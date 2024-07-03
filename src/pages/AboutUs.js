@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/AboutUs.css";
-import HeroBanner from "../components/HeroBanner"
-import leftImage from "../assets/about-left-side-image.jpg"
-import team1 from "../assets/team-1-picture.png"
-import GetInTouch from "../components/GetInTouch"
-import AboutPageBackdrop from "../assets/about-page-backdrop.jpeg"
+import HeroBanner from "../components/HeroBanner";
+import leftImage from "../assets/about-left-side-image.jpg";
+import team1 from "../assets/team-1-picture.png";
+import GetInTouch from "../components/GetInTouch";
+import AboutPageBackdrop from "../assets/about-page-backdrop.jpeg";
 
 function AboutUs() {
   return (
@@ -26,9 +26,10 @@ function AboutUs() {
               <span className="text-[#2B00AC]">business</span> succed
             </h1>
             <p>
-            It is a long established fact that a reader will be distracted by the  readable content
-            of a page when looking at its layout. The point of  using Lorem Ipsum is that it has a
-            more-or-less normal distribution of letters, as opposed
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed
             </p>
           </div>
         </div>
@@ -45,7 +46,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -54,7 +57,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -63,7 +68,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -72,7 +79,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -81,7 +90,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -90,7 +101,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -99,7 +112,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
@@ -108,7 +123,9 @@ function AboutUs() {
                 <img src={team1} width="100%" alt=""></img>
               </div>
               <div>
-                <h4 className="text-[#2B00AC] capitalize font-bold">full name</h4>
+                <h4 className="text-[#2B00AC] capitalize font-bold">
+                  full name
+                </h4>
                 <p className="text-[#0E1F51] capitalize">role</p>
               </div>
             </div>
