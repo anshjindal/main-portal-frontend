@@ -1,0 +1,21 @@
+.our-work-menu p {
+    width: 7vw;
+    height: 100%;
+    font-size: 1.1vw;
+    border-width: 1.3px;
+    border-color: #25252580;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #25252580;
+}
+
+.our-work-menu p:nth-child(1), p:nth-child(2), p:nth-child(3), p:nth-child(4), p:nth-child(5){
+    border-right: none;
+}
+
+.our-work-menu p:hover {
+    background-color: #FF9900;
+}
