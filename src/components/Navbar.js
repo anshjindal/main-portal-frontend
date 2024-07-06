@@ -25,9 +25,9 @@ function Navbar() {
                 Services
               </li>
             </Link>
-            <Link to="/Pricing">
+            <Link to="/Products">
               <li className="py-2 hover:text-[#FF9900] hover:overline text-[1.1vw]">
-                Pricing
+                Products
               </li>
             </Link>
             <Link to="/Portfolio">

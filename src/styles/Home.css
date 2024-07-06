@@ -51,3 +51,8 @@
     width: 30px;
 }
 
+
+.space-evenly {
+    justify-content: space-between;
+}
+

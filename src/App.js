@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
-import Pricing from "./pages/Pricing";
+import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
 
@@ -24,7 +24,7 @@ function App() {
           <Route path="/Services" element={<Services />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Pricing" element={<Pricing />}></Route>
+          <Route path="/Products" element={<Products />}></Route>
         </Routes>
         <Routes>
           <Route path="/Portfolio" element={<Portfolio />}></Route>

@@ -1,149 +1,201 @@
 import React from "react";
-import "../styles/Services.css"
-import HeroBanner from "../components/HeroBanner"
-import WhatWeDoImg from "../assets/what-we-do-services-page.jpg"
-import ServicesPageBackdrop from "../assets/service-page-backdrop.jpg"
-import GetInTouch from "../components/GetInTouch"
+import "../styles/Services.css";
+import MeetTheTeamImages from "../assets/recent-proj-backdrop.png";
+import { CgArrowLongUp } from "react-icons/cg";
 
 function Services() {
   return (
-    <main>
-      <HeroBanner title={"Our services"} image={ServicesPageBackdrop} />
-      <section className="bg-gray-100">
-        <div className="grid lg:grid-cols-2 px-3 sm:px-6 lg:px-12 gap-12 py-16 text-start">
-          <div>
-            <img src={WhatWeDoImg} width="100%" height="auto" alt="young-stylish-dark-skinned-couple-standing-sunny-city"></img>
-          </div>
-          <div className="space-y-6">
-            <p className="capitalize font-bold text-[#2B00AC]">\ what we do \</p>
-            <h1 className="text-[#0E1F51] text-4xl font-bold">We provide a range of services</h1>
-            <p>We provide a range of services designed to elevate your business and drive success. Our offerings include digital marketing, web development, graphic design, strategic planning, and operations management</p>
-            <p>Each service is tailored to meet your unique needs, ensuring personalized, effective solutions that enhance your brand's presence, streamline your operations, and achieve your business goals. Let us help you navigate the path to growth and excellence.</p>
-            <div className="sm:flex justify-between gap-6 p-4 rounded-lg">
-              <div className="bg-white p-2 flex items-center justify-evenly rounded-lg">
-                <div className="bg-gray-200 text-5xl px-5 py-3 rounded-xl">
-                  <i className="fa-regular fa-lightbulb text-[#2B00AC]"></i>
-                </div>
-                <div className=" space-y-2 p-3">
-                  <h3 className="text-2xl text-[#2B00AC] font-bold capitalize">our vision</h3>
-                  <p>It is a long established fact that</p>
+    <div className="flex justify-center mt-[5vw] mb-[5vw]">
+      <div className="w-[80%]">
+        <div className="flex items-center justify-center">
+          <div className="w-[6.5vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]"></div>
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]">
+            <div className="w-[80%] text-left text-white">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">
+                  Website Development
+                </h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                  </div>
                 </div>
               </div>
-              <div className="bg-white p-2 flex items-center justify-evenly rounded-lg">
-                <div className="bg-gray-200 text-5xl px-5 py-3 rounded-xl">
-                  <i className="fa-regular fa-lightbulb text-[#2B00AC]"></i>
-                </div>
-                <div className=" space-y-2 p-3">
-                  <h3 className="text-2xl text-[#2B00AC] font-bold capitalize">our goals</h3>
-                  <p>It is a long established fact that</p>
-                </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-white w-[5vw] h-[5vw]"></div>
+                <p className="text-[1.1vw] w-[80%] mt-[-1vw]">
+                  Our specialized team of researchers, strategists, designers,
+                  developers, and project managers work with streamlined
+                  processes to break through organizational roadblocks.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div className="px-3 sm:px-6 lg:px-40 gap-12 pb-20">
-          <div className="my-20 space-y-6 text-center font-bold">
-            <p className="text-[#2B00AC]">\ Services \</p>
-            <h2 className="text-[#0E1F51] capitalize text-4xl">our expertise</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-start">
-            <div className="bg-[#2B00AC] h-64 rounded-lg px-6 pt-4 pb-6 text-white">
-              <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                <i className="text-4xl text-[#2B00AC] fa-solid fa-desktop"></i>
-              </div>
-              <div className=" mt-2 space-y-3">
-                <h3 className="capitalize font-extrabold text-lg">web design/development</h3>
-                <div className="flex gap-2">
-                  <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                  <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                </div>
-                <p>Creating and maintaining responsive, user-friendly websites
-                  that drive business growth.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 h-64 rounded-lg px-6 pt-4 pb-6">
-              <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                <i className="text-4xl text-[#2B00AC] fa-regular fa-pen-to-square"></i>
-              </div>
-              <div className=" mt-2 space-y-3">
-                <h3 className="text-[#2B00AC] capitalize font-extrabold text-lg">Content Marketing</h3>
-                <div className="flex gap-2">
-                  <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                  <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                </div>
-                <p>Creating and distributing valuable content to attract and
-                  engage target audiences.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 h-64 rounded-lg px-6 pt-4 pb-6">
-              <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                <i className="text-4xl text-[#2B00AC] fa-solid fa-book"></i>
-              </div>
-              <div className=" mt-2 space-y-3">
-                <h3 className="text-[#2B00AC] capitalize font-extrabold text-lg">Search Engine Optimization</h3>
-                <div className="flex gap-2">
-                  <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                  <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                </div>
-                <p>Enhancing website visibility and ranking on search engines
-                    to attract organic traffic.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 h-64 rounded-lg px-6 pt-4 pb-6">
-              <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                <i className="text-4xl text-[#2B00AC] fa-solid fa-mobile-screen"></i>
-              </div>
-              <div className=" mt-2 space-y-3">
-                <h3 className="text-[#2B00AC] capitalize font-extrabold text-lg">content Management</h3>
-                <div className="flex gap-2">
-                  <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                  <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                </div>
-                <p>Creating and distributing valuable content to attract and
-                  engage target audiences.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 h-64 rounded-lg px-6 pt-4 pb-6">
-              <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                <i className="text-4xl text-[#2B00AC] fa-solid fa-chart-column"></i>
-              </div>
-              <div className=" mt-2 space-y-3">
-                <h3 className="text-[#2B00AC] capitalize font-extrabold text-lg">Business Analytics</h3>
-                <div className="flex gap-2">
-                    <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                    <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                </div>
-                <p>Monitoring, analyzing, and reporting on marketing campaign
-                  performance to inform strategic decisions.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gray-100 h-64 rounded-lg px-6 pt-4 pb-6">
-                <div className="w-fit bg-white flex items-center justify-center p-4 rounded-lg">
-                  <i className="text-4xl text-[#2B00AC] fa-solid fa-chart-line"></i>
-                </div>
-                <div className=" mt-2 space-y-3">
-                  <h3 className="text-[#2B00AC] capitalize font-extrabold text-lg">Marketing</h3>
-                  <div className="flex gap-2">
-                    <div className="w-12 h-1 bg-[#2b00AC] rounded-2xl"></div>
-                    <div className="w-4 h-1 bg-[#2b00AC] rounded-2xl"></div>
+
+        <div className="flex items-center justify-center mt-[5vw]">
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-white mr-[-6vw] z-10">
+            <div className="w-[80%] text-left text-[black]">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">Brand Design</h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-[black] cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                   </div>
-                  <p>Designing and executing campaigns to communicate with
-                    prospects and customers, and to drive sales.
+                </div>
+              </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw]"></div>
+                <div className="flex flex-col w-[80%] mt-[-1vw]">
+                  <p className="text-[1.1vw]">
+                    We offer a full suite of branding solutions to help our
+                    clients build, launch, and maintain their brands. We design
+                    attractive brand marketing materials and perform consistent
+                    brand marketing activities. 
+                  </p>
+                  <p className="mt-[2.5vw] text-[1vw] text-[#757575]">
+                    LOGO DESIGN &#x2022; IDENTITY DESIGN &#x2022; MARKETING
+                    ASSETS
                   </p>
                 </div>
+              </div>
             </div>
           </div>
-          <GetInTouch />
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
         </div>
-      </section>
-    </main>
+
+        <div className="flex items-center justify-center mt-[5vw]">
+          <div className="w-[6.5vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]"></div>
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]">
+            <div className="w-[80%] text-left text-white">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">
+                  Digital Marketing
+                </h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-white w-[5vw] h-[5vw]"></div>
+                <p className="text-[1.1vw] w-[80%] mt-[-1vw]">
+                  Our multi-talented digital marketing team uses the best
+                  content writing practices to develop quality content that sets
+                  the right tone for your audience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center mt-[5vw]">
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-white mr-[-6vw] z-10">
+            <div className="w-[80%] text-left text-[black]">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">Video Production</h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-[black] cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw]"></div>
+                <div className="flex flex-col w-[80%] mt-[-1vw]">
+                  <p className="text-[1.1vw]">
+                    Video marketing is the latest and top trend in digital
+                    marketing. It is a cost-effective method of communicating
+                    with the audience.
+                  </p>
+                  <p className="mt-[2.5vw] text-[1vw] text-[#757575]">
+                    PROCESS &#x2022; CREATIVITY &#x2022; EXPERIENCE
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+        </div>
+
+        <div className="flex items-center justify-center mt-[5vw]">
+          <div className="w-[6.5vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]"></div>
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-[#2B00AC] mt-[-5vw]">
+            <div className="w-[80%] text-left text-white">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">
+                  Search Engine Optimization
+                </h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-white w-[5vw] h-[5vw]"></div>
+                <p className="text-[1.1vw] w-[80%] mt-[-1vw]">
+                  Our multi-talented digital marketing team uses the best
+                  content writing practices to develop quality content that sets
+                  the right tone for your audience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center mt-[5vw]">
+          <div className="flex justify-center items-center w-[44vw] h-[28vw] bg-white mr-[-6vw] z-10">
+            <div className="w-[80%] text-left text-[black]">
+              <div className="flex">
+                <h1 className="text-[4vw]/[4vw] font-bold">Video Production</h1>
+                <div className="w-[12vw] flex justify-end items-center">
+                  <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-[black] cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                    Details
+                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between mt-[3vw]">
+                <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw]"></div>
+                <div className="flex flex-col w-[80%] mt-[-1vw]">
+                  <p className="text-[1.1vw]">
+                    Video marketing is the latest and top trend in digital
+                    marketing. It is a cost-effective method of communicating
+                    with the audience.
+                  </p>
+                  <p className="mt-[2.5vw] text-[1vw] text-[#757575]">
+                    PROCESS &#x2022; CREATIVITY &#x2022; EXPERIENCE
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
+            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+        </div>
+      </div>
+    </div>
   );
 }
 
