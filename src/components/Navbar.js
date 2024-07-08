@@ -8,9 +8,11 @@ function Navbar() {
     <div className="text-[#2B00AC] h-[8vw] flex justify-center">
       <div className="flex items-center w-[80%] border-b-[0.001vw] border-[#B8B8B8]">
         <div className="flex items-center gap-x-[10vw]">
-          <img src={logo} width="20%" height="auto"></img>
+          <Link to="/" className="w-[20%]">
+            <img src={logo} height="auto"></img>
+          </Link>
           <ul className="flex gap-x-[2vw] py-3 w-[58vw] justify-center">
-            <Link to="/Home">
+            <Link to="/">
               <li className="py-2 hover:text-[#FF9900] hover:overline text-[1.1vw]">
                 Home
               </li>
