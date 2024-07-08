@@ -88,7 +88,7 @@ function Home() {
           <h1 className="text-[4.5vw] text-[#110E0E] font-bold mt-[0.2vw] mb-[1vw]">
             What we do
           </h1>
-          <div className="flex space-evenly items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
+          <div className="flex justify-between items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
             <div className="flex flex-col">
               <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
                 Digital <br /> Marketing
@@ -108,7 +108,7 @@ function Home() {
             <div className="w-[25vw] h-[25vw] bg-[#D9D9D9]"></div>
           </div>
 
-          <div className="flex space-evenly items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
+          <div className="flex justify-between items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
             <div className="w-[25vw] h-[25vw] bg-[#D9D9D9]"></div>
             <div className="flex flex-col">
               <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
@@ -129,7 +129,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="flex space-evenly items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
+          <div className="flex justify-between items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mb-[2vw]">
             <div className="flex flex-col">
               <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
                 Business
@@ -150,7 +150,7 @@ function Home() {
             <div className="w-[25vw] h-[25vw] bg-[#D9D9D9]"></div>
           </div>
 
-          <div className="flex space-evenly items-center border-t-[0.01vw] border-[#9C9C9C] border-b-[0.01vw] pt-[2vw] pb-[2vw]">
+          <div className="flex justify-between items-center border-t-[0.01vw] border-[#9C9C9C] border-b-[0.01vw] pt-[2vw] pb-[2vw]">
             <div className="w-[25vw] h-[25vw] bg-[#D9D9D9]"></div>
             <div className="flex flex-col">
               <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">

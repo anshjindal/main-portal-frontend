@@ -37,7 +37,7 @@ function Products() {
             </div>
           </div>
         </div>
-        <div className="flex space-evenly text-left items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mt-[5vw] mb-[2vw]">
+        <div className="flex justify-between text-left items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mt-[5vw] mb-[2vw]">
           <div className="w-[35vw] h-[30vw] bg-[#D9D9D9]"></div>
           <div className="flex flex-col">
             <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
@@ -57,7 +57,7 @@ function Products() {
             </div>
           </div>
         </div>
-        <div className="flex space-evenly text-left items-center border-t-[0.01vw] border-[#9C9C9C] border-b-[0.01vw] pb-[2vw] pt-[2vw] mb-[2vw]">
+        <div className="flex justify-between text-left items-center border-t-[0.01vw] border-[#9C9C9C] border-b-[0.01vw] pb-[2vw] pt-[2vw] mb-[2vw]">
           <div className="flex flex-col">
             <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
               Egolu
