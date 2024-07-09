@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex items-center w-[80%] border-b-[0.001vw] border-[#B8B8B8]">
         <div className="flex items-center gap-x-[10vw]">
           <Link to="/" className="w-[20%]">
-            <img src={logo} height="auto"></img>
+            <img src={logo} height="auto" className="cursor-pointer"></img>
           </Link>
           <ul className="flex gap-x-[2vw] py-3 w-[58vw] justify-center">
             <Link to="/">

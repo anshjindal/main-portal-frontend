@@ -8,6 +8,8 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
+import Insights from "./pages/Insights";
+import Careers from "./pages/Careers";
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/ContactUs" element={<ContactUs />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/Insights" element={<Insights />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/Careers" element={<Careers />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
