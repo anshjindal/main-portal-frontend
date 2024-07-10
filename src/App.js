@@ -17,28 +17,44 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/"
+            element={<Home />}></Route>
         </Routes>
         <Routes>
-          <Route path="/AboutUs" element={<AboutUs />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/AboutUs"
+            element={<AboutUs />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Services" element={<Services />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/Services"
+            element={<Services />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Products" element={<Products />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/Products"
+            element={<Products />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Portfolio" element={<Portfolio />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/Portfolio"
+            element={<Portfolio />}></Route>
         </Routes>
         <Routes>
-          <Route path="/ContactUs" element={<ContactUs />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/ContactUs"
+            element={<ContactUs />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Insights" element={<Insights />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/Insights"
+            element={<Insights />}></Route>
         </Routes>
         <Routes>
-          <Route path="/Careers" element={<Careers />}></Route>
+          <Route
+            path="frontend-react-wouessi-website-v2/Careers"
+            element={<Careers />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -48,13 +48,13 @@ function Footer() {
           <div className="flex gap-x-[0.3vw]">
             <p className="hover:underline cursor-pointer">About</p> &#x2022;
             <p className="hover:underline cursor-pointer">Contact</p> &#x2022;
-            <Link to="/Insights">
+            <Link to="frontend-react-wouessi-website-v2/Insights">
               <p className="hover:underline cursor-pointer">Insights</p>
             </Link>{" "}
             &#x2022;
             <p className="hover:underline cursor-pointer">Approach</p> &#x2022;
             <p className="hover:underline cursor-pointer">Potfolio</p> &#x2022;
-            <Link to="/Careers">
+            <Link to="frontend-react-wouessi-website-v2/Careers">
               <p className="hover:underline cursor-pointer">Careers</p>
             </Link>
           </div>
