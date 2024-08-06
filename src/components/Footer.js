@@ -1,65 +1,60 @@
 import React from "react";
 import "../styles/Footer.css";
-import FooterWouessiLogo from "../FooterWouessiLogo.svg";
+import LogoFooter from "../LogoFooter.svg";
 import { Link } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-[#2B00AC]">
-      <div className="flex justify-center">
-        <div className="w-[80%]">
-          <div className="flex gap-x-[6vw] items-center">
-            <div>
-              <img
-                src={FooterWouessiLogo}
-                className="w-[16vw] h-[7vw]"
-                alt="logo"
-              />
-              <p className="text-left text-[1vw] text-[#C8CFD5] w-[23vw]">
-                When do they work well, and when do they on us and finally, when
-                do we actually need how can we avoid them.
-              </p>
-            </div>
-            <div className="flex flex-col w-[13vw] text-white">
-              <div className="flex items-center justify-center border-b-[0.01vw] border-l-[0.01vw] border-r-[0.01vw] border-[#B8B8B8] text-[1vw] p-[1vw] h-[4.5vw]">
-                FACEBOOK
-              </div>
-              <div className="flex items-center justify-center border-[0.01vw] border-[#B8B8B8] text-[1vw] p-[1vw] h-[4.5vw]">
-                TWITTER
-              </div>
-              <div className="flex items-center justify-center border-[0.01vw] border-[#B8B8B8] text-[1vw] p-[1vw] h-[4.5vw]">
-                LINKEDIN
-              </div>
-              <div className="flex items-center justify-center border-t-[0.01vw] border-l-[0.01vw] border-r-[0.01vw] border-[#B8B8B8] text-[1vw] p-[1vw] h-[4.5vw]">
-                INSTAGRAM
-              </div>
-            </div>
-            <div className="flex items-center justify-center w-[32vw] text-[6vw] text-white font-light">
-              LET'S TALK
-            </div>
+    <div className="flex justify-center">
+      <div className="w-[90%] pt-[3vw] pb-[3vw] flex gap-x-[6vw] border-t-[0.2vw] border-[#2B00AC]">
+        <div className="space-y-[1.5vw] text-left">
+          <img src={LogoFooter} alt="logo" className="w-[9vw]" />
+          <p className="text-left text-[1vw] text-[#828282]">
+            Wouessi is your key to digital marketing in an ever evolving media
+            landscape. From generating concepts to developing and online
+            presence, we can do it all.
+          </p>
+          <div className="flex text-[#828282] text-[1.5vw] gap-x-[1.6vw]">
+            <FaFacebook />
+            <FaLinkedin />
+            <FaYoutube />
+            <FaInstagram />
           </div>
+          <p className="text-[0.8vw] text-[#828282]">
+            Copyright &copy;2024 Wouessi. All rights reserved.
+          </p>
+        </div>
+        <div className="flex gap-x-[2vw]">
+          <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw]">
+            <li className="text-[#2B00AC]">Home</li>
+            <li>Product Offerings</li>
+            <li>Get A Quote</li>
+            <li>Insights</li>
+          </ul>
+          <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw]">
+            <li className="text-[#2B00AC]">About Us</li>
+            <li>Our Team</li>
+            <li>
+              <Link to="frontend-react-wouessi-website-v2/Careers">
+                Careers
+              </Link>
+            </li>
+            <li>Past works and reviews</li>
+          </ul>
+          <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw]">
+            <li className="text-[#2B00AC]">Contact Us</li>
+            <li>Terms and Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+          </ul>
         </div>
       </div>
-      <div className="flex justify-center border-t-[0.001vw] border-[#B8B8B8]">
-        <div className="flex justify-between w-[80%] items-center text-[#C8CFD5] text-[1.2vw]">
-          <div className="p-10">
-            Copyright &#xa9; 2024 Rinico. All rights reserved
-          </div>
-          <div className="flex gap-x-[0.3vw]">
-            <p className="hover:underline cursor-pointer">About</p> &#x2022;
-            <p className="hover:underline cursor-pointer">Contact</p> &#x2022;
-            <Link to="frontend-react-wouessi-website-v2/Insights">
-              <p className="hover:underline cursor-pointer">Insights</p>
-            </Link>{" "}
-            &#x2022;
-            <p className="hover:underline cursor-pointer">Approach</p> &#x2022;
-            <p className="hover:underline cursor-pointer">Potfolio</p> &#x2022;
-            <Link to="frontend-react-wouessi-website-v2/Careers">
-              <p className="hover:underline cursor-pointer">Careers</p>
-            </Link>
-          </div>
-        </div>
-      </div>
+      {/* <div className="flex justify-center border-t-[0.001vw] border-[#B8B8B8]">
+      </div> */}
     </div>
   );
 }

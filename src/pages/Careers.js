@@ -1,5 +1,8 @@
 import React from "react";
 import MeetTheTeamImages from "../assets/recent-proj-backdrop.png";
+import Accordion from "../components/Accordion";
+
+import Data from "../helpers/CareersAccordionInnerText.json";
 
 function Careers() {
   return (
@@ -25,7 +28,7 @@ function Careers() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-[4vw]">
           <div className="flex justify-center items-center w-[48vw] h-[28vw]">
             <div className="w-[80%] text-left text-black">
               <h1 className="text-[4vw]/[4vw] font-bold">Why Join Wouessi?</h1>
@@ -44,6 +47,10 @@ function Careers() {
             style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
             className="w-[30vw] h-[28vw] bg-cover bg-[center_right_-2vw]"></div>
         </div>
+        <Accordion title="Development" InnerTextData={Data.Development} />
+        <Accordion title="Project Management" InnerTextData={Data.ProductDev} />
+        <Accordion title="Sales" InnerTextData={Data.Sales} />
+        <Accordion title="Design" InnerTextData={Data.Design} />
       </div>
     </div>
   );
