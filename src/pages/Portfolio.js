@@ -4,6 +4,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
 import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
+import WorkWithUs from "../components/WorkWithUs";
 
 function Portfolio() {
   const data = [
@@ -72,7 +73,7 @@ function Portfolio() {
           </p>
         </div>
         <div className="w-1/6 mt-[2vw] border border-slate-600"></div>
-        <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw] mb-[5vw]">
+        <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
           {items.slice(0, visible).map((item) => {
             return (
               <div className="w-[39vw] pb-[2vw] bg-white rounded-2xl mt-[2vw]">
@@ -81,14 +82,16 @@ function Portfolio() {
                     src={item.image}
                     className="h-full object-cover rounded-t-2xl"></img>
                 </div>
-                <div className="flex justify-center gap-x-[8vw] items-center bg-white text-black h-[7vw]">
-                  <div className="flex flex-col text-left">
-                    <h2 className="text-[2vw] font-bold">{item.title}</h2>
-                    <p className="text-[1.1vw]">{item.subtitle}</p>
-                  </div>
-                  <div className="w-[11vw] h-[3.5vw] rounded-md bg-[#FF9900] text-[1.1vw] flex items-center justify-center cursor-pointer">
-                    See Project
-                    <BsArrowRightShort className="text-[2vw]" />
+                <div className="flex justify-center">
+                  <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw]">
+                    <div className="flex flex-col text-left">
+                      <h2 className="text-[2vw] font-bold">{item.title}</h2>
+                      <p className="text-[1.1vw]">{item.subtitle}</p>
+                    </div>
+                    <div className="w-[11vw] h-[3.5vw] rounded-md bg-[#FF9900] text-[1.1vw] flex items-center justify-center cursor-pointer">
+                      See Project
+                      <BsArrowRightShort className="text-[2vw]" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,6 +115,14 @@ function Portfolio() {
             </div>
           </div>
         </div>
+        <WorkWithUs
+          Heading={
+            <h1>
+              We would love to hear more<br></br> about your project
+            </h1>
+          }
+          CallToAction="Let's Talk"
+        />
       </div>
     </div>
   );

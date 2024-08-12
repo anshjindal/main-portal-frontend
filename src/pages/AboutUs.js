@@ -4,12 +4,12 @@ import { CgArrowLongUp } from "react-icons/cg";
 import AboutPageHeroImage from "../assets/about-page-hero-image.jpeg";
 import { PiArrowCircleRightLight } from "react-icons/pi";
 import { PiArrowCircleLeftLight } from "react-icons/pi";
-import MeetTheTeamImages from "../assets/recent-proj-backdrop.png";
+import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
 import HartnamtemahLogo from "../HartnamtemahLogo.svg";
 import ASDICLogo from "../ASDICLogo.svg";
 import CADRLogo from "../CADRLogo.svg";
 import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
-import KigaliRunningClub from "../KigaliRunningClub.svg";
+import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
 import QuoteIcon from "../QuoteIcon.svg";
 
 function AboutUs() {

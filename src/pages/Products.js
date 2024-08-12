@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Pricing.css";
-import MeetTheTeamImages from "../assets/recent-proj-backdrop.png";
+import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
 import { CgArrowLongUp } from "react-icons/cg";
 import { PiArrowCircleRightLight } from "react-icons/pi";
 import { PiArrowCircleLeftLight } from "react-icons/pi";
@@ -39,7 +39,7 @@ function Products() {
         </div>
         <div className="flex justify-between text-left items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mt-[5vw] mb-[2vw]">
           <div className="w-[35vw] h-[30vw] bg-[#D9D9D9]"></div>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-y-[2vw]">
             <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
               BantuEd
             </h1>
@@ -58,7 +58,7 @@ function Products() {
           </div>
         </div>
         <div className="flex justify-between text-left items-center border-t-[0.01vw] border-[#9C9C9C] border-b-[0.01vw] pb-[2vw] pt-[2vw] mb-[2vw]">
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-y-[2vw]">
             <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold">
               Egolu
             </h1>
@@ -97,7 +97,7 @@ function Products() {
                     unified brands.
                   </p>
                   <div className="flex justify-between">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col gap-y-[2vw]">
                       <h2 className="text-[1.8vw] font-bold text-[#0A0907] mt-[1vw]">
                         Rodrique Fouafou
                       </h2>
