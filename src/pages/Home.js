@@ -395,7 +395,7 @@ function Home() {
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[32vw] text-left pt-[5vw] pl-[3vw] rounded-md">
+            <div className="border-[0.1vw] border-[#2B00AC] h-[32vw] text-left pt-[5vw] pl-[3vw] rounded-md hover:bg-[#2B00AC] hover:pt-[6vw] transition-all ease-in-out duration-300 hover:text-white">
               <h1 className="text-[5vw] font-extrabold">125</h1>
               <h2 className="text-[3vw]/[4vw]">Projects</h2>
               <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer">
@@ -405,21 +405,21 @@ function Home() {
           </div>
           {/* Second row with 3 boxes */}
           <div className="col-span-3 grid grid-cols-3 gap-[1vw] mt-[1vw]">
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md">
+            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
               <h1 className="text-[4vw] font-extrabold">75</h1>
               <h2 className="text-[1.3vw]">Clients</h2>
               <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer">
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md">
+            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
               <h1 className="text-[4vw] font-extrabold">15</h1>
               <h2 className="text-[1.3vw]">Countries</h2>
               <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer">
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md">
+            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
               <h1 className="text-[4vw] font-extrabold">2</h1>
               <h2 className="text-[1.3vw]">New Products</h2>
               <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer">

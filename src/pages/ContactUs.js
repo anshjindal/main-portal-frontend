@@ -196,7 +196,7 @@ function ContactUs() {
                     className="bg-[#2B00AC] h-[3.5vw] w-full text-[1.2vw] focus-visible:outline-none placeholder:font-normal placeholder:text-white"></input>
                   <button
                     type="submit"
-                    className="w-[3vw] hover:pl-[1vw] hover:text-[#44c644] cursor-pointer transition-all ease-in-out duration-300">
+                    className="w-[3vw] text-[1.5vw] hover:pl-[1vw] hover:text-[#44c644] cursor-pointer transition-all ease-in-out duration-300">
                     <FaArrowRight />
                   </button>
                 </div>

@@ -11,27 +11,65 @@ import CADRLogo from "../CADRLogo.svg";
 import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
 import QuoteIcon from "../QuoteIcon.svg";
+import OurMissionTopImage from "../assets/OurMissionTopImage.png";
+import OurMissionSideImage from "../assets/OurMissionSideImage.png";
+import Carousel from "../components/OurTeamCarousel";
 
 function AboutUs() {
+  const cards = [
+    {
+      image: { OurMissionSideImage },
+      title: "Rodrigue Fouafou",
+      subtitle: "CEO",
+    },
+    {
+      image: { OurMissionSideImage },
+      title: "Rimjhim Rosalin",
+      subtitle: "COO",
+    },
+    {
+      image: { OurMissionSideImage },
+      title: "Strive Mazunga",
+      subtitle: "CTO",
+    },
+    {
+      image: { OurMissionSideImage },
+      title: "Reginald Nugent",
+      subtitle: "CFO",
+    },
+    {
+      image: { OurMissionSideImage },
+      title: "Fanny Ene",
+      subtitle: "VP of SALES",
+    },
+    {
+      image: { OurMissionSideImage },
+      title: "Nelson Nwankwo",
+      subtitle: "Director of Digital services",
+    },
+  ];
+
   return (
     <>
       <div className="flex justify-center h-fit">
         <div className="w-[80%] text-left mt-[3vw]">
-          <h1 className="text-[4vw]/[5vw] font-extrabold">
-            We provide innovative digital solutions to help your{" "}
-            <span className="text-[#2703A5]">business</span> succeed.
+          <h1 className="text-[4vw]/[5vw] font-extrabold w-[75%]">
+            Powerful Digital Solutions for{" "}
+            <span className="text-[#2703A5]">Business Growth</span>
           </h1>
-          <div className="flex mt-[3vw] gap-x-[3vw] items-center">
+          <div className="flex mt-[3vw] items-center justify-between">
+            <p className="w-[65%] text-[1.3vw]">
+              Wouessi Inc. stands as a beacon of innovation and excellence in
+              the heart of Toronto, Canada, leading in revolutionizing the
+              digital landscape worldwide. With a steadfast commitment to
+              pushing boundaries and delivering unparalleled solutions, Wouessi
+              offers a comprehensive suite of cutting-edge digital services
+              tailored to meet the diverse needs of businesses across the globe.
+            </p>
             <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
-              See our Approach
+              Our Approach
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
-            <p className="w-[40%] text-[1.3vw]">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed
-            </p>
           </div>
           <div
             style={{ backgroundImage: `url(${AboutPageHeroImage})` }}
@@ -39,38 +77,51 @@ function AboutUs() {
           <div className="flex justify-end">
             <div className="w-[15vw] h-[7vw] bg-[#FF9900] mt-[-4.3vw] mr-[-3vw]"></div>
           </div>
-          <div className="mt-[4vw] flex justify-between ">
-            <div className="flex flex-col">
-              <p className="text-[1.3vw]">DIGITAL COMPANY</p>
-              <h1 className="text-[4.5vw] font-extrabold">Our Story</h1>
-            </div>
-            <div className="flex flex-col flex w-[45vw]">
-              <p className="text-[1.3vw]">
-                Your brand is the most important asset in your company let our
-                team of professionals help you with a good strategy took the
-                runway next with an edgy collection featuring dyed denim pieces.
-                The collection included patchwork denim, a trend that has
-                recently exploded in younger generations. Playing on aspects of
-                sustainability, the pieces appeared to be upcycled to establish
-                dimension and flair. This take on grunge and streetwear took
-                sustainable fashion to an entirely new level.
+          <div className="mt-[4vw] flex justify-between">
+            <div className="flex flex-col gap-y-[1.5vw] w-[45%]">
+              <p className="text-[1.3vw] text-[#666666]">Our Mission</p>
+              <h1 className="text-[3.8vw]/[5.2vw] font-normal">
+                Empowering Businesses with Bespoke Digital Strategies for Global
+                Success
+              </h1>
+              <p className="mt-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+                Our Vision
               </p>
-              <p className="mt-[2vw] text-[1.3vw]">
-                Our specialized team of researchers, strategists, designers,
-                developers, and project managers work with streamlined processes
-                to break through organizational roadblocks. We translate
-                research into solutions, crafting thoughtful and unified brands.
+              <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw]">
+                At Wouessi, we transcend geographical boundaries to envision a
+                world where digital innovation knows no limits. Our vision is to
+                emerge as a global leader, spearheading groundbreaking
+                initiatives that redefine collaboration and drive transformative
+                change on a worldwide scale.
               </p>
             </div>
-          </div>
-          <div className="flex mt-[5vw] justify-between items-center">
-            <div className="w-[19vw] h-[26vw] bg-[#D9D9D9]"></div>
-            <div className="w-[25vw] h-[34vw] bg-[#D9D9D9]"></div>
-            <div className="flex flex-col w-[32vw] gap-y-[2vw]">
-              <div className="h-[12vw] bg-[#D9D9D9]"></div>
-              <div className="h-[12vw] bg-[#D9D9D9]"></div>
+            <div className="flex flex-col flex w-[33vw]">
+              <div
+                style={{ backgroundImage: `url(${OurMissionTopImage})` }}
+                className="w-full h-[15vw] bg-center bg-cover"></div>
+              <div className="flex">
+                <div className="w-[23vw] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
+                  <p className="mt-[2vw] mb-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+                    Our Story
+                  </p>
+                  <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw] pr-[1.2vw]">
+                    Beyond our digital endeavors, Wouessi Digital is deeply
+                    committed to community involvement and social
+                    responsibility. Under the leadership of Mr. Rodrigue
+                    Fouafou, our founder, we strive to drive positive change and
+                    create
+                  </p>
+                </div>
+                <div
+                  style={{
+                    backgroundImage: `url(${OurMissionSideImage})`,
+                  }}
+                  className="w-[15vw] h-[30vw] bg-cover bg-center"></div>
+              </div>
             </div>
           </div>
+
+          <Carousel cards={cards} />
         </div>
       </div>
       <div className="bg-[#2703A5] mt-[5vw] h-[37vw]">
@@ -142,7 +193,7 @@ function AboutUs() {
         </div>
       </div>
       <div className="flex justify-center mt-[10vw]">
-        <div className="w-[80%] flex flex-col mt-[6vw] mb-[5vw] text-left text-[1.7vw] font-bold">
+        <div className="w-[80%] flex flex-col mt-[10vw] mb-[5vw] text-left text-[1.7vw] font-bold">
           <h1>Explore some of our clients</h1>
           <div className="flex gap-x-[7vw] place-content-evenly mt-[1vw]">
             <img src={HartnamtemahLogo} className="h-[10vw] w-[10vw]"></img>
