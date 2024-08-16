@@ -45,7 +45,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="App bg-[#F4F4F4]">
+      <div className="text-center bg-[#F4F4F4]">
         <BrowserRouter>
           <Navbar />
           <Routes>

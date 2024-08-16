@@ -20,25 +20,24 @@ const Carousel = ({ cards }) => {
   };
 
   return (
-    <div className="flex items-center mt-[4vw]">
+    <div className="flex items-center justify-center mt-[5vw]">
       <div
         onClick={goToPrevious}
-        className="flex justify-center items-center mr-[-2.2vw] text-[2vw] text-black w-[6.2vw] h-[4.5vw] rounded-full bg-[#ECECEC] cursor-pointer z-10 hover:text-[#FF9900]">
+        className="flex justify-center items-center text-[2vw] text-black w-[4.5vw] h-[4.5vw] rounded-full bg-[#ECECEC] cursor-pointer z-10 hover:text-[#FF9900]">
         <HiOutlineArrowSmLeft />
       </div>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden w-[80%]">
+        <h1 className="text-[3vw] text-left font-bold">Our Team</h1>
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {cards.map((card, index) => (
-            <div key={index} className="flex-shrink-0 w-[33%] p-4">
+            <div key={index} className="flex-shrink-0 w-[33.3%] p-4">
               <div className="bg-white rounded-lg overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-[25vw] text-[1.1vw] object-cover"
-                />
-                <div className="p-4 text-center">
+                <div
+                  style={{ backgroundImage: `url(${card.image})` }}
+                  className="w-[full] h-[30vw] text-[1.1vw] bg-cover bg-center"></div>
+                <div className="p-[1.5vw] text-center ">
                   <h2 className="font-bold text-[1.5vw]">{card.title}</h2>
                   <p className="text-gray-600 text-[1.1vw]">{card.subtitle}</p>
                 </div>
@@ -49,7 +48,7 @@ const Carousel = ({ cards }) => {
       </div>
       <div
         onClick={goToNext}
-        className="flex justify-center items-center ml-[-3vw] text-[2vw] text-black w-[6.2vw] h-[4.5vw] rounded-full bg-[#ECECEC] cursor-pointer z-10 hover:text-[#FF9900]">
+        className="flex justify-center items-center text-[2vw] text-black w-[4.5vw] h-[4.5vw] rounded-full bg-[#ECECEC] cursor-pointer z-10 hover:text-[#FF9900]">
         <HiOutlineArrowSmRight />
       </div>
     </div>

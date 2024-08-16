@@ -24,6 +24,21 @@ import { gql, useQuery } from "@apollo/client";
 import parse from "html-react-parser";
 
 import OurPartners from "../components/OurPartners";
+import WorkWithUs from "../components/WorkWithUs";
+import NewsletterRegister from "../components/NewsletterRegister";
+
+import HomepageAboutUsImage from "../assets/HomepageAboutUsImage.jpeg";
+import RedefineCollab from "../assets/SVG/RedefineCollab.svg";
+import DriveTransformation from "../assets/SVG/DriveTransformation.svg";
+import RiipenLogo from "../assets/SVG/RiipenLogo.svg";
+import BipocFoundationLogo from "../assets/SVG/BipocFoundationLogo.svg";
+import HomepageUnknownPartnerLogo from "../assets/SVG/HomepageUnknownPartnerLogo.svg";
+import AyaLogo from "../assets/SVG/AyaLogo.svg";
+import DigitalMainStLogo from "../assets/SVG/DigitalMainStLogo.svg";
+import BantuEdLogo from "../assets/SVG/BantuEdLogo.svg";
+import ClientTestimonySlider from "../components/ClientTestimonySlider";
+import MobileSEOServicesBlogImage from "../assets/MobileSEOServicesBlogImage.jpeg";
+import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogImage.jpeg";
 
 const SLIDER_HOME = gql`
   query Sliderhome {
@@ -189,20 +204,20 @@ function Home() {
                 succeed.
               </p>
             </div>
-            <div className="flex items-center mt-[-7vw]">
+            <div className="flex items-center mt-[-8vw]">
               <div className="flex justify-center w-[18.8vw]">
                 <div className="bg-[#FF9900] rounded-full w-[5vw] h-[5vw]"></div>
               </div>
               <h1 className="text-[12vw] font-extrabold z-10">NESS</h1>
             </div>
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
             Start your Project
             <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
           </div>
         </div>
       </div>
-      <div className="flex justify-center h-[28vw] mt-[-6vw]">
+      <div className="flex justify-center h-[28vw] mt-[-7vw]">
         <div className="flex justify-end w-[80%]">
           <div
             // style={{
@@ -223,24 +238,48 @@ function Home() {
         Logo5={KigaliRunningClub}
       />
 
-      <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
-        <img
-          src={WhyChooseUsBackground}
-          className="w-[30vw] mt-[6vw] mb-[6vw]"></img>
-        <div className="flex flex-col text-left">
-          <h2 className="text-[1.1vw] mb-[0.7vw] mt-[6vw] text-[#FF9900]">
-            WHY CHOOSE US
-          </h2>
-          <h1 className="text-[4vw]/[4.5vw] text-left font-bold text-white w-[33vw]">
-            We Empower Businesses with Innovative Digital Solutions.
-          </h1>
-          <h3 className="text-[1.2vw] mt-[2vw] text-white w-[19vw]">
-            At Wouessi, we offer a comprehensive range of digital services to
-            help businesses thrive in the online world.
-          </h3>
-          <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
-            Details
-            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+      <div className="bg-[#2B00AC] mt-[2vw]">
+        <div className="flex justify-center bg-[#2B00AC]">
+          <div className="w-[80%]">
+            <h2 className="text-[1.1vw] text-left mb-[0.7vw] mt-[5vw] mt-[2vw] text-[#FF9900]">
+              About Us
+            </h2>
+            <div className="flex justify-center justify-between mt-[2vw]">
+              <div
+                style={{ backgroundImage: `url(${HomepageAboutUsImage})` }}
+                className="w-[40vw] h-[45vw] mb-[6vw] bg-center bg-cover">
+                <div className="flex justify-center items-center text-[3.5vw] text-white font-bold w-full h-full bg-gray-900/45">
+                  Our Vision
+                </div>
+              </div>
+              <div className="flex flex-col text-left text-white w-[43%] gap-y-[2vw]">
+                <p className="text-[1.3vw]">
+                  At Wouessi, we transcend geographical boundaries to envision a
+                  world where digital innovation knows no limits.{" "}
+                </p>
+                <p className="text-[1.3vw]">
+                  Our vision is to emerge as a global leader, spearheading
+                  groundbreaking initiatives that redefine collaboration and
+                  drive transformative change on a worldwide scale.
+                </p>
+                <div className="flex gap-x-[2vw] items-center">
+                  <img src={RedefineCollab} className="w-[3vw] h-[3vw]"></img>
+                  <p className="text-[1.5vw] font-bold">
+                    REDEFINE COLLABORATION
+                  </p>
+                </div>
+                <div className="flex gap-x-[2vw] items-center">
+                  <img
+                    src={DriveTransformation}
+                    className="w-[3vw] h-[3vw]"></img>
+                  <p className="text-[1.5vw] font-bold">DRIVE TRANSFORMATION</p>
+                </div>
+                <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
+                  Details
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -259,16 +298,14 @@ function Home() {
               <h1 className="text-[3vw] text-[#2E2E2E] font-extrabold">
                 Software <br /> Engineering
               </h1>
-              <div className="flex w-[36vw] items-center">
-                <div className="flex border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] items-center">
+              <div className="flex w-[36vw] items-end justify-between">
+                <div className="flex items-center border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw]">
                   Dedicated to building robust, scalable, and high-performance
                   digital solutions.
                 </div>
-                <div className="w-[12vw] flex justify-end items-center">
-                  <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
-                    Details
-                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-                  </div>
+                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
+                  Details
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                 </div>
               </div>
             </div>
@@ -285,18 +322,40 @@ function Home() {
               <h1 className="text-[3vw] text-[#2E2E2E] font-extrabold">
                 Digital Marketing <br /> and Branding
               </h1>
-              <div className="flex w-[36vw] items-center">
+              <div className="flex w-[36vw] items-end justify-between">
                 <div className="flex border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] items-center">
                   Propel your business forward in the online landscape.
                 </div>
-                <div className="w-[12vw] flex justify-end items-center">
-                  <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
-                    Details
-                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-                  </div>
+                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
+                  Details
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
+        <img
+          src={WhyChooseUsBackground}
+          className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw]"></img>
+        <div className="flex flex-col text-left w-[38vw]">
+          <h2 className="text-[1.1vw] mb-[0.7vw] mt-[6vw] text-[#FF9900]">
+            WHY CHOOSE US
+          </h2>
+          <h1 className="text-[4vw]/[4.5vw] text-left font-bold text-white">
+            We Empower Businesses with Innovative Digital Solutions.
+          </h1>
+          <h3 className="text-[1.2vw] mt-[2vw] text-white">
+            we are committed to helping business owners leverage digital
+            technology and solutions, increase their digital footprint, harness
+            the benefits of digital presence, and gain a cutting edge ahead of
+            their competitors.
+          </h3>
+          <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
+            Details
+            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
           </div>
         </div>
       </div>
@@ -309,14 +368,14 @@ function Home() {
           <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw]">
             SERVICES SPOTLIGHT
           </h1>
-          <div className="flex flex-wrap gap-y-[0.7vw] justify-center">
+          <div className="flex flex-wrap gap-y-[1vw] justify-center">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`rounded-full border-[0.02vw] border-[#2B00AC] p-[0.7vw] text-[#2B00AC] text-[3.1vw] cursor-pointer transition-all duration-300
+                className={`rounded-full border-[0.02vw] text-[3vw] border-[#2B00AC] p-[1vw] text-[#2B00AC] cursor-pointer transition-all ease-in-out duration-500
             ${
               hoveredIndex === index
-                ? "text-[3.5vw] border-[#FF9900] text-[#FF9900]"
+                ? "scale-100 border-[#FF9900] text-[#FF9900]"
                 : "scale-95"
             }
             ${
@@ -364,7 +423,7 @@ function Home() {
               style={{
                 backgroundImage: `url(${SliderData[projSlider].thumbnail})`,
               }}
-              className="w-[30vw] h-[35vw] bg-cover bg-[center] flex transition"></div>
+              className="w-[30vw] h-[35vw] bg-cover bg-[center] flex transition-all ease-in-out duration-300"></div>
             <PiArrowCircleRightLight
               onClick={() =>
                 updateProjSlider(projSlider === 4 ? 0 : projSlider + 1)
@@ -375,7 +434,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-white pt-[4vw] pb-[5vw] flex justify-center">
+      <div className="pt-[4vw] flex justify-center">
         <div className="w-[80%] h-full text-left">
           <p className="text-[1.1vw] text-[#666666] font-normal">
             OUR SERVICES
@@ -429,6 +488,79 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <OurPartners
+        Logo1={RiipenLogo}
+        Logo2={BipocFoundationLogo}
+        Logo3={HomepageUnknownPartnerLogo}
+        Logo4={AyaLogo}
+        Logo5={DigitalMainStLogo}
+      />
+
+      <ClientTestimonySlider />
+
+      <div className="flex justify-center mt-[4vw] text-black text-left">
+        <div className="w-[80%]">
+          <p className="text-[1.1vw] text-[#666666] font-normal">
+            RECENT BLOGS
+          </p>
+          <div className="flex gap-x-[10vw] mt-[1vw] items-center">
+            <h1 className="text-[4vw]/[5vw] text-left w-[55vw] font-bold">
+              Where Software Engineering Meets Digital Marketing
+            </h1>
+            <p className="w-[40vw] text-[1.1vw] text-left text-black float-right">
+              Discover insights for businesses seeking digital transformation.
+              Explore trends, strategies, and technologies related to software
+              optimization, data-driven marketing, and the online platform
+              ecosystem. Get practical tips to stay updated and gain a
+              competitive edge.
+            </p>
+          </div>
+          <div className="flex justify-between">
+            <div className="flex mt-[5vw]">
+              <div
+                style={{
+                  backgroundImage: `url(${MobileSEOServicesBlogImage})`,
+                }}
+                className="w-[20vw] h-[30vw] bg-cover bg-center"></div>
+              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white">
+                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw]">
+                  <p>SEO SERVICES</p>
+                  <p className="text-[#A7A9AA]">11 July 2024</p>
+                </div>
+                <p className="text-[1.7vw] font-bold">
+                  Key Reasons Why Your Business Needs Mobile SEO Services
+                </p>
+                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline">
+                  Read more
+                </p>
+              </div>
+            </div>
+
+            <div className="flex mt-[5vw]">
+              <div
+                style={{
+                  backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
+                }}
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw]"></div>
+              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white">
+                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw]">
+                  <p>SEO SERVICES</p>
+                  <p className="text-[#A7A9AA]">11 July 2024</p>
+                </div>
+                <p className="text-[1.7vw] font-bold">
+                  Technical SEO Services: Optimize and Rank your Website
+                </p>
+                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline">
+                  Read more
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <NewsletterRegister />
 
       {/* <div>
         {loading && <h3> Data is loading...</h3>}

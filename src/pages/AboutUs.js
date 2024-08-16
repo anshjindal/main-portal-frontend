@@ -1,52 +1,146 @@
 import React from "react";
 import "../styles/AboutUs.css";
-import { CgArrowLongUp } from "react-icons/cg";
+import NewsletterRegister from "../components/NewsletterRegister";
+import {
+  CgArrowLongUp,
+  HiOutlineArrowSmRight,
+  HiOutlineArrowSmLeft,
+} from "react-icons/cg";
 import AboutPageHeroImage from "../assets/about-page-hero-image.jpeg";
-import { PiArrowCircleRightLight } from "react-icons/pi";
-import { PiArrowCircleLeftLight } from "react-icons/pi";
-import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
-import HartnamtemahLogo from "../HartnamtemahLogo.svg";
-import ASDICLogo from "../ASDICLogo.svg";
-import CADRLogo from "../CADRLogo.svg";
-import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
+// import { PiArrowCircleRightLight } from "react-icons/pi";
+// import { PiArrowCircleLeftLight } from "react-icons/pi";
+// import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
+// import HartnamtemahLogo from "../HartnamtemahLogo.svg";
+// import ASDICLogo from "../ASDICLogo.svg";
+// import CADRLogo from "../CADRLogo.svg";
+// import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
+// import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
+
+import Aldelia from "../assets/SVG/AldeliaLogo.svg";
+import ARQCH from "../assets/SVG/ARQCHLogo.svg";
+import Precision from "../assets/SVG/PrecisionLogo.svg";
+import Charis from "../assets/SVG/CharisLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
+
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets/OurMissionSideImage.png";
 import Carousel from "../components/OurTeamCarousel";
+import RodrigueFouafouHeadshot from "../assets/RodrigueFouafouHeadshot.png";
+import RosalinRimjhimHeadshot from "../assets/RosalinRimjhimHeadshot.png";
+import StriveMazungaHeadshot from "../assets/StriveMazungaHeadshot.png";
+import ReginaldNugentHeadshot from "../assets/ReginaldNugentHeadshot.png";
+import FannyEneHeadshot from "../assets/FannyEneHeadshot.png";
+import NelsonNwankwoHeadshot from "../assets/NelsonNwankwoHeadshot.png";
+import MarieNsanaHeadshot from "../assets/MarieNsanaHeadshot.png";
+import PamelaDefoHeadshot from "../assets/PamelaDefoHeadshot.png";
+import BillTinglingHeadshot from "../assets/BillTinglingHeadshot.png";
+import JasmineMHeadshot from "../assets/JasmineMHeadshot.png";
+import OurPartners from "../components/OurPartners";
+import OurApproachCarousel from "../components/OurApproachCarousel";
+
+import ExpressJS from "../assets/SVG/ExpressJS.svg";
+import ReactJS from "../assets/SVG/ReactJS.svg";
+import Vue from "../assets/SVG/Vue.svg";
+import Angular from "../assets/SVG/Angular.svg";
+import Node from "../assets/SVG/Node.svg";
+import Mongo from "../assets/SVG/Mongo.svg";
+import PHP from "../assets/SVG/PHP.svg";
+import Python from "../assets/SVG/Python.svg";
+import Ruby from "../assets/SVG/Ruby.svg";
+import Java from "../assets/SVG/Java.svg";
+import Laravel from "../assets/SVG/Laravel.svg";
+import Django from "../assets/SVG/Django.svg";
+import RubyOnRails from "../assets/SVG/RubyOnRails.svg";
+import Redis from "../assets/SVG/Redis.svg";
+import AWS from "../assets/SVG/AWS.svg";
+import Firebase from "../assets/SVG/Firebase.svg";
+import Apache from "../assets/SVG/Apache.svg";
+import MySQL from "../assets/SVG/MySQL.svg";
+import DotNet from "../assets/SVG/DotNet.svg";
+import Jenkins from "../assets/SVG/Jenkins.svg";
+import Lambda from "../assets/SVG/Lambda.svg";
+import GoogleCloud from "../assets/SVG/GoogleCloud.svg";
+import Azure from "../assets/SVG/Azure.svg";
+import Kubemetes from "../assets/SVG/Kubemetes.svg";
+import NextJS from "../assets/SVG/NextJS.svg";
+import WorkWithUs from "../components/WorkWithUs";
 
 function AboutUs() {
   const cards = [
     {
-      image: { OurMissionSideImage },
+      image: RodrigueFouafouHeadshot,
       title: "Rodrigue Fouafou",
       subtitle: "CEO",
     },
     {
-      image: { OurMissionSideImage },
+      image: RosalinRimjhimHeadshot,
       title: "Rimjhim Rosalin",
       subtitle: "COO",
     },
     {
-      image: { OurMissionSideImage },
+      image: StriveMazungaHeadshot,
       title: "Strive Mazunga",
       subtitle: "CTO",
     },
     {
-      image: { OurMissionSideImage },
+      image: ReginaldNugentHeadshot,
       title: "Reginald Nugent",
       subtitle: "CFO",
     },
     {
-      image: { OurMissionSideImage },
+      image: FannyEneHeadshot,
       title: "Fanny Ene",
       subtitle: "VP of SALES",
     },
     {
-      image: { OurMissionSideImage },
+      image: NelsonNwankwoHeadshot,
       title: "Nelson Nwankwo",
       subtitle: "Director of Digital services",
     },
+    {
+      image: MarieNsanaHeadshot,
+      title: "Marie Noel Nsana",
+      subtitle: "Advisor",
+    },
+    {
+      image: PamelaDefoHeadshot,
+      title: "Pamela Moko Defo",
+      subtitle: "Advisor",
+    },
+    {
+      image: BillTinglingHeadshot,
+      title: "Bill Tingling",
+      subtitle: "Advisor",
+    },
+  ];
+
+  const logos = [
+    ExpressJS,
+    ReactJS,
+    Vue,
+    Angular,
+    Node,
+    Mongo,
+    PHP,
+    Python,
+    Ruby,
+    Java,
+    Laravel,
+    Django,
+    RubyOnRails,
+    Redis,
+    AWS,
+    Firebase,
+    Apache,
+    MySQL,
+    DotNet,
+    Jenkins,
+    Lambda,
+    GoogleCloud,
+    Azure,
+    Kubemetes,
+    NextJS,
   ];
 
   return (
@@ -116,16 +210,82 @@ function AboutUs() {
                   style={{
                     backgroundImage: `url(${OurMissionSideImage})`,
                   }}
-                  className="w-[15vw] h-[30vw] bg-cover bg-center"></div>
+                  className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
               </div>
             </div>
           </div>
-
-          <Carousel cards={cards} />
         </div>
       </div>
-      <div className="bg-[#2703A5] mt-[5vw] h-[37vw]">
-        <div className="flex justify-center">
+      <Carousel cards={cards} />
+
+      <div className="flex justify-center mb-[3vw] mt-[8vw]">
+        <div className="flex justify-center w-[80%]">
+          <div
+            style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
+            className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
+          <div>
+            <img
+              src={QuoteIcon}
+              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
+            <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
+              <div className="p-[3vw]">
+                <h1 className="text-[3vw]/[3vw] font-bold">
+                  Amazing Work Culture
+                </h1>
+                <p className="text-[1.1vw] mt-[1.5vw]">
+                  I’ve been provided with the opportunity to expand my skillset
+                  through the endless support, and choice in varying projects.
+                  I’ve had a great experience so far and am excited to see where
+                  this company goes in the future.
+                </p>
+                <h2 className="text-[1.8vw] font-bold text-[#0A0907] mt-[1vw]">
+                  Jasmine M.
+                </h2>
+                <p className="text-[0.9vw] text-[#666666]">
+                  PROJECT COORDINATOR, Calgary, AB Canada
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <OurPartners
+        Logo1={ARQCH}
+        Logo2={Precision}
+        Logo3={Aldelia}
+        Logo4={Charis}
+        Logo5={KigaliRunningClub}
+      />
+
+      <OurApproachCarousel />
+
+      <div className="flex justify-center my-[5vw]">
+        <div className="w-[80%]">
+          <div className="grid grid-cols-5 gap-4">
+            {logos.map((LogoComponent, index) => (
+              <img
+                key={index}
+                src={LogoComponent}
+                className={`flex justify-center items-center p-4 w-[12vw] h-[12vw] ${
+                  Math.floor(index / 5) !== 4 ? "border-b" : ""
+                }`}></img>
+            ))}
+          </div>
+          <WorkWithUs
+            Heading={
+              <h1>
+                We would love to hear more<br></br> about your project
+              </h1>
+            }
+            CallToAction="Let's Talk"
+          />
+          <NewsletterRegister />
+        </div>
+      </div>
+
+      {/* <div className="bg-[#2703A5] mt-[5vw] h-[37vw]"> */}
+      {/* <div className="flex justify-center">
           <div className="w-[80%] flex flex-col mt-[4vw] text-left justify-left">
             <p className="text-[1.1vw] mb-[-0.5vw] text-[#FF9900]">
               THE PEOPLE
@@ -138,8 +298,9 @@ function AboutUs() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center">
+        </div> */}
+
+      {/* <div className="flex justify-center">
           <div className="flex items-center mt-[3vw]">
             <PiArrowCircleLeftLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[2vw]" />
             <div className="w-[80vw] flex justify-between items-center text-left">
@@ -190,56 +351,8 @@ function AboutUs() {
             </div>
             <PiArrowCircleRightLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[2vw]" />
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center mt-[10vw]">
-        <div className="w-[80%] flex flex-col mt-[10vw] mb-[5vw] text-left text-[1.7vw] font-bold">
-          <h1>Explore some of our clients</h1>
-          <div className="flex gap-x-[7vw] place-content-evenly mt-[1vw]">
-            <img src={HartnamtemahLogo} className="h-[10vw] w-[10vw]"></img>
-            <img src={ASDICLogo} className="h-[10vw] w-[10vw]"></img>
-            <img src={CADRLogo} className="h-[10vw] w-[10vw]"></img>
-            <img src={AfroTechTalkLogo} className="h-[10vw] w-[10vw]"></img>
-            <img src={KigaliRunningClub} className="h-[10vw] w-[10vw]"></img>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center mb-[5vw]">
-        <div className="flex justify-center w-[80%] items-center">
-          <div
-            style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-            className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
-          <div className="flex flex-col">
-            <img src={QuoteIcon} className="w-[6vw] h-[6vw] ml-[2vw]"></img>
-            <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
-              <div className="p-[2vw]">
-                <h1 className="text-[3vw]/[3vw] font-bold">
-                  Amazing digital service
-                </h1>
-                <p className="text-[1.1vw] mt-[1.5vw]">
-                  Our specialized team of researchers, strategists, designers,
-                  developers, and project managers work with streamlined
-                  processes to break through organizational roadblocks. We
-                  translate research into solutions, crafting thoughtful and
-                  unified brands.
-                </p>
-                <div className="flex justify-between">
-                  <div className="flex flex-col">
-                    <h2 className="text-[1.8vw] font-bold text-[#0A0907] mt-[1vw]">
-                      Rodrique Fouafou
-                    </h2>
-                    <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                  </div>
-                  <div className="flex pt-[1vw]">
-                    <PiArrowCircleLeftLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer" />
-                    <PiArrowCircleRightLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </>
   );
 }

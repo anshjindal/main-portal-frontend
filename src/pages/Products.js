@@ -20,7 +20,7 @@ function Products() {
               <div className="flex">
                 <h1 className="text-[4vw]/[4vw] font-bold">Products</h1>
                 <div className="w-[12vw] flex justify-end items-center">
-                  <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                  <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
                     Details
                     <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                   </div>
@@ -49,7 +49,7 @@ function Products() {
                 advanced technologies and tailored solutions.
               </div>
               <div className="w-[12vw] flex justify-end items-center">
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
                   Details
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                 </div>
@@ -68,7 +68,7 @@ function Products() {
                 and human resources management.
               </div>
               <div className="w-[12vw] flex justify-end items-center">
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
+                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[6vw] h-[6vw] text-[1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
                   Details
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                 </div>

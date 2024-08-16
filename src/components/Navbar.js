@@ -5,9 +5,9 @@ import { CgArrowLongUp } from "react-icons/cg";
 
 function Navbar() {
   return (
-    <div className="text-[#2B00AC] h-[8vw] flex justify-center">
-      <div className="flex items-center w-[80%] border-b-[0.001vw] border-[#B8B8B8]">
-        <div className="flex items-center gap-x-[10vw]">
+    <div className="flex justify-center pl-[1vw] pr-[1vw]">
+      <div className="flex items-center justify-center text-[#2B00AC] h-[8vw] border-b-[0.001vw] border-[#B8B8B8]">
+        <div className="flex items-center gap-x-[10vw] w-[95%]">
           <Link to="frontend-react-wouessi-website-v2/" className="w-[20%]">
             <img src={logo} height="auto" className="cursor-pointer"></img>
           </Link>

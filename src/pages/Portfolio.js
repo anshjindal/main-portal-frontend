@@ -62,17 +62,16 @@ function Portfolio() {
   return (
     <div className="text-black flex justify-center">
       <div className="w-[80%] mt-[4vw]">
-        <div className="flex gap-x-[10vw]">
-          <h1 className="text-[4vw]/[4vw] text-left w-[55vw] font-bold">
-            Explore our new recently completed projects.
+        <div className="flex gap-x-[10vw] items-center">
+          <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold">
+            Explore our new recently completed projects
           </h1>
-          <p className="w-[24vw] text-[1.1vw] text-left text-black float-right">
+          <p className="w-[40vw] text-[1.1vw] text-left text-black float-right">
             Our portfolio boasts an impressive array of successful
             collaborations with esteemed clients. Each partnership stands as a
             testament to our commitment to excellence and innovation.
           </p>
         </div>
-        <div className="w-1/6 mt-[2vw] border border-slate-600"></div>
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
           {items.slice(0, visible).map((item) => {
             return (
