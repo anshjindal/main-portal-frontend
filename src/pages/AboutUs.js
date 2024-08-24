@@ -6,7 +6,7 @@ import {
   HiOutlineArrowSmRight,
   HiOutlineArrowSmLeft,
 } from "react-icons/cg";
-import AboutPageHeroImage from "../assets/about-page-hero-image.jpeg";
+import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
 // import { PiArrowCircleRightLight } from "react-icons/pi";
 // import { PiArrowCircleLeftLight } from "react-icons/pi";
 // import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
@@ -165,12 +165,7 @@ function AboutUs() {
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
           </div>
-          <div
-            style={{ backgroundImage: `url(${AboutPageHeroImage})` }}
-            className="w-[full] h-[32vw] bg-cover mt-[3vw]"></div>
-          <div className="flex justify-end">
-            <div className="w-[15vw] h-[7vw] bg-[#FF9900] mt-[-4.3vw] mr-[-3vw]"></div>
-          </div>
+          <img src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
           <div className="mt-[4vw] flex justify-between">
             <div className="flex flex-col gap-y-[1.5vw] w-[45%]">
               <p className="text-[1.3vw] text-[#666666]">Our Mission</p>
