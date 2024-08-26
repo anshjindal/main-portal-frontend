@@ -6,47 +6,68 @@ import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import WorkWithUs from "../components/WorkWithUs";
 
+import AldeliaImage from "../assets/PortfolioAldeliaImage.png";
+import ATRImage from "../assets/PortfolioATRImage.png";
+import BuckheadImage from "../assets/PortfolioBuckheadImage.png";
+import CanalPlus from "../assets/PortfolioCanalPlus.png";
+import GIZImage from "../assets/PortfolioGIZImage.png";
+import HamiltonCrescentImage from "../assets/PortfolioHamiltonCrescentImage.png";
+import KeplerImage from "../assets/PortfolioKeplerImage.png";
+import MasterNodedImage from "../assets/PortfolioMasterNodedImage.png";
+import WatchReportImage from "../assets/PortfolioWatchReportImage.png";
+import YellowCardImage from "../assets/PortfolioYellowCardImage.png";
+
 function Portfolio() {
   const data = [
     {
-      image: AfricaBlockChainImage,
-      title: "AfricaBlockChain",
-      subtitle: "Featured - Blockchain, Website",
+      image: GIZImage,
+      title: "GIZ",
+      subtitle: "Featured - Family Consultancy",
     },
     {
-      image: AfroLifestyleImage,
-      title: "AfroLifestyle",
-      subtitle: "Featured - eCommerce",
+      image: CanalPlus,
+      title: "Canal Plus",
+      subtitle: "Featured - Community",
     },
     {
-      image: AfroLifestyleImage,
-      title: "AfroLifestyle",
-      subtitle: "Featured - eCommerce",
+      image: HamiltonCrescentImage,
+      title: "Hamilton Crescent",
+      subtitle: "Featured - cybersecurity",
     },
     {
-      image: AfricaBlockChainImage,
-      title: "AfricaBlockChain",
-      subtitle: "Featured - Blockchain, Website",
+      image: AldeliaImage,
+      title: "Aldelia",
+      subtitle: "Featured - Entrepreneurship",
     },
     {
-      image: AfricaBlockChainImage,
-      title: "AfricaBlockChain",
-      subtitle: "Featured - Blockchain, Website",
+      image: ATRImage,
+      title: "ATR Cyber",
+      subtitle: "Featured - Auto Parts Supplier",
     },
     {
-      image: AfroLifestyleImage,
-      title: "AfroLifestyle",
-      subtitle: "Featured - eCommerce",
+      image: WatchReportImage,
+      title: "Watch Rport",
+      subtitle: "Featured - Beverage",
     },
     {
-      image: AfroLifestyleImage,
-      title: "AfroLifestyle",
-      subtitle: "Featured - eCommerce",
+      image: YellowCardImage,
+      title: "Yellow Card",
+      subtitle: "Featured - GIS, Construction",
     },
     {
-      image: AfricaBlockChainImage,
-      title: "AfricaBlockChain",
-      subtitle: "Featured - Blockchain, Website",
+      image: MasterNodedImage,
+      title: "Masternoded",
+      subtitle: "Featured - Non-Profit",
+    },
+    {
+      image: BuckheadImage,
+      title: "Buckhead",
+      subtitle: "Featured - Buckhead",
+    },
+    {
+      image: KeplerImage,
+      title: "Kepler",
+      subtitle: "Featured - Non-profit",
     },
   ];
 
@@ -75,7 +96,7 @@ function Portfolio() {
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
           {items.slice(0, visible).map((item) => {
             return (
-              <div className="w-[39vw] pb-[2vw] bg-white rounded-2xl mt-[2vw]">
+              <div className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw]">
                 <div className="flex w-full h-[29vw]">
                   <img
                     src={item.image}
@@ -86,10 +107,6 @@ function Portfolio() {
                     <div className="flex flex-col text-left">
                       <h2 className="text-[2vw] font-bold">{item.title}</h2>
                       <p className="text-[1.1vw]">{item.subtitle}</p>
-                    </div>
-                    <div className="w-[11vw] h-[3.5vw] rounded-md bg-[#FF9900] text-[1.1vw] flex items-center justify-center cursor-pointer">
-                      See Project
-                      <BsArrowRightShort className="text-[2vw]" />
                     </div>
                   </div>
                 </div>

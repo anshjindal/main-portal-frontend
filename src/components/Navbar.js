@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import { CgArrowLongUp } from "react-icons/cg";
 
 function Navbar() {
+  const [languageDropdown, setLanguageDropdown] = useState(false);
+  const [language, setLanguage] = useState("EN");
+
   return (
     <div className="flex justify-center pl-[1vw] pr-[1vw]">
       <div className="flex items-center justify-center text-[#2B00AC] h-[8vw] border-b-[0.001vw] border-[#B8B8B8]">
@@ -11,7 +14,7 @@ function Navbar() {
           <Link to="frontend-react-wouessi-website-v2/" className="w-[20%]">
             <img src={logo} className="cursor-pointer"></img>
           </Link>
-          <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center">
+          <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer">
             <Link to="frontend-react-wouessi-website-v2/">
               <li className="py-2 hover:text-[#FF9900] hover:overline">Home</li>
             </Link>
@@ -40,6 +43,37 @@ function Navbar() {
                 Contact Us
               </li>
             </Link>
+            <div
+              onMouseEnter={() => setLanguageDropdown(true)}
+              onMouseLeave={() => setLanguageDropdown(false)}>
+              <div className="py-2 hover:text-[#FF9900] gap-x-[0.2vw] flex">
+                <p
+                  className={`${
+                    languageDropdown
+                      ? "rotate-[90deg] transition-all duration-300 font-bold"
+                      : "font-bold"
+                  }`}>
+                  &gt;
+                </p>
+                <p>{language}</p>
+              </div>
+              {languageDropdown ? (
+                <div className="absolute ml-[1vw] mt-[-0.9vw]">
+                  <p
+                    className="hover:text-[#FF9900]"
+                    onClick={() => setLanguage("EN")}>
+                    &gt; EN
+                  </p>
+                  <p
+                    className="hover:text-[#FF9900]"
+                    onClick={() => setLanguage("FR")}>
+                    &gt; FR
+                  </p>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </ul>
         </div>
         <Link to="frontend-react-wouessi-website-v2/ContactUs">
