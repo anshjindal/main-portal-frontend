@@ -39,6 +39,8 @@ import BantuEdLogo from "../assets/SVG/BantuEdLogo.svg";
 import ClientTestimonySlider from "../components/ClientTestimonySlider";
 import MobileSEOServicesBlogImage from "../assets/MobileSEOServicesBlogImage.jpeg";
 import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogImage.jpeg";
+import OurVision from "../assets/SVG/HomepageOurVision.svg";
+import { HiOutlineSpeakerWave } from "react-icons/hi2";
 
 const SLIDER_HOME = gql`
   query Sliderhome {
@@ -229,6 +231,14 @@ function Home() {
             className="w-[66vw] h-full bg-cover bg-[center_-8vw] opacity-90"></div>
         </div>
       </div>
+      <div className="w-[95%] flex justify-end mb-[-5vw]">
+        <div className="bg-[#2703A5] transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer">
+          {/* <img
+          src={WouessiPronunciation}
+          className="w-[5vw] h-[5vw] hover:bg-[#FF9900]"></img> */}
+          <HiOutlineSpeakerWave className="w-[3vw] h-[3vw] rotate-[-30deg] text-white hover:text-[#FF9900]" />
+        </div>
+      </div>
 
       <OurPartners
         Logo1={ARQCH}
@@ -241,17 +251,13 @@ function Home() {
       <div className="bg-[#2B00AC] mt-[2vw]">
         <div className="flex justify-center bg-[#2B00AC]">
           <div className="w-[80%]">
-            <h2 className="text-[1.1vw] text-left mb-[0.7vw] mt-[5vw] mt-[2vw] text-[#FF9900]">
+            <h2 className="text-[1.1vw] text-left mt-[5vw] text-[#FF9900]">
               About Us
             </h2>
+            <h1 className="text-[3.5vw] text-left mb-[0.7vw] text-white font-bold">
+              Our Vision
+            </h1>
             <div className="flex justify-center justify-between mt-[2vw]">
-              <div
-                style={{ backgroundImage: `url(${HomepageAboutUsImage})` }}
-                className="w-[40vw] h-[45vw] mb-[6vw] bg-center bg-cover">
-                <div className="flex justify-center items-center text-[3.5vw] text-white font-bold w-full h-full bg-gray-900/45">
-                  Our Vision
-                </div>
-              </div>
               <div className="flex flex-col text-left text-white w-[43%] gap-y-[2vw]">
                 <p className="text-[1.3vw]">
                   At Wouessi, we transcend geographical boundaries to envision a
@@ -262,6 +268,8 @@ function Home() {
                   groundbreaking initiatives that redefine collaboration and
                   drive transformative change on a worldwide scale.
                 </p>
+              </div>
+              <div className="space-y-[3vw] text-white z-10">
                 <div className="flex gap-x-[2vw] items-center">
                   <img src={RedefineCollab} className="w-[3vw] h-[3vw]"></img>
                   <p className="text-[1.5vw] font-bold">
@@ -275,13 +283,14 @@ function Home() {
                   <p className="text-[1.5vw] font-bold">DRIVE TRANSFORMATION</p>
                 </div>
                 <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
-                  Details
+                  View More
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <img src={OurVision} className="w-full mt-[-5vw]"></img>
       </div>
 
       <div className="bg-[#F4F4F4] pb-[5vw] pt-[4vw] flex justify-center">
