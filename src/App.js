@@ -11,6 +11,8 @@ import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 import {
   ApolloClient,
@@ -87,6 +89,16 @@ function App() {
             <Route
               path="frontend-react-wouessi-website-v2/Careers"
               element={<Careers />}></Route>
+          </Routes>
+          <Routes>
+            <Route
+              path="frontend-react-wouessi-website-v2/Blog"
+              element={<Blog />}></Route>
+          </Routes>
+          <Routes>
+            <Route
+              path="frontend-react-wouessi-website-v2/Blogpost"
+              element={<BlogPost />}></Route>
           </Routes>
           <Footer />
         </BrowserRouter>
