@@ -89,11 +89,6 @@ function AboutUs() {
       subtitle: "CFO",
     },
     {
-      image: FannyEneHeadshot,
-      title: "Fanny Ene",
-      subtitle: "VP of SALES",
-    },
-    {
       image: NelsonNwankwoHeadshot,
       title: "Nelson Nwankwo",
       subtitle: "Director of Digital services",
