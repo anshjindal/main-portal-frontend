@@ -147,7 +147,7 @@ function ContactUs() {
                   Visit Us
                 </h2>
                 <p className="text-[1.1vw] w-[15vw]">
-                  140 Younge Street, Suite 200 ON M5C 1X6
+                  Unit 202, 117 Peter street, Toronto, M5V1X1
                 </p>
               </div>
             </div>

@@ -1,48 +1,65 @@
 import AfricaBlockChainSlider from "../assets/africa-block-chain-slider.png";
 import AIMSlider from "../assets/AIM-slider.png";
 import BipocSlider from "../assets/bipoc-foundation-slider.png";
-import ATRSlider from "../assets/ATR-cybersecurity-slider.png";
 import StartupYMMSlider from "../assets/startupYMM-slider.png";
 import UCBSlider from "../assets/UCB-slider.png";
 import PrecisionSportscarSlider from "../assets/precision-sportscar-slider.png";
 
+import GIZSlider from "../assets/HomepageRecentProjGIZ.png";
+import CanalPlusSlider from "../assets/PortfolioCanalPlus.png";
+import HamiltonCrescentSlider from "../assets/PortfolioHamiltonCrescentImage.png";
+import AldeliaSlider from "../assets/PortfolioAldeliaImage.png";
+import ATRSlider from "../assets/PortfolioATRImage.png";
+import WatchReportSlider from "../assets/PortfolioWatchReportImage.png";
+import YellowCardSlider from "../assets/PortfolioYellowCardImage.png";
+import MasterNodedSlider from "../assets/PortfolioMasterNodedImage.png";
+import BuckheadSlider from "../assets/PortfolioBuckheadImage.png";
+import KeplerSlider from "../assets/PortfolioKeplerImage.png";
+
 const SliderData = [
   {
-    thumbnail: AfricaBlockChainSlider,
-    titleFirstLine: "AFRICA",
-    titleSecondLine: "BLOCK",
-    titleThirdLine: "CHAIN",
+    thumbnail: GIZSlider,
+    titleSecondLine: "GIZ",
   },
   {
-    thumbnail: AIMSlider,
-    titleFirstLine: "AIM",
+    thumbnail: CanalPlusSlider,
+    titleFirstLine: "CANAL",
+    titleSecondLine: "PLUS",
   },
   {
-    thumbnail: BipocSlider,
-    titleFirstLine: "BIPOC",
-    titleSecondLine: "FOUND",
-    titleThirdLine: "ATION",
+    thumbnail: HamiltonCrescentSlider,
+    titleFirstLine: "HAMILTON",
+    titleThirdLine: "CRESCENT",
   },
   {
-    thumbnail: ATRSlider,
-    titleFirstLine: "ATR",
-    titleSecondLine: "CYBER",
-    titleThirdLine: "SECURITY",
+    thumbnail: AldeliaSlider,
+    titleFirstLine: "AL",
+    titleSecondLine: "DE",
+    titleThirdLine: "LIA",
   },
   {
-    thumbnail: StartupYMMSlider,
-    titleFirstLine: "STARTUP",
-    titleSecondLine: "YMM",
+    thumbnail: WatchReportSlider,
+    titleFirstLine: "WATCH",
+    titleSecondLine: "REPORT",
   },
   {
-    thumbnail: UCBSlider,
-    titleFirstLine: "UCB",
-  },
-  {
-    thumbnail: PrecisionSportscarSlider,
-    titleFirstLine: "PRECISION",
+    thumbnail: YellowCardSlider,
+    titleFirstLine: "YELLOW",
     titleSecondLine: "SPORTS",
-    titleThirdLine: "CARS",
+  },
+  {
+    thumbnail: MasterNodedSlider,
+    titleSecondLine: "MASTER",
+    titleThirdLine: "NODED",
+  },
+  {
+    thumbnail: BuckheadSlider,
+    titleSecondLine: "BUCK",
+    titleThirdLine: "HEAD",
+  },
+  {
+    thumbnail: KeplerSlider,
+    titleSecondLine: "KEPLER",
   },
 ];
 

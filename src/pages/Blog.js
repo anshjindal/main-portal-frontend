@@ -89,15 +89,13 @@ function Blog() {
             <div className="relative mb-[7vw]">
               <div
                 style={{ backgroundImage: `url(${BlogPageLaptop})` }}
-                className="w-[30vw] h-[40vw] bg-cover bg-[center]"
-              ></div>
+                className="w-[30vw] h-[40vw] bg-cover bg-[center]"></div>
               <div className="absolute top-20 left-80 w-[44vw] h-[28vw] bg-[#2B00AC]">
                 <div className="m-[2vw]">
                   <div className="flex items-center mb-[1vw]">
                     <button
                       className="border-white text-white border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-[#2B00AC] hover:bg-white transition duration-300"
-                      disabled
-                    >
+                      disabled>
                       SEO SERVICES
                     </button>
                     <p className="text-[1.1vw] text-white ml-[1vw]">
@@ -146,8 +144,7 @@ function Blog() {
                 </div>
                 <button
                   className="border-white text-white border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#D26B2F] transition duration-300"
-                  disabled
-                >
+                  disabled>
                   SEO SERVICES
                 </button>
               </div>
@@ -166,8 +163,7 @@ function Blog() {
                 </div>
                 <button
                   className="border-white text-white border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#D26B2F] transition duration-300"
-                  disabled
-                >
+                  disabled>
                   SEO SERVICES
                 </button>
               </div>
@@ -186,8 +182,7 @@ function Blog() {
                 </div>
                 <button
                   className="border-white text-white border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#D26B2F] transition duration-300"
-                  disabled
-                >
+                  disabled>
                   SEO SERVICES
                 </button>
               </div>
@@ -204,8 +199,7 @@ function Blog() {
                   <div className="flex items-center">
                     <button
                       className="border-[#666666] text-[#666666] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#666666] transition duration-300"
-                      disabled
-                    >
+                      disabled>
                       SEO SERVICES
                     </button>
                     <p className="text-[1.1vw] ml-[1vw]">5 MIN Read</p>
@@ -227,22 +221,19 @@ function Blog() {
               </div>
               <div
                 className="w-[60vw] h-[30vw] bg-cover bg-[center_right_-2vw]"
-                style={{ backgroundImage: `url(${bloglist1})` }}
-              ></div>
+                style={{ backgroundImage: `url(${bloglist1})` }}></div>
             </div>
 
             <div className="flex justify-between text-left items-center pt-[2vw] mt-[5vw] mb-[2vw]">
-            <div
+              <div
                 className="w-[60vw] h-[30vw] bg-cover bg-[center_right_-2vw]"
-                style={{ backgroundImage: `url(${bloglist2})` }}
-              ></div>
+                style={{ backgroundImage: `url(${bloglist2})` }}></div>
               <div className=" w-[44vw] h-[28vw] ml-[3vw]">
                 <div className="m-[2vw]">
                   <div className="flex items-center">
                     <button
                       className="border-[#666666] text-[#666666] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#666666] transition duration-300"
-                      disabled
-                    >
+                      disabled>
                       AI
                     </button>
                     <p className="text-[1.1vw] ml-[1vw]">5 MIN Read</p>
@@ -250,18 +241,18 @@ function Blog() {
                   <div className="text-left mt-[2vw]">
                     <div className="flex">
                       <h1 className="text-[2vw] font-bold">
-                      How to Use AI for to Create Content that Converts
+                        How to Use AI for to Create Content that Converts
                       </h1>
                     </div>
                     <div className="flex justify-between mt-[3vw]">
                       <p className="text-[1.1vw] w-[80%] mt-[-1vw]">
-                      This article delves into the realm of AI for content creations.
+                        This article delves into the realm of AI for content
+                        creations.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
             </div>
 
             <div className="flex justify-between text-left items-center pt-[2vw] mt-[5vw] mb-[2vw]">
@@ -270,8 +261,7 @@ function Blog() {
                   <div className="flex items-center">
                     <button
                       className="border-[#666666] text-[#666666] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#666666] transition duration-300"
-                      disabled
-                    >
+                      disabled>
                       AI
                     </button>
                     <p className="text-[1.1vw] ml-[1vw]">12 MIN Read</p>
@@ -279,12 +269,14 @@ function Blog() {
                   <div className="text-left mt-[2vw]">
                     <div className="flex">
                       <h1 className="text-[2vw] font-bold">
-                      The Growing Adoption of Integrated AI—Top Business Applications for 2024
+                        The Growing Adoption of Integrated AI—Top Business
+                        Applications for 2024
                       </h1>
                     </div>
                     <div className="flex justify-between mt-[3vw]">
                       <p className="text-[1.1vw] w-[80%] mt-[-1vw]">
-                        Since over half of businesses are using AI, where does that put your company in the marketplace?
+                        Since over half of businesses are using AI, where does
+                        that put your company in the marketplace?
                       </p>
                     </div>
                   </div>
@@ -292,8 +284,7 @@ function Blog() {
               </div>
               <div
                 className="w-[60vw] h-[30vw] bg-cover bg-[center_right_-2vw]"
-                style={{ backgroundImage: `url(${bloglist3})` }}
-              ></div>
+                style={{ backgroundImage: `url(${bloglist3})` }}></div>
             </div>
           </div>
         </div>
@@ -310,8 +301,7 @@ function Blog() {
               </h1>
               <a
                 href="/frontend-react-wouessi-website-v2/Careers"
-                className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.8vw] w-[10vw] h-[10vw] text-[1vw] text-black cursor-pointer hover:bg-[#2B00AC] hover:text-white hover:border-[#2B00AC] transition ease-in-out duration-300"
-              >
+                className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.8vw] w-[10vw] h-[10vw] text-[1vw] text-black cursor-pointer hover:bg-[#2B00AC] hover:text-white hover:border-[#2B00AC] transition ease-in-out duration-300">
                 Learn More
                 <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
               </a>

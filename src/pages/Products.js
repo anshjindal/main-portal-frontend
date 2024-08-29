@@ -75,10 +75,10 @@ function Products() {
         {/* Last Div */}
         <div className="flex justify-center">
           <div className="w-[80%]  mb-[5vw] mt-[6vw]">
-            <p className="text-left text-[1.1vw]">WORK WITH US</p>
+            <p className="text-left text-[1.1vw]">OUR PRODUCT</p>
             <div className="flex justify-between">
-              <h1 className="text-left w-[60%] text-[4vw]/[4vw] font-bold">
-                Reach out for more insights on our products!
+              <h1 className="text-left w-[65%] text-[4vw]/[4vw] font-bold">
+                Explore our innovative products!
               </h1>
               <a
                 href="/frontend-react-wouessi-website-v2/Careers"

@@ -194,31 +194,38 @@ function Home() {
   return (
     <div className="overflow-hidden">
       <div className="flex justify-center mt-[5vw]">
-        <div className="flex justify-left w-[80%] text-left">
+        <div className="flex justify-left w-[80%] text-left max-[350px]:justify-center">
           <div className="flex flex-col">
-            <h2 className="text-[2vw] font-light">TRANSFORM YOUR</h2>
+            <h2 className="text-[2vw] font-light max-[350px]:text-[5vw]">
+              TRANSFORM YOUR
+            </h2>
             <div className="flex items-center gap-x-[1vw] mt-[-4vw]">
-              <h1 className="text-[12vw] font-extrabold">BUSI</h1>
-              <p className="w-[16vw] text-left text-[1.3vw]">
+              <h1 className="text-[12vw] font-extrabold max-[350px]:text-[18vw]">
+                BUSI
+              </h1>
+              <div className="bg-[#FF9900] rounded-full w-[7vw] h-[7vw] ml-[25vw] mt-[5vw] min-[351px]:hidden"></div>
+              <p className="w-[16vw] text-left text-[1.3vw] max-[350px]:hidden">
                 We provide innovative digital solutions to help your business
                 succeed.
               </p>
             </div>
-            <div className="flex items-center mt-[-8vw]">
-              <div className="flex justify-center w-[18.8vw]">
-                <div className="bg-[#FF9900] rounded-full w-[5vw] h-[5vw]"></div>
+            <div className="flex items-center mt-[-8vw] max-[350px]:mt-[-12vw]">
+              <div className="flex justify-center w-[24vw] max-[350px]:w-[27.5vw]">
+                <div className="bg-[#FF9900] rounded-full w-[5vw] h-[5vw] max-[350px]:hidden"></div>
               </div>
-              <h1 className="text-[12vw] font-extrabold z-10">NESS</h1>
+              <h1 className="text-[12vw] font-extrabold z-10 max-[350px]:text-[18vw]">
+                NESS
+              </h1>
             </div>
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
-            Start your Project
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[350px]:hidden">
+            See Our Work
             <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
           </div>
         </div>
       </div>
-      <div className="flex justify-center h-[28vw] mt-[-7vw]">
-        <div className="flex justify-end w-[80%]">
+      <div className="flex justify-center mt-[-5vw] max-[350px]:mt-[-9vw]">
+        <div className="flex justify-end w-[80%] h-[28vw] max-[350px]:w-full max-[350px]:flex-none max-[350px]:justify-start max-[350px]:h-[42vw]">
           <div
             // style={{
             //   backgroundImage: `url(${parse(
@@ -226,11 +233,40 @@ function Home() {
             //   )})`,
             // }}
             style={{ backgroundImage: `url(${HomepageHeroImage})` }}
-            className="w-[66vw] h-full bg-cover bg-[center_-8vw] opacity-90"></div>
+            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[350px]:w-full max-[350px]:bg-[center_-10vw]">
+            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[351px]:hidden">
+              {WouessiPronunciation ? (
+                <div className="p-[1vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
+                  <h1 className="text-[4.5vw] font-bold">
+                    Wou-essi /wu: ε si:/
+                  </h1>
+                  <div className="border-[0.1vw] border-[#2703A5]"></div>
+                  <p className="text-[2.5vw] mt-[1.1vw]">
+                    The way we pronounce our name is "woo-eh-ssi".
+                  </p>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="w-[95%] h-full flex justify-end items-center min-[351px]:hidden">
+              <div
+                onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
+                className={`${
+                  WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5]"
+                } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}>
+                {WouessiPronunciation ? (
+                  <ImCross className="w-[7vw] h-[7vw] text-white" />
+                ) : (
+                  <HiOutlineSpeakerWave className="w-[8vw] h-[8vw] rotate-[-30deg] text-white" />
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="w-[95%] h-fit flex justify-end text-[#2703A5]">
+      <div className="w-[95%] h-fit flex justify-end text-[#2703A5] max-[350px]:hidden">
         {WouessiPronunciation ? (
           <div className="mt-[-9vw] p-[1vw] pt-[2vw] pb-[2vw] bg-white rounded-lg absolute">
             <h1 className="text-[2vw] font-bold">Wou-essi /wu: ε si:/</h1>
@@ -244,7 +280,7 @@ function Home() {
         )}
       </div>
 
-      <div className="w-[95%] flex justify-end mb-[-7vw] mt-[1.5vw]">
+      <div className="w-[95%] flex justify-end mb-[-7vw] mt-[1.5vw] max-[350px]:hidden">
         <div
           onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
           className={`${
@@ -255,6 +291,19 @@ function Home() {
           ) : (
             <HiOutlineSpeakerWave className="w-[3vw] h-[3vw] rotate-[-30deg] text-white" />
           )}
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-[3vw] min-[351px]:hidden">
+        <div className="flex justify-center justify-between items-center w-[80%] text-left">
+          <div className="w-[50%] text-[3vw]/[5vw]">
+            Empowering your business with AI-driven solutions and expert
+            consulting.
+          </div>
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[351px]:hidden">
+            See Our Work
+            <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
+          </div>
         </div>
       </div>
 
@@ -429,33 +478,37 @@ function Home() {
               onClick={() =>
                 updateProjSlider(projSlider === 0 ? 4 : projSlider - 1)
               }
-              className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[4vw]"
+              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[4vw]"
             />
-            <div className="flex flex-col jusitfy-center text-white text-[7.5vw] font-extrabold w-[49.5%] mr-[-8vw] z-10">
-              <h1>{SliderData[projSlider].titleFirstLine}</h1>
-              {SliderData[projSlider].titleSecondLine ? (
-                <h1 className="w-[100%] flex justify-center mt-[-3vw] mb-[-3vw]">
-                  {SliderData[projSlider].titleSecondLine}
-                </h1>
-              ) : (
-                ""
-              )}
-              {SliderData[projSlider].titleThirdLine ? (
-                <h1>{SliderData[projSlider].titleThirdLine}</h1>
-              ) : (
-                ""
-              )}
+            <div className="flex items-center w-[70%]">
+              <div className="flex flex-col jusitfy-center text-white text-[7.5vw] font-extrabold w-[40%] mr-[-13vw] z-10">
+                <h1>{SliderData[projSlider].titleFirstLine}</h1>
+                {SliderData[projSlider].titleSecondLine ? (
+                  <h1 className="w-[100%] flex justify-center mt-[-3vw] mb-[-3vw]">
+                    {SliderData[projSlider].titleSecondLine}
+                  </h1>
+                ) : (
+                  <div className="mt-[-3vw]"></div>
+                )}
+                {SliderData[projSlider].titleThirdLine ? (
+                  <h1>{SliderData[projSlider].titleThirdLine}</h1>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div
+                style={{
+                  backgroundImage: `url(${SliderData[projSlider].thumbnail})`,
+                }}
+                className="w-[45vw] h-[40vw] bg-cover bg-[left] flex transition-all ease-in-out duration-300">
+                <div className="w-full h-full bg-slate-900/50"></div>
+              </div>
             </div>
-            <div
-              style={{
-                backgroundImage: `url(${SliderData[projSlider].thumbnail})`,
-              }}
-              className="w-[30vw] h-[35vw] bg-cover bg-[center] flex transition-all ease-in-out duration-300"></div>
             <PiArrowCircleRightLight
               onClick={() =>
                 updateProjSlider(projSlider === 4 ? 0 : projSlider + 1)
               }
-              className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[4vw]"
+              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[4vw]"
             />
           </div>
         </div>

@@ -72,11 +72,11 @@ function Portfolio() {
   ];
 
   const [items, setItems] = useState(data);
-  const [visible, setVisible] = useState(2);
+  const [visible, setVisible] = useState(4);
 
   const showMoreItems = () => {
     setVisible((prevValue) =>
-      prevValue === 8 ? (prevValue = 2) : prevValue + 2
+      prevValue === 8 ? (prevValue = 4) : prevValue + 2
     );
   };
 

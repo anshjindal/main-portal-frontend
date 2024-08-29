@@ -45,9 +45,10 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const getData = () => {};
   return (
     <ApolloProvider client={client}>
-      <div className="text-center bg-[#F4F4F4]">
+      <div className="text-center bg-[#F4F4F4] ">
         <BrowserRouter>
           <Navbar />
           <Routes>

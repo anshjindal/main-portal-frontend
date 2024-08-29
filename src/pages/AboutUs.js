@@ -267,6 +267,7 @@ function AboutUs() {
                 }`}></img>
             ))}
           </div>
+          <NewsletterRegister />
           <WorkWithUs
             Heading={
               <h1>
@@ -275,7 +276,6 @@ function AboutUs() {
             }
             CallToAction="Let's Talk"
           />
-          <NewsletterRegister />
         </div>
       </div>
 
