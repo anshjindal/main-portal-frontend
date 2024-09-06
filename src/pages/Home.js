@@ -194,38 +194,38 @@ function Home() {
   return (
     <div className="overflow-hidden">
       <div className="flex justify-center mt-[5vw]">
-        <div className="flex justify-left w-[80%] text-left max-[350px]:justify-center">
+        <div className="flex justify-left w-[80%] text-left max-[450px]:justify-center">
           <div className="flex flex-col">
-            <h2 className="text-[2vw] font-light max-[350px]:text-[5vw]">
+            <h2 className="text-[2vw] font-light max-[450px]:text-[5vw]">
               TRANSFORM YOUR
             </h2>
             <div className="flex items-center gap-x-[1vw] mt-[-4vw]">
-              <h1 className="text-[12vw] font-extrabold max-[350px]:text-[18vw]">
+              <h1 className="text-[12vw] font-extrabold max-[450px]:text-[18vw]">
                 BUSI
               </h1>
-              <div className="bg-[#FF9900] rounded-full w-[7vw] h-[7vw] ml-[25vw] mt-[5vw] min-[350px]:hidden"></div>
-              <p className="w-[16vw] text-left text-[1.3vw] max-[350px]:hidden">
+              <div className="bg-[#FF9900] rounded-full w-[7vw] h-[7vw] ml-[25vw] mt-[5vw] min-[450px]:hidden"></div>
+              <p className="w-[16vw] text-left text-[1.3vw] max-[450px]:hidden">
                 We provide innovative digital solutions to help your business
                 succeed.
               </p>
             </div>
-            <div className="flex items-center mt-[-8vw] max-[350px]:mt-[-12vw]">
-              <div className="flex justify-center w-[24vw] max-[350px]:w-[27.5vw]">
-                <div className="bg-[#FF9900] rounded-full w-[5vw] h-[5vw] max-[350px]:hidden"></div>
+            <div className="flex items-center mt-[-8vw] max-[450px]:mt-[-12vw]">
+              <div className="flex justify-center w-[24vw] max-[450px]:w-[27.5vw]">
+                <div className="bg-[#FF9900] rounded-full w-[5vw] h-[5vw] max-[450px]:hidden"></div>
               </div>
-              <h1 className="text-[12vw] font-extrabold z-10 max-[350px]:text-[18vw]">
+              <h1 className="text-[12vw] font-extrabold z-10 max-[450px]:text-[18vw]">
                 NESS
               </h1>
             </div>
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[350px]:hidden">
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
             See Our Work
             <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-[-5vw] max-[350px]:mt-[-9vw]">
-        <div className="flex justify-end w-[80%] h-[28vw] max-[350px]:w-full max-[350px]:flex-none max-[350px]:justify-start max-[350px]:h-[42vw]">
+      <div className="flex justify-center mt-[-5vw] max-[450px]:mt-[-9vw]">
+        <div className="flex justify-end w-[80%] h-[28vw] max-[450px]:w-full max-[450px]:flex-none max-[450px]:justify-start max-[450px]:h-[42vw]">
           <div
             // style={{
             //   backgroundImage: `url(${parse(
@@ -233,8 +233,8 @@ function Home() {
             //   )})`,
             // }}
             style={{ backgroundImage: `url(${HomepageHeroImage})` }}
-            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[350px]:w-full max-[350px]:bg-[center_-10vw]">
-            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[350px]:hidden">
+            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]">
+            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450px]:hidden">
               {WouessiPronunciation ? (
                 <div className="p-[2vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
                   <h1 className="text-[4.5vw] font-bold">
@@ -249,7 +249,7 @@ function Home() {
                 ""
               )}
             </div>
-            <div className="w-[95%] h-full flex justify-end items-center min-[350px]:hidden">
+            <div className="w-[95%] h-full flex justify-end items-center min-[450px]:hidden">
               <div
                 onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
                 className={`${
@@ -266,7 +266,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-[95%] h-fit flex justify-end text-[#2703A5] max-[350px]:hidden">
+      <div className="w-[95%] h-fit flex justify-end text-[#2703A5] max-[450px]:hidden">
         {WouessiPronunciation ? (
           <div className="mt-[-9vw] p-[2vw] pt-[2vw] pb-[2vw] bg-white rounded-lg absolute">
             <h1 className="text-[2vw] font-bold">Wou-essi /wu: ε si:/</h1>
@@ -280,7 +280,7 @@ function Home() {
         )}
       </div>
 
-      <div className="w-[95%] flex justify-end mb-[-7vw] mt-[1.5vw] max-[350px]:hidden">
+      <div className="w-[95%] flex justify-end mb-[-7vw] mt-[1.5vw] max-[450px]:hidden">
         <div
           onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
           className={`${
@@ -294,13 +294,13 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-[3vw] min-[350px]:hidden">
+      <div className="flex justify-center mt-[3vw] min-[450px]:hidden">
         <div className="flex justify-center justify-between items-center w-[80%] text-left">
           <div className="w-[50%] text-[3vw]/[5vw]">
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[350px]:hidden">
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450px]:hidden">
             See Our Work
             <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
           </div>
@@ -316,46 +316,46 @@ function Home() {
       />
 
       <div className="bg-[#2B00AC] mt-[2vw]">
-        <div className="flex justify-center bg-[#2B00AC] max-[350px]:mb-[10vw]">
-          <div className="w-[80%] max-[350px]:mt-[3vw]">
-            <h2 className="text-[1.1vw] text-left mt-[5vw] text-[#FF9900]  max-[350px]:text-[2.5vw]">
+        <div className="flex justify-center bg-[#2B00AC] max-[450px]:mb-[10vw]">
+          <div className="w-[80%] max-[450px]:mt-[3vw]">
+            <h2 className="text-[1.1vw] text-left mt-[5vw] text-[#FF9900] max-[450px]:text-[2.5vw]">
               About Us
             </h2>
-            <h1 className="text-[3.5vw] text-left mb-[0.7vw] text-white font-bold max-[350px]:text-[7vw]">
+            <h1 className="text-[3.5vw] text-left mb-[0.7vw] text-white font-bold max-[450px]:text-[7vw]">
               Our Vision
             </h1>
-            <div className="flex justify-center justify-between mt-[2vw] max-[350px]:flex-col max-[350px]:gap-y-[5vw]  max-[350px]:mt-[6vw]">
-              <div className="flex flex-col text-left text-white w-full gap-y-[2vw] max-[350px]:gap-y-[5vw]">
-                <p className="text-[1.3vw] max-[350px]:text-[3vw]">
+            <div className="flex justify-center justify-between mt-[2vw] max-[450px]:flex-col max-[450px]:gap-y-[5vw] max-[450px]:mt-[6vw]">
+              <div className="flex flex-col text-left text-white w-[43%] max-[450px]:w-full gap-y-[2vw] max-[450px]:gap-y-[5vw]">
+                <p className="text-[1.3vw] max-[450px]:text-[3vw]">
                   At Wouessi, we transcend geographical boundaries to envision a
                   world where digital innovation knows no limits.{" "}
                 </p>
-                <p className="text-[1.3vw] max-[350px]:text-[3vw]">
+                <p className="text-[1.3vw] max-[450px]:text-[3vw]">
                   Our vision is to emerge as a global leader, spearheading
                   groundbreaking initiatives that redefine collaboration and
                   drive transformative change on a worldwide scale.
                 </p>
               </div>
-              <div className="space-y-[3vw] text-white z-10 max-[350px]:space-y-[5vw] max-[350px]:mt-[6vw]">
+              <div className="space-y-[3vw] text-white text-left z-10 max-[450px]:space-y-[5vw] max-[450px]:mt-[6vw]">
                 <div className="flex gap-x-[2vw] items-center">
                   <img
                     src={RedefineCollab}
-                    className="w-[3vw] h-[3vw] max-[350px]:w-[8vw] max-[350px]:h-[8vw]"></img>
-                  <p className="text-[1.5vw] font-bold max-[350px]:text-[4vw]">
+                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"></img>
+                  <p className="text-[1.5vw] font-bold max-[450px]:text-[4vw]">
                     REDEFINE COLLABORATION
                   </p>
                 </div>
-                <div className="flex gap-x-[2vw] items-center max-[350px]:pb-[6vw]">
+                <div className="flex gap-x-[2vw] items-center max-[450px]:pb-[6vw]">
                   <img
                     src={DriveTransformation}
-                    className="w-[3vw] h-[3vw] max-[350px]:w-[8vw] max-[350px]:h-[8vw]"></img>
-                  <p className="text-[1.5vw] font-bold max-[350px]:text-[4vw]">
+                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"></img>
+                  <p className="text-[1.5vw] font-bold max-[450px]:text-[4vw]">
                     DRIVE TRANSFORMATION
                   </p>
                 </div>
-                <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[350px]:w-[25vw] max-[350px]:h-[25vw] max-[350px]:text-[3vw]">
+                <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
                   View More
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[350px]:text-[3vw]" />
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
                 </div>
               </div>
             </div>
@@ -364,38 +364,38 @@ function Home() {
         <img src={OurVision} className="w-full mt-[-5vw]"></img>
       </div>
 
-      <div className="bg-[#F4F4F4] pb-[5vw] pt-[4vw] flex justify-center max-[350px]:pt-[8vw] max-[350px]:pb-[10vw]">
+      <div className="bg-[#F4F4F4] pb-[5vw] pt-[4vw] flex justify-center max-[450px]:pt-[8vw] max-[450px]:pb-[10vw]">
         <div className="w-[80%] h-full text-left">
-          <p className="text-[1.1vw] text-[#666666] font-normal max-[350px]:text-[2.5vw]">
+          <p className="text-[1.1vw] text-[#666666] font-normal max-[450px]:text-[2.5vw]">
             OUR SERVICES
           </p>
-          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mb-[1vw] max-[350px]:text-[6vw] max-[350px]:mt-[2vw]">
+          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mb-[1vw] max-[450px]:text-[6vw] max-[450px]:mt-[2vw]">
             What we do
           </h1>
 
-          <div className="flex justify-between pt-[2vw] pb-[2vw] max-[350px]:flex-col">
+          <div className="flex justify-between pt-[2vw] pb-[2vw] max-[450px]:flex-col">
             <div className="flex flex-col">
-              <h1 className="text-[3vw] text-[#2E2E2E] font-bold max-[350px]:text-[4.5vw]/[5.5vw]">
+              <h1 className="text-[3vw] text-[#2E2E2E] font-bold max-[450px]:text-[4.5vw]/[5.5vw]">
                 Software <br /> Engineering
               </h1>
-              <div className="flex w-[36vw] items-end justify-between max-[350px]:w-full max-[350px]:items-center">
-                <div className="flex items-center border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] max-[350px]:text-[2.7vw] max-[350px]:h-fit max-[350px]:w-[40vw]">
+              <div className="flex w-[36vw] items-end justify-between max-[450px]:w-full max-[450px]:items-center">
+                <div className="flex items-center border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] max-[450px]:text-[2.7vw] max-[450px]:h-fit max-[450px]:w-[40vw]">
                   Dedicated to building robust, scalable, and high-performance
                   digital solutions.
                 </div>
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[350px]:w-[25vw] max-[350px]:h-[25vw] max-[350px]:text-[3vw] mt-[-6vw]">
+                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
                   Details
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[350px]:text-[3vw]" />
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
                 </div>
               </div>
             </div>
             <div
               style={{ backgroundImage: `url(${SoftwareEngineeringImage})` }}
-              className="w-[35vw] h-[25vw] mt-[5vw] bg-cover bg-[center] flex max-[350px]:w-full max-[350px]:h-[55vw]"></div>
+              className="w-[35vw] h-[25vw] mt-[5vw] bg-cover bg-[center] flex max-[450px]:w-full max-[450px]:h-[55vw]"></div>
           </div>
 
-          <div className="flex justify-between border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] max-[350px]:w-full max-[350px]:flex-col max-[350px]:w-full max-[350px]:gap-y-[4vw] max-[350px]:border-none">
-            <div className="flex flex-col mt-[6vw] min-[350px]:hidden">
+          <div className="flex justify-between border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] max-[450px]:w-full max-[450px]:flex-col max-[450px]:w-full max-[450px]:gap-y-[4vw] max-[450px]:border-none">
+            <div className="flex flex-col mt-[6vw] min-[450px]:hidden">
               <h1 className="text-[3vw] text-[#2E2E2E] font-bold text-[4.5vw]/[5.5vw]">
                 Digital Marketing <br /> and Branding
               </h1>
@@ -411,8 +411,8 @@ function Home() {
             </div>
             <div
               style={{ backgroundImage: `url(${DigitalMarketingImage})` }}
-              className="w-[35vw] h-[25vw] bg-cover bg-[center_right_-0.5vw] flex max-[350px]:w-full max-[350px]:h-[55vw]"></div>
-            <div className="flex flex-col max-[350px]:hidden">
+              className="w-[35vw] h-[25vw] bg-cover bg-[center_right_-0.5vw] flex max-[450px]:w-full max-[450px]:h-[55vw]"></div>
+            <div className="flex flex-col max-[450px]:hidden">
               <h1 className="text-[3vw] text-[#2E2E2E] font-bold">
                 Digital Marketing <br /> and Branding
               </h1>
@@ -430,19 +430,19 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-white pt-[4vw] pb-[5vw] flex justify-center max-[350px]:pt-[7vw] max-[350px]:pb-[7vw]">
+      <div className="bg-white pt-[4vw] pb-[5vw] flex justify-center max-[450px]:pt-[7vw] max-[450px]:pb-[7vw]">
         <div className="w-[80%] h-full text-left">
-          <p className="text-[1.1vw] text-[#666666] font-normal max-[350px]:text-[2.5vw]">
+          <p className="text-[1.1vw] text-[#666666] font-normal max-[450px]:text-[2.5vw]">
             OUR SERVICES
           </p>
-          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw] max-[350px]:text-[6vw] max-[350px]:mt-[2vw]">
+          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw] max-[450px]:text-[6vw] max-[450px]:mt-[2vw]">
             Services Spotlight
           </h1>
-          <div className="flex flex-wrap gap-y-[1vw] justify-center max-[350px]:gap-y-[2vw] max-[350px]:gap-x-[1vw]">
+          <div className="flex flex-wrap gap-y-[1vw] justify-center max-[450px]:gap-y-[2vw] max-[450px]:gap-x-[1vw]">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`rounded-full border-[0.02vw] text-[3vw] border-[#2B00AC] p-[1vw] text-[#2B00AC] cursor-pointer transition-all ease-in-out duration-500 max-[350px]:text-[4vw] max-[350px]:p-[2vw]
+                className={`rounded-full border-[0.02vw] text-[3vw] border-[#2B00AC] p-[1vw] text-[#2B00AC] cursor-pointer transition-all ease-in-out duration-500 max-[450px]:text-[4vw] max-[450px]:p-[2vw]
             ${
               hoveredIndex === index
                 ? "scale-100 border-[#FF9900] text-[#FF9900]"
@@ -465,61 +465,61 @@ function Home() {
       <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
         <img
           src={WhyChooseUsBackground}
-          className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw] max-[350px]:hidden"></img>
-        <div className="flex flex-col text-left w-[38vw] max-[350px]:w-[80%] max-[350px]:mt-[4vw]">
-          <h2 className="text-[1.1vw] mb-[0.7vw] mt-[6vw] text-[#FF9900] max-[350px]:text-[2.5vw]">
+          className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw] max-[450px]:hidden"></img>
+        <div className="flex flex-col text-left w-[38vw] max-[450px]:w-[80%] max-[450px]:mt-[4vw]">
+          <h2 className="text-[1.1vw] mb-[0.7vw] mt-[6vw] text-[#FF9900] max-[450px]:text-[2.5vw]">
             WHY CHOOSE US
           </h2>
-          <h1 className="text-[4vw]/[4.5vw] text-left font-bold text-white max-[350px]:text-[6vw]/[7.5vw] max-[350px]:mt-[3vw]">
+          <h1 className="text-[4vw]/[4.5vw] text-left font-bold text-white max-[450px]:text-[6vw]/[7.5vw] max-[450px]:mt-[3vw]">
             Empower Businesses With Innovative Digital Solutions.
           </h1>
           <div
             style={{ backgroundImage: `url(${WhyChooseUsBackground})` }}
-            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[350px]:hidden"></div>
-          <h3 className="text-[1.2vw] mt-[2vw] text-white max-[350px]:text-[3vw] ">
+            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[450px]:hidden"></div>
+          <h3 className="text-[1.2vw] mt-[2vw] text-white max-[450px]:text-[3vw] ">
             we are committed to helping business owners leverage digital
             technology and solutions, increase their digital footprint, harness
             the benefits of digital presence, and gain a cutting edge ahead of
             their competitors.
           </h3>
-          <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[350px]:w-[25vw] max-[350px]:h-[25vw] max-[350px]:text-[3vw] max-[350px]:mb-[10vw] max-[350px]:mt-[8vw]">
+          <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[8vw]">
             Details
-            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[350px]:text-[3vw]" />
+            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
           </div>
         </div>
       </div>
 
       <div className="pt-[4vw] pb-[5vw] flex justify-center">
         <div className="w-[80%] h-full text-left">
-          <p className="text-[1.1vw] text-[#666666] font-normal max-[350px]:text-[2.5vw] max-[350px]:mt-[4vw]">
+          <p className="text-[1.1vw] text-[#666666] font-normal max-[450px]:text-[2.5vw] max-[450px]:mt-[4vw]">
             ABOUT US
           </p>
-          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw] max-[350px]:text-[7vw]/[7vw] max-[350px]:mt-[3vw]">
+          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw] max-[450px]:text-[7vw]/[7vw] max-[450px]:mt-[3vw]">
             Four Years of Achievements
           </h1>
 
-          <div className="grid grid-cols-2 gap-[1vw] max-[350px]:mt-[6vw]">
+          <div className="grid grid-cols-2 gap-[1vw] max-[450px]:mt-[6vw]">
             {/* First row with 2 boxes */}
             <div className="bg-[#2B00AC] text-white h-[32vw] text-left items-center pt-[5vw] pl-[3vw] rounded-md">
-              <h1 className="text-[5vw] font-extrabold max-[350px]:text-[8vw] max-[350px]:mt-[-5vw]">
+              <h1 className="text-[5vw] font-extrabold max-[450px]:text-[8vw] max-[450px]:mt-[-5vw]">
                 500
               </h1>
-              <h2 className="text-[3vw]/[4vw] max-[350px]:text-[4vw]/[4.5vw] max-[350px]:font-light">
+              <h2 className="text-[3vw]/[4vw] max-[450px]:text-[4vw]/[4.5vw] max-[450px]:font-light">
                 Engineers & <br></br>Experts
               </h2>
-              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold gap-x-[0.5vw] hover:gap-x-[0.8vw] cursor-pointer max-[350px]:text-[2vw] max-[350px]:mt-[5vw]">
+              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold gap-x-[0.5vw] hover:gap-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw] max-[450px]:mt-[5vw]">
                 <p>See More</p>
                 <FaArrowRight />
               </div>
             </div>
             <div className="border-[0.1vw] border-[#2B00AC] h-[32vw] text-left pt-[5vw] pl-[3vw] rounded-md hover:bg-[#2B00AC] hover:pt-[6vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[5vw] font-extrabold max-[350px]:text-[8vw] max-[350px]:mt-[-5vw]">
+              <h1 className="text-[5vw] font-extrabold max-[450px]:text-[8vw] max-[450px]:mt-[-5vw]">
                 125
               </h1>
-              <h2 className="text-[3vw]/[4vw] max-[350px]:text-[4vw]/[4.5vw] max-[350px]:font-light">
+              <h2 className="text-[3vw]/[4vw] max-[450px]:text-[4vw]/[4.5vw] max-[450px]:font-light">
                 Projects
               </h2>
-              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[350px]:mt-[3vw] max-[350px]:text-[2vw] max-[350px]:mt-[5vw] max-[350px]:mt-[9vw]">
+              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:mt-[3vw] max-[450px]:text-[2vw] max-[450px]:mt-[5vw] max-[450px]:mt-[9vw]">
                 <p>See More</p>
                 <FaArrowRight />
               </div>
@@ -528,31 +528,31 @@ function Home() {
           {/* Second row with 3 boxes */}
           <div className="col-span-3 grid grid-cols-3 gap-[1vw] mt-[1vw]">
             <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[350px]:text-[7vw] max-[350px]:mt-[-3vw] max-[350px]:mb-[-2vw]">
+              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
                 75
               </h1>
-              <h2 className="text-[1.3vw] max-[350px]:text-[3vw]">Clients</h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[350px]:text-[2vw]">
+              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">Clients</h2>
+              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
             <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[350px]:text-[7vw] max-[350px]:mt-[-3vw] max-[350px]:mb-[-2vw]">
+              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
                 15
               </h1>
-              <h2 className="text-[1.3vw] max-[350px]:text-[3vw]">Countries</h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[350px]:text-[2vw]">
+              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">Countries</h2>
+              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
             <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[350px]:text-[7vw] max-[350px]:mt-[-3vw] max-[350px]:mb-[-2vw]">
+              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
                 2
               </h1>
-              <h2 className="text-[1.3vw] max-[350px]:text-[3vw]">
+              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">
                 New Products
               </h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[350px]:text-[2vw]">
+              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
                 <p>See More</p> <FaArrowRight />
               </div>
             </div>
@@ -568,9 +568,9 @@ function Home() {
         Logo5={DigitalMainStLogo}
       />
 
-      <div className="bg-[#2B00AC] flex justify-center pt-[6vw] pb-[6vw] max-[350px]:pb-[10vw]">
+      <div className="bg-[#2B00AC] flex justify-center pt-[6vw] pb-[6vw] max-[450px]:pb-[10vw]">
         <div className="w-[80%] text-left flex flex-col">
-          <h1 className="text-[#FF9900] text-[1.1vw] font-normal max-[350px]:text-[2.5vw] max-[350px]:mt-[3vw]">
+          <h1 className="text-[#FF9900] text-[1.1vw] font-normal max-[450px]:text-[2.5vw] max-[450px]:mt-[3vw]">
             RECENT PROJECTS
           </h1>
           <div className="flex items-center justify-center">
@@ -578,10 +578,10 @@ function Home() {
               onClick={() =>
                 updateProjSlider(projSlider === 0 ? 4 : projSlider - 1)
               }
-              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[4vw] max-[350px]:text-[10vw]"
+              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[4vw] max-[450px]:text-[10vw]"
             />
-            <div className="flex items-center w-[70%] max-[350px]:flex-col">
-              <div className="flex flex-col jusitfy-center text-white text-[7.5vw] font-extrabold w-[40%] mr-[-13vw] z-10 max-[350px]:mt-[5vw] max-[350px]:mb-[-4vw] max-[350px]:mr-0">
+            <div className="flex items-center w-[70%] max-[450px]:flex-col">
+              <div className="flex flex-col jusitfy-center text-white text-[7.5vw] font-extrabold w-[40%] mr-[-13vw] z-10 max-[450px]:mt-[5vw] max-[450px]:mb-[-4vw] max-[450px]:mr-0">
                 <h1>{SliderData[projSlider].titleFirstLine}</h1>
                 {SliderData[projSlider].titleSecondLine ? (
                   <h1 className="w-[100%] flex justify-center mt-[-3vw] mb-[-3vw]">
@@ -600,7 +600,7 @@ function Home() {
                 style={{
                   backgroundImage: `url(${SliderData[projSlider].thumbnail})`,
                 }}
-                className="w-[45vw] h-[40vw] bg-cover bg-[left] flex transition-all ease-in-out duration-300 max-[350px]:w-[55vw] max-[350px]:h-[50vw]">
+                className="w-[45vw] h-[40vw] bg-cover bg-[left] flex transition-all ease-in-out duration-300 max-[450px]:w-[55vw] max-[450px]:h-[50vw]">
                 <div className="w-full h-full bg-slate-900/50"></div>
               </div>
             </div>
@@ -608,7 +608,7 @@ function Home() {
               onClick={() =>
                 updateProjSlider(projSlider === 4 ? 0 : projSlider + 1)
               }
-              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[4vw] max-[350px]:text-[10vw]"
+              className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[4vw] max-[450px]:text-[10vw]"
             />
           </div>
         </div>
@@ -619,15 +619,15 @@ function Home() {
       <NewsletterRegister />
 
       <div className="flex justify-center mt-[4vw] text-black text-left">
-        <div className="w-[80%] max-[350px]:mt-[5vw] max-[350px]:mb-[5vw] max-[350px]:w-full">
-          <p className="text-[1.1vw] text-[#666666] font-normal max-[350px]:text-[2.5vw] max-[350px]:pl-[10vw]">
+        <div className="w-[80%] max-[450px]:mt-[5vw] max-[450px]:mb-[5vw] max-[450px]:w-full">
+          <p className="text-[1.1vw] text-[#666666] font-normal max-[450px]:text-[2.5vw] max-[450px]:pl-[10vw]">
             RECENT BLOGS
           </p>
-          <div className="flex gap-x-[10vw] mt-[1vw] items-center max-[350px]:flex-col max-[350px]:space-y-[8vw]">
-            <h1 className="text-[4vw]/[5vw] text-left w-[55vw] font-bold max-[350px]:text-[7vw]/[7.5vw] max-[350px]:w-[80%] max-[350px]:mt-[3vw]">
+          <div className="flex gap-x-[10vw] mt-[1vw] items-center max-[450px]:flex-col max-[450px]:space-y-[8vw]">
+            <h1 className="text-[4vw]/[5vw] text-left w-[55vw] font-bold max-[450px]:text-[7vw]/[7.5vw] max-[450px]:w-[80%] max-[450px]:mt-[3vw]">
               Where Software Engineering Meets Digital Marketing
             </h1>
-            <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[350px]:text-[3vw] max-[350px]:w-[80%]">
+            <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[450px]:text-[3vw] max-[450px]:w-[80%]">
               Discover insights for businesses seeking digital transformation.
               Explore trends, strategies, and technologies related to software
               optimization, data-driven marketing, and the online platform
@@ -635,42 +635,42 @@ function Home() {
               competitive edge.
             </p>
           </div>
-          <div className="flex justify-between max-[350px]:flex-col max-[350px]:gap-y-[5vw] max-[350px]:mt-[7vw]">
+          <div className="flex justify-between max-[450px]:flex-col max-[450px]:gap-y-[5vw] max-[450px]:mt-[7vw]">
             <div className="flex mt-[5vw]">
               <div
                 style={{
                   backgroundImage: `url(${MobileSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-center max-[350px]:w-[40vw] max-[350px]:h-[60vw]"></div>
-              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[350px]:w-[60vw] max-[350px]:p-[6vw] max-[350px]:ml-[-15vw] max-[350px]:mt-[10vw] max-[350px]:space-y-[7vw]">
-                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[350px]:text-[3vw]">
+                className="w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]"></div>
+              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[-15vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
+                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
                   <p className="text-[#A7A9AA]">11 July 2024</p>
                 </div>
-                <p className="text-[1.7vw] font-bold max-[350px]:text-[5vw]">
+                <p className="text-[1.7vw] font-bold max-[450px]:text-[5vw]">
                   Key Reasons Why Your Business Needs Mobile SEO Services
                 </p>
-                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[350px]:text-[3vw]">
+                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[450px]:text-[3vw]">
                   Read more
                 </p>
               </div>
             </div>
 
-            <div className="flex mt-[5vw] max-[350px]:justify-between">
+            <div className="flex mt-[5vw] max-[450px]:justify-between">
               <div
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[350px]:hidden"></div>
-              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white z-10 max-[350px]:w-[60vw] max-[350px]:p-[6vw] max-[350px]:ml-[10vw] max-[350px]:mt-[10vw] max-[350px]:space-y-[7vw]">
-                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[350px]:text-[3vw]">
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[450px]:hidden"></div>
+              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white z-10 max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[10vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
+                <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
                   <p className="text-[#A7A9AA]">11 July 2024</p>
                 </div>
-                <p className="text-[1.7vw] font-bold max-[350px]:text-[5vw]">
+                <p className="text-[1.7vw] font-bold max-[450px]:text-[5vw]">
                   Technical SEO Services: Optimize and Rank your Website
                 </p>
-                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[350px]:text-[3vw]">
+                <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[450px]:text-[3vw]">
                   Read more
                 </p>
               </div>
@@ -678,7 +678,7 @@ function Home() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[350px]:hidden max-[350px]:w-[40vw] max-[350px]:h-[60vw] max-[350px]:ml-[-30vw]"></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"></div>
             </div>
           </div>
         </div>
@@ -691,7 +691,7 @@ function Home() {
       </div> */}
 
       <motion.div
-        className="text-end font-bold text-[9vw] text-[#2B00AC] mb-4 mt-4 flex max-[350px]:text-[15vw]"
+        className="text-end font-bold text-[9vw] text-[#2B00AC] mb-4 mt-4 flex max-[450px]:text-[15vw]"
         initial={{ x: "100%" }}
         animate={{ x: ["-98%", "3%", "-98%"] }}
         transition={{
