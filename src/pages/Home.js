@@ -24,7 +24,7 @@ import { gql, useQuery } from "@apollo/client";
 import parse from "html-react-parser";
 
 import OurPartners from "../components/OurPartners";
-import WorkWithUs from "../components/WorkWithUs";
+import CallToActionSection from "../components/CallToActionSection";
 import NewsletterRegister from "../components/NewsletterRegister";
 
 import HomepageAboutUsImage from "../assets/HomepageAboutUsImage.jpeg";

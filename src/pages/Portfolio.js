@@ -4,7 +4,8 @@ import { BsArrowRightShort } from "react-icons/bs";
 import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
 import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
-import WorkWithUs from "../components/WorkWithUs";
+import CallToActionSection from '../components/CallToActionSection';
+
 
 import AldeliaImage from "../assets/PortfolioAldeliaImage.png";
 import ATRImage from "../assets/PortfolioATRImage.png";
@@ -131,9 +132,10 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <WorkWithUs
-          Heading="We would love to hear more about your project"
+        <CallToActionSection
+          Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
+          Title="Work With Us"
         />
       </div>
     </div>

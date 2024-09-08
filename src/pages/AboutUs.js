@@ -22,7 +22,7 @@ import ARQCH from "../assets/SVG/ARQCHLogo.svg";
 import Precision from "../assets/SVG/PrecisionLogo.svg";
 import Charis from "../assets/SVG/CharisLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
-
+import CallToActionSection from '../components/CallToActionSection';
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets/OurMissionSideImage.png";
@@ -39,6 +39,7 @@ import BillTinglingHeadshot from "../assets/BillTinglingHeadshot.png";
 import JasmineMHeadshot from "../assets/JasmineMHeadshot.png";
 import OurPartners from "../components/OurPartners";
 import OurApproachCarousel from "../components/OurApproachCarousel";
+
 
 import ExpressJS from "../assets/SVG/ExpressJS.svg";
 import ReactJS from "../assets/SVG/ReactJS.svg";
@@ -65,7 +66,7 @@ import GoogleCloud from "../assets/SVG/GoogleCloud.svg";
 import Azure from "../assets/SVG/Azure.svg";
 import Kubemetes from "../assets/SVG/Kubemetes.svg";
 import NextJS from "../assets/SVG/NextJS.svg";
-import WorkWithUs from "../components/WorkWithUs";
+
 
 function AboutUs() {
   const cards = [
@@ -142,13 +143,13 @@ function AboutUs() {
   return (
     <>
       <div className="flex justify-center h-fit">
-        <div className="w-[90%] md:w-[80%] md:text-left md:mt-[3vw]">
-          <h1 className="md:text-[4vw]/[5vw] text-[6vw]/[8vw] font-extrabold md:w-[75%] w-[100%]">
+        <div className="w-[80%] text-left mt-[3vw]">
+          <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
             Powerful Digital Solutions for{" "}
             <span className="text-[#2703A5]">Business Growth</span>
           </h1>
-          <div className="md:flex mt-[3vw] items-center justify-between">
-            <p className="w-[100%] text-[2vw] mb-[2vw] md:mb-[0vw] md:w-[65%] md:text-[1.3vw]">
+          <div className="max-[450px]:block flex mt-[3vw] items-center justify-between">
+            <p className="max-[450px]:w-[100%] max-[450px]:text-[3vw]/[5vw] max-[450px]:mb-[4vw] mb-[0vw] w-[65%] text-[1.3vw]">
               Wouessi Inc. stands as a beacon of innovation and excellence in
               the heart of Toronto, Canada, leading in revolutionizing the
               digital landscape worldwide. With a steadfast commitment to
@@ -183,7 +184,8 @@ function AboutUs() {
             <div className="flex flex-col flex w-[33vw]">
               <div
                 style={{ backgroundImage: `url(${OurMissionTopImage})` }}
-                className="w-full h-[15vw] bg-center bg-cover"></div>
+                className="w-full h-[15vw] bg-center bg-cover"
+              ></div>
               <div className="flex">
                 <div className="w-[23vw] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
                   <p className="mt-[2vw] mb-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
@@ -201,7 +203,8 @@ function AboutUs() {
                   style={{
                     backgroundImage: `url(${OurMissionSideImage})`,
                   }}
-                  className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
+                  className="w-[15vw] h-[27vw] bg-cover bg-center"
+                ></div>
               </div>
             </div>
           </div>
@@ -213,11 +216,13 @@ function AboutUs() {
         <div className="flex justify-center w-[80%]">
           <div
             style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
-            className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
+            className="w-[30vw] h-[37vw] bg-cover bg-center"
+          ></div>
           <div>
             <img
               src={QuoteIcon}
-              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
+              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
+            ></img>
             <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
               <div className="p-[3vw]">
                 <h1 className="text-[3vw]/[3vw] font-bold">
@@ -260,17 +265,16 @@ function AboutUs() {
                 src={LogoComponent}
                 className={`flex justify-center items-center p-4 w-[12vw] h-[12vw] ${
                   Math.floor(index / 5) !== 4 ? "border-b" : ""
-                }`}></img>
+                }`}
+              ></img>
             ))}
           </div>
           <NewsletterRegister />
-          <WorkWithUs
-            Heading={
-              <h1>
-                We would love to hear more<br></br> about your project
-              </h1>
-            }
+
+          <CallToActionSection
+            Content="We would love to hear more about your project"
             CallToAction="Let's Talk"
+            Title="Work With Us"
           />
         </div>
       </div>

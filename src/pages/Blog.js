@@ -10,6 +10,8 @@ import bloglist1 from "../assets/bloglist1.png";
 import bloglist2 from "../assets/bloglist2.png";
 import bloglist3 from "../assets/bloglist3.png";
 import Carousel from "../components/ArticlesCarousel";
+import CallToActionSection from '../components/CallToActionSection';
+
 
 function Blog() {
   const data = [
@@ -292,22 +294,11 @@ function Blog() {
         <Carousel cards={data} />
 
         {/* Last Div */}
-        <div className="flex justify-center">
-          <div className="w-[80%]  mb-[5vw] mt-[6vw]">
-            <p className="text-left text-[1.1vw]">WORK WITH US</p>
-            <div className="flex justify-between">
-              <h1 className="text-left w-[60%] text-[4vw]/[4vw] font-bold">
-                We would love to hear more about your project
-              </h1>
-              <a
-                href="/frontend-react-wouessi-website-v2/Careers"
-                className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.8vw] w-[10vw] h-[10vw] text-[1vw] text-black cursor-pointer hover:bg-[#2B00AC] hover:text-white hover:border-[#2B00AC] transition ease-in-out duration-300">
-                Learn More
-                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <CallToActionSection
+          Content="We would love to hear more about your project"
+          CallToAction="Let's Talk"
+          Title="Work With Us"
+        />
       </div>
     </div>
   );

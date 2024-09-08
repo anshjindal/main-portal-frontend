@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Services.css";
-import WorkWithUs from "../components/WorkWithUs";
+import CallToActionSection from '../components/CallToActionSection';
 import HeroBanner from "../components/HeroBanner";
 import ServicesHeroBanner from "../assets/ServicesHeroImage.jpeg";
 import Accordion from "../components/Accordion";
@@ -37,14 +37,11 @@ function Services() {
             InnerTextData={Data.Outsourcing}
           />
         </div>
-        <WorkWithUs
-          Title="WORK WITH US"
-          Heading={
-            <h1>
-              Looking for services and guidance?<br></br> Let's get in touch!
-            </h1>
-          }
-          CallToAction="Let's Talk"
+
+        <CallToActionSection
+          Title="OUR PRODUCT"
+          Content="Looking for services and guidance? Let's get in touch!"
+          CallToAction="Let's Talk!"
         />
       </div>
     </div>

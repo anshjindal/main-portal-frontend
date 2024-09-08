@@ -3,7 +3,8 @@ import "../styles/Pricing.css";
 import { CgArrowLongUp } from "react-icons/cg";
 import BantuEd from "../assets/BantuEdProductImage.png";
 import Egolu from "../assets/egolu-app.png";
-import WorkWithUs from "../components/WorkWithUs";
+import CallToActionSection from '../components/CallToActionSection';
+
 
 function Products() {
   return (
@@ -73,9 +74,9 @@ function Products() {
           </div>
         </div>
 
-        <WorkWithUs
+        <CallToActionSection
           Title="OUR PRODUCT"
-          Heading="Explore our innovative product!"
+          Content="Explore our innovative product!"
           CallToAction="Let's Talk!"
         />
       </div>
