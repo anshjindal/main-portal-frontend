@@ -38,6 +38,7 @@ function Services() {
           />
         </div>
         <WorkWithUs
+          Title="WORK WITH US"
           Heading={
             <h1>
               Looking for services and guidance?<br></br> Let's get in touch!

@@ -26,19 +26,19 @@ function ContactUs() {
   };
 
   return (
-    <div className="pt-[5vw] pb-[5vw]">
+    <div className="pt-[5vw] pb-[5vw] max-[450px]:pt-[20vw]">
       <div className="flex items-center justify-center mb-[3vw]">
-        <div className="flex justify-center items-center w-[44vw] h-[32vw] bg-white mr-[-6vw] z-10">
-          <div className="w-[80%] text-left text-[black]">
+        <div className="flex justify-center items-center w-[44vw] h-[32vw] bg-white mr-[-6vw] z-10 max-[450px]:bg-[#F4F4F4] max-[450px]:mr-0 max-[450px]:items-start">
+          <div className="w-[80%] text-left text-[black] max-[450px]:w-full">
             <h1
               className="text-[3.7vw]/[4vw] font-bold w-[
-              70%]">
+              70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw]">
               Get in touch with us
             </h1>
             <div className="flex justify-between mt-[3vw]">
-              <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw]"></div>
+              <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw] max-[450px]:hidden"></div>
               <div className="flex flex-col w-[80%] mt-[-1vw]">
-                <p className="text-[1.1vw]">
+                <p className="text-[1.1vw] max-[450px]:text-[2.5vw] max-[450px]:mt-[3vw]">
                   We appreciate you taking the time to visit our website and
                   learn more about Wouessi Inc. To learn more about us, we
                   welcome you to contact our team at any time. <br></br>Email

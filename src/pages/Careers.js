@@ -43,6 +43,7 @@ function Careers() {
           <Accordion title="Design" InnerTextData={Data.Design} />
         </div>
         <WorkWithUs
+          Title="WORK WITH US"
           Heading="Apply now and become part of our dynamic team!"
           CallToAction="Join Our Team"
         />

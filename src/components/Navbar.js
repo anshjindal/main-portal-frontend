@@ -102,12 +102,12 @@ function Navbar({ onClick, onMenuItemClick }) {
           {hamburgerMenu ? (
             <GiHamburgerMenu
               onClick={handleMenuToggle}
-              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450px]:hidden"
+              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450.1px]:hidden"
             />
           ) : (
             <RxCross1
               onClick={handleMenuToggle}
-              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450px]:hidden"
+              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450.1px]:hidden"
             />
           )}
         </div>

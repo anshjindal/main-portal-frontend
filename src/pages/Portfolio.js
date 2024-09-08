@@ -132,11 +132,7 @@ function Portfolio() {
           </div>
         </div>
         <WorkWithUs
-          Heading={
-            <h1>
-              We would love to hear more<br></br> about your project
-            </h1>
-          }
+          Heading="We would love to hear more about your project"
           CallToAction="Let's Talk"
         />
       </div>

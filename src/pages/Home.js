@@ -203,7 +203,7 @@ function Home() {
               <h1 className="text-[12vw] font-extrabold max-[450px]:text-[18vw]">
                 BUSI
               </h1>
-              <div className="bg-[#FF9900] rounded-full w-[7vw] h-[7vw] ml-[25vw] mt-[5vw] min-[450px]:hidden"></div>
+              <div className="bg-[#FF9900] rounded-full w-[7vw] h-[7vw] ml-[25vw] mt-[5vw] min-[450.1px]:hidden"></div>
               <p className="w-[16vw] text-left text-[1.3vw] max-[450px]:hidden">
                 We provide innovative digital solutions to help your business
                 succeed.
@@ -234,7 +234,7 @@ function Home() {
             // }}
             style={{ backgroundImage: `url(${HomepageHeroImage})` }}
             className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]">
-            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450px]:hidden">
+            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden">
               {WouessiPronunciation ? (
                 <div className="p-[2vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
                   <h1 className="text-[4.5vw] font-bold">
@@ -249,7 +249,7 @@ function Home() {
                 ""
               )}
             </div>
-            <div className="w-[95%] h-full flex justify-end items-center min-[450px]:hidden">
+            <div className="w-[95%] h-full flex justify-end items-center min-[450.1px]:hidden">
               <div
                 onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
                 className={`${
@@ -294,13 +294,13 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-[3vw] min-[450px]:hidden">
+      <div className="flex justify-center mt-[3vw] min-[450.1px]:hidden">
         <div className="flex justify-center justify-between items-center w-[80%] text-left">
           <div className="w-[50%] text-[3vw]/[5vw]">
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450px]:hidden">
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
             See Our Work
             <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
           </div>
@@ -395,7 +395,7 @@ function Home() {
           </div>
 
           <div className="flex justify-between border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] max-[450px]:w-full max-[450px]:flex-col max-[450px]:w-full max-[450px]:gap-y-[4vw] max-[450px]:border-none">
-            <div className="flex flex-col mt-[6vw] min-[450px]:hidden">
+            <div className="flex flex-col mt-[6vw] min-[450.1px]:hidden">
               <h1 className="text-[3vw] text-[#2E2E2E] font-bold text-[4.5vw]/[5.5vw]">
                 Digital Marketing <br /> and Branding
               </h1>
@@ -475,7 +475,7 @@ function Home() {
           </h1>
           <div
             style={{ backgroundImage: `url(${WhyChooseUsBackground})` }}
-            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[450px]:hidden"></div>
+            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[450.1px]:hidden"></div>
           <h3 className="text-[1.2vw] mt-[2vw] text-white max-[450px]:text-[3vw] ">
             we are committed to helping business owners leverage digital
             technology and solutions, increase their digital footprint, harness
@@ -678,7 +678,7 @@ function Home() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450.1px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"></div>
             </div>
           </div>
         </div>

@@ -24,6 +24,8 @@ import {
   // HttpLink,
   // from,
 } from "@apollo/client";
+import { BsArrowRight } from "react-icons/bs";
+import { FaGreaterThan } from "react-icons/fa";
 
 // import { onError } from "@apollo/client/link/error";
 
@@ -64,6 +66,9 @@ const itemVariants = {
 
 function App() {
   const [navMenu, updateNavMenu] = useState(false);
+  const [languageDropdown, setLanguageDropdown] = useState(false);
+  const [language, setLanguage] = useState("EN");
+
   const getData = (data) => {
     updateNavMenu(data);
   };
@@ -85,7 +90,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className="text-center bg-[#F4F4F4]">
+      <div className="text-center bg-[#F4F4F4] h-[120%] min-[350px]:pb-[20vw] min-[380px]:pb-[35vw]">
         <BrowserRouter>
           <Navbar onClick={getData} onMenuItemClick={navMenu} />
           <div
@@ -105,7 +110,7 @@ function App() {
                     <Link to="frontend-react-wouessi-website-v2/ContactUs">
                       <div
                         onClick={() => updateNavMenu(false)}
-                        className="w-[47vw] h-[14vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[7vw] font-semibold flex items-center justify-center">
+                        className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center">
                         Let's Talk
                         <CgArrowLongUp className="ml-[1vw] text-[6vw] rotate-[90deg]" />
                       </div>
@@ -137,7 +142,7 @@ function App() {
                       <motion.h1
                         key={index}
                         onClick={getData}
-                        className="text-[7vw] underline font-semibold"
+                        className="text-[6vw] underline font-semibold"
                         variants={itemVariants}>
                         <Link to={`${text.route}`}>
                           <div>{text.name}</div>
@@ -145,6 +150,43 @@ function App() {
                       </motion.h1>
                     </div>
                   ))}
+                  <motion.div
+                    variants={itemVariants}
+                    onMouseEnter={() => setLanguageDropdown(true)}
+                    onMouseLeave={() => setLanguageDropdown(false)}
+                    className="flex justify-center">
+                    <div className="w-fit">
+                      <div className="py-[2vw] hover:text-[#FF9900] gap-x-[2vw] flex items-center">
+                        <p
+                          className={`${
+                            languageDropdown
+                              ? "rotate-[90deg] transition-all duration-300 font-bold"
+                              : "font-bold"
+                          }`}>
+                          <FaGreaterThan className="text-[#2B00AC] text-[4vw]" />
+                        </p>
+                        <p className="text-[#2B00AC] text-[5vw] font-bold cursor-pointer">
+                          {language}
+                        </p>
+                      </div>
+                      {languageDropdown ? (
+                        <div className="absolute ml-[4vw]">
+                          <p
+                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            onClick={() => setLanguage("EN")}>
+                            - EN
+                          </p>
+                          <p
+                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            onClick={() => setLanguage("FR")}>
+                            - FR
+                          </p>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </motion.div>
                 </motion.div>
               </motion.div>
             )}
