@@ -7,6 +7,7 @@ import {
   HiOutlineArrowSmLeft,
 } from "react-icons/cg";
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
+
 // import { PiArrowCircleRightLight } from "react-icons/pi";
 // import { PiArrowCircleLeftLight } from "react-icons/pi";
 // import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
@@ -141,13 +142,13 @@ function AboutUs() {
   return (
     <>
       <div className="flex justify-center h-fit">
-        <div className="w-[80%] text-left mt-[3vw]">
-          <h1 className="text-[4vw]/[5vw] font-extrabold w-[75%]">
+        <div className="w-[90%] md:w-[80%] md:text-left md:mt-[3vw]">
+          <h1 className="md:text-[4vw]/[5vw] text-[6vw]/[8vw] font-extrabold md:w-[75%] w-[100%]">
             Powerful Digital Solutions for{" "}
             <span className="text-[#2703A5]">Business Growth</span>
           </h1>
-          <div className="flex mt-[3vw] items-center justify-between">
-            <p className="w-[65%] text-[1.3vw]">
+          <div className="md:flex mt-[3vw] items-center justify-between">
+            <p className="w-[100%] text-[2vw] mb-[2vw] md:mb-[0vw] md:w-[65%] md:text-[1.3vw]">
               Wouessi Inc. stands as a beacon of innovation and excellence in
               the heart of Toronto, Canada, leading in revolutionizing the
               digital landscape worldwide. With a steadfast commitment to
@@ -155,7 +156,7 @@ function AboutUs() {
               offers a comprehensive suite of cutting-edge digital services
               tailored to meet the diverse needs of businesses across the globe.
             </p>
-            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
+            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.1vw] cursor-pointer">
               Our Approach
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
@@ -273,76 +274,6 @@ function AboutUs() {
           />
         </div>
       </div>
-
-      {/* <div className="bg-[#2703A5] mt-[5vw] h-[37vw]"> */}
-      {/* <div className="flex justify-center">
-          <div className="w-[80%] flex flex-col mt-[4vw] text-left justify-left">
-            <p className="text-[1.1vw] mb-[-0.5vw] text-[#FF9900]">
-              THE PEOPLE
-            </p>
-            <div className="flex items-center text-[4vw]/[4vw] text-left font-bold text-white">
-              Meet the Team
-              <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.5vw] w-[6.2vw] h-[6.2vw] text-[1vw] text-white font-light cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
-                View All
-                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-      {/* <div className="flex justify-center">
-          <div className="flex items-center mt-[3vw]">
-            <PiArrowCircleLeftLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[2vw]" />
-            <div className="w-[80vw] flex justify-between items-center text-left">
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-            </div>
-            <PiArrowCircleRightLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[2vw]" />
-          </div>
-        </div> */}
-      {/* </div> */}
     </>
   );
 }
