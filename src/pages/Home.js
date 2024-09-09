@@ -224,10 +224,14 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="flex justify-center mt-[-5vw] max-[450px]:mt-[-9vw]">
         <div className="flex justify-end w-[80%] h-[28vw] max-[450px]:w-full max-[450px]:flex-none max-[450px]:justify-start max-[450px]:h-[42vw]">
           <div
+            // style={{
+            //   backgroundImage: `url(${parse(
+            //     data.page.featuredImage.node.sourceUrl
+            //   )})`,
+            // }}
             style={{ backgroundImage: `url(${HomepageHeroImage})` }}
             className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]">
             <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden">
@@ -250,7 +254,7 @@ function Home() {
                 onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
                 className={`${
                   WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5]"
-                } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:ring-offset-2`}>
+                } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}>
                 {WouessiPronunciation ? (
                   <ImCross className="w-[7vw] h-[7vw] text-white" />
                 ) : (
@@ -281,7 +285,7 @@ function Home() {
           onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
           className={`${
             WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5]"
-          } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:ring-offset-2`}>
+          } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}>
           {WouessiPronunciation ? (
             <ImCross className="w-[3vw] h-[3vw] text-white" />
           ) : (
@@ -296,7 +300,7 @@ function Home() {
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:ring-offset-2">
+          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
             See Our Work
             <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
           </div>

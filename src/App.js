@@ -25,7 +25,7 @@ import {
   // from,
 } from "@apollo/client";
 import { BsArrowRight } from "react-icons/bs";
-import { FaGreaterThan } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 
 // import { onError } from "@apollo/client/link/error";
 
@@ -68,15 +68,17 @@ function App() {
   const [navMenu, updateNavMenu] = useState(false);
   const [languageDropdown, setLanguageDropdown] = useState(false);
   const [language, setLanguage] = useState("EN");
-
+  const [languageButtonClicked, setLanguageButtonClicked] = useState(false);
   const getData = (data) => {
     updateNavMenu(data);
+    setLanguageDropdown(!data);
   };
 
   useEffect(() => {
     // Function to set the state to false on screen resize
     const handleResize = () => {
       updateNavMenu(false);
+      setLanguageDropdown(false);
     };
 
     // Add the event listener for window resize
@@ -90,7 +92,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className="text-center bg-[#F4F4F4]">
+      <div className={`text-center bg-[#F4F4F4]`}>
         <BrowserRouter>
           <Navbar onClick={getData} onMenuItemClick={navMenu} />
           <div className={`h-0 ${navMenu && "h-screen mt-[-22vw]"}`}>
@@ -108,7 +110,7 @@ function App() {
                       <div className="w-full flex justify-center">
                         <div
                           onClick={() => updateNavMenu(false)}
-                          className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center focus:outline-none focus:border-[#FF9900] focus:text-[#FF9900]">
+                          className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center">
                           Let's Talk
                           <CgArrowLongUp className="ml-[1vw] text-[6vw] rotate-[90deg]" />
                         </div>
@@ -137,14 +139,13 @@ function App() {
                       route: "frontend-react-wouessi-website-v2/Portfolio",
                     },
                   ].map((text, index) => (
-                    <div
-                      key={index}
-                      onClick={() => updateNavMenu(false)}
-                      className="">
+                    <div onClick={() => updateNavMenu(false)} className="">
                       <motion.h1
-                        className="text-[6vw] hover:text-[#FF9900] underline font-semibold focus:outline-none focus:text-[#FF9900]"
+                        key={index}
+                        onClick={getData}
+                        className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
                         variants={itemVariants}>
-                        <Link to={text.route}>
+                        <Link to={`${text.route}`}>
                           <div>{text.name}</div>
                         </Link>
                       </motion.h1>
@@ -152,38 +153,38 @@ function App() {
                   ))}
                   <motion.div
                     variants={itemVariants}
-                    onMouseEnter={() => setLanguageDropdown(true)}
-                    onMouseLeave={() => setLanguageDropdown(false)}
                     className="flex justify-center">
                     <div className="w-fit">
-                      <div className="py-[2vw] hover:text-[#FF9900] gap-x-[2vw] flex items-center">
-                        <p
-                          className={`${
+                      <div
+                        onClick={() => setLanguageDropdown(!languageDropdown)}
+                        className={`${
+                          languageDropdown ? "text-[#FF9900]" : ""
+                        } py-[2vw] gap-x-[1vw] flex items-center cursor-pointer hover:text-[#FF9900] text-[#2B00AC] text-[5vw] font-bold`}>
+                        <IoIosArrowForward
+                          className={` ${
                             languageDropdown
                               ? "rotate-[90deg] transition-all duration-300 font-bold"
-                              : "font-bold"
-                          } focus:outline-none`}>
-                          <FaGreaterThan className="text-[#2B00AC] text-[4vw]" />
-                        </p>
-                        <p className="text-[#2B00AC] text-[5vw] font-bold cursor-pointer focus:outline-none focus:text-[#FF9900]">
+                              : "font-bold transition-all duration-300"
+                          }`}
+                        />
+                        <div className="transition-all duration-300">
                           {language}
-                        </p>
-                      </div>
-                      {languageDropdown ? (
-                        <div className="absolute pl-[4vw]">
-                          <p
-                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer focus:outline-none focus:text-[#FF9900]"
-                            onClick={() => setLanguage("EN")}>
-                            - EN
-                          </p>
-                          <p
-                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer focus:outline-none focus:text-[#FF9900]"
-                            onClick={() => setLanguage("FR")}>
-                            - FR
-                          </p>
                         </div>
-                      ) : (
-                        ""
+                      </div>
+                      {navMenu}
+                      {languageDropdown && (
+                        <div className="absolute pl-[4vw]">
+                          <div
+                            className="flex items-center text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            onClick={() => setLanguage("EN")}>
+                            <IoIosArrowForward className="text-[4vw]" /> EN
+                          </div>
+                          <div
+                            className="flex items-center text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            onClick={() => setLanguage("FR")}>
+                            <IoIosArrowForward className="text-[4vw]" /> FR
+                          </div>
+                        </div>
                       )}
                     </div>
                   </motion.div>
