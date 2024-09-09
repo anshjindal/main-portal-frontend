@@ -42,6 +42,7 @@ import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogIma
 import OurVision from "../assets/SVG/HomepageOurVision.svg";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router-dom";
 
 const SLIDER_HOME = gql`
   query Sliderhome {
@@ -300,10 +301,12 @@ function Home() {
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
-            See Our Work
-            <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
-          </div>
+          <Link to="Portfolio">
+            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
+              See Our Work
+              <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
+            </div>
+          </Link>
         </div>
       </div>
 
