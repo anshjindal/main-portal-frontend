@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import OurApproachUnderstandYourBusiness from "../assets/OurApproachUnderstandYourBusiness.jpeg";
 import OurApproachStrategicPlanning from "../assets/OurApproachStrategicPlanning.jpeg";
 import OurApproachInnovativeExecution from "../assets/OurApproachInnovativeExecution.jpeg";
+import ContinuousImprovement from "../assets/ContinuousImprovement.png";
 import {
   PiArrowCircleLeftLight,
   PiArrowCircleRight,
@@ -60,54 +61,25 @@ function OurApproachCarousel() {
         "With the help of modern technologies and tools, we create perfect software and launch efficient marketing campaigns fully customized for your specific business needs.",
     },
     {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
+      image: ContinuousImprovement,
+      title: "Improvement",
+      subtitle: "Execution",
+      hoverTitle: "Innovative Execution",
+      hoverContent:
+        "With the help of modern technologies and tools, we create perfect software and launch efficient marketing campaigns fully customized for your specific business needs.",
     },
     {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
-    },
-    {
-      image: "",
-      title: "Title 1",
-      subtitle: "Title 2",
+      image: ContinuousImprovement,
+      title: "Improvement",
+      subtitle: "Execution",
+      hoverTitle: "Innovative Execution",
+      hoverContent:
+        "With the help of modern technologies and tools, we create perfect software and launch efficient marketing campaigns fully customized for your specific business needs.",
     },
   ];
   return (
     <div className="overflow-hidden pl-[8vw] mt-[3vw]">
-      <h1 className="text-[3vw] text-left pl-[1vw] font-bold">
+      <h1 className="text-[3vw] text-left pl-[1vw] font-bold max-[450px]:text-[7vw]">
         Our Approaches
       </h1>
       <div

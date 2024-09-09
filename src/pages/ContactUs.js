@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { CgArrowLongUp } from "react-icons/cg";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -32,7 +33,8 @@ function ContactUs() {
           <div className="w-[80%] text-left text-[black] max-[450px]:w-full">
             <h1
               className="text-[3.7vw]/[4vw] font-bold w-[
-              70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw] ">
+              70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw]"
+            >
               Get in touch with us
             </h1>
             <div className="flex justify-between mt-[3vw]">
@@ -169,20 +171,59 @@ function ContactUs() {
                 Follow us
               </h1>
               <div className="flex justify-center gap-x-[1.5vw] mt-[2vw] max-[450px]:justify-between max-[450px]:mt-[4vw]">
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
-                  <FaLinkedinIn className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
+              <a
+                href="https://www.facebook.com/WouessiD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaFacebook className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+              </a>
+              <a
+                href="https://x.com/WouessiD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaXTwitter className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/wouessid/mycompany/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaLinkedin className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/wouessid/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                   <FaInstagram className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
-                  <FaFacebookF className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC5fsK-v4WpJOR_tp-ZLBz4A?app=desktop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaYoutube className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
-                  <FaTwitter className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
-                </div>
+              </a>
               </div>
             </div>
+
+
+            {/* <h1 className="text-[1.4vw] text-[#2B00AC] font-bold">Follow us</h1>
+            <div className="flex justify-center gap-x-[1.1vw] mt-[2vw]">
+              
+            </div> */}
           </div>
         </div>
       </div>

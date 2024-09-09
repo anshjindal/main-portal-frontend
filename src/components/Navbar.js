@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg";
+import logo from "../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { CgArrowLongUp } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
@@ -31,32 +31,32 @@ function Navbar({ onClick, onMenuItemClick }) {
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
               <Link to="frontend-react-wouessi-website-v2/">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]  ">
                   Home
                 </li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/AboutUs">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]   ">
                   About Us
                 </li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Services">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]   ">
                   Services
                 </li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Products">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]   ">
                   Products
                 </li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Portfolio">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]   ">
                   Portfolio
                 </li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/ContactUs">
-                <li className="py-2 hover:text-[#FF9900] hover:overline">
+                <li className="py-2 hover:text-[#FF9900]   ">
                   Contact Us
                 </li>
               </Link>
@@ -94,7 +94,7 @@ function Navbar({ onClick, onMenuItemClick }) {
             </ul>
           </div>
           <Link to="frontend-react-wouessi-website-v2/ContactUs">
-            <div className="w-[10vw] h-[3.5vw] rounded-md border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[1.1vw] flex items-center justify-center max-[450px]:hidden">
+            <div className="w-[10vw] h-[3.5vw] rounded-md border-[0.1vw] border-[#2B00AC] hover:bg-[#2B00AC] hover:text-[#FFFFFF] text-[1.1vw] flex items-center justify-center max-[450px]:hidden">
               Let's Talk
               <CgArrowLongUp className="ml-[1vw] text-[1.5vw] rotate-[90deg]" />
             </div>

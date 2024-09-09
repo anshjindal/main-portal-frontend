@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 
-const Carousel = ({ cards }) => {
+const OurTeamCarousel = ({ cards }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -27,12 +27,12 @@ const Carousel = ({ cards }) => {
         <HiOutlineArrowSmLeft />
       </div>
       <div className="overflow-hidden w-[80%]">
-        <h1 className="text-[3vw] text-left font-bold">Our Team</h1>
+        <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">Our Team</h1>
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {cards.map((card, index) => (
-            <div key={index} className="flex-shrink-0 w-[33.3%] p-4">
+            <div key={index} className="flex-shrink-0 w-[33.3%] max-[450px]:p-2 p-4">
               <div className="bg-white rounded-lg overflow-hidden">
                 <div
                   style={{ backgroundImage: `url(${card.image})` }}
@@ -55,4 +55,4 @@ const Carousel = ({ cards }) => {
   );
 };
 
-export default Carousel;
+export default OurTeamCarousel;

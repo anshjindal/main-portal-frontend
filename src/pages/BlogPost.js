@@ -11,6 +11,7 @@ import IconShare from "../assets/Icon-Share.png";
 import IconLinkedin from "../assets/Icon-Linkedin.png";
 import IconTiktok from "../assets/Icon-Tiktok.png";
 import IconInsta from "../assets/Icon-Insta.png";
+import CallToActionSection from '../components/CalltoActionSection';
 
 function BlogPost() {
   const data = [
@@ -419,23 +420,11 @@ function BlogPost() {
         <Carousel cards={data} />
 
         {/* Call to Action Section */}
-        <div className="flex justify-center">
-          <div className="w-[80%]  mb-[5vw] mt-[6vw]">
-            <p className="text-left text-[1.1vw]">WORK WITH US</p>
-            <div className="flex justify-between">
-              <h1 className="text-left w-[60%] text-[4vw]/[4vw] font-bold">
-                We would love to hear more about your project
-              </h1>
-              <a
-                href="/frontend-react-wouessi-website-v2/Careers"
-                className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.8vw] w-[10vw] h-[10vw] text-[1vw] text-black cursor-pointer hover:bg-[#2B00AC] hover:text-white hover:border-[#2B00AC] transition ease-in-out duration-300"
-              >
-                Learn More
-                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <CallToActionSection
+          Content="We would love to hear more about your project"
+          CallToAction="Let's Talk"
+          Title="Work With Us"
+        />
       </div>
     </div>
   );

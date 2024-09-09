@@ -23,9 +23,11 @@ import SliderData from "../helpers/RecentProjectSlider";
 import { gql, useQuery } from "@apollo/client";
 import parse from "html-react-parser";
 
+import Achievements from "../components/Achievements";
+
 import OurPartners from "../components/OurPartners";
-import WorkWithUs from "../components/WorkWithUs";
 import NewsletterRegister from "../components/NewsletterRegister";
+import OurClients from "../components/OurClients";
 
 import HomepageAboutUsImage from "../assets/HomepageAboutUsImage.jpeg";
 import RedefineCollab from "../assets/SVG/RedefineCollab.svg";
@@ -42,7 +44,7 @@ import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogIma
 import OurVision from "../assets/SVG/HomepageOurVision.svg";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const SLIDER_HOME = gql`
   query Sliderhome {
@@ -219,9 +221,11 @@ function Home() {
               </h1>
             </div>
           </div>
-          <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
+          <div>
+          <Link to="/frontend-react-wouessi-website-v2/Portfolio"><div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
             See Our Work
             <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+          </div></Link>
           </div>
         </div>
       </div>
@@ -254,7 +258,7 @@ function Home() {
               <div
                 onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
                 className={`${
-                  WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5]"
+                  WouessiPronunciation ? "bg-[#FF9900]  hover:bg-[#FF9900]" : "bg-[#2703A5]"
                 } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}>
                 {WouessiPronunciation ? (
                   <ImCross className="w-[7vw] h-[7vw] text-white" />
@@ -285,10 +289,10 @@ function Home() {
         <div
           onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
           className={`${
-            WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5]"
+            WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5] hover:bg-[#FF9900]"
           } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}>
           {WouessiPronunciation ? (
-            <ImCross className="w-[3vw] h-[3vw] text-white" />
+            <ImCross className="w-[3vw] h-[3vw] text-white hover:text-[#2703A5]" />
           ) : (
             <HiOutlineSpeakerWave className="w-[3vw] h-[3vw] rotate-[-30deg] text-white" />
           )}
@@ -301,16 +305,15 @@ function Home() {
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <Link to="Portfolio">
-            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
-              See Our Work
-              <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
-            </div>
-          </Link>
+          <div> <Link to="/frontend-react-wouessi-website-v2/Portfolio"><div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
+            See Our Work
+            <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
+          </div></Link></div>
+          
         </div>
       </div>
 
-      <OurPartners
+      <OurClients
         Logo1={ARQCH}
         Logo2={Precision}
         Logo3={Aldelia}
@@ -356,10 +359,11 @@ function Home() {
                     DRIVE TRANSFORMATION
                   </p>
                 </div>
-                <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
+                <div><Link to="/frontend-react-wouessi-website-v2/AboutUs"><div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
                   View More
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div>
+                </div></Link></div>
+                
               </div>
             </div>
           </div>
@@ -386,10 +390,11 @@ function Home() {
                   Dedicated to building robust, scalable, and high-performance
                   digital solutions.
                 </div>
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
+                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
                   Details
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div>
+                </div></Link></div>
+                
               </div>
             </div>
             <div
@@ -406,10 +411,10 @@ function Home() {
                 <div className="flex items-center border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] text-[2.7vw] h-fit w-[40vw]">
                   Propel your business forward in the online landscape.
                 </div>
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 w-[25vw] h-[25vw] text-[3vw] mt-[-6vw]">
+                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
                   Details
-                  <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
-                </div>
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                </div></Link></div>
               </div>
             </div>
             <div
@@ -423,10 +428,10 @@ function Home() {
                 <div className="flex border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] items-center">
                   Propel your business forward in the online landscape.
                 </div>
-                <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300">
+                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
                   Details
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-                </div>
+                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                </div></Link></div>
               </div>
             </div>
           </div>
@@ -485,83 +490,15 @@ function Home() {
             the benefits of digital presence, and gain a cutting edge ahead of
             their competitors.
           </h3>
-          <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[8vw]">
+          <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[8vw]">
             Details
             <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-          </div>
+          </div></Link></div>
+          
         </div>
       </div>
 
-      <div className="pt-[4vw] pb-[5vw] flex justify-center">
-        <div className="w-[80%] h-full text-left">
-          <p className="text-[1.1vw] text-[#666666] font-normal max-[450px]:text-[2.5vw] max-[450px]:mt-[4vw]">
-            ABOUT US
-          </p>
-          <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mt-[0.2vw] mb-[4vw] max-[450px]:text-[7vw]/[7vw] max-[450px]:mt-[3vw]">
-            Four Years of Achievements
-          </h1>
-
-          <div className="grid grid-cols-2 gap-[1vw] max-[450px]:mt-[6vw]">
-            {/* First row with 2 boxes */}
-            <div className="bg-[#2B00AC] text-white h-[32vw] text-left items-center pt-[5vw] pl-[3vw] rounded-md">
-              <h1 className="text-[5vw] font-extrabold max-[450px]:text-[8vw] max-[450px]:mt-[-5vw]">
-                500
-              </h1>
-              <h2 className="text-[3vw]/[4vw] max-[450px]:text-[4vw]/[4.5vw] max-[450px]:font-light">
-                Engineers & <br></br>Experts
-              </h2>
-              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold gap-x-[0.5vw] hover:gap-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw] max-[450px]:mt-[5vw]">
-                <p>See More</p>
-                <FaArrowRight />
-              </div>
-            </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[32vw] text-left pt-[5vw] pl-[3vw] rounded-md hover:bg-[#2B00AC] hover:pt-[6vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[5vw] font-extrabold max-[450px]:text-[8vw] max-[450px]:mt-[-5vw]">
-                125
-              </h1>
-              <h2 className="text-[3vw]/[4vw] max-[450px]:text-[4vw]/[4.5vw] max-[450px]:font-light">
-                Projects
-              </h2>
-              <div className="flex items-center mt-[2vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:mt-[3vw] max-[450px]:text-[2vw] max-[450px]:mt-[5vw] max-[450px]:mt-[9vw]">
-                <p>See More</p>
-                <FaArrowRight />
-              </div>
-            </div>
-          </div>
-          {/* Second row with 3 boxes */}
-          <div className="col-span-3 grid grid-cols-3 gap-[1vw] mt-[1vw]">
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
-                75
-              </h1>
-              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">Clients</h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
-                <p>See More</p> <FaArrowRight />
-              </div>
-            </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
-                15
-              </h1>
-              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">Countries</h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
-                <p>See More</p> <FaArrowRight />
-              </div>
-            </div>
-            <div className="border-[0.1vw] border-[#2B00AC] h-[22vw] text-left pt-[3vw] pl-[2vw] space-y-[1vw] rounded-md hover:bg-[#2B00AC] hover:pt-[4vw] transition-all ease-in-out duration-300 hover:text-white">
-              <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
-                2
-              </h1>
-              <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">
-                New Products
-              </h2>
-              <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
-                <p>See More</p> <FaArrowRight />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Achievements/>
 
       <OurPartners
         Logo1={RiipenLogo}
@@ -659,7 +596,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="flex mt-[5vw] max-[450px]:justify-between">
+            <div className="flex mt-[5vw] mb-[5vw] max-[450px]:justify-between">
               <div
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
@@ -693,7 +630,7 @@ function Home() {
         {data && parse(data.page.content)}
       </div> */}
 
-      <motion.div
+      {/* <motion.div
         className="text-end font-bold text-[9vw] text-[#2B00AC] mb-4 mt-4 flex max-[450px]:text-[15vw]"
         initial={{ x: "100%" }}
         animate={{ x: ["-98%", "3%", "-98%"] }}
@@ -707,7 +644,7 @@ function Home() {
         Digital<span className="text-[#FF9900]"> - </span>Design
         <span className="text-[#FF9900]"> - </span>Development
         <span className="text-[#FF9900]"> - </span>Technology
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

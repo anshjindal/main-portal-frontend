@@ -2,7 +2,7 @@ import React from "react";
 import HeroBanner from "../components/HeroBanner";
 import Accordion from "../components/Accordion";
 import Data from "../helpers/CareersAccordionInnerText.json";
-import WorkWithUs from "../components/WorkWithUs";
+import CallToActionSection from '../components/CalltoActionSection';
 import CareersHeroBanner from "../assets/CareersHeroImage.jpeg";
 
 function Careers() {
@@ -42,9 +42,9 @@ function Careers() {
           <Accordion title="Sales" InnerTextData={Data.Sales} />
           <Accordion title="Design" InnerTextData={Data.Design} />
         </div>
-        <WorkWithUs
+        <CallToActionSection
           Title="WORK WITH US"
-          Heading="Apply now and become part of our dynamic team!"
+          Content="Apply now and become part of our dynamic team!"
           CallToAction="Join Our Team"
         />
       </div>

@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScollToTop";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
@@ -16,33 +17,18 @@ import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import TermsCondition from "./pages/TermsCondition";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+import CopyrightPolicy from "./pages/CopyrightPolicy";
 
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  // HttpLink,
-  // from,
 } from "@apollo/client";
 import { BsArrowRight } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
-
-// import { onError } from "@apollo/client/link/error";
-
-// const errorLink = onError(({ graphQLErrors, networkError }) => {
-//   if (graphQLErrors) {
-//     graphQLErrors.map(({ message, location, path }) => {
-//       alert(`GraphQL Error: ${message}`);
-//     });
-//   }
-// });
-
-// const link = from([
-//   errorLink,
-//   new HttpLink({
-//     uri: "http://localhost:3000/frontend-react-wouessi-website-v2/",
-//   }),
-// ]);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -94,6 +80,7 @@ function App() {
     <ApolloProvider client={client}>
       <div className={`text-center bg-[#F4F4F4]`}>
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar onClick={getData} onMenuItemClick={navMenu} />
           <div className={`h-0 ${navMenu && "h-screen mt-[-22vw]"}`}>
             {navMenu && (
@@ -139,9 +126,8 @@ function App() {
                       route: "frontend-react-wouessi-website-v2/Portfolio",
                     },
                   ].map((text, index) => (
-                    <div onClick={() => updateNavMenu(false)} className="">
+                    <div onClick={() => updateNavMenu(false)} className="" key={index}>
                       <motion.h1
-                        key={index}
                         onClick={getData}
                         className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
                         variants={itemVariants}>
@@ -224,9 +210,21 @@ function App() {
               <Route
                 path="frontend-react-wouessi-website-v2/Blogpost"
                 element={<BlogPost />}></Route>
+              <Route
+                path="frontend-react-wouessi-website-v2/TermsCondition"
+                element={<TermsCondition />}></Route>
+              <Route
+                path="frontend-react-wouessi-website-v2/PrivacyPolicy"
+                element={<PrivacyPolicy />}></Route>
+              <Route
+                path="frontend-react-wouessi-website-v2/CookiePolicy"
+                element={<CookiePolicy />}></Route>
+              <Route
+                path="frontend-react-wouessi-website-v2/CopyrightPolicy"
+                element={<CopyrightPolicy />}></Route>
             </Routes>
-            <Footer />
           </div>
+          <Footer />
         </BrowserRouter>
       </div>
     </ApolloProvider>

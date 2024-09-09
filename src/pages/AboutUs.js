@@ -7,6 +7,8 @@ import {
   HiOutlineArrowSmLeft,
 } from "react-icons/cg";
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
+import OurClients from "../components/OurClients";
+
 // import { PiArrowCircleRightLight } from "react-icons/pi";
 // import { PiArrowCircleLeftLight } from "react-icons/pi";
 // import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
@@ -21,11 +23,11 @@ import ARQCH from "../assets/SVG/ARQCHLogo.svg";
 import Precision from "../assets/SVG/PrecisionLogo.svg";
 import Charis from "../assets/SVG/CharisLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
-
+import CallToActionSection from "../components/CalltoActionSection";
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets/OurMissionSideImage.png";
-import Carousel from "../components/OurTeamCarousel";
+import OurTeamCarousel from "../components/OurTeamCarousel";
 import RodrigueFouafouHeadshot from "../assets/RodrigueFouafouHeadshot.png";
 import RosalinRimjhimHeadshot from "../assets/RosalinRimjhimHeadshot.png";
 import StriveMazungaHeadshot from "../assets/StriveMazungaHeadshot.png";
@@ -64,7 +66,6 @@ import GoogleCloud from "../assets/SVG/GoogleCloud.svg";
 import Azure from "../assets/SVG/Azure.svg";
 import Kubemetes from "../assets/SVG/Kubemetes.svg";
 import NextJS from "../assets/SVG/NextJS.svg";
-import WorkWithUs from "../components/WorkWithUs";
 
 function AboutUs() {
   const cards = [
@@ -142,12 +143,12 @@ function AboutUs() {
     <>
       <div className="flex justify-center h-fit">
         <div className="w-[80%] text-left mt-[3vw]">
-          <h1 className="text-[4vw]/[5vw] font-extrabold w-[75%]">
+          <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
             Powerful Digital Solutions for{" "}
             <span className="text-[#2703A5]">Business Growth</span>
           </h1>
-          <div className="flex mt-[3vw] items-center justify-between">
-            <p className="w-[65%] text-[1.3vw]">
+          <div className="max-[450px]:block flex mt-[3vw] items-center justify-between">
+            <p className="max-[450px]:w-[100%] max-[450px]:text-[3vw]/[5vw] max-[450px]:mb-[4vw] mb-[0vw] w-[65%] text-[1.3vw]">
               Wouessi Inc. stands as a beacon of innovation and excellence in
               the heart of Toronto, Canada, leading in revolutionizing the
               digital landscape worldwide. With a steadfast commitment to
@@ -155,23 +156,25 @@ function AboutUs() {
               offers a comprehensive suite of cutting-edge digital services
               tailored to meet the diverse needs of businesses across the globe.
             </p>
-            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer">
+            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.1vw] cursor-pointer">
               Our Approach
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
           </div>
+          
           <img src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
-          <div className="mt-[4vw] flex justify-between">
-            <div className="flex flex-col gap-y-[1.5vw] w-[45%]">
-              <p className="text-[1.3vw] text-[#666666]">Our Mission</p>
-              <h1 className="text-[3.8vw]/[5.2vw] font-normal">
+          
+          <div className="mt-[4vw] flex justify-between max-[450px]:block ">
+            <div className="flex flex-col gap-y-[1.5vw] w-[45%] max-[450px]:w-[100%] ">
+              <p className="text-[1.3vw] text-[#666666] max-[450px]:text-[3vw]/[5vw] ">Our Mission</p>
+              <h1 className="text-[3.8vw]/[5.2vw] max-[450px]:text-[6vw]/[8vw]  max-[450px]:w-[60%] font-normal">
                 Empowering Businesses with Bespoke Digital Strategies for Global
                 Success
               </h1>
-              <p className="mt-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+              <p className="mt-[2vw] text-[1.3vw]  max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
                 Our Vision
               </p>
-              <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw]">
+              <p className="text-[1.3vw] border-l-[0.1vw] max-[450px]:text-[3vw]/[5vw] border-[#9C9C9C] pl-[1vw]">
                 At Wouessi, we transcend geographical boundaries to envision a
                 world where digital innovation knows no limits. Our vision is to
                 emerge as a global leader, spearheading groundbreaking
@@ -179,13 +182,15 @@ function AboutUs() {
                 change on a worldwide scale.
               </p>
             </div>
-            <div className="flex flex-col flex w-[33vw]">
+            
+            <div className="flex flex-col flex w-[33vw] max-[450px]:w-[100%] ">
               <div
                 style={{ backgroundImage: `url(${OurMissionTopImage})` }}
-                className="w-full h-[15vw] bg-center bg-cover"></div>
+                className="w-full h-[15vw] bg-center bg-cover"
+              ></div>
               <div className="flex">
-                <div className="w-[23vw] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
-                  <p className="mt-[2vw] mb-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+                <div className="w-[23vw]  max-[450px]:w-[100%] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
+                  <p className="mt-[2vw] mb-[2vw] text-[1.3vw] max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
                     Our Story
                   </p>
                   <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw] pr-[1.2vw]">
@@ -200,23 +205,27 @@ function AboutUs() {
                   style={{
                     backgroundImage: `url(${OurMissionSideImage})`,
                   }}
-                  className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
+                  className="w-[15vw] h-[27vw] bg-cover bg-center"
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Carousel cards={cards} />
+
+      <OurTeamCarousel cards={cards} />
 
       <div className="flex justify-center mb-[3vw] mt-[8vw]">
         <div className="flex justify-center w-[80%]">
           <div
             style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
-            className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
+            className="w-[30vw] h-[37vw] bg-cover bg-center"
+          ></div>
           <div>
             <img
               src={QuoteIcon}
-              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
+              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
+            ></img>
             <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
               <div className="p-[3vw]">
                 <h1 className="text-[3vw]/[3vw] font-bold">
@@ -240,7 +249,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <OurPartners
+      <OurClients
         Logo1={ARQCH}
         Logo2={Precision}
         Logo3={Aldelia}
@@ -250,99 +259,32 @@ function AboutUs() {
 
       <OurApproachCarousel />
 
-      <div className="flex justify-center my-[5vw]">
+      <div className="flex justify-center my-[5vw] ">
         <div className="w-[80%]">
-          <div className="grid grid-cols-5 gap-4">
+          <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
+            Tech Stack
+          </h1>
+          <div className="grid grid-cols-5 gap-4 mt-[3vw]  max-[450px]:mb-[8vw]">
             {logos.map((LogoComponent, index) => (
               <img
                 key={index}
                 src={LogoComponent}
-                className={`flex justify-center items-center p-4 w-[12vw] h-[12vw] ${
+                className={`flex justify-center items-center p-4 max-[450px]:p-1 w-[12vw] h-[12vw] ${
                   Math.floor(index / 5) !== 4 ? "border-b" : ""
-                }`}></img>
+                }`}
+              ></img>
             ))}
           </div>
-          <NewsletterRegister />
-          <WorkWithUs
-            Heading={
-              <h1>
-                We would love to hear more<br></br> about your project
-              </h1>
-            }
-            CallToAction="Let's Talk"
-          />
         </div>
       </div>
 
-      {/* <div className="bg-[#2703A5] mt-[5vw] h-[37vw]"> */}
-      {/* <div className="flex justify-center">
-          <div className="w-[80%] flex flex-col mt-[4vw] text-left justify-left">
-            <p className="text-[1.1vw] mb-[-0.5vw] text-[#FF9900]">
-              THE PEOPLE
-            </p>
-            <div className="flex items-center text-[4vw]/[4vw] text-left font-bold text-white">
-              Meet the Team
-              <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] ml-[2.5vw] w-[6.2vw] h-[6.2vw] text-[1vw] text-white font-light cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out">
-                View All
-                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-              </div>
-            </div>
-          </div>
-        </div> */}
+      <NewsletterRegister />
 
-      {/* <div className="flex justify-center">
-          <div className="flex items-center mt-[3vw]">
-            <PiArrowCircleLeftLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[2vw]" />
-            <div className="w-[80vw] flex justify-between items-center text-left">
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-              <div className="flex flex-col w-[18.5vw] shadow-black-100 shadow-lg">
-                <div
-                  style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-                  className="w-full h-[27vw] bg-cover bg-[center_right_-2vw]"></div>
-                <div className="flex flex-col p-[1vw]">
-                  <h2 className="text-[1.8vw] font-bold text-[#0A0907]">
-                    Rodrique Fouafou
-                  </h2>
-                  <p className="text-[1.3vw] text-[#666666]">FOUNDER & CEO</p>
-                </div>
-              </div>
-            </div>
-            <PiArrowCircleRightLight className="text-[5.5vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[2vw]" />
-          </div>
-        </div> */}
-      {/* </div> */}
+      <CallToActionSection
+        Content="We would love to hear more about your project"
+        CallToAction="Let's Talk"
+        Title="WORK WITH US"
+      />
     </>
   );
 }
