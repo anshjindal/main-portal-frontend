@@ -166,15 +166,18 @@ function ContactUs() {
                 </p>
               </div>
             </div>
-            <h1 className="text-[1.4vw] text-[#2B00AC] font-bold">Follow us</h1>
-            <div className="flex justify-center gap-x-[1.1vw] mt-[2vw]">
+            <div className="text-left max-[450px]:w-full">
+              <h1 className="text-[1.4vw] text-[#2B00AC] font-bold max-[450px]:text-[4vw] max-[450px]:mt-[5vw]">
+                Follow us
+              </h1>
+              <div className="flex justify-center gap-x-[1.5vw] mt-[2vw] max-[450px]:justify-between max-[450px]:mt-[4vw]">
               <a
                 href="https://www.facebook.com/WouessiD"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
-                  <FaFacebook className="text-[1.6vw]" />
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaFacebook className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
               </a>
               <a
@@ -182,8 +185,8 @@ function ContactUs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
-                  <FaXTwitter className="text-[1.6vw]" />
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaXTwitter className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
               </a>
               <a
@@ -191,8 +194,8 @@ function ContactUs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
-                  <FaLinkedin className="text-[1.6vw]" />
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaLinkedin className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
               </a>
               <a
@@ -200,8 +203,8 @@ function ContactUs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
-                  <FaInstagram className="text-[1.6vw]" />
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaInstagram className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
               </a>
               <a
@@ -209,11 +212,18 @@ function ContactUs() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
-                  <FaYoutube className="text-[1.6vw]" />
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <FaYoutube className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                 </div>
               </a>
+              </div>
             </div>
+
+
+            {/* <h1 className="text-[1.4vw] text-[#2B00AC] font-bold">Follow us</h1>
+            <div className="flex justify-center gap-x-[1.1vw] mt-[2vw]">
+              
+            </div> */}
           </div>
         </div>
       </div>
