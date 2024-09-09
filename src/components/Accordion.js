@@ -12,15 +12,15 @@ function Accordion({ title, InnerTextData }) {
     <div className="text-left pb-[1.5vw] max-[450px]:pb-[7vw]">
       <div className="flex items-center gap-x-[1.5vw] w-fit max-[450px]:w-full">
         <IoMdArrowDropright
-          onClick={accordionToggle}
+          // onClick={accordionToggle}
           className={`text-[2vw] max-[450px]:text-[5vw]  ${
-            accordionOpen
-              ? "cursor-pointer"
-              : "transition-all duration-300 rotate-[90deg] cursor-pointer"
+            accordionOpen ? "" : "transition-all duration-300 rotate-[90deg]"
           }`}
         />
-        <div className="max-[450px]:w-full">
-          <h2 className="text-[3.8vw] font-bold max-[450px]:text-[5.5vw]/[6vw]">
+        <div
+          onClick={accordionToggle}
+          className="max-[450px]:w-full cursor-pointer z-10">
+          <h2 className="text-[3.8vw] hover:text-[#FF9900] font-bold max-[450px]:text-[5.5vw]/[6vw] transition-all duration-100 ease-in-out">
             {title}
           </h2>
           <div className="border-b-[0.1vw] border-[#666666] w-[10vw] max-[450px]:mt-[3vw] max-[450px]:w-full"></div>
