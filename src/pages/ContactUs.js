@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
 import { CgArrowLongUp } from "react-icons/cg";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -32,7 +33,8 @@ function ContactUs() {
           <div className="w-[80%] text-left text-[black] max-[450px]:w-full">
             <h1
               className="text-[3.7vw]/[4vw] font-bold w-[
-              70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw]">
+              70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw]"
+            >
               Get in touch with us
             </h1>
             <div className="flex justify-between mt-[3vw]">
@@ -53,14 +55,16 @@ function ContactUs() {
         </div>
         <div
           style={{ backgroundImage: `url(${MeetTheTeamImages})` }}
-          className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"></div>
+          className="w-[30vw] h-[40vw] bg-cover bg-[center_right_-2vw]"
+        ></div>
       </div>
       <div className="flex justify-center mt-[8vw]">
         <div className="flex justify-between w-[80%] items-center">
           <form
             onSubmit={submitHandler}
             ref={formRef}
-            className="flex flex-col gap-y-[1.5vw] w-[44vw] rounded-xl">
+            className="flex flex-col gap-y-[1.5vw] w-[44vw] rounded-xl"
+          >
             <div className="text-left">
               <div className="text-[4vw] font-bold">Let's talk</div>
               <p className="text-[1.1vw]">
@@ -73,30 +77,35 @@ function ContactUs() {
                 type="text"
                 placeholder="Name*"
                 required
-                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"></input>
+                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"
+              ></input>
               <input
                 type="email"
                 placeholder="Email*"
                 required
-                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"></input>
+                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"
+              ></input>
             </div>
             <div className="flex justify-between">
               <input
                 type="tel"
                 placeholder="Phone"
                 required
-                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"></input>
+                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"
+              ></input>
               <input
                 type="Subject"
                 placeholder="Subject*"
                 required
-                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"></input>
+                className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black"
+              ></input>
             </div>
             <textarea
               placeholder="Your Message*"
               rows="1"
               cols="10"
-              className="bg-[#F4F4F4] border-b-[0.1vw] border-[#B8B8B8] pt-[0.5vw] pb-[1vw] min-h-[1vw] resize-none text-[1.1vw] placeholder:font-thin placeholder:text-black hover:placeholder-text:w-[3vw]"></textarea>
+              className="bg-[#F4F4F4] border-b-[0.1vw] border-[#B8B8B8] pt-[0.5vw] pb-[1vw] min-h-[1vw] resize-none text-[1.1vw] placeholder:font-thin placeholder:text-black hover:placeholder-text:w-[3vw]"
+            ></textarea>
 
             <button
               type="submit"
@@ -104,7 +113,8 @@ function ContactUs() {
                 submitButton === false
                   ? "border-[0.01vw] border-black transition-all ease-in-out duration-300 rounded-full flex items-center justify-center mt-[3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer hover:bg-[#2B00AC] hover:text-white"
                   : "border-black bg-[green] border-[0.1vw] transition-all duration-300 ease-in-out rounded-full flex items-center justify-center mt-[3vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer"
-              }>
+              }
+            >
               {submitButton === false ? (
                 <div className="flex items-center gap-x-[0.3vw]">
                   Send your message
@@ -152,19 +162,52 @@ function ContactUs() {
               </div>
             </div>
             <h1 className="text-[1.4vw] text-[#2B00AC] font-bold">Follow us</h1>
-            <div className="flex justify-center gap-x-[1.5vw] mt-[2vw]">
-              <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white">
-                <FaLinkedinIn className="text-[1.6vw]" />
-              </div>
-              <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white">
-                <FaInstagram className="text-[1.6vw]" />
-              </div>
-              <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white">
-                <FaFacebookF className="text-[1.6vw]" />
-              </div>
-              <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white">
-                <FaTwitter className="text-[1.6vw]" />
-              </div>
+            <div className="flex justify-center gap-x-[1.1vw] mt-[2vw]">
+              <a
+                href="https://www.facebook.com/WouessiD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
+                  <FaFacebook className="text-[1.6vw]" />
+                </div>
+              </a>
+              <a
+                href="https://x.com/WouessiD"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
+                  <FaXTwitter className="text-[1.6vw]" />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/wouessid/mycompany/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
+                  <FaLinkedin className="text-[1.6vw]" />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/wouessid/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
+                  <FaInstagram className="text-[1.6vw]" />
+                </div>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC5fsK-v4WpJOR_tp-ZLBz4A?app=desktop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white">
+                  <FaYoutube className="text-[1.6vw]" />
+                </div>
+              </a>
             </div>
           </div>
         </div>

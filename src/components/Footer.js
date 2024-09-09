@@ -4,9 +4,11 @@ import LogoFooter from "../LogoFooter.svg";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CgArrowLongUp } from "react-icons/cg";
+
 
 import WouessiLogoFooter from "../WouessiLogoFooter.svg";
 
@@ -25,45 +27,121 @@ function Footer() {
               presence, we can do it all.
             </p>
             <div className="flex gap-x-[4vw] items-center max-[450px]:gap-x-[14vw]">
-              <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] text-center cursor-pointer z-10 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[5vw]">
+              <div className="border-black border-[0.1vw] bg-[#F7F7F7] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] text-center cursor-pointer z-10 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[5vw]">
                 Download <br></br> our Brochure
                 <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
               </div>
               <div className="space-y-[2.5vw]">
-                <div className="flex text-[#2703A5] text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
-                  <FaFacebook />
-                  <FaLinkedin />
-                  <FaYoutube />
-                  <FaInstagram />
+                <div className="flex text-[#2703A5]  text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
+                  <a
+                    href="https://www.facebook.com/WouessiD"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF9900]"
+                  >
+                    <FaFacebook />
+                  </a>
+                  <a
+                    href="https://x.com/WouessiD"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF9900]"
+                  >
+                    <FaXTwitter />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/wouessid/mycompany/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF9900]"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/wouessid/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF9900]"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UC5fsK-v4WpJOR_tp-ZLBz4A?app=desktop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF9900]"
+                  >
+                    <FaYoutube />
+                  </a>
                 </div>
                 <p className="text-[0.8vw] text-[#828282] max-[450px]:hidden">
-                  Copyright &copy;2024 Wouessi. All rights reserved.
+                  Copyright &copy;2024 Wouessi Inc. All rights reserved.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex gap-x-[2vw] max-[450px]:flex-wrap max-[450px]:gap-x-[6vw] justify-between">
             <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[40vw] max-[450px]:font-semibold">
-              <li className="text-[#2B00AC]">Home</li>
-              <li>Product Offerings</li>
-              <li>Get A Quote</li>
-              <li>Insights</li>
+              <li className="text-[#2B00AC] hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/">Home</Link>
+              </li>
+              <li className="hover:text-[#FF9900]">
+                <Link to="frontend-react-wouessi-website-v2/Products">
+                  Products
+                </Link>
+              </li>
+              <li className="hover:text-[#FF9900]">
+                <Link to="frontend-react-wouessi-website-v2/Portfolio">
+                  Portfolio
+                </Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/Services">
+                  Services
+                </Link>
+              </li>
             </ul>
             <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[30vw] max-[450px]:font-semibold">
-              <li className="text-[#2B00AC]">About Us</li>
-              <li>Our Team</li>
-              <li>
+              <li className="text-[#2B00AC] hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/AboutUs">
+                  About Us
+                </Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/Blog">Blogs</Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
                 <Link to="frontend-react-wouessi-website-v2/Careers">
                   Careers
                 </Link>
               </li>
-              <li>Past works</li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/CookiePolicy">
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
             <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[45vw] max-[450px]:mt-[7vw] max-[450px]:font-semibold">
-              <li className="text-[#2B00AC]">Contact Us</li>
-              <li>Terms and Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Cookie Policy</li>
+              <li className="text-[#2B00AC] hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/ContactUs">
+                  Contact Us
+                </Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/TermsCondition">
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/PrivacyPolicy">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li className=" hover:text-[#FF9900]  ">
+                <Link to="frontend-react-wouessi-website-v2/CopyrightPolicy">
+                  Copyright Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -72,7 +150,8 @@ function Footer() {
         <div className="w-[90%]">
           <img
             src={WouessiLogoFooter}
-            className="w-[100%] h-[27vw] mt-[-10vw] max-[450px]:mt-0"></img>
+            className="w-[100%] h-[27vw] mt-[-10vw] max-[450px]:mt-0"
+          ></img>
         </div>
       </div>
     </>

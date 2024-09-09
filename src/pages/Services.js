@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Services.css";
-import CallToActionSection from '../components/CallToActionSection';
+import CallToActionSection from '../components/CalltoActionSection';
 import HeroBanner from "../components/HeroBanner";
 import ServicesHeroBanner from "../assets/ServicesHeroImage.jpeg";
 import Accordion from "../components/Accordion";

@@ -7,6 +7,7 @@ import {
   HiOutlineArrowSmLeft,
 } from "react-icons/cg";
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
+import OurClients from "../components/OurClients";
 
 // import { PiArrowCircleRightLight } from "react-icons/pi";
 // import { PiArrowCircleLeftLight } from "react-icons/pi";
@@ -22,11 +23,11 @@ import ARQCH from "../assets/SVG/ARQCHLogo.svg";
 import Precision from "../assets/SVG/PrecisionLogo.svg";
 import Charis from "../assets/SVG/CharisLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
-import CallToActionSection from '../components/CallToActionSection';
+import CallToActionSection from "../components/CalltoActionSection";
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets/OurMissionSideImage.png";
-import Carousel from "../components/OurTeamCarousel";
+import OurTeamCarousel from "../components/OurTeamCarousel";
 import RodrigueFouafouHeadshot from "../assets/RodrigueFouafouHeadshot.png";
 import RosalinRimjhimHeadshot from "../assets/RosalinRimjhimHeadshot.png";
 import StriveMazungaHeadshot from "../assets/StriveMazungaHeadshot.png";
@@ -39,7 +40,6 @@ import BillTinglingHeadshot from "../assets/BillTinglingHeadshot.png";
 import JasmineMHeadshot from "../assets/JasmineMHeadshot.png";
 import OurPartners from "../components/OurPartners";
 import OurApproachCarousel from "../components/OurApproachCarousel";
-
 
 import ExpressJS from "../assets/SVG/ExpressJS.svg";
 import ReactJS from "../assets/SVG/ReactJS.svg";
@@ -66,7 +66,6 @@ import GoogleCloud from "../assets/SVG/GoogleCloud.svg";
 import Azure from "../assets/SVG/Azure.svg";
 import Kubemetes from "../assets/SVG/Kubemetes.svg";
 import NextJS from "../assets/SVG/NextJS.svg";
-
 
 function AboutUs() {
   const cards = [
@@ -162,18 +161,20 @@ function AboutUs() {
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
           </div>
+          
           <img src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
-          <div className="mt-[4vw] flex justify-between">
-            <div className="flex flex-col gap-y-[1.5vw] w-[45%]">
-              <p className="text-[1.3vw] text-[#666666]">Our Mission</p>
-              <h1 className="text-[3.8vw]/[5.2vw] font-normal">
+          
+          <div className="mt-[4vw] flex justify-between max-[450px]:block ">
+            <div className="flex flex-col gap-y-[1.5vw] w-[45%] max-[450px]:w-[100%] ">
+              <p className="text-[1.3vw] text-[#666666] max-[450px]:text-[3vw]/[5vw] ">Our Mission</p>
+              <h1 className="text-[3.8vw]/[5.2vw] max-[450px]:text-[6vw]/[8vw]  max-[450px]:w-[60%] font-normal">
                 Empowering Businesses with Bespoke Digital Strategies for Global
                 Success
               </h1>
-              <p className="mt-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+              <p className="mt-[2vw] text-[1.3vw]  max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
                 Our Vision
               </p>
-              <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw]">
+              <p className="text-[1.3vw] border-l-[0.1vw] max-[450px]:text-[3vw]/[5vw] border-[#9C9C9C] pl-[1vw]">
                 At Wouessi, we transcend geographical boundaries to envision a
                 world where digital innovation knows no limits. Our vision is to
                 emerge as a global leader, spearheading groundbreaking
@@ -181,14 +182,15 @@ function AboutUs() {
                 change on a worldwide scale.
               </p>
             </div>
-            <div className="flex flex-col flex w-[33vw]">
+            
+            <div className="flex flex-col flex w-[33vw] max-[450px]:w-[100%] ">
               <div
                 style={{ backgroundImage: `url(${OurMissionTopImage})` }}
                 className="w-full h-[15vw] bg-center bg-cover"
               ></div>
               <div className="flex">
-                <div className="w-[23vw] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
-                  <p className="mt-[2vw] mb-[2vw] text-[1.3vw] font-[bold] text-[#666666]">
+                <div className="w-[23vw]  max-[450px]:w-[100%] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
+                  <p className="mt-[2vw] mb-[2vw] text-[1.3vw] max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
                     Our Story
                   </p>
                   <p className="text-[1.3vw] border-l-[0.1vw] border-[#9C9C9C] pl-[1vw] pr-[1.2vw]">
@@ -210,7 +212,8 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <Carousel cards={cards} />
+
+      <OurTeamCarousel cards={cards} />
 
       <div className="flex justify-center mb-[3vw] mt-[8vw]">
         <div className="flex justify-center w-[80%]">
@@ -246,7 +249,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <OurPartners
+      <OurClients
         Logo1={ARQCH}
         Logo2={Precision}
         Logo3={Aldelia}
@@ -256,28 +259,32 @@ function AboutUs() {
 
       <OurApproachCarousel />
 
-      <div className="flex justify-center my-[5vw]">
+      <div className="flex justify-center my-[5vw] ">
         <div className="w-[80%]">
-          <div className="grid grid-cols-5 gap-4">
+          <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
+            Tech Stack
+          </h1>
+          <div className="grid grid-cols-5 gap-4 mt-[3vw]  max-[450px]:mb-[8vw]">
             {logos.map((LogoComponent, index) => (
               <img
                 key={index}
                 src={LogoComponent}
-                className={`flex justify-center items-center p-4 w-[12vw] h-[12vw] ${
+                className={`flex justify-center items-center p-4 max-[450px]:p-1 w-[12vw] h-[12vw] ${
                   Math.floor(index / 5) !== 4 ? "border-b" : ""
                 }`}
               ></img>
             ))}
           </div>
-          <NewsletterRegister />
-
-          <CallToActionSection
-            Content="We would love to hear more about your project"
-            CallToAction="Let's Talk"
-            Title="Work With Us"
-          />
         </div>
       </div>
+
+      <NewsletterRegister />
+
+      <CallToActionSection
+        Content="We would love to hear more about your project"
+        CallToAction="Let's Talk"
+        Title="WORK WITH US"
+      />
     </>
   );
 }

@@ -3,7 +3,7 @@ import "../styles/Pricing.css";
 import { CgArrowLongUp } from "react-icons/cg";
 import BantuEd from "../assets/BantuEdProductImage.png";
 import Egolu from "../assets/egolu-app.png";
-import CallToActionSection from '../components/CallToActionSection';
+import CallToActionSection from '../components/CalltoActionSection';
 
 
 function Products() {
