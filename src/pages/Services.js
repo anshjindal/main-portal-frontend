@@ -17,7 +17,7 @@ function Services() {
               developers, and project managers work with streamlined processes
               to break through organizational roadblocks."
         />
-        <div className="mb-[-1vw]">
+        <div className="mb-[-1vw] mt-[-5vw] max-[450px]:mt-[5vw]">
           <Accordion
             title="Website & Software Engineering"
             InnerTextData={Data.Engineering}

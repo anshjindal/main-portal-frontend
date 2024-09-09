@@ -90,7 +90,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className={`text-center bg-[#F4F4F4]`}>
+      <div className="text-center bg-[#F4F4F4]">
         <BrowserRouter>
           <Navbar onClick={getData} onMenuItemClick={navMenu} />
           <div className={`h-0 ${navMenu && "h-screen mt-[-22vw]"}`}>
@@ -108,7 +108,7 @@ function App() {
                       <div className="w-full flex justify-center">
                         <div
                           onClick={() => updateNavMenu(false)}
-                          className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center">
+                          className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center focus:outline-none focus:border-[#FF9900] focus:text-[#FF9900]">
                           Let's Talk
                           <CgArrowLongUp className="ml-[1vw] text-[6vw] rotate-[90deg]" />
                         </div>
@@ -137,13 +137,14 @@ function App() {
                       route: "frontend-react-wouessi-website-v2/Portfolio",
                     },
                   ].map((text, index) => (
-                    <div onClick={() => updateNavMenu(false)} className="">
+                    <div
+                      key={index}
+                      onClick={() => updateNavMenu(false)}
+                      className="">
                       <motion.h1
-                        key={index}
-                        onClick={getData}
-                        className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
+                        className="text-[6vw] hover:text-[#FF9900] underline font-semibold focus:outline-none focus:text-[#FF9900]"
                         variants={itemVariants}>
-                        <Link to={`${text.route}`}>
+                        <Link to={text.route}>
                           <div>{text.name}</div>
                         </Link>
                       </motion.h1>
@@ -161,22 +162,22 @@ function App() {
                             languageDropdown
                               ? "rotate-[90deg] transition-all duration-300 font-bold"
                               : "font-bold"
-                          }`}>
+                          } focus:outline-none`}>
                           <FaGreaterThan className="text-[#2B00AC] text-[4vw]" />
                         </p>
-                        <p className="text-[#2B00AC] text-[5vw] font-bold cursor-pointer">
+                        <p className="text-[#2B00AC] text-[5vw] font-bold cursor-pointer focus:outline-none focus:text-[#FF9900]">
                           {language}
                         </p>
                       </div>
                       {languageDropdown ? (
                         <div className="absolute pl-[4vw]">
                           <p
-                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer focus:outline-none focus:text-[#FF9900]"
                             onClick={() => setLanguage("EN")}>
                             - EN
                           </p>
                           <p
-                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer"
+                            className="text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-semibold cursor-pointer focus:outline-none focus:text-[#FF9900]"
                             onClick={() => setLanguage("FR")}>
                             - FR
                           </p>

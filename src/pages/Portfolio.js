@@ -72,22 +72,22 @@ function Portfolio() {
   ];
 
   const [items, setItems] = useState(data);
-  const [visible, setVisible] = useState(4);
+  const [visible, setVisible] = useState(2);
 
   const showMoreItems = () => {
     setVisible((prevValue) =>
-      prevValue === 8 ? (prevValue = 4) : prevValue + 2
+      prevValue === 8 ? (prevValue = 2) : prevValue + 2
     );
   };
 
   return (
     <div className="text-black flex justify-center">
       <div className="w-[80%] mt-[4vw]">
-        <div className="flex gap-x-[10vw] items-center">
-          <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold">
+        <div className="flex gap-x-[10vw] items-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
+          <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:w-full">
             Explore our new recently completed projects
           </h1>
-          <p className="w-[40vw] text-[1.1vw] text-left text-black float-right">
+          <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[450px]:w-[100%] max-[450px]:text-[3vw] max-[450px]:font-semibold max-[450px]:mb-[-2vw]">
             Our portfolio boasts an impressive array of successful
             collaborations with esteemed clients. Each partnership stands as a
             testament to our commitment to excellence and innovation.
@@ -96,42 +96,47 @@ function Portfolio() {
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
           {items.slice(0, visible).map((item) => {
             return (
-              <div className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw]">
-                <div className="flex w-full h-[29vw]">
+              <div className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw] max-[450px]:w-full max-[450px]:pb-[2vw] max-[450px]:mt-[6vw] shadow-lg">
+                <div className="flex w-full h-[29vw] max-[450px]:h-[65vw]">
                   <img
                     src={item.image}
                     className="h-full object-cover rounded-t-2xl"></img>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw]">
-                    <div className="flex flex-col text-left">
-                      <h2 className="text-[2vw] font-bold">{item.title}</h2>
-                      <p className="text-[1.1vw]">{item.subtitle}</p>
+                  <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw] max-[450px]:h-[17vw]">
+                    <div className="flex flex-col text-left max-[450px]:p-[2vw]">
+                      <h2 className="text-[2vw] font-bold max-[450px]:text-[4vw]">
+                        {item.title}
+                      </h2>
+                      <p className="text-[1.1vw] max-[450px]:text-[3vw]">
+                        {item.subtitle}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             );
           })}
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full max-[450px]:mt-[4vw] max-[450px]:mb-[8vw]">
             <div
-              className="border-black border-[0.1vw] rounded-[3vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out flex justify-center mt-[3vw] w-[8.5vw] h-[2.5vw] text-[1.1vw] cursor-pointer"
+              className="border-black border-[0.1vw] rounded-[3vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out flex justify-center mt-[3vw] w-[8.5vw] h-[2.5vw] text-[1.1vw] cursor-pointer max-[450px]:w-[19vw] max-[450px]:h-[6vw] max-[450px]:text-[2.5vw]"
               onClick={showMoreItems}>
               {visible === 8 ? (
-                <div className="flex items-center gap-x-[0.3vw]">
-                  Collapse
-                  <CgArrowLongUp className="text-[1.1vw]" />
+                <div className="flex items-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
+                  See Less
+                  <CgArrowLongUp className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               ) : (
-                <div className="flex items-center gap-x-[0.3vw]">
+                <div className="flex items-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
                   See More
-                  <CgArrowLongDown className="text-[1.1vw]" />
+                  <CgArrowLongDown className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               )}
             </div>
           </div>
         </div>
         <WorkWithUs
+          Title="WORK WITH US"
           Heading="We would love to hear more about your project"
           CallToAction="Let's Talk"
         />
