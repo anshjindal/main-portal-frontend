@@ -23,7 +23,7 @@ import ARQCH from "../assets/SVG/ARQCHLogo.svg";
 import Precision from "../assets/SVG/PrecisionLogo.svg";
 import Charis from "../assets/SVG/CharisLogo.svg";
 import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
-import CallToActionSection from "../components/CalltoActionSection";
+import CallToActionSection from "../components/CallToActionSection";
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets/OurMissionSideImage.png";
@@ -161,12 +161,14 @@ function AboutUs() {
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
           </div>
-          
+
           <img src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
-          
+
           <div className="mt-[4vw] flex justify-between max-[450px]:block ">
             <div className="flex flex-col gap-y-[1.5vw] w-[45%] max-[450px]:w-[100%] ">
-              <p className="text-[1.3vw] text-[#666666] max-[450px]:text-[3vw]/[5vw] ">Our Mission</p>
+              <p className="text-[1.3vw] text-[#666666] max-[450px]:text-[3vw]/[5vw] ">
+                Our Mission
+              </p>
               <h1 className="text-[3.8vw]/[5.2vw] max-[450px]:text-[6vw]/[8vw]  max-[450px]:w-[60%] font-normal">
                 Empowering Businesses with Bespoke Digital Strategies for Global
                 Success
@@ -182,12 +184,11 @@ function AboutUs() {
                 change on a worldwide scale.
               </p>
             </div>
-            
+
             <div className="flex flex-col flex w-[33vw] max-[450px]:w-[100%] ">
               <div
                 style={{ backgroundImage: `url(${OurMissionTopImage})` }}
-                className="w-full h-[15vw] bg-center bg-cover"
-              ></div>
+                className="w-full h-[15vw] bg-center bg-cover"></div>
               <div className="flex">
                 <div className="w-[23vw]  max-[450px]:w-[100%] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
                   <p className="mt-[2vw] mb-[2vw] text-[1.3vw] max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
@@ -205,8 +206,7 @@ function AboutUs() {
                   style={{
                     backgroundImage: `url(${OurMissionSideImage})`,
                   }}
-                  className="w-[15vw] h-[27vw] bg-cover bg-center"
-                ></div>
+                  className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
               </div>
             </div>
           </div>
@@ -219,13 +219,11 @@ function AboutUs() {
         <div className="flex justify-center w-[80%]">
           <div
             style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
-            className="w-[30vw] h-[37vw] bg-cover bg-center"
-          ></div>
+            className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
           <div>
             <img
               src={QuoteIcon}
-              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
-            ></img>
+              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
             <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
               <div className="p-[3vw]">
                 <h1 className="text-[3vw]/[3vw] font-bold">
@@ -271,8 +269,7 @@ function AboutUs() {
                 src={LogoComponent}
                 className={`flex justify-center items-center p-4 max-[450px]:p-1 w-[12vw] h-[12vw] ${
                   Math.floor(index / 5) !== 4 ? "border-b" : ""
-                }`}
-              ></img>
+                }`}></img>
             ))}
           </div>
         </div>

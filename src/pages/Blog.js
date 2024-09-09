@@ -10,8 +10,7 @@ import bloglist1 from "../assets/bloglist1.png";
 import bloglist2 from "../assets/bloglist2.png";
 import bloglist3 from "../assets/bloglist3.png";
 import Carousel from "../components/ArticlesCarousel";
-import CallToActionSection from '../components/CalltoActionSection';
-
+import CallToActionSection from "../components/CallToActionSection";
 
 function Blog() {
   const data = [

@@ -2,7 +2,7 @@ import React from "react";
 import HeroBanner from "../components/HeroBanner";
 import Accordion from "../components/Accordion";
 import Data from "../helpers/CareersAccordionInnerText.json";
-import CallToActionSection from '../components/CalltoActionSection';
+import CallToActionSection from "../components/CallToActionSection";
 import CareersHeroBanner from "../assets/CareersHeroImage.jpeg";
 
 function Careers() {

@@ -11,7 +11,7 @@ import IconShare from "../assets/Icon-Share.png";
 import IconLinkedin from "../assets/Icon-Linkedin.png";
 import IconTiktok from "../assets/Icon-Tiktok.png";
 import IconInsta from "../assets/Icon-Insta.png";
-import CallToActionSection from '../components/CalltoActionSection';
+import CallToActionSection from "../components/CallToActionSection";
 
 function BlogPost() {
   const data = [
@@ -93,16 +93,13 @@ function BlogPost() {
         <div className="flex justify-between mb-[2vw]">
           <p>July 12th, 2024</p>
           <div className="flex space-x-[1vw]">
-            {media_icons.map(
-              (icon, index) => (
-                <button
-                  key={index}
-                  style={{ backgroundImage: `url(${icon})` }}
-                  className="w-[1.4vw] h-[1.4vw] bg-cover bg-center bg-no-repeat border-none cursor-pointer focus:outline-none"
-                  aria-label={`Social media icon ${index + 1}`}
-                ></button>
-              )
-            )}
+            {media_icons.map((icon, index) => (
+              <button
+                key={index}
+                style={{ backgroundImage: `url(${icon})` }}
+                className="w-[1.4vw] h-[1.4vw] bg-cover bg-center bg-no-repeat border-none cursor-pointer focus:outline-none"
+                aria-label={`Social media icon ${index + 1}`}></button>
+            ))}
           </div>
         </div>
 
@@ -122,8 +119,7 @@ function BlogPost() {
                       ? "border-[#250978]"
                       : "border-transparent"
                   } hover:bg-[#250978] hover:text-white`}
-                  onClick={() => setActiveIndex(index)}
-                >
+                  onClick={() => setActiveIndex(index)}>
                   {section}
                 </button>
                 {/* Adjust spacing or add any additional content here if needed */}
@@ -139,8 +135,7 @@ function BlogPost() {
               <div className="flex items-center mb-[1vw] space-x-[1vw]">
                 <button
                   className="border-[#D26B2F] text-[#D26B2F] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#D26B2F] transition duration-300"
-                  disabled
-                >
+                  disabled>
                   SEO SERVICES
                 </button>
                 <p className="text-[1.1vw]">5 MIN Read</p>
@@ -152,8 +147,7 @@ function BlogPost() {
               </h1>
               <div
                 style={{ backgroundImage: `url(${BlogPost1})` }}
-                className="h-[40vw] bg-cover bg-center my-[2vw]"
-              ></div>
+                className="h-[40vw] bg-cover bg-center my-[2vw]"></div>
 
               {/* Blog Content */}
               <div className="space-y-[2vw] text-left">
@@ -187,8 +181,7 @@ function BlogPost() {
 
                 <div
                   style={{ backgroundImage: `url(${BlogPost2})` }}
-                  className="h-[40vw] bg-cover bg-center my-[2vw]"
-                ></div>
+                  className="h-[40vw] bg-cover bg-center my-[2vw]"></div>
 
                 <p className="font-bold" style={{ marginBottom: "0" }}>
                   Enhanced User Experience (UX)
@@ -407,8 +400,7 @@ function BlogPost() {
                 />
                 <button
                   className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#2703A5] text-orange-500 px-[0.6vw] py-[0.5vw] border-none cursor-pointer focus:outline-none"
-                  aria-label="Submit"
-                >
+                  aria-label="Submit">
                   &#8594;
                 </button>
               </div>

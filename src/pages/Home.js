@@ -44,7 +44,7 @@ import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogIma
 import OurVision from "../assets/SVG/HomepageOurVision.svg";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const SLIDER_HOME = gql`
   query Sliderhome {
@@ -222,10 +222,12 @@ function Home() {
             </div>
           </div>
           <div>
-          <Link to="/frontend-react-wouessi-website-v2/Portfolio"><div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
-            See Our Work
-            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
-          </div></Link>
+            <Link to="/frontend-react-wouessi-website-v2/Portfolio">
+              <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
+                See Our Work
+                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -258,7 +260,9 @@ function Home() {
               <div
                 onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
                 className={`${
-                  WouessiPronunciation ? "bg-[#FF9900]  hover:bg-[#FF9900]" : "bg-[#2703A5]"
+                  WouessiPronunciation
+                    ? "bg-[#FF9900]  hover:bg-[#FF9900]"
+                    : "bg-[#2703A5]"
                 } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}>
                 {WouessiPronunciation ? (
                   <ImCross className="w-[7vw] h-[7vw] text-white" />
@@ -289,7 +293,9 @@ function Home() {
         <div
           onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
           className={`${
-            WouessiPronunciation ? "bg-[#FF9900]" : "bg-[#2703A5] hover:bg-[#FF9900]"
+            WouessiPronunciation
+              ? "bg-[#FF9900]"
+              : "bg-[#2703A5] hover:bg-[#FF9900]"
           } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}>
           {WouessiPronunciation ? (
             <ImCross className="w-[3vw] h-[3vw] text-white hover:text-[#2703A5]" />
@@ -305,11 +311,15 @@ function Home() {
             Empowering your business with AI-driven solutions and expert
             consulting.
           </div>
-          <div> <Link to="/frontend-react-wouessi-website-v2/Portfolio"><div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
-            See Our Work
-            <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
-          </div></Link></div>
-          
+          <div>
+            {" "}
+            <Link to="/frontend-react-wouessi-website-v2/Portfolio">
+              <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[25vw] h-[25vw] text-[3vw] cursor-pointer min-[450.1px]:hidden">
+                See Our Work
+                <CgArrowLongUp className="text-[3vw] rotate-[60deg]" />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -359,11 +369,14 @@ function Home() {
                     DRIVE TRANSFORMATION
                   </p>
                 </div>
-                <div><Link to="/frontend-react-wouessi-website-v2/AboutUs"><div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
-                  View More
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div></Link></div>
-                
+                <div>
+                  <Link to="/frontend-react-wouessi-website-v2/AboutUs">
+                    <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
+                      View More
+                      <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -390,11 +403,14 @@ function Home() {
                   Dedicated to building robust, scalable, and high-performance
                   digital solutions.
                 </div>
-                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
-                  Details
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div></Link></div>
-                
+                <div>
+                  <Link to="/frontend-react-wouessi-website-v2/Services">
+                    <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
+                      Details
+                      <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -411,10 +427,14 @@ function Home() {
                 <div className="flex items-center border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] text-[2.7vw] h-fit w-[40vw]">
                   Propel your business forward in the online landscape.
                 </div>
-                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
-                  Details
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div></Link></div>
+                <div>
+                  <Link to="/frontend-react-wouessi-website-v2/Services">
+                    <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
+                      Details
+                      <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -428,10 +448,14 @@ function Home() {
                 <div className="flex border-[#9C9C9C] border-l-[0.1vw] h-[7vw] w-[22vw] text-[1.3vw] text-[#787878] pl-[1vw] ml-[2.8vw] items-center">
                   Propel your business forward in the online landscape.
                 </div>
-                <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
-                  Details
-                  <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-                </div></Link></div>
+                <div>
+                  <Link to="/frontend-react-wouessi-website-v2/Services">
+                    <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] w-[10vw] h-[10vw] text-[1.1vw] text-black cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] mt-[-6vw]">
+                      Details
+                      <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -490,15 +514,18 @@ function Home() {
             the benefits of digital presence, and gain a cutting edge ahead of
             their competitors.
           </h3>
-          <div><Link to="/frontend-react-wouessi-website-v2/Services"><div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[8vw]">
-            Details
-            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
-          </div></Link></div>
-          
+          <div>
+            <Link to="/frontend-react-wouessi-website-v2/Services">
+              <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[4vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[8vw]">
+                Details
+                <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <Achievements/>
+      <Achievements />
 
       <OurPartners
         Logo1={RiipenLogo}

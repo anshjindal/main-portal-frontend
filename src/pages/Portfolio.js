@@ -4,8 +4,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
 import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
-import CallToActionSection from '../components/CalltoActionSection';
-
+import CallToActionSection from "../components/CallToActionSection";
 
 import AldeliaImage from "../assets/PortfolioAldeliaImage.png";
 import ATRImage from "../assets/PortfolioATRImage.png";
