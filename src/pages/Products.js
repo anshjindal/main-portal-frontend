@@ -17,7 +17,7 @@ function Products() {
             </h1>
           </div>
           <div className="w-[55%] max-[450px]:w-[100%]">
-            <p className="text-left text-[1.1vw] max-[450px]:text-[3vw]">
+            <p className="text-left text-[1.1vw] max-[450px]:text-[3vw] max-[450px]:font-semibold">
               Welcome to the forefront of innovation. We are proud to offer a
               suite of products that embody advanced technologies and
               groundbreaking solutions.
