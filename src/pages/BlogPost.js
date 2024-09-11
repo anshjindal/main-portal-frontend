@@ -12,6 +12,7 @@ import IconLinkedin from "../assets/Icon-Linkedin.png";
 import IconTiktok from "../assets/Icon-Tiktok.png";
 import IconInsta from "../assets/Icon-Insta.png";
 import CallToActionSection from "../components/CallToActionSection";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function BlogPost() {
   const data = [
@@ -91,7 +92,7 @@ function BlogPost() {
       <div className="w-[80%]">
         {/* Header Section */}
         <div className="flex justify-between mb-[2vw]">
-          <p>July 12th, 2024</p>
+          <p className="text-[2vw]">July 12th, 2024</p>
           <div className="flex space-x-[1vw]">
             {media_icons.map((icon, index) => (
               <button
@@ -106,11 +107,11 @@ function BlogPost() {
         {/* Main Content Section */}
         <div className="flex">
           {/* Sidebar Navigation */}
-          <div className="w-[20%] space-y-[1vw] sticky top-[20vw] self-start">
+          <div className="w-[20%] space-y-[1vw] sticky top-[20vw] self-start text-left">
             {sections.map((section, index) => (
               <div key={index} className="relative">
                 <button
-                  className={`border-[#250978] text-[#666666] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1vw] bg-transparent cursor-pointer transition duration-300 ${
+                  className={`border-[#250978] text-[#666666] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1.1vw] bg-transparent cursor-pointer transition duration-300 ${
                     activeIndex === index
                       ? "bg-white text-[#250978]"
                       : "bg-transparent text-[#666666]"
@@ -147,7 +148,7 @@ function BlogPost() {
               </h1>
               <div
                 style={{ backgroundImage: `url(${BlogPost1})` }}
-                className="h-[40vw] bg-cover bg-center my-[2vw]"></div>
+                className="h-[40vw] bg-cover bg-center my-[6vw]"></div>
 
               {/* Blog Content */}
               <div className="space-y-[2vw] text-left">
@@ -168,7 +169,7 @@ function BlogPost() {
                 <p className="font-bold" style={{ marginBottom: "0" }}>
                   Explosive Growth of Mobile Users
                 </p>
-                <p style={{ marginTop: "0" }}>
+                <p className="mt-0 mb-[10vw]">
                   With the proliferation of smartphones, more and more people
                   are accessing the internet through their mobile devices.
                   Statistics reveal that mobile devices account for over half of
@@ -181,7 +182,7 @@ function BlogPost() {
 
                 <div
                   style={{ backgroundImage: `url(${BlogPost2})` }}
-                  className="h-[40vw] bg-cover bg-center my-[2vw]"></div>
+                  className="h-[40vw] bg-cover bg-center my-[6vw]"></div>
 
                 <p className="font-bold" style={{ marginBottom: "0" }}>
                   Enhanced User Experience (UX)
@@ -388,21 +389,21 @@ function BlogPost() {
 
           {/* Subscription Section */}
           <div className="w-[20%] space-y-[2vw] sticky top-[20vw] self-start">
-            <div className="bg-white p-[1vw]">
+            <div className="bg-white p-[1vw] w-[17vw]">
               <p className="text-[1.3vw] font-semibold text-left">
                 SIGN UP TO BE NOTIFIED FOR MORE
               </p>
-              <div className="relative mt-[2vh]">
+              <div className="flex justify-end relative h-[4vw] bg-[red] mt-[2vw]">
                 <input
                   type="email"
                   placeholder="EMAIL HERE"
-                  className="w-full p-[0.4vw] pr-[3.5vw] border-[0.2vw] border-[#2703A5]"
+                  className="w-full text-[1.5vw] p-[0.4vw] border-[0.2vw] border-[#2703A5] placeholder:text-[1.5vw] focus:outline-none"
                 />
-                <button
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#2703A5] text-orange-500 px-[0.6vw] py-[0.5vw] border-none cursor-pointer focus:outline-none"
-                  aria-label="Submit">
-                  &#8594;
-                </button>
+                <div className="flex pl-[0.5vw] pr-[0.5vw] items-center absolute h-full bg-[#2703A5]">
+                  <button className="text-[2vw] text-orange-500 border-none cursor-pointer">
+                    <FaArrowRightLong />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

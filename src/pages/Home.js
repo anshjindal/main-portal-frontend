@@ -618,7 +618,7 @@ function Home() {
                   Key Reasons Why Your Business Needs Mobile SEO Services
                 </p>
                 <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[450px]:text-[3vw]">
-                  Read more
+                  <Link to="BlogPost">Read more</Link>
                 </p>
               </div>
             </div>

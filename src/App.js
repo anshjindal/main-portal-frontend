@@ -22,11 +22,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { BsArrowRight } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -126,7 +122,10 @@ function App() {
                       route: "frontend-react-wouessi-website-v2/Portfolio",
                     },
                   ].map((text, index) => (
-                    <div onClick={() => updateNavMenu(false)} className="" key={index}>
+                    <div
+                      onClick={() => updateNavMenu(false)}
+                      className=""
+                      key={index}>
                       <motion.h1
                         onClick={getData}
                         className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
@@ -222,9 +221,12 @@ function App() {
               <Route
                 path="frontend-react-wouessi-website-v2/CopyrightPolicy"
                 element={<CopyrightPolicy />}></Route>
+              <Route
+                path="frontend-react-wouessi-website-v2/BlogPost"
+                element={<BlogPost />}></Route>
             </Routes>
+            <Footer />
           </div>
-          <Footer />
         </BrowserRouter>
       </div>
     </ApolloProvider>
