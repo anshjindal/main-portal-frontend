@@ -1,35 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import { PiArrowCircleRightLight } from "react-icons/pi";
 import { PiArrowCircleLeftLight } from "react-icons/pi";
-import { motion } from "framer-motion";
 import { CgArrowLongUp } from "react-icons/cg";
-import { FaArrowRight } from "react-icons/fa";
-import HomepageHeroImage from "../assets/homepage-hero-image.png";
+import HeroBannerVideo from "../assets/Video/HeroBannerVideo.mp4";
 // import HartnamtemahLogo from "../HartnamtemahLogo.svg";
 // import ASDICLogo from "../ASDICLogo.svg";
 // import CADRLogo from "../CADRLogo.svg";
 // import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
-import Aldelia from "../assets/SVG/AldeliaLogo.svg";
-import ARQCH from "../assets/SVG/ARQCHLogo.svg";
-import Precision from "../assets/SVG/PrecisionLogo.svg";
-import Charis from "../assets/SVG/CharisLogo.svg";
-import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
+import Aldelia from "../assets/SVG/ClientsLogo/AldeliaLogo.svg";
+import ARQCH from "../assets/SVG/ClientsLogo/ARQCHLogo.svg";
+import Precision from "../assets/SVG/ClientsLogo/PrecisionLogo.svg";
+import Charis from "../assets/SVG/ClientsLogo/CharisLogo.svg";
+import KigaliRunningClub from "../assets/SVG/ClientsLogo/KigaliRunningClub.svg";
+
+
 import WhyChooseUsBackground from "../assets/WhyChooseUsBackground.png";
 import DigitalMarketingImage from "../assets/what-we-do-digital-marketing.jpeg";
 import SoftwareEngineeringImage from "../assets/what-we-do-software-engineering.jpeg";
 import SliderData from "../helpers/RecentProjectSlider";
 // import { SliderHome } from "../GraphQL/Queries";
 import { gql, useQuery } from "@apollo/client";
-import parse from "html-react-parser";
-
 import Achievements from "../components/Achievements";
-
 import OurPartners from "../components/OurPartners";
 import NewsletterRegister from "../components/NewsletterRegister";
 import OurClients from "../components/OurClients";
-
-import HomepageAboutUsImage from "../assets/HomepageAboutUsImage.jpeg";
 import RedefineCollab from "../assets/SVG/RedefineCollab.svg";
 import DriveTransformation from "../assets/SVG/DriveTransformation.svg";
 import RiipenLogo from "../assets/SVG/RiipenLogo.svg";
@@ -37,7 +32,7 @@ import BipocFoundationLogo from "../assets/SVG/BipocFoundationLogo.svg";
 import HomepageUnknownPartnerLogo from "../assets/SVG/HomepageUnknownPartnerLogo.svg";
 import AyaLogo from "../assets/SVG/AyaLogo.svg";
 import DigitalMainStLogo from "../assets/SVG/DigitalMainStLogo.svg";
-import BantuEdLogo from "../assets/SVG/BantuEdLogo.svg";
+
 import ClientTestimonySlider from "../components/ClientTestimonySlider";
 import MobileSEOServicesBlogImage from "../assets/MobileSEOServicesBlogImage.jpeg";
 import TechnicalSEOServicesBlogImage from "../assets/TechnicalSEOServicesBlogImage.jpeg";
@@ -233,43 +228,44 @@ function Home() {
       </div>
       <div className="flex justify-center mt-[-5vw] max-[450px]:mt-[-9vw]">
         <div className="flex justify-end w-[80%] h-[28vw] max-[450px]:w-full max-[450px]:flex-none max-[450px]:justify-start max-[450px]:h-[42vw]">
-          <div
-            // style={{
-            //   backgroundImage: `url(${parse(
-            //     data.page.featuredImage.node.sourceUrl
-            //   )})`,
-            // }}
-            style={{ backgroundImage: `url(${HomepageHeroImage})` }}
-            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]">
-            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden">
-              {WouessiPronunciation ? (
-                <div className="p-[2vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
-                  <h1 className="text-[4.5vw] font-bold">
-                    Wou-essi /wu: ε si:/
-                  </h1>
-                  <div className="border-[0.1vw] border-[#2703A5]"></div>
-                  <p className="text-[2.5vw] mt-[1.1vw]">
-                    The way we pronounce our name is "woo-eh-ssi".
-                  </p>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-            <div className="w-[95%] h-full flex justify-end items-center min-[450.1px]:hidden">
-              <div
-                onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
-                className={`${
-                  WouessiPronunciation
-                    ? "bg-[#FF9900]  hover:bg-[#FF9900]"
-                    : "bg-[#2703A5]"
-                } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}>
-                {WouessiPronunciation ? (
-                  <ImCross className="w-[7vw] h-[7vw] text-white" />
-                ) : (
-                  <HiOutlineSpeakerWave className="w-[8vw] h-[8vw] rotate-[-30deg] text-white" />
-                )}
+          <video
+            src={HeroBannerVideo}
+            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]"
+            autoPlay
+            muted
+            loop
+            controls={false} 
+          >
+            Your browser does not support the video tag.
+          </video>
+
+          <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden">
+            {WouessiPronunciation ? (
+              <div className="p-[2vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
+                <h1 className="text-[4.5vw] font-bold">Wou-essi /wu: ε si:/</h1>
+                <div className="border-[0.1vw] border-[#2703A5]"></div>
+                <p className="text-[2.5vw] mt-[1.1vw]">
+                  The way we pronounce our name is "woo-eh-ssi".
+                </p>
               </div>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="w-[95%] h-full flex justify-end items-center min-[450.1px]:hidden">
+            <div
+              onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
+              className={`${
+                WouessiPronunciation
+                  ? "bg-[#FF9900]  hover:bg-[#FF9900]"
+                  : "bg-[#2703A5]"
+              } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[12vw] h-[12vw] text-[1.1vw] cursor-pointer`}
+            >
+              {WouessiPronunciation ? (
+                <ImCross className="w-[7vw] h-[7vw] text-white" />
+              ) : (
+                <HiOutlineSpeakerWave className="w-[8vw] h-[8vw] rotate-[-30deg] text-white" />
+              )}
             </div>
           </div>
         </div>
@@ -296,7 +292,8 @@ function Home() {
             WouessiPronunciation
               ? "bg-[#FF9900]"
               : "bg-[#2703A5] hover:bg-[#FF9900]"
-          } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}>
+          } transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}
+        >
           {WouessiPronunciation ? (
             <ImCross className="w-[3vw] h-[3vw] text-white hover:text-[#2703A5]" />
           ) : (
@@ -356,7 +353,8 @@ function Home() {
                 <div className="flex gap-x-[2vw] items-center">
                   <img
                     src={RedefineCollab}
-                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"></img>
+                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"
+                  ></img>
                   <p className="text-[1.5vw] font-bold max-[450px]:text-[4vw]">
                     REDEFINE COLLABORATION
                   </p>
@@ -364,7 +362,8 @@ function Home() {
                 <div className="flex gap-x-[2vw] items-center max-[450px]:pb-[6vw]">
                   <img
                     src={DriveTransformation}
-                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"></img>
+                    className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"
+                  ></img>
                   <p className="text-[1.5vw] font-bold max-[450px]:text-[4vw]">
                     DRIVE TRANSFORMATION
                   </p>
@@ -415,7 +414,8 @@ function Home() {
             </div>
             <div
               style={{ backgroundImage: `url(${SoftwareEngineeringImage})` }}
-              className="w-[35vw] h-[25vw] mt-[5vw] bg-cover bg-[center] flex max-[450px]:w-full max-[450px]:h-[55vw]"></div>
+              className="w-[35vw] h-[25vw] mt-[5vw] bg-cover bg-[center] flex max-[450px]:w-full max-[450px]:h-[55vw]"
+            ></div>
           </div>
 
           <div className="flex justify-between border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] max-[450px]:w-full max-[450px]:flex-col max-[450px]:w-full max-[450px]:gap-y-[4vw] max-[450px]:border-none">
@@ -439,7 +439,8 @@ function Home() {
             </div>
             <div
               style={{ backgroundImage: `url(${DigitalMarketingImage})` }}
-              className="w-[35vw] h-[25vw] bg-cover bg-[center_right_-0.5vw] flex max-[450px]:w-full max-[450px]:h-[55vw]"></div>
+              className="w-[35vw] h-[25vw] bg-cover bg-[center_right_-0.5vw] flex max-[450px]:w-full max-[450px]:h-[55vw]"
+            ></div>
             <div className="flex flex-col max-[450px]:hidden">
               <h1 className="text-[3vw] text-[#2E2E2E] font-bold">
                 Digital Marketing <br /> and Branding
@@ -486,7 +487,8 @@ function Home() {
                 : ""
             }`}
                 onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}>
+                onMouseLeave={handleMouseLeave}
+              >
                 {service}
               </div>
             ))}
@@ -497,7 +499,8 @@ function Home() {
       <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
         <img
           src={WhyChooseUsBackground}
-          className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw] max-[450px]:hidden"></img>
+          className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw] max-[450px]:hidden"
+        ></img>
         <div className="flex flex-col text-left w-[38vw] max-[450px]:w-[80%] max-[450px]:mt-[4vw]">
           <h2 className="text-[1.1vw] mb-[0.7vw] mt-[6vw] text-[#FF9900] max-[450px]:text-[2.5vw]">
             WHY CHOOSE US
@@ -507,9 +510,10 @@ function Home() {
           </h1>
           <div
             style={{ backgroundImage: `url(${WhyChooseUsBackground})` }}
-            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[450.1px]:hidden"></div>
+            className="w-full h-[70vw] mt-[6vw] mb-[6vw] bg-cover bg-center min-[450.1px]:hidden"
+          ></div>
           <h3 className="text-[1.2vw] mt-[2vw] text-white max-[450px]:text-[3vw] ">
-            we are committed to helping business owners leverage digital
+            We are committed to helping business owners leverage digital
             technology and solutions, increase their digital footprint, harness
             the benefits of digital presence, and gain a cutting edge ahead of
             their competitors.
@@ -567,7 +571,8 @@ function Home() {
                 style={{
                   backgroundImage: `url(${SliderData[projSlider].thumbnail})`,
                 }}
-                className="w-[45vw] h-[40vw] bg-cover bg-[left] flex transition-all ease-in-out duration-300 max-[450px]:w-[55vw] max-[450px]:h-[50vw]">
+                className="w-[45vw] h-[40vw] bg-cover bg-[left] flex transition-all ease-in-out duration-300 max-[450px]:w-[55vw] max-[450px]:h-[50vw]"
+              >
                 <div className="w-full h-full bg-slate-900/50"></div>
               </div>
             </div>
@@ -608,7 +613,8 @@ function Home() {
                 style={{
                   backgroundImage: `url(${MobileSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]"></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]"
+              ></div>
               <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[-15vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
@@ -628,7 +634,8 @@ function Home() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[450px]:hidden"></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[450px]:hidden"
+              ></div>
               <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white z-10 max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[10vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
@@ -645,7 +652,8 @@ function Home() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450.1px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450.1px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"
+              ></div>
             </div>
           </div>
         </div>

@@ -13,7 +13,6 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
-import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -200,9 +199,6 @@ function App() {
               <Route
                 path="frontend-react-wouessi-website-v2/ContactUs"
                 element={<ContactUs />}></Route>
-              <Route
-                path="frontend-react-wouessi-website-v2/Insights"
-                element={<Insights />}></Route>
               <Route
                 path="frontend-react-wouessi-website-v2/Careers"
                 element={<Careers />}></Route>

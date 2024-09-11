@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "../styles/Portfolio.css";
-import { BsArrowRightShort } from "react-icons/bs";
-import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
+import React, { useState } from "react";
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/CallToActionSection";
 
+// Portfolio images
 import AldeliaImage from "../assets/PortfolioAldeliaImage.png";
 import ATRImage from "../assets/PortfolioATRImage.png";
 import BuckheadImage from "../assets/PortfolioBuckheadImage.png";
@@ -19,64 +16,24 @@ import YellowCardImage from "../assets/PortfolioYellowCardImage.png";
 
 function Portfolio() {
   const data = [
-    {
-      image: GIZImage,
-      title: "GIZ",
-      subtitle: "Featured - Family Consultancy",
-    },
-    {
-      image: CanalPlus,
-      title: "Canal Plus",
-      subtitle: "Featured - Community",
-    },
-    {
-      image: HamiltonCrescentImage,
-      title: "Hamilton Crescent",
-      subtitle: "Featured - cybersecurity",
-    },
-    {
-      image: AldeliaImage,
-      title: "Aldelia",
-      subtitle: "Featured - Entrepreneurship",
-    },
-    {
-      image: ATRImage,
-      title: "ATR Cyber",
-      subtitle: "Featured - Auto Parts Supplier",
-    },
-    {
-      image: WatchReportImage,
-      title: "Watch Rport",
-      subtitle: "Featured - Beverage",
-    },
-    {
-      image: YellowCardImage,
-      title: "Yellow Card",
-      subtitle: "Featured - GIS, Construction",
-    },
-    {
-      image: MasterNodedImage,
-      title: "Masternoded",
-      subtitle: "Featured - Non-Profit",
-    },
-    {
-      image: BuckheadImage,
-      title: "Buckhead",
-      subtitle: "Featured - Buckhead",
-    },
-    {
-      image: KeplerImage,
-      title: "Kepler",
-      subtitle: "Featured - Non-profit",
-    },
+    { image: GIZImage, title: "GIZ", link: "https://www.giz.de/en/html/index.html" },
+    { image: CanalPlus, title: "Canal Plus", link: "https://www.canalplus.com/ " },
+    { image: HamiltonCrescentImage, title: "Hamilton Crescent", link: "https://hamiltonccm.com" },
+    { image: AldeliaImage, title: "Aldelia", link: "https://www.aldelia.com/en/" },
+    { image: ATRImage, title: "ATR Cyber", link: "https://atrcyber.com" },
+    { image: WatchReportImage, title: "Watch Report", link: "https://www.watchreport.com" },
+    { image: YellowCardImage, title: "Yellow Card", link: "https://yellowcard.io/" },
+    { image: MasterNodedImage, title: "Masternoded", link: "https://masternoded.com" },
+    { image: BuckheadImage, title: "Buckhead", link: "https://www.buckhead.com/" },
+    { image: KeplerImage, title: "Kepler", link: "https://kepler.org" },
   ];
 
   const [items, setItems] = useState(data);
-  const [visible, setVisible] = useState(2);
+  const [visible, setVisible] = useState(4); // Show 4 cards initially
 
   const showMoreItems = () => {
     setVisible((prevValue) =>
-      prevValue === 8 ? (prevValue = 2) : prevValue + 2
+      prevValue === 8 ? (prevValue = 4) : prevValue + 4
     );
   };
 
@@ -94,34 +51,38 @@ function Portfolio() {
           </p>
         </div>
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
-          {items.slice(0, visible).map((item) => {
-            return (
-              <div className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw] max-[450px]:w-full max-[450px]:pb-[2vw] max-[450px]:mt-[6vw] shadow-lg">
-                <div className="flex w-full h-[29vw] max-[450px]:h-[65vw]">
-                  <img
-                    src={item.image}
-                    className="h-full object-cover rounded-t-2xl"></img>
-                </div>
-                <div className="flex justify-center">
-                  <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw] max-[450px]:h-[17vw]">
-                    <div className="flex flex-col text-left max-[450px]:p-[2vw]">
-                      <h2 className="text-[2vw] font-bold max-[450px]:text-[4vw]">
-                        {item.title}
-                      </h2>
-                      <p className="text-[1.1vw] max-[450px]:text-[3vw]">
-                        {item.subtitle}
-                      </p>
-                    </div>
+          {items.slice(0, visible).map((item) => (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw] max-[450px]:w-full max-[450px]:pb-[2vw] max-[450px]:mt-[6vw] shadow-md hover:shadow-lg transition-transform"
+              key={item.title}
+            >
+              <div className="relative w-full h-[29vw] max-[450px]:h-[65vw] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover rounded-t-2xl transition-transform transform hover:scale-105"
+                />
+              </div>
+              <div className="flex justify-center">
+                <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw] max-[450px]:h-[17vw]">
+                  <div className="flex flex-col text-left max-[450px]:p-[2vw]">
+                    <h2 className="text-[2vw] font-bold max-[450px]:text-[4vw]">
+                      {item.title}
+                    </h2>
                   </div>
                 </div>
               </div>
-            );
-          })}
+            </a>
+          ))}
           <div className="flex justify-center w-full max-[450px]:mt-[4vw] max-[450px]:mb-[8vw]">
             <div
               className="border-black border-[0.1vw] rounded-[3vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out flex justify-center mt-[3vw] w-[8.5vw] h-[2.5vw] text-[1.1vw] cursor-pointer max-[450px]:w-[19vw] max-[450px]:h-[6vw] max-[450px]:text-[2.5vw]"
-              onClick={showMoreItems}>
-              {visible === 8 ? (
+              onClick={showMoreItems}
+            >
+              {visible === 10 ? (
                 <div className="flex items-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
                   See Less
                   <CgArrowLongUp className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
