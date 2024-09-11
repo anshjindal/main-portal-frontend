@@ -21,6 +21,8 @@ import TermsCondition from "./pages/TermsCondition";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
+import ErrorPage from "./pages/Error";
+
 
 import {
   ApolloClient,
@@ -222,6 +224,7 @@ function App() {
               <Route
                 path="frontend-react-wouessi-website-v2/CopyrightPolicy"
                 element={<CopyrightPolicy />}></Route>
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
           <Footer />
