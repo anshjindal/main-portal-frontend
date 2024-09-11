@@ -531,14 +531,6 @@ function Home() {
 
       <Achievements />
 
-      <OurPartners
-        Logo1={RiipenLogo}
-        Logo2={BipocFoundationLogo}
-        Logo3={HomepageUnknownPartnerLogo}
-        Logo4={AyaLogo}
-        Logo5={DigitalMainStLogo}
-      />
-
       <div className="bg-[#2B00AC] flex justify-center pt-[6vw] pb-[6vw] max-[450px]:pb-[10vw]">
         <div className="w-[80%] text-left flex flex-col">
           <h1 className="text-[#FF9900] text-[1.1vw] font-normal max-[450px]:text-[2.5vw] max-[450px]:mt-[3vw]">
