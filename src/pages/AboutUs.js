@@ -18,11 +18,6 @@ import OurClients from "../components/OurClients";
 // import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
 // import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
 
-import Aldelia from "../assets/SVG/AldeliaLogo.svg";
-import ARQCH from "../assets/SVG/ARQCHLogo.svg";
-import Precision from "../assets/SVG/PrecisionLogo.svg";
-import Charis from "../assets/SVG/CharisLogo.svg";
-import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
 import CallToActionSection from "../components/CallToActionSection";
 import QuoteIcon from "../QuoteIcon.svg";
 import OurMissionTopImage from "../assets/OurMissionTopImage.png";
@@ -68,6 +63,12 @@ import Kubemetes from "../assets/SVG/Kubemetes.svg";
 import NextJS from "../assets/SVG/NextJS.svg";
 
 function AboutUs() {
+  const handleScroll = () => {
+    document
+      .getElementById("target-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const cards = [
     {
       image: RodrigueFouafouHeadshot,
@@ -156,7 +157,10 @@ function AboutUs() {
               offers a comprehensive suite of cutting-edge digital services
               tailored to meet the diverse needs of businesses across the globe.
             </p>
-            <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.1vw] cursor-pointer">
+            <div
+              className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.1vw] cursor-pointer"
+              onClick={handleScroll}
+            >
               Our Approach
               <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
             </div>
@@ -188,7 +192,8 @@ function AboutUs() {
             <div className="flex flex-col flex w-[33vw] max-[450px]:w-[100%] ">
               <div
                 style={{ backgroundImage: `url(${OurMissionTopImage})` }}
-                className="w-full h-[15vw] bg-center bg-cover"></div>
+                className="w-full h-[15vw] bg-center bg-cover"
+              ></div>
               <div className="flex">
                 <div className="w-[23vw]  max-[450px]:w-[100%] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
                   <p className="mt-[2vw] mb-[2vw] text-[1.3vw] max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
@@ -206,7 +211,8 @@ function AboutUs() {
                   style={{
                     backgroundImage: `url(${OurMissionSideImage})`,
                   }}
-                  className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
+                  className="w-[15vw] h-[27vw] bg-cover bg-center"
+                ></div>
               </div>
             </div>
           </div>
@@ -219,11 +225,13 @@ function AboutUs() {
         <div className="flex justify-center w-[80%]">
           <div
             style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
-            className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
+            className="w-[30vw] h-[37vw] bg-cover bg-center"
+          ></div>
           <div>
             <img
               src={QuoteIcon}
-              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
+              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
+            ></img>
             <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
               <div className="p-[3vw]">
                 <h1 className="text-[3vw]/[3vw] font-bold">
@@ -247,15 +255,20 @@ function AboutUs() {
         </div>
       </div>
 
-      <OurClients
-        Logo1={ARQCH}
-        Logo2={Precision}
-        Logo3={Aldelia}
-        Logo4={Charis}
-        Logo5={KigaliRunningClub}
-      />
+      <section>
+        <div className="flex justify-center mb-[2vw] ">
+          <div className="w-[80%]">
+            <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
+              Our Partners
+            </h1>
+          </div>
+        </div>
+        <OurPartners />
+      </section>
 
-      <OurApproachCarousel />
+      <section id="target-section">
+        <OurApproachCarousel />
+      </section>
 
       <div className="flex justify-center my-[5vw] ">
         <div className="w-[80%]">
@@ -269,7 +282,8 @@ function AboutUs() {
                 src={LogoComponent}
                 className={`flex justify-center items-center p-4 max-[450px]:p-1 w-[12vw] h-[12vw] ${
                   Math.floor(index / 5) !== 4 ? "border-b" : ""
-                }`}></img>
+                }`}
+              ></img>
             ))}
           </div>
         </div>
