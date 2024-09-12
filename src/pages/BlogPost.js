@@ -2,16 +2,16 @@ import React from "react";
 import { useState } from "react";
 import "../styles/Blogpost.css";
 import { CgArrowLongUp } from "react-icons/cg";
-import BlogPost1 from "../assets/BlogPost1.png";
-import BlogPost2 from "../assets/BlogPost2.png";
-import Carousel from "../components/ArticlesCarousel";
-import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
-import IconShare from "../assets/Icon-Share.png";
-import IconLinkedin from "../assets/Icon-Linkedin.png";
-import IconTiktok from "../assets/Icon-Tiktok.png";
-import IconInsta from "../assets/Icon-Insta.png";
-import CallToActionSection from "../components/CallToActionSection";
+import BlogPost1 from "../assets/Images/BlogPost1.png";
+import BlogPost2 from "../assets/Images/BlogPost2.png";
+import Carousel from "../components/Reusable/ArticlesCarousel";
+import AfricaBlockChainImage from "../assets/Images/left-side-image-portfolio.jpeg";
+import AfroLifestyleImage from "../assets/Images/right-side-image-portfolio.png";
+import IconShare from "../assets/Images/Icon-Share.png";
+import IconLinkedin from "../assets/Images/Icon-Linkedin.png";
+import IconTiktok from "../assets/Images/Icon-Tiktok.png";
+import IconInsta from "../assets/Images/Icon-Insta.png";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
 
 function BlogPost() {
   const data = [

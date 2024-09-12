@@ -1,9 +1,9 @@
 import React from "react";
-import HeroBanner from "../components/HeroBanner";
-import Accordion from "../components/Accordion";
-import Data from "../helpers/CareersAccordionInnerText.json";
-import CallToActionSection from "../components/CallToActionSection";
-import CareersHeroBanner from "../assets/CareersHeroImage.jpeg";
+import HeroBanner from "../components/Reusable/HeroBanner";
+import Accordion from "../components/Services/Accordion";
+import Data from "../data/CareersAccordionInnerText.json";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
+import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
 
 function Careers() {
   return (

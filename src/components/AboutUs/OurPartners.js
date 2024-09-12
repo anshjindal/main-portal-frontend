@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/global.css';
+import '../../styles/global.css';
 
 import {
   ATRCyberLogo,
@@ -22,7 +22,7 @@ import {
   StartupYMMLogo,
   VelocityLogo,
   YoshiLogo,
-} from "../assets/SVG/PartnersLogo";
+} from "../../assets/SVG/PartnersLogo";
 
 function OurPartners() {
   return (

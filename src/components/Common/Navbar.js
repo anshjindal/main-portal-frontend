@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
+import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { CgArrowLongUp } from "react-icons/cg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
-import "../styles/global.css";
+import "../../styles/global.css";
 
 function Navbar({ onClick, onMenuItemClick }) {
   const [languageDropdown, setLanguageDropdown] = useState(false);
@@ -47,8 +47,8 @@ function Navbar({ onClick, onMenuItemClick }) {
               <Link to="frontend-react-wouessi-website-v2/Portfolio" className="navbar-link">
                 <li className="py-2 hover:text-[#FF9900]   ">Portfolio</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/ContactUs" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">Contact Us</li>
+              <Link to="frontend-react-wouessi-website-v2/Blog" className="navbar-link">
+                <li className="py-2 hover:text-[#FF9900]   ">Blogs</li>
               </Link>
               <div
       className="relative"

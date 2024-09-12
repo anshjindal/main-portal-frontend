@@ -6,8 +6,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CgArrowLongUp } from "react-icons/cg";
-import WouessiLogoFooter from "../WouessiLogoFooter.svg";
-import "../styles/global.css";
+import WouessiLogoFooter from "../../assets/SVG/WouessiLogoFooter.svg";
+import "../../styles/global.css";
 
 function Footer() {
   return (
@@ -25,7 +25,7 @@ function Footer() {
             </p>
             <div className="flex gap-x-[4vw] items-center max-[450px]:gap-x-[14vw]">
               <a
-                href={require("../assets/Documents/WouessiBrochure.pdf")}
+                href={require("../../assets/Documents/WouessiBrochure.pdf")}
                 download="WouessiBrochure.pdf"
                 className="border-black border-[0.1vw] bg-[#F7F7F7] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] text-center cursor-pointer z-10 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[5vw]"
               >

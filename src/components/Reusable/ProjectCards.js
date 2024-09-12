@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
+import AfricaBlockChainImage from "../assets/Images/left-side-image-portfolio.jpeg";
+import AfroLifestyleImage from "../assets/Images/right-side-image-portfolio.png";
 
 function ProjectCards() {
   const data = [

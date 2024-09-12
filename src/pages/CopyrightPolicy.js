@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Services.css";
 import CopyrightIcon from "../assets/SVG/CopyrightPolicyIcon.svg";
-import Accordion from "../components/Accordion";
-import CopyrightData from "../helpers/CopyrightPolicyText.json";
-import ContactUsSection from "../components/ContactUsSection";
+import Accordion from "../components/Services/Accordion";
+import CopyrightData from "../data/CopyrightPolicyText.json";
+import ContactUsSection from "../components/Reusable/ContactUsSection";
 
 function CopyrightPolicy() {
   return (

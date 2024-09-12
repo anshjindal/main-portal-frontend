@@ -1,16 +1,12 @@
 import React from "react";
-import "../styles/Pricing.css";
-import { CgArrowLongUp } from "react-icons/cg";
-import BantuEd from "../assets/BantuEd.png";
-import Egolu from "../assets/egolu-app.png";
-import AfricaBlockChainImage from "../assets/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/right-side-image-portfolio.png";
-import BlogPageLaptop from "../assets/blog_page_laptop.png";
-import bloglist1 from "../assets/bloglist1.png";
-import bloglist2 from "../assets/bloglist2.png";
-import bloglist3 from "../assets/bloglist3.png";
-import Carousel from "../components/ArticlesCarousel";
-import CallToActionSection from "../components/CallToActionSection";
+import AfricaBlockChainImage from "../assets/Images/left-side-image-portfolio.jpeg";
+import AfroLifestyleImage from "../assets/Images/right-side-image-portfolio.png";
+import BlogPageLaptop from "../assets/Images/blog_page_laptop.png";
+import bloglist1 from "../assets/Images/BlogPost1.png";
+import bloglist2 from "../assets/Images/BlogPost2.png";
+import bloglist3 from "../assets/Images/bloglist3.png";
+import Carousel from "../components/Reusable/ArticlesCarousel";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
 
 function Blog() {
   const data = [

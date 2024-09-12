@@ -1,5 +1,5 @@
 import React from "react";
-import NewsletterBanner from "../assets/NewsletterBanner.jpeg";
+import NewsletterBanner from "../../assets/Images/NewsletterBanner.jpeg";
 import { FaArrowRight } from "react-icons/fa6";
 
 function NewsletterRegister() {

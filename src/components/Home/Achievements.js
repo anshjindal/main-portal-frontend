@@ -1,10 +1,8 @@
-import React from 'react';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
-import { FaArrowRight } from 'react-icons/fa';  // Assuming you have react-icons installed
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import { FaArrowRight } from "react-icons/fa";
 
 const Achievements = () => {
-  // Hook to determine when the element is in view
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true, // Only trigger once
     threshold: 0.1, // Trigger when 10% of the component is in view
@@ -72,7 +70,9 @@ const Achievements = () => {
             <h1 className="text-[4vw] font-extrabold max-[450px]:text-[7vw] max-[450px]:mt-[-3vw] max-[450px]:mb-[-2vw]">
               {sectionInView ? <CountUp start={0} end={2} duration={3} /> : 0}
             </h1>
-            <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">New Products</h2>
+            <h2 className="text-[1.3vw] max-[450px]:text-[3vw]">
+              New Products
+            </h2>
             <div className="flex items-center pt-[1vw] w-fit text-[1.1vw] font-semibold space-x-[0.5vw] hover:space-x-[0.8vw] cursor-pointer max-[450px]:text-[2vw]">
               <p>See More</p> <FaArrowRight />
             </div>
