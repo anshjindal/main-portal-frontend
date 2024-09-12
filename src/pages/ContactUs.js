@@ -8,9 +8,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import ContactPageHeroImage from "../assets/ContactPageHeroImage.png";
+import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.png";
 import { ImCheckmark } from "react-icons/im";
-import NewsletterRegister from "../components/NewsletterRegister";
+import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);

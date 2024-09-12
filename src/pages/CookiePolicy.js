@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Services.css";
 import CookiePolicyIcon from "../assets/SVG/CookiePolicyIcon.svg";
-import Accordion from "../components/Accordion";
-import CookieData from "../helpers/CookiePolicyText.json";
-import ContactUsSection from "../components/ContactUsSection";
+import Accordion from "../components/Services/Accordion";
+import CookieData from "../data/CookiePolicyText.json";
+import ContactUsSection from "../components/Reusable/ContactUsSection";
 
 function CookiePolicy() {
   return (

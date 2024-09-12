@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Services.css";
 import PrivacyIcon from "../assets/SVG/PrivacyPolicyIcon.svg";
-import Accordion from "../components/Accordion";
-import PrivacyData from "../helpers/PrivacyPolicyText.json";
-import ContactUsSection from "../components/ContactUsSection";
+import Accordion from "../components/Services/Accordion";
+import PrivacyData from "../data/PrivacyPolicyText.json";
+import ContactUsSection from "../components/Reusable/ContactUsSection";
 
 function PrivacyPolicy() {
   return (

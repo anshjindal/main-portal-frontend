@@ -5,9 +5,9 @@ import { CgArrowLongUp } from "react-icons/cg";
 import "./App.css";
 
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import ScrollToTop from "./components/ScollToTop";
+import Footer from "./components/Common/Footer";
+import Navbar from "./components/Common/Navbar";
+import ScrollToTop from "./components/Utils/ScollToTop";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Products from "./pages/Products";

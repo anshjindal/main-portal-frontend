@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/Services.css";
-import CallToActionSection from "../components/CallToActionSection";
-import HeroBanner from "../components/HeroBanner";
-import ServicesHeroBanner from "../assets/ServicesHeroImage.jpeg";
-import Accordion from "../components/Accordion";
-import Data from "../helpers/ServicesAccordionInnerText";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
+import HeroBanner from "../components/Reusable/HeroBanner";
+import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.jpeg";
+import Accordion from "../components/Services/Accordion";
+import Data from "../data/ServicesData.json";
 
 function Services() {
   return (

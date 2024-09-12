@@ -1,66 +1,23 @@
 import React from "react";
 import "../styles/AboutUs.css";
-import NewsletterRegister from "../components/NewsletterRegister";
-import {
-  CgArrowLongUp,
-  HiOutlineArrowSmRight,
-  HiOutlineArrowSmLeft,
-} from "react-icons/cg";
+
+import { CgArrowLongUp } from "react-icons/cg";
+
+
+import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
+import ClientTestimonySlider from "../components/Home/ClientTestimonySlider";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
+import OurTeamCarousel from "../components/AboutUs/OurTeamCarousel";
+import OurPartners from "../components/AboutUs/OurPartners";
+import OurApproachCarousel from "../components/AboutUs/OurApproachCarousel";
+import TechStack from "../components/AboutUs/TechStack";
+import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
+
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
-import OurClients from "../components/OurClients";
+import OurMissionTopImage from "../assets/Images/OurMissionTopImage.png";
+import OurMissionSideImage from "../assets//Images/OurMissionSideImage.png";
 
-// import { PiArrowCircleRightLight } from "react-icons/pi";
-// import { PiArrowCircleLeftLight } from "react-icons/pi";
-// import MeetTheTeamImages from "../assets/africa-block-chain-slider.png";
-// import HartnamtemahLogo from "../HartnamtemahLogo.svg";
-// import ASDICLogo from "../ASDICLogo.svg";
-// import CADRLogo from "../CADRLogo.svg";
-// import AfroTechTalkLogo from "../AfroTechTalkLogo.svg";
-// import KigaliRunningClub from "../assets/SVG/KigaliRunningClub.svg";
 
-import CallToActionSection from "../components/CallToActionSection";
-import QuoteIcon from "../QuoteIcon.svg";
-import OurMissionTopImage from "../assets/OurMissionTopImage.png";
-import OurMissionSideImage from "../assets/OurMissionSideImage.png";
-import OurTeamCarousel from "../components/OurTeamCarousel";
-import RodrigueFouafouHeadshot from "../assets/RodrigueFouafouHeadshot.png";
-import RosalinRimjhimHeadshot from "../assets/RosalinRimjhimHeadshot.png";
-import StriveMazungaHeadshot from "../assets/StriveMazungaHeadshot.png";
-import ReginaldNugentHeadshot from "../assets/ReginaldNugentHeadshot.png";
-import FannyEneHeadshot from "../assets/FannyEneHeadshot.png";
-import NelsonNwankwoHeadshot from "../assets/NelsonNwankwoHeadshot.png";
-import MarieNsanaHeadshot from "../assets/MarieNsanaHeadshot.png";
-import PamelaDefoHeadshot from "../assets/PamelaDefoHeadshot.png";
-import BillTinglingHeadshot from "../assets/BillTinglingHeadshot.png";
-import JasmineMHeadshot from "../assets/JasmineMHeadshot.png";
-import OurPartners from "../components/OurPartners";
-import OurApproachCarousel from "../components/OurApproachCarousel";
-
-import ExpressJS from "../assets/SVG/ExpressJS.svg";
-import ReactJS from "../assets/SVG/ReactJS.svg";
-import Vue from "../assets/SVG/Vue.svg";
-import Angular from "../assets/SVG/Angular.svg";
-import Node from "../assets/SVG/Node.svg";
-import Mongo from "../assets/SVG/Mongo.svg";
-import PHP from "../assets/SVG/PHP.svg";
-import Python from "../assets/SVG/Python.svg";
-import Ruby from "../assets/SVG/Ruby.svg";
-import Java from "../assets/SVG/Java.svg";
-import Laravel from "../assets/SVG/Laravel.svg";
-import Django from "../assets/SVG/Django.svg";
-import RubyOnRails from "../assets/SVG/RubyOnRails.svg";
-import Redis from "../assets/SVG/Redis.svg";
-import AWS from "../assets/SVG/AWS.svg";
-import Firebase from "../assets/SVG/Firebase.svg";
-import Apache from "../assets/SVG/Apache.svg";
-import MySQL from "../assets/SVG/MySQL.svg";
-import DotNet from "../assets/SVG/DotNet.svg";
-import Jenkins from "../assets/SVG/Jenkins.svg";
-import Lambda from "../assets/SVG/Lambda.svg";
-import GoogleCloud from "../assets/SVG/GoogleCloud.svg";
-import Azure from "../assets/SVG/Azure.svg";
-import Kubemetes from "../assets/SVG/Kubemetes.svg";
-import NextJS from "../assets/SVG/NextJS.svg";
 
 function AboutUs() {
   const handleScroll = () => {
@@ -68,77 +25,6 @@ function AboutUs() {
       .getElementById("target-section")
       ?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const cards = [
-    {
-      image: RodrigueFouafouHeadshot,
-      title: "Rodrigue Fouafou",
-      subtitle: "CEO",
-    },
-    {
-      image: RosalinRimjhimHeadshot,
-      title: "Rimjhim Rosalin",
-      subtitle: "COO",
-    },
-    {
-      image: StriveMazungaHeadshot,
-      title: "Strive Mazunga",
-      subtitle: "CTO",
-    },
-    {
-      image: ReginaldNugentHeadshot,
-      title: "Reginald Nugent",
-      subtitle: "CFO",
-    },
-    {
-      image: NelsonNwankwoHeadshot,
-      title: "Nelson Nwankwo",
-      subtitle: "Director of Digital services",
-    },
-    {
-      image: MarieNsanaHeadshot,
-      title: "Marie Noel Nsana",
-      subtitle: "Advisor",
-    },
-    {
-      image: PamelaDefoHeadshot,
-      title: "Pamela Moko Defo",
-      subtitle: "Advisor",
-    },
-    {
-      image: BillTinglingHeadshot,
-      title: "Bill Tingling",
-      subtitle: "Advisor",
-    },
-  ];
-
-  const logos = [
-    ExpressJS,
-    ReactJS,
-    Vue,
-    Angular,
-    Node,
-    Mongo,
-    PHP,
-    Python,
-    Ruby,
-    Java,
-    Laravel,
-    Django,
-    RubyOnRails,
-    Redis,
-    AWS,
-    Firebase,
-    Apache,
-    MySQL,
-    DotNet,
-    Jenkins,
-    Lambda,
-    GoogleCloud,
-    Azure,
-    Kubemetes,
-    NextJS,
-  ];
 
   return (
     <>
@@ -219,41 +105,13 @@ function AboutUs() {
         </div>
       </div>
 
-      <OurTeamCarousel cards={cards} />
+      <section>
+        <OurTeamCarousel />
+      </section>
 
-      <div className="flex justify-center mb-[3vw] mt-[8vw]">
-        <div className="flex justify-center w-[80%]">
-          <div
-            style={{ backgroundImage: `url(${JasmineMHeadshot})` }}
-            className="w-[30vw] h-[37vw] bg-cover bg-center"
-          ></div>
-          <div>
-            <img
-              src={QuoteIcon}
-              className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
-            ></img>
-            <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
-              <div className="p-[3vw]">
-                <h1 className="text-[3vw]/[3vw] font-bold">
-                  Amazing Work Culture
-                </h1>
-                <p className="text-[1.1vw] mt-[1.5vw]">
-                  I’ve been provided with the opportunity to expand my skillset
-                  through the endless support, and choice in varying projects.
-                  I’ve had a great experience so far and am excited to see where
-                  this company goes in the future.
-                </p>
-                <h2 className="text-[1.8vw] font-bold text-[#0A0907] mt-[1vw]">
-                  Jasmine M.
-                </h2>
-                <p className="text-[0.9vw] text-[#666666]">
-                  PROJECT COORDINATOR, Calgary, AB Canada
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section>
+        <WorkerTestimonial/>
+      </section>
 
       <section>
         <div className="flex justify-center mb-[2vw] ">
@@ -270,32 +128,25 @@ function AboutUs() {
         <OurApproachCarousel />
       </section>
 
-      <div className="flex justify-center my-[5vw] ">
-        <div className="w-[80%]">
-          <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
-            Tech Stack
-          </h1>
-          <div className="grid grid-cols-5 gap-4 mt-[3vw]  max-[450px]:mb-[8vw]">
-            {logos.map((LogoComponent, index) => (
-              <img
-                key={index}
-                src={LogoComponent}
-                className={`flex justify-center items-center p-4 max-[450px]:p-1 w-[12vw] h-[12vw] ${
-                  Math.floor(index / 5) !== 4 ? "border-b" : ""
-                }`}
-              ></img>
-            ))}
-          </div>
-        </div>
-      </div>
+      <section>
+        <ClientTestimonySlider isHomepage={false} />
+      </section>
 
-      <NewsletterRegister />
+      <section>
+        <TechStack/>
+      </section>
 
-      <CallToActionSection
-        Content="We would love to hear more about your project"
-        CallToAction="Let's Talk"
-        Title="WORK WITH US"
-      />
+      <section>
+        <NewsletterRegister />
+      </section>
+
+      <section>
+        <CallToActionSection
+          Content="We would love to hear more about your project"
+          CallToAction="Let's Talk"
+          Title="WORK WITH US"
+        />
+      </section>
     </>
   );
 }
