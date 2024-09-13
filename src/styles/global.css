@@ -28,6 +28,7 @@
     text-decoration: none; 
     color: #2B00AC;
     transition: color 0.3s ease; 
+    z-index: 10;
   }
   
   .navbar-link:hover::after {
@@ -85,4 +86,9 @@
     position: relative;
     background-color: #F4F4F4; 
     z-index: 10;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 100;
   }
