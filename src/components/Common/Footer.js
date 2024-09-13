@@ -41,7 +41,7 @@ function Footer() {
                       href="https://www.facebook.com/WouessiD"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:scale-150 transition-transform duration-300"
+                      className="hover:scale-150 transition-transform duration-300 z-10"
                     >
                       <FaFacebook />
                     </a>
@@ -49,7 +49,7 @@ function Footer() {
                       href="https://x.com/WouessiD"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:scale-150 transition-transform duration-300"
+                      className="hover:scale-150 transition-transform duration-300 z-10"
                     >
                       <FaXTwitter />
                     </a>
@@ -57,7 +57,7 @@ function Footer() {
                       href="https://www.linkedin.com/company/wouessid/mycompany/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:scale-150 transition-transform duration-300"
+                      className="hover:scale-150 transition-transform duration-300 z-10"
                     >
                       <FaLinkedin />
                     </a>
@@ -65,7 +65,7 @@ function Footer() {
                       href="https://www.instagram.com/wouessid/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:scale-150 transition-transform duration-300"
+                      className="hover:scale-150 transition-transform duration-300 z-10"
                     >
                       <FaInstagram />
                     </a>
@@ -73,7 +73,7 @@ function Footer() {
                       href="https://www.youtube.com/channel/UC5fsK-v4WpJOR_tp-ZLBz4A?app=desktop"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:scale-150 transition-transform duration-300"
+                      className="hover:scale-150 transition-transform duration-300 z-10"
                     >
                       <FaYoutube />
                     </a>
