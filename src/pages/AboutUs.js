@@ -52,7 +52,7 @@ function AboutUs() {
             </div>
           </div>
 
-          <img src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
+          <img alt="" src={AboutPageHeroImage} className="w-[100%] h-[43vw]"></img>
 
           <div className="mt-[4vw] flex justify-between max-[450px]:block ">
             <div className="flex flex-col gap-y-[1.5vw] w-[45%] max-[450px]:w-[100%] ">

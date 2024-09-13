@@ -29,7 +29,7 @@ function Navbar({ onClick, onMenuItemClick }) {
               to="frontend-react-wouessi-website-v2/"
               className="w-[20%] max-[450px]:w-[50%] z-10"
             >
-              <img src={logo} className="cursor-pointer"></img>
+              <img alt="" src={logo} className="cursor-pointer"></img>
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
               <Link to="frontend-react-wouessi-website-v2/" className="navbar-link"> 

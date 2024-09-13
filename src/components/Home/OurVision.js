@@ -30,7 +30,7 @@ function OurVision() {
               </div>
               <div className="space-y-[3vw] text-white text-left z-10 max-[450px]:space-y-[5vw] max-[450px]:mt-[6vw]">
                 <div className="flex gap-x-[2vw] items-center">
-                  <img
+                  <img alt=""
                     src={RedefineCollab}
                     className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"
                   ></img>
@@ -39,7 +39,7 @@ function OurVision() {
                   </p>
                 </div>
                 <div className="flex gap-x-[2vw] items-center max-[450px]:pb-[6vw]">
-                  <img
+                  <img alt=""
                     src={DriveTransformation}
                     className="w-[3vw] h-[3vw] max-[450px]:w-[8vw] max-[450px]:h-[8vw]"
                   ></img>
@@ -59,7 +59,7 @@ function OurVision() {
             </div>
           </div>
         </div>
-        <img src={OurVisionPic} className="w-full mt-[-5vw]"></img>
+        <img alt="" src={OurVisionPic} className="w-full mt-[-5vw]"></img>
       </div>
     </>
   );

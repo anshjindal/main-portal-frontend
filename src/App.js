@@ -28,7 +28,6 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
-import { BsArrowRight } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 
 const client = new ApolloClient({
