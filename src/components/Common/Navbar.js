@@ -22,7 +22,7 @@ function Navbar({ onClick, onMenuItemClick }) {
 
   return (
     <>
-      <div className="flex justify-center pl-[1vw] pr-[1vw] z-1000">
+      <div className="flex justify-center pl-[1vw] pr-[1vw] z-1000 ">
         <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
             <Link

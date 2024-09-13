@@ -12,7 +12,9 @@ import "../../styles/global.css";
 function Footer() {
   return (
     <>
-      <footer className="flex flex-wrap w-full h-screen align-center justify-center relative bg-color: transparent">
+      <footer
+        className="flex flex-wrap w-full h-screen align-center justify-center relative footer"
+      >
         <div className="flex justify-center w-full h-auto pt-20 pb-[calc(80px_+_25vw)] md:mb-0 md:py-0 md:h-[calc(100%_-_25vw)]">
           <div className="w-[90%] pt-[3vw] pb-[3vw] flex gap-x-[6vw] border-t-[0.2vw] border-[#2B00AC] max-[450px]:flex-col max-[450px]:border-t-[0.6vw]">
             <div className="space-y-[1vw] text-left mt-[-1vw] max-[450px]:mt-[2vw]">
