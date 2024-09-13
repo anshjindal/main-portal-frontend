@@ -237,7 +237,7 @@ function Home() {
               controls={false}>
               Your browser does not support the video tag.
             </video>
-            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden mt-[-41vw]">
+            <div className="w-[95%] h-fit mt-[3vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden mt-[-43vw]">
               {WouessiPronunciation ? (
                 <div className="p-[2vw] pt-[3vw] pb-[3vw] bg-white rounded-lg absolute">
                   <h1 className="text-[4.5vw] font-bold">
