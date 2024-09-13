@@ -1,93 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Blogpost.css";
-import { CgArrowLongUp } from "react-icons/cg";
 import BlogPost1 from "../assets/Images/BlogPost1.png";
 import BlogPost2 from "../assets/Images/BlogPost2.png";
-import Carousel from "../components/Reusable/ArticlesCarousel";
-import AfricaBlockChainImage from "../assets/Images/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/Images/right-side-image-portfolio.png";
+import BlogsCarousel from "../components/Reusable/BlogsCarousel";
 import IconShare from "../assets/Images/Icon-Share.png";
 import IconLinkedin from "../assets/Images/Icon-Linkedin.png";
 import IconTiktok from "../assets/Images/Icon-Tiktok.png";
 import IconInsta from "../assets/Images/Icon-Insta.png";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 
-function BlogPost() {
-  const data = [
-    {
-      image: AfricaBlockChainImage,
-      title: "Key Reasons Why Your Business Needs Mobile SEO Services",
-      subtitle:
-        "In this comprehensive guide, we delve into the key reasons why your business needs to prioritize Mobile SEO Services for sustainable growth.",
-      tags: "SEO Services",
-      duration: "5 min",
-    },
-    {
-      image: AfroLifestyleImage,
-      title: "Technical SEO Services: Optimize and Rank your Website",
-      subtitle:
-        "In this comprehensive guide, we'll delve into the world of Technical SEO.",
-      tags: "AI",
-      duration: "12 min",
-    },
-    {
-      image: AfroLifestyleImage,
-      title: "How to Use AI for to Create Content that Converts",
-      subtitle:
-        "This article delves into the realm of AI for content creations.",
-      tags: "SEO Services",
-      duration: "15 min",
-    },
-    {
-      image: AfricaBlockChainImage,
-      title:
-        "The Growing Adoption of Integrated AI—Top Business Applications for 2024",
-      subtitle:
-        "Since over half of businesses are using AI, where does that put your company in the marketplace?",
-      tags: "SEO Services",
-      duration: "5 min",
-    },
-    {
-      image: AfricaBlockChainImage,
-      title: "Technical SEO Services: Optimize and Rank your Website",
-      subtitle:
-        "In this comprehensive guide, we'll delve into the world of Technical SEO.",
-      tags: "SEO Services",
-      duration: "2 min",
-    },
-    {
-      image: AfroLifestyleImage,
-      title: "How to Use AI for to Create Content that Converts",
-      subtitle:
-        "This article delves into the realm of AI for content creations.",
-      tags: "SEO Services",
-      duration: "6 min",
-    },
-    {
-      image: AfroLifestyleImage,
-      title:
-        "The Growing Adoption of Integrated AI—Top Business Applications for 2024",
-      subtitle:
-        "Since over half of businesses are using AI, where does that put your company in the marketplace?",
-      tags: "SEO Services",
-      duration: "4 min",
-    },
-    {
-      image: AfricaBlockChainImage,
-      title: "AfricaBlockChain",
-      subtitle: "Featured - Blockchain, Website",
-      tags: "SEO Services",
-      duration: "7 min",
-    },
-  ];
 
+function BlogPost() {
   const [activeIndex, setActiveIndex] = useState(null);
   const sections = ["SECTION 1", "SECTION 2", "SECTION 3", "SECTION 4"];
   const media_icons = [IconShare, IconLinkedin, IconTiktok, IconInsta];
 
   return (
-    <div className="flex justify-center mt-[5vw] mb-[5vw]">
+    <div className="flex justify-center mt-[5vw] mb-[5vw] page-background">
       <div className="w-[80%]">
         {/* Header Section */}
         <div className="flex justify-between mb-[2vw]">
@@ -128,7 +58,7 @@ function BlogPost() {
             ))}
           </div>
 
-          {/* Blog Content */}
+          {/* Blogs Content */}
           <div className="w-[60%] mb-[7vw]">
             <div className="m-[2vw]">
               {/* Tags and Read Time */}
@@ -141,7 +71,7 @@ function BlogPost() {
                 <p className="text-[1.1vw]">5 MIN Read</p>
               </div>
 
-              {/* Blog Title and Image */}
+              {/* Blogs Title and Image */}
               <h1 className="text-[3.5vw] font-bold leading-[4.2vw]">
                 Key Reasons Why Your Business Needs Mobile SEO Services
               </h1>
@@ -149,7 +79,7 @@ function BlogPost() {
                 style={{ backgroundImage: `url(${BlogPost1})` }}
                 className="h-[40vw] bg-cover bg-center my-[2vw]"></div>
 
-              {/* Blog Content */}
+              {/* Blogs Content */}
               <div className="space-y-[2vw] text-left">
                 <p className="w-[80%]">
                   Today, smartphones have become an indispensable part of our
@@ -409,7 +339,7 @@ function BlogPost() {
         </div>
 
         {/* Carousel Section */}
-        <Carousel cards={data} />
+        <BlogsCarousel />
 
         {/* Call to Action Section */}
         <CallToActionSection

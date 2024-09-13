@@ -27,7 +27,7 @@ function AboutUs() {
   };
 
   return (
-    <>
+    <div className="page-background">
       <div className="flex justify-center h-fit">
         <div className="w-[80%] text-left mt-[3vw]">
           <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
@@ -147,7 +147,7 @@ function AboutUs() {
           Title="WORK WITH US"
         />
       </section>
-    </>
+    </div>
   );
 }
 

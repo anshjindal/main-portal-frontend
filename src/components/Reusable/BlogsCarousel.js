@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import { BsArrowRightShort } from "react-icons/bs";
+import BlogsData from "../../data/BlogData";
 
-const Carousel = ({ cards }) => {
+const BlogsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsToShow = 2; // Number of visible items at a time
-  const totalItems = cards.length;
+  const totalItems = BlogsData.length;
   const itemsPerPage = itemsToShow;
   const numberOfPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -35,7 +36,7 @@ const Carousel = ({ cards }) => {
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}>
-          {cards.map((card, index) => (
+          {BlogsData.map((card, index) => (
             <div key={index} className="flex-shrink-0 w-[calc(50%_-_1vw)] pb-[2vw] bg-white rounded-2xl mx-[0.5vw]">
               <div className="flex w-full h-[29vw]">
                 <img
@@ -69,4 +70,4 @@ const Carousel = ({ cards }) => {
   );
 };
 
-export default Carousel;
+export default BlogsCarousel;

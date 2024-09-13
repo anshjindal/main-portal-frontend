@@ -7,7 +7,7 @@ import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
 
 function Careers() {
   return (
-    <div className="flex justify-center mt-[5vw]">
+    <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <HeroBanner
           Header="Why Join Wouessi?"

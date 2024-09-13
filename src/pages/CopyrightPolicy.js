@@ -7,7 +7,7 @@ import ContactUsSection from "../components/Reusable/ContactUsSection";
 
 function CopyrightPolicy() {
   return (
-    <div className="flex justify-center mt-[5vw]">
+    <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <div className=" items-center justify-between max-[450px]:flex-col max-[450px]:gap-y-[6vw] relative">
         <div

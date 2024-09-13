@@ -14,7 +14,7 @@ import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import ContactUs from "./pages/ContactUs";
 import Careers from "./pages/Careers";
-import Blog from "./pages/Blog";
+import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import TermsCondition from "./pages/TermsCondition";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -203,8 +203,8 @@ function App() {
                 path="frontend-react-wouessi-website-v2/Careers"
                 element={<Careers />}></Route>
               <Route
-                path="frontend-react-wouessi-website-v2/Blog"
-                element={<Blog />}></Route>
+                path="frontend-react-wouessi-website-v2/Blogs"
+                element={<Blogs />}></Route>
               <Route
                 path="frontend-react-wouessi-website-v2/Blogpost"
                 element={<BlogPost />}></Route>

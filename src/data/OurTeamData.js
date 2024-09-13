@@ -42,7 +42,7 @@ const OurTeamData = [
       title: "Nelson Nwankwo",
       subtitle: "Director of Digital services",
       hovertitle: "Digital transformation is at the heart of Wouessi Inc.'s mission. We don't just navigate the digital world; we shape it, creating innovative solutions that deliver measurable results.",
-      linkedinlink: "https://www.linkedin.com/in/rodriguefouafou/",
+      linkedinlink: "https://www.linkedin.com/in/nelson-nwankwo-4b5a8778/",
     },
     {
       image: MarieNsanaHeadshot,
@@ -70,7 +70,7 @@ const OurTeamData = [
       title: "David Smith",
       subtitle: "Advisor",
       hovertitle: "Welcome to the future of digital innovation at Wouessi Inc. Our mission is simple: to empower businesses globally through groundbreaking digital experiences.",
-      linkedinlink: "https://www.linkedin.com/in/rodriguefouafou/",
+      linkedinlink: "https://www.linkedin.com/in/davidsmithsv/",
     },
   ];
 

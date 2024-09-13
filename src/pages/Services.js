@@ -8,7 +8,7 @@ import Data from "../data/ServicesData.json";
 
 function Services() {
   return (
-    <div className="flex justify-center mt-[5vw]">
+    <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <HeroBanner
           BannerImage={ServicesHeroBanner}

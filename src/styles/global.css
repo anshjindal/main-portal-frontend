@@ -26,6 +26,8 @@
     display: inline-block;
     position: relative;
     text-decoration: none; 
+    color: #2B00AC;
+    transition: color 0.3s ease; 
   }
   
   .navbar-link:hover::after {
@@ -38,4 +40,44 @@
     background-color: black;
     transition: width 0.3s ease;
   }
+
+  .navbar-link:active {
+    color: #B0B0B0; 
+  }
   
+
+
+  .footer-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  
+  .footer-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2.5px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: width 0.3s ease;
+  }
+  
+  .footer-link:active {
+    color: #B0B0B0; 
+  }
+  
+  
+
+  .wouessi-background {
+    position: fixed;
+    inset: 0px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .page-background {
+    background-color: #FFFFFF;
+  }

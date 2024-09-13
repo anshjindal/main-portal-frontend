@@ -27,7 +27,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="pt-[5vw] pb-[5vw] max-[450px]:pt-[20vw]">
+    <div className="pt-[5vw] pb-[5vw] max-[450px]:pt-[20vw] page-background">
       <div className="flex items-center justify-center mb-[3vw]">
         <div className="flex justify-center items-center w-[44vw] h-[32vw] bg-white mr-[-6vw] z-10 max-[450px]:bg-[#F4F4F4] max-[450px]:mr-0 max-[450px]:items-start max-[450px]:w-full max-[450px]:pl-[10vw]">
           <div className="w-[80%] text-left text-[black] max-[450px]:w-full">

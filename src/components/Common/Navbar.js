@@ -23,7 +23,7 @@ function Navbar({ onClick, onMenuItemClick }) {
   return (
     <>
       <div className="flex justify-center pl-[1vw] pr-[1vw] z-1000">
-        <div className="flex items-center justify-center text-[#2B00AC] h-[8vw] border-b-[0.001vw] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
+        <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
             <Link
               to="frontend-react-wouessi-website-v2/"
@@ -33,22 +33,22 @@ function Navbar({ onClick, onMenuItemClick }) {
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
               <Link to="frontend-react-wouessi-website-v2/" className="navbar-link"> 
-                <li className="py-2 hover:text-[#FF9900]  ">Home</li>
+                <li className="py-2  ">Home</li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/AboutUs" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">About Us</li>
+                <li className="py-2   ">About Us</li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Services" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">Services</li>
+                <li className="py-2  ">Services</li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Products" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">Products</li>
+                <li className="py-2   ">Products</li>
               </Link>
               <Link to="frontend-react-wouessi-website-v2/Portfolio" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">Portfolio</li>
+                <li className="py-2   ">Portfolio</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/Blog" className="navbar-link">
-                <li className="py-2 hover:text-[#FF9900]   ">Blogs</li>
+              <Link to="frontend-react-wouessi-website-v2/Blogs" className="navbar-link">
+                <li className="py-2   ">Blogs</li>
               </Link>
               <div
       className="relative"

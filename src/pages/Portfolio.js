@@ -15,7 +15,7 @@ function Portfolio() {
   };
 
   return (
-    <div className="text-black flex justify-center">
+    <div className="text-black flex justify-center page-background">
       <div className="w-[80%] mt-[4vw]">
         <div className="flex gap-x-[10vw] items-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
           <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:w-full">

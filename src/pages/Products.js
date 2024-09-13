@@ -7,7 +7,7 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 
 function Products() {
   return (
-    <div className="flex justify-center mt-[5vw] mb-[5vw]">
+    <div className="flex justify-center mt-[5vw] mb-[5vw] page-background">
       <div className="w-[80%]">
         {/* First Main Heading Div */}
         <div className="flex items-center justify-between max-[450px]:flex-col max-[450px]:gap-y-[6vw]">
