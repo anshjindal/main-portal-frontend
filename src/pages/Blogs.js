@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import BlogPageLaptop from "../assets/Images/blog_page_laptop.png";
 import bloglist1 from "../assets/Images/BlogPost1.png";
 import bloglist2 from "../assets/Images/BlogPost2.png";
@@ -9,9 +9,20 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 
 function Blogs() {
 
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/data`)
+      .then(response => response.json())
+      .then(data => setData(data.message))
+      .catch(error => console.error('Error:', error));
+  }, []);
+
+
   return (
     <div className="flex justify-center mt-[5vw] mb-[5vw] page-background">
       <div className="w-full">
+      <p>{data}</p>
         {/* First Main Heading Div */}
         <div className="flex justify-center">
           <div className="w-[1000px]">

@@ -14,8 +14,9 @@ import PronunciationButton from "../components/Home/PronunciationButton";
 function Home() {
 
   return (
-    <div className="overflow-hidden page-background">
+    <div className="page-background">
 
+      
       <Hero />
 
       <PronunciationButton/>
@@ -39,7 +40,6 @@ function Home() {
       <NewsletterRegister />
 
       <RecentBlogs />
-      
 
     </div>
   );
