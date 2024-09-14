@@ -88,7 +88,7 @@ function Footer() {
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[40vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
                   <Link
-                    to="frontend-react-wouessi-website-v2/"
+                    to="/"
                     className="footer-link"
                   >
                     Home
@@ -97,7 +97,7 @@ function Footer() {
 
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/Products"
+                    to="/Products"
                     className="footer-link"
                   >
                     Products
@@ -105,7 +105,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/Portfolio"
+                    to="/Portfolio"
                     className="footer-link"
                   >
                     Portfolio
@@ -113,7 +113,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/Services"
+                    to="/Services"
                     className="footer-link"
                   >
                     Services
@@ -123,7 +123,7 @@ function Footer() {
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[30vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
                   <Link
-                    to="frontend-react-wouessi-website-v2/AboutUs"
+                    to="/AboutUs"
                     className="footer-link"
                   >
                     About Us
@@ -131,7 +131,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/Blogs"
+                    to="/Blogs"
                     className="footer-link"
                   >
                     Blogs
@@ -139,7 +139,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/Careers"
+                    to="/Careers"
                     className="footer-link"
                   >
                     Careers
@@ -147,7 +147,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/CookiePolicy"
+                    to="/CookiePolicy"
                     className="footer-link"
                   >
                     Cookie Policy
@@ -157,7 +157,7 @@ function Footer() {
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[45vw] max-[450px]:mt-[7vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
                   <Link
-                    to="frontend-react-wouessi-website-v2/ContactUs"
+                    to="/ContactUs"
                     className="footer-link"
                   >
                     Contact Us
@@ -165,7 +165,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/TermsCondition"
+                    to="/TermsCondition"
                     className="footer-link"
                   >
                     Terms and Conditions
@@ -173,7 +173,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/PrivacyPolicy"
+                    to="/PrivacyPolicy"
                     className="footer-link"
                   >
                     Privacy Policy
@@ -181,7 +181,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    to="frontend-react-wouessi-website-v2/CopyrightPolicy"
+                    to="/CopyrightPolicy"
                     className="footer-link"
                   >
                     Copyright Policy
@@ -195,6 +195,7 @@ function Footer() {
           <div className="flex justify-center max-[450px]:pb-[5vw] pt-8 absolute bottom-0">
             <div className="w-[90%]">
               <img
+                alt = ""
                 src={WouessiLogoFooter}
                 className="w-[100%] h-[27vw] mt-[-10vw] max-[450px]:mt-0"
               ></img>

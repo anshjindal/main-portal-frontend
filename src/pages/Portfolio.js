@@ -5,10 +5,9 @@ import PortfolioData from "../data/PortfolioData";
 
 
 function Portfolio() {
-  const [items, setItems] = useState(PortfolioData);
   const [visible, setVisible] = useState(4); // Show 4 cards initially
 
-  const showMoreItems = () => {
+  const showMorePortfolioData = () => {
     setVisible((prevValue) =>
       prevValue === 8 ? (prevValue = 4) : prevValue + 4
     );
@@ -17,7 +16,7 @@ function Portfolio() {
   return (
     <div className="text-black flex justify-center page-background">
       <div className="w-[80%] mt-[4vw]">
-        <div className="flex gap-x-[10vw] items-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
+        <div className="flex gap-x-[10vw] PortfolioData-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
           <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:w-full">
             Explore our new recently completed projects
           </h1>
@@ -28,7 +27,7 @@ function Portfolio() {
           </p>
         </div>
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
-          {items.slice(0, visible).map((item) => (
+          {PortfolioData.slice(0, visible).map((item) => (
             <a
               href={item.link}
               target="_blank"
@@ -44,7 +43,7 @@ function Portfolio() {
                 />
               </div>
               <div className="flex justify-center">
-                <div className="w-[90%] flex justify-center justify-between items-center bg-white text-black h-[7vw] max-[450px]:h-[17vw]">
+                <div className="w-[90%] flex justify-center justify-between PortfolioData-center bg-white text-black h-[7vw] max-[450px]:h-[17vw]">
                   <div className="flex flex-col text-left max-[450px]:p-[2vw]">
                     <h2 className="text-[2vw] font-bold max-[450px]:text-[4vw]">
                       {item.title}
@@ -57,15 +56,15 @@ function Portfolio() {
           <div className="flex justify-center w-full max-[450px]:mt-[4vw] max-[450px]:mb-[8vw]">
             <div
               className="border-black border-[0.1vw] rounded-[3vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out flex justify-center mt-[3vw] w-[8.5vw] h-[2.5vw] text-[1.1vw] cursor-pointer max-[450px]:w-[19vw] max-[450px]:h-[6vw] max-[450px]:text-[2.5vw]"
-              onClick={showMoreItems}
+              onClick={showMorePortfolioData}
             >
               {visible === 10 ? (
-                <div className="flex items-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
+                <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
                   See Less
                   <CgArrowLongUp className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               ) : (
-                <div className="flex items-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
+                <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
                   See More
                   <CgArrowLongDown className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>

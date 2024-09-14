@@ -11,6 +11,7 @@ function WorkerTestimonial() {
       ></div>
       <div>
         <img
+          alt = ""
           src={QuoteIcon}
           className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"
         ></img>

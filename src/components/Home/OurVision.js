@@ -48,7 +48,7 @@ function OurVision() {
                   </p>
                 </div>
                 <div>
-                  <Link to="/frontend-react-wouessi-website-v2/AboutUs">
+                  <Link to="/AboutUs">
                     <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
                       View More
                       <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />

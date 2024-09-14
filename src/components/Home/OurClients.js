@@ -11,22 +11,27 @@ function OurClients() {
         <h1>Explore some our Clients</h1>
         <div className="flex w-full justify-between items-center mt-[-1vw]">
           <img
+            alt = ""
             src={Aldelia}
             className="h-[12vw] w-[12vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
           ></img>
           <img
+            alt = ""
             src={ARQCH}
             className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
           ></img>
           <img
+            alt = ""
             src={Precision}
             className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
           ></img>
           <img
+            alt = ""
             src={Charis}
             className="h-[12vw] w-[12vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
           ></img>
           <img
+            alt = ""
             src={KigaliRunningClub}
             className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
           ></img>

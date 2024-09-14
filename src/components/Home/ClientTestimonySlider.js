@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import HomepageTestimonyData from "../../data/HomepageTestimonyData";
 import AboutUsPageTestimonyData from "../../data/AboutUspageTestimonyData";
-import { PiArrowCircleRightLight } from "react-icons/pi";
-import { PiArrowCircleLeftLight } from "react-icons/pi";
+import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
 
 function ClientTestimonySlider({ isHomepage = true }) {
@@ -16,22 +15,22 @@ function ClientTestimonySlider({ isHomepage = true }) {
   const backgroundColor = isHomepage ? "bg-white" : "bg-[#F4F4F4]";
   const cardColor = isHomepage ? "bg-[#F4F4F4]" : "bg-white";
 
-  // Autoplay functionality with useEffect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 3000); // Change slide every 3 seconds
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [testimonySlider]);
 
-  // Function to handle next slide
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setIsAnimating(true);
     setTimeout(() => {
       updateTestimonySlider((testimonySlider + 1) % testimonyCount);
       setIsAnimating(false);
     }, 500);
-  };
+  }, [testimonySlider, testimonyCount]); 
+
+  // Autoplay functionality with useEffect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval); 
+  }, [handleNext]); 
 
   const handlePrev = () => {
     setIsAnimating(true);
@@ -51,9 +50,9 @@ function ClientTestimonySlider({ isHomepage = true }) {
         </h1>
         <div className="flex justify-center gap-x-[4vw] mt-[3vw] mb-[3vw]">
           <img
+            alt="Quote Icon"
             src={QuoteIcon}
             className="w-[6vw] h-[6vw] mb-[1vw] max-[450px]:hidden"
-            alt="Quote Icon"
           />
           <div
             className={`flex justify-center items-center text-left w-[50vw] h-fit mt-[4vw] ${cardColor} overflow-hidden relative`}
@@ -73,9 +72,7 @@ function ClientTestimonySlider({ isHomepage = true }) {
                 </h2>
                 <div className="flex flex-wrap space-x-[0.5vw] justify-center text-[1.5vw] text-[#666666] max-[450px]:text-[3vw]">
                   <p>{testimonyData[testimonySlider].role}</p>
-                  <p className="w-fit">
-                    {testimonyData[testimonySlider].location}
-                  </p>
+                  <p className="w-fit">{testimonyData[testimonySlider].location}</p>
                 </div>
               </div>
             </div>

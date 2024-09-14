@@ -26,28 +26,28 @@ function Navbar({ onClick, onMenuItemClick }) {
         <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
             <Link
-              to="frontend-react-wouessi-website-v2/"
+              to="/"
               className="w-[20%] max-[450px]:w-[50%] z-10"
             >
               <img alt="" src={logo} className="cursor-pointer"></img>
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
-              <Link to="frontend-react-wouessi-website-v2/" className="navbar-link"> 
+              <Link to="/" className="navbar-link"> 
                 <li className="py-2  ">Home</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/AboutUs" className="navbar-link">
+              <Link to="/AboutUs" className="navbar-link">
                 <li className="py-2   ">About Us</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/Services" className="navbar-link">
+              <Link to="/Services" className="navbar-link">
                 <li className="py-2  ">Services</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/Products" className="navbar-link">
+              <Link to="/Products" className="navbar-link">
                 <li className="py-2   ">Products</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/Portfolio" className="navbar-link">
+              <Link to="/Portfolio" className="navbar-link">
                 <li className="py-2   ">Portfolio</li>
               </Link>
-              <Link to="frontend-react-wouessi-website-v2/Blogs" className="navbar-link">
+              <Link to="/Blogs" className="navbar-link">
                 <li className="py-2   ">Blogs</li>
               </Link>
               <div
@@ -86,7 +86,7 @@ function Navbar({ onClick, onMenuItemClick }) {
     </div>
             </ul>
           </div>
-          <Link to="frontend-react-wouessi-website-v2/ContactUs">
+          <Link to="/ContactUs">
             <div className="max-[450px]:hidden w-[10vw] h-[3.5vw] rounded-full border-[0.1vw] z-10 border-[#2B00AC] hover:bg-[#0033A0] hover:text-[#FFFFFF] text-[#2B00AC] flex items-center justify-center transition-all duration-300 ease-in-out relative shadow-inner hover:shadow-inner-custom ">
               Let's Talk
               <CgArrowLongUp className="ml-[1vw] text-[1.5vw] rotate-[90deg]" />
