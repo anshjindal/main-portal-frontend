@@ -23,6 +23,10 @@ import CopyrightPolicy from "./pages/CopyrightPolicy";
 import ErrorPage from "./pages/Error";
 import { IoIosArrowForward } from "react-icons/io";
 
+
+// import { LanguageContext, LanguageProvider } from "./components/Utils/languageContext";
+
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -227,5 +231,5 @@ function App() {
     </div>
   );
 }
-
+// <LanguageProvider><App/></LanguageProvider> 
 export default App;
