@@ -28,11 +28,11 @@ function Portfolio() {
   }, []); // Empty dependency array ensures this only runs on mount
 
   if (loading) {
-    return <div>Loading...</div>;  // Show loading message while data is being fetched
+    return <div className='page-background'>Loading...</div>;  // Show loading message while data is being fetched
   }
 
   if (error) {
-    return <div>{error}</div>;  // Show error message if there's an error
+    return <div className='page-background'>{error}</div>;  // Show error message if there's an error
   }
 
   const showMorePortfolioData = () => {
