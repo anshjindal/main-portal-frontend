@@ -9,7 +9,7 @@ function Portfolio() {
 
   const showMorePortfolioData = () => {
     setVisible((prevValue) =>
-      prevValue === 8 ? (prevValue = 4) : prevValue + 4
+      prevValue === 8 ? (prevValue = 2) : prevValue + 2
     );
   };
 
@@ -33,13 +33,12 @@ function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-[48%] pb-[2vw] bg-white rounded-2xl mt-[2vw] max-[450px]:w-full max-[450px]:pb-[2vw] max-[450px]:mt-[6vw] shadow-md hover:shadow-lg transition-transform"
-              key={item.title}
-            >
+              key={item.title}>
               <div className="relative w-full h-[29vw] max-[450px]:h-[65vw] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover rounded-t-2xl transition-transform transform hover:scale-105"
+                  className="w-full h-full object-cover rounded-t-2xl transition-transform transform hover:scale-105 transition-all duration-500 ease-in-out"
                 />
               </div>
               <div className="flex justify-center">

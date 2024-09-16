@@ -1,5 +1,6 @@
 import MobileSEOServicesBlogImage from "../../assets/Images/MobileSEOServicesBlogImage.jpeg";
 import TechnicalSEOServicesBlogImage from "../../assets/Images/TechnicalSEOServicesBlogImage.jpeg";
+import { Link } from "react-router-dom";
 
 function RecentBlogs() {
   return (
@@ -27,8 +28,7 @@ function RecentBlogs() {
                 style={{
                   backgroundImage: `url(${MobileSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]"
-              ></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]"></div>
               <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[-15vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
@@ -38,7 +38,7 @@ function RecentBlogs() {
                   Key Reasons Why Your Business Needs Mobile SEO Services
                 </p>
                 <p className="text-[1.1vw] text-[#666666] hover:text-[#FF9900] cursor-pointer underline max-[450px]:text-[3vw]">
-                  Read more
+                  <Link to="BlogPost">Read more</Link>
                 </p>
               </div>
             </div>
@@ -48,8 +48,7 @@ function RecentBlogs() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[450px]:hidden"
-              ></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] max-[450px]:hidden"></div>
               <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white z-10 max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[10vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>SEO SERVICES</p>
@@ -66,8 +65,7 @@ function RecentBlogs() {
                 style={{
                   backgroundImage: `url(${TechnicalSEOServicesBlogImage})`,
                 }}
-                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450.1px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"
-              ></div>
+                className="w-[20vw] h-[30vw] bg-cover bg-[center_1vw] min-[450.1px]:hidden max-[450px]:w-[40vw] max-[450px]:h-[60vw] max-[450px]:ml-[-30vw]"></div>
             </div>
           </div>
         </div>

@@ -12,9 +12,7 @@ const BlogsCarousel = () => {
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide
-      ? numberOfPages - 1
-      : currentIndex - 1;
+    const newIndex = isFirstSlide ? numberOfPages - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
@@ -25,6 +23,12 @@ const BlogsCarousel = () => {
   };
 
   return (
+    <div>
+      <div className="flex justify-center">
+        <h1 className="w-[80%] mt-[5vw] text-[1.5vw] text-left font-bold mb-[2vw] max-[450px]:text-[4vw] max-[450px]:">
+          Explore more articles
+        </h1>
+      </div>
     <div className="relative flex items-center justify-center mt-[5vw]">
       <div
         onClick={goToPrevious}
@@ -67,6 +71,8 @@ const BlogsCarousel = () => {
         <HiOutlineArrowSmRight />
       </div>
     </div>
+
+   </div> 
   );
 };
 

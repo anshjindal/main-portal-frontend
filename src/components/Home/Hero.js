@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import HeroBannerVideo from "../../assets/Video/HeroBannerVideo.mp4";
 
 function Hero() {
-
   return (
     <>
       <div className="flex justify-center mt-[5vw]">
@@ -32,7 +31,7 @@ function Hero() {
             </div>
           </div>
           <div>
-            <Link to="/Portfolio">
+            <Link to="/frontend-react-wouessi-website-v2/Portfolio">
               <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
                 See Our Work
                 <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
@@ -41,22 +40,21 @@ function Hero() {
           </div>
         </div>
       </div>
-
-      <div className="flex justify-center mt-[-5vw] max-[450px]:mt-[-9vw]">
+      <div className="flex justify-center mt-[-5vw] max-[450px]:mt-[-7vw]">
         <div className="flex justify-end w-[80%] h-[28vw] max-[450px]:w-full max-[450px]:flex-none max-[450px]:justify-start max-[450px]:h-[42vw]">
-          <video
-            src={HeroBannerVideo}
-            className="w-[62vw] h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]"
-            autoPlay
-            muted
-            loop
-            controls={false}
-          >
-            Your browser does not support the video tag.
-          </video>
+          <div className="w-[62vw] max-[450px]:w-full relative">
+            <video
+              src={HeroBannerVideo}
+              className="h-full bg-cover bg-[center_-6vw] opacity-90 max-[450px]:w-full max-[450px]:bg-[center_-10vw]"
+              autoPlay
+              muted
+              loop
+              controls={false}>
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-
     </>
   );
 }
