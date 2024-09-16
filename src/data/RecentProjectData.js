@@ -9,56 +9,66 @@ import MasterNodedSlider from "../assets/Images/RecentProject/RecentProjectMaste
 import BuckheadSlider from "../assets/Images/RecentProject/RecentProjectBuckheadImage.png";
 import KeplerSlider from "../assets/Images/RecentProject/RecentProjectKeplerImage.png";
 
-const SliderData = [
+const RecentProjectData = [
   {
     thumbnail: GIZSlider,
     titleSecondLine: "GIZ",
+    link: "https://www.giz.de/en/html/index.html",
   },
   {
     thumbnail: CanalPlusSlider,
     titleFirstLine: "CANAL",
     titleSecondLine: "PLUS",
+    link: "https://www.canalplus.com/",
   },
   {
     thumbnail: HamiltonCrescentSlider,
     titleFirstLine: "HAMILTON",
     titleThirdLine: "CRESCENT",
+    link: "https://hamiltonccm.com",
   },
   {
     thumbnail: AldeliaSlider,
     titleFirstLine: "AL",
     titleSecondLine: "DE",
     titleThirdLine: "LIA",
+    link: "https://www.aldelia.com/en/",
   },
   {
     thumbnail: ATRSlider,
     titleFirstLine: "ATR",
     titleSecondLine: "CYBER",
+    link: "https://atrcyber.com",
   },
   {
     thumbnail: WatchReportSlider,
     titleFirstLine: "WATCH",
     titleSecondLine: "REPORT",
+    link: "https://www.watchreport.com",
   },
   {
     thumbnail: YellowCardSlider,
     titleFirstLine: "YELLOW",
     titleSecondLine: "SPORTS",
+    link: "https://yellowcard.io/",
   },
   {
     thumbnail: MasterNodedSlider,
     titleSecondLine: "MASTER",
     titleThirdLine: "NODED",
+    link: "https://masternoded.com",
   },
   {
     thumbnail: BuckheadSlider,
     titleSecondLine: "BUCK",
     titleThirdLine: "HEAD",
+    link: "https://www.buckhead.com/",
   },
   {
     thumbnail: KeplerSlider,
     titleSecondLine: "KEPLER",
+    link: "https://kepler.org",
   },
 ];
 
-export default SliderData;
+export default RecentProjectData;

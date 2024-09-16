@@ -1,5 +1,5 @@
 
-import TeckLogos from "../../data/TeckLogo";
+import TechLogos from "../../data/TechLogo";
 
 
 function TechStack () {
@@ -10,7 +10,7 @@ function TechStack () {
               Tech Stack
             </h1>
             <div className="grid grid-cols-5 gap-4 mt-[3vw]  max-[450px]:mb-[8vw]">
-              {TeckLogos.map((LogoComponent, index) => (
+              {TechLogos.map((LogoComponent, index) => (
                 <img
                   alt =""
                   key={index}
