@@ -2,8 +2,6 @@ import React from "react";
 import "../styles/AboutUs.css";
 
 import { CgArrowLongUp } from "react-icons/cg";
-
-
 import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 import ClientTestimonySlider from "../components/Home/ClientTestimonySlider";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
@@ -12,7 +10,6 @@ import OurPartners from "../components/AboutUs/OurPartners";
 import OurApproachCarousel from "../components/AboutUs/OurApproachCarousel";
 import TechStack from "../components/AboutUs/TechStack";
 import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
-
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
 import OurMissionTopImage from "../assets/Images/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets//Images/OurMissionSideImage.png";
@@ -111,13 +108,6 @@ function AboutUs() {
       </section>
 
       <section>
-        <div className="flex justify-center mb-[2vw]">
-          <div className="w-[80%]">
-            <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
-              Our Partners
-            </h1>
-          </div>
-        </div>
         <OurPartners />
       </section>
 

@@ -1,13 +1,13 @@
-import GIZSlider from "../assets/Images/Portfolio/PortfolioGIZImage.png";
-import CanalPlusSlider from "../assets/Images/Portfolio/PortfolioCanalPlus.png";
-import HamiltonCrescentSlider from "../assets/Images/Portfolio/PortfolioHamiltonCrescentImage.png";
-import AldeliaSlider from "../assets/Images/Portfolio/PortfolioAldeliaImage.png";
-import ATRSlider from "../assets/Images/Portfolio/PortfolioATRImage.png";
-import WatchReportSlider from "../assets/Images/Portfolio/PortfolioWatchReportImage.png";
-import YellowCardSlider from "../assets/Images/Portfolio/PortfolioYellowCardImage.png";
-import MasterNodedSlider from "../assets/Images/Portfolio/PortfolioMasterNodedImage.png";
-import BuckheadSlider from "../assets/Images/Portfolio/PortfolioBuckheadImage.png";
-import KeplerSlider from "../assets/Images/Portfolio/PortfolioKeplerImage.png";
+import GIZSlider from "../assets/Images/RecentProject/RecentProjectGIZImage.png";
+import CanalPlusSlider from "../assets/Images/RecentProject/RecentProjectCanalPlus.png";
+import HamiltonCrescentSlider from "../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.png";
+import AldeliaSlider from "../assets/Images/RecentProject/RecentProjectAldeliaImage.png";
+import ATRSlider from "../assets/Images/RecentProject/RecentProjectATRImage.png";
+import WatchReportSlider from "../assets/Images/RecentProject/RecentProjectWatchReportImage.png";
+import YellowCardSlider from "../assets/Images/RecentProject/RecentProjectYellowCardImage.png";
+import MasterNodedSlider from "../assets/Images/RecentProject/RecentProjectMasterNodedImage.png";
+import BuckheadSlider from "../assets/Images/RecentProject/RecentProjectBuckheadImage.png";
+import KeplerSlider from "../assets/Images/RecentProject/RecentProjectKeplerImage.png";
 
 const SliderData = [
   {

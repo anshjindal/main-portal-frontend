@@ -10,6 +10,7 @@ function WorkerTestimonial() {
         className="w-[30vw] h-[37vw] bg-cover bg-center"></div>
       <div>
         <img
+          alt = "Quote Icon"
           src={QuoteIcon}
           className="w-[6vw] h-[6vw] ml-[2vw] mb-[1vw]"></img>
         <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">

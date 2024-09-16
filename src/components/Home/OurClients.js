@@ -1,43 +1,31 @@
-import Aldelia from "../../assets/SVG/ClientsLogo/AldeliaLogo.svg";
-import ARQCH from "../../assets/SVG/ClientsLogo/ARQCHLogo.svg";
-import Precision from "../../assets/SVG/ClientsLogo/PrecisionLogo.svg";
-import Charis from "../../assets/SVG/ClientsLogo/CharisLogo.svg";
-import KigaliRunningClub from "../../assets/SVG/ClientsLogo/KigaliRunningClub.svg";
+import React from "react";
+import Slider from "react-infinite-logo-slider";
+import clientLogos from "../../data/ClientsLogoData"; 
 
 function OurClients() {
   return (
-    <div className="flex justify-center">
-      <div className="w-[80%] flex flex-col mt-[6vw] text-left text-[3vw] max-[450px]:text-[7vw] font-bold max-[450px]:text-[4vw] max-[450px]:h-[16vw] max-[450px]:w-[90%] max-[450px]:mb-[5vw]">
-        <h1>Explore some our Clients</h1>
-        <div className="flex w-full justify-between items-center mt-[-1vw]">
-          <img
-            alt = ""
-            src={Aldelia}
-            className="h-[12vw] w-[12vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
-          ></img>
-          <img
-            alt = ""
-            src={ARQCH}
-            className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
-          ></img>
-          <img
-            alt = ""
-            src={Precision}
-            className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
-          ></img>
-          <img
-            alt = ""
-            src={Charis}
-            className="h-[12vw] w-[12vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
-          ></img>
-          <img
-            alt = ""
-            src={KigaliRunningClub}
-            className="h-[10vw] w-[10vw] max-[450px]:h-[14vw] max-[450px]:w-[14vw]"
-          ></img>
+    <>
+      <div className="flex justify-center mb-[2vw]">
+        <div className="w-[80%]">
+          <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
+            Our Clients
+          </h1>
         </div>
       </div>
-    </div>
+      <Slider
+        width="250px"
+        duration={40}
+        pauseOnHover={true}
+        blurBorders={false}
+        blurBoderColor={"#fff"}
+      >
+        {clientLogos.map((logo, index) => (
+          <Slider.Slide key={index}>
+            <img src={logo.src} alt={logo.alt} className="w-36" />
+          </Slider.Slide>
+        ))}
+      </Slider>
+    </>
   );
 }
 

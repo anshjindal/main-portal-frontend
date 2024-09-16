@@ -31,7 +31,7 @@ function Hero() {
             </div>
           </div>
           <div>
-            <Link to="/frontend-react-wouessi-website-v2/Portfolio">
+            <Link to="/Portfolio">
               <div className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] ml-[8vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:hidden">
                 See Our Work
                 <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />

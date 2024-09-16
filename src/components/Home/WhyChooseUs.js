@@ -7,6 +7,7 @@ function WhyChooseUS() {
     <>
       <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
         <img
+          alt = "Why Choose Us"
           src={WhyChooseUsBackground}
           className="w-[30vw] h-[45vw] mt-[6vw] mb-[6vw] max-[450px]:hidden"></img>
         <div className="flex flex-col text-left w-[38vw] max-[450px]:w-[80%] max-[450px]:mt-[4vw]">

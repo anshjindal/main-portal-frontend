@@ -1,15 +1,15 @@
-import AldeliaImage from "../assets/Images/Portfolio/PortfolioAldeliaImage.png";
-import ATRImage from "../assets/Images/Portfolio/PortfolioATRImage.png";
-import BuckheadImage from "../assets/Images/Portfolio/PortfolioBuckheadImage.png";
-import CanalPlus from "../assets/Images/Portfolio/PortfolioCanalPlus.png";
-import GIZImage from "../assets/Images/Portfolio/PortfolioGIZImage.png";
-import HamiltonCrescentImage from "../assets/Images/Portfolio/PortfolioHamiltonCrescentImage.png";
-import KeplerImage from "../assets/Images/Portfolio/PortfolioKeplerImage.png";
-import MasterNodedImage from "../assets/Images/Portfolio/PortfolioMasterNodedImage.png";
-import WatchReportImage from "../assets/Images/Portfolio/PortfolioWatchReportImage.png";
-import YellowCardImage from "../assets/Images/Portfolio/PortfolioYellowCardImage.png";
+import AldeliaImage from "../assets/Images/RecentProject/RecentProjectAldeliaImage.png";
+import ATRImage from "../assets/Images/RecentProject/RecentProjectATRImage.png";
+import BuckheadImage from "../assets/Images/RecentProject/RecentProjectBuckheadImage.png";
+import CanalPlus from "../assets/Images/RecentProject/RecentProjectCanalPlus.png";
+import GIZImage from "../assets/Images/RecentProject/RecentProjectGIZImage.png";
+import HamiltonCrescentImage from "../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.png";
+import KeplerImage from "../assets/Images/RecentProject/RecentProjectKeplerImage.png";
+import MasterNodedImage from "../assets/Images/RecentProject/RecentProjectMasterNodedImage.png";
+import WatchReportImage from "../assets/Images/RecentProject/RecentProjectWatchReportImage.png";
+import YellowCardImage from "../assets/Images/RecentProject/RecentProjectYellowCardImage.png";
 
-const PortfolioData = [
+const RecentProjectData = [
     { image: GIZImage, title: "GIZ", link: "https://www.giz.de/en/html/index.html" },
     { image: CanalPlus, title: "Canal Plus", link: "https://www.canalplus.com/ " },
     { image: HamiltonCrescentImage, title: "Hamilton Crescent", link: "https://hamiltonccm.com" },
@@ -22,4 +22,4 @@ const PortfolioData = [
     { image: KeplerImage, title: "Kepler", link: "https://kepler.org" },
   ];
 
-  export default PortfolioData
+  export default RecentProjectData
