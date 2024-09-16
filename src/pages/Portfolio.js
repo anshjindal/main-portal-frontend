@@ -1,11 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import PortfolioData from "../data/PortfolioData";
-
+import axios from 'axios';
 
 function Portfolio() {
   const [visible, setVisible] = useState(4); // Show 4 cards initially
+
+  const [portfolioItems, setPortfolioItems] = useState([]); // State to store portfolio data
+  const [loading, setLoading] = useState(true); // Loading state
+  const [error, setError] = useState(null); // Error state
+
+  useEffect(() => {
+    // Function to fetch portfolio data
+    const fetchPortfolioData = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_WOUESSI_API_URL}/api/portfolios`);  // Replace with your actual API endpoint
+        setPortfolioItems(response.data);  // Set portfolio data in state
+        setLoading(false);  // Set loading to false after data is fetched
+      } catch (error) {
+        setError('Error fetching portfolio data');
+        setLoading(false);
+      }
+    };
+
+    fetchPortfolioData(); // Fetch the data when the component mounts
+  }, []); // Empty dependency array ensures this only runs on mount
+
+  if (loading) {
+    return <div>Loading...</div>;  // Show loading message while data is being fetched
+  }
+
+  if (error) {
+    return <div>{error}</div>;  // Show error message if there's an error
+  }
 
   const showMorePortfolioData = () => {
     setVisible((prevValue) =>
@@ -27,7 +55,7 @@ function Portfolio() {
           </p>
         </div>
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
-          {PortfolioData.slice(0, visible).map((item) => (
+          {portfolioItems.slice(0, visible).map((item) => (
             <a
               href={item.link}
               target="_blank"
