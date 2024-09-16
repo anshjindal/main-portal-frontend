@@ -9,6 +9,7 @@ import IconLinkedin from "../assets/Images/Icon-Linkedin.png";
 import IconTiktok from "../assets/Images/Icon-Tiktok.png";
 import IconInsta from "../assets/Images/Icon-Insta.png";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 function BlogPost() {
