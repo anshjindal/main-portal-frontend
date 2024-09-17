@@ -13,10 +13,12 @@ import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
 import AboutPageHeroImage from "../assets/SVG/AboutPageHeroImage.svg";
 import OurMissionTopImage from "../assets/Images/OurMissionTopImage.png";
 import OurMissionSideImage from "../assets//Images/OurMissionSideImage.png";
-
+import { useParams } from "react-router-dom";
 
 
 function AboutUs() {
+  const {lang} = useParams();
+
   const handleScroll = () => {
     document
       .getElementById("target-section")
@@ -100,31 +102,31 @@ function AboutUs() {
       </div>
 
       <section>
-        <OurTeamCarousel />
+        <OurTeamCarousel lang={lang} />
       </section>
 
       <section>
-        <WorkerTestimonial/>
+        <WorkerTestimonial lang={lang}/>
       </section>
 
       <section>
-        <OurPartners />
+        <OurPartners lang={lang} />
       </section>
 
       <section id="target-section">
-        <OurApproachCarousel />
+        <OurApproachCarousel lang={lang} />
       </section>
 
       <section>
-        <ClientTestimonySlider isHomepage={false} />
+        <ClientTestimonySlider lang={lang} isHomepage={false} />
       </section>
 
       <section>
-        <TechStack/>
+        <TechStack lang={lang}/>
       </section>
 
       <section>
-        <NewsletterRegister />
+        <NewsletterRegister lang={lang} />
       </section>
 
       <section>

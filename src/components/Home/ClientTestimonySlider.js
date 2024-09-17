@@ -4,6 +4,7 @@ import AboutUsPageTestimonyData from "../../content/AboutUspageTestimonyData.jso
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
 import { useParams } from "react-router-dom";
+import content from "../../content/Home/ClientTestimony.json"
 
 function ClientTestimonySlider({ isHomepage = true }) {
   const [testimonySlider, updateTestimonySlider] = useState(0);
@@ -49,7 +50,7 @@ function ClientTestimonySlider({ isHomepage = true }) {
     <div className={`flex justify-center ${backgroundColor}`}>
       <div className="w-[80%] max-[450px]:mb-[4vw]">
         <h1 className="w-full text-left text-[#666666] mt-[4vw] max-[450px]:text-[3vw] max-[450px]:mt-[8vw]">
-          Client Testimony
+          {content[lang].heading}
         </h1>
         <div className="flex justify-center gap-x-[4vw] mt-[3vw] mb-[3vw]">
           <img
