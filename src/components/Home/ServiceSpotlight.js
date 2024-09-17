@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import ServicesSpotlightData from "../../content/ServicesSpotlightData"
 import { Link, useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/Home/ServiceSpotlight.json"; 
 
 function ServiceSpotlight() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const handleMouseEnter = (index) => setHoveredIndex(index);
   const handleMouseLeave = () => setHoveredIndex(null);
+
+  const {lang} = useParams();
+  const Content = content[lang];
 
   return (
     <>

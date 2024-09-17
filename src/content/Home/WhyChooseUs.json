@@ -1,19 +1,18 @@
 {
-    "en": {
-      "heading1": "TRANSFORM YOUR",
-      "heading2": "BUSINESS",
-      "subheading1": "BUSI",
-      "subheading2": "NESS",
-      "description": "We provide innovative digital solutions to help your business succeed.",
-      "buttonText": "See Our Work"
-    },
-    "fr": {
-      "heading1": "TRANSFORMEZ VOTRE",
-      "heading2": "ENTREPRISE",
-      "subheading1": "ENTRE",
-      "subheading2": "PRISE",
-      "description": "Nous fournissons des solutions numériques innovantes pour aider votre entreprise à réussir.",
-      "buttonText": "Voir Nos Réalisations"
+  "en": {
+    "whyChooseUs": {
+      "sectionTitle": "WHY CHOOSE US",
+      "heading": "Empower Businesses With Innovative Digital Solutions.",
+      "description": "We are committed to helping business owners leverage digital technology and solutions, increase their digital footprint, harness the benefits of digital presence, and gain a cutting edge ahead of their competitors.",
+      "button": "Details"
     }
-  }
-  
+  },
+  "fr": {
+    "whyChooseUs": {
+      "sectionTitle": "POURQUOI NOUS CHOISIR",
+      "heading": "Autonomiser les entreprises avec des solutions numériques innovantes.",
+      "description": "Nous nous engageons à aider les propriétaires d'entreprises à tirer parti des technologies et solutions numériques, à augmenter leur empreinte numérique, à exploiter les avantages de la présence numérique et à obtenir un avantage concurrentiel.",
+      "button": "Détails"
+    }
+  }    
+}
