@@ -10,6 +10,7 @@ import IconTiktok from "../assets/Images/Icon-Tiktok.png";
 import IconInsta from "../assets/Images/Icon-Insta.png";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
 
 
 function BlogPost() {

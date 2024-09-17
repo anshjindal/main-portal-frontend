@@ -5,7 +5,7 @@ import bloglist2 from "../assets/Images/BlogPost2.png";
 import bloglist3 from "../assets/Images/bloglist3.png";
 import BlogsCarousel from "../components/Reusable/BlogsCarousel";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
-
+import { useParams } from "react-router-dom";
 
 function Blogs() {
 

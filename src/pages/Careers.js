@@ -4,6 +4,7 @@ import Accordion from "../components/Services/Accordion";
 import Data from "../content/CareersAccordionInnerText.json";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
+import { useParams } from "react-router-dom";
 
 function Careers() {
   return (

@@ -4,6 +4,7 @@ import PrivacyIcon from "../assets/SVG/PrivacyPolicyIcon.svg";
 import Accordion from "../components/Services/Accordion";
 import PrivacyData from "../content/PrivacyPolicyText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
+import { useParams } from "react-router-dom";
 
 function PrivacyPolicy() {
   return (

@@ -4,6 +4,7 @@ import CookiePolicyIcon from "../assets/SVG/CookiePolicyIcon.svg";
 import Accordion from "../components/Services/Accordion";
 import CookieData from "../content/CookiePolicyText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
+import { useParams } from "react-router-dom";
 
 function CookiePolicy() {
   return (

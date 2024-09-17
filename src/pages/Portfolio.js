@@ -3,6 +3,7 @@ import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import PortfolioData from "../content/PortfolioData";
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 
 function Portfolio() {
   const [visible, setVisible] = useState(4); // Show 4 cards initially

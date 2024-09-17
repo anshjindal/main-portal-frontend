@@ -5,6 +5,7 @@ import HeroBanner from "../components/Reusable/HeroBanner";
 import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.jpeg";
 import Accordion from "../components/Services/Accordion";
 import Data from "../content/ServicesData.json";
+import { useParams } from "react-router-dom";
 
 function Services() {
   return (

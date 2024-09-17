@@ -4,6 +4,7 @@ import CopyrightIcon from "../assets/SVG/CopyrightPolicyIcon.svg";
 import Accordion from "../components/Services/Accordion";
 import CopyrightData from "../content/CopyrightPolicyText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
+import { useParams } from "react-router-dom";
 
 function CopyrightPolicy() {
   return (

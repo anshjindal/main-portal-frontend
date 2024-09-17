@@ -11,10 +11,12 @@ import { FaLocationDot } from "react-icons/fa6";
 import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.png";
 import { ImCheckmark } from "react-icons/im";
 import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
+import { useParams } from "react-router-dom";
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
   const formRef = useRef(null);
+  const {lang} = useParams();
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -227,7 +229,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <NewsletterRegister />
+      <NewsletterRegister lang={lang} />
     </div>
   );
 }

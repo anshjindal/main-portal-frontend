@@ -4,6 +4,7 @@ import { CgArrowLongUp } from "react-icons/cg";
 import BantuEd from "../assets/Images/BantuEdProductImage.png";
 import Egolu from "../assets/Images/egolu-app.png";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
+import { useParams } from "react-router-dom";
 
 function Products() {
   return (
