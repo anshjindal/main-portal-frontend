@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { CgArrowLongUp } from "react-icons/cg";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross1 } from "react-icons/rx";
 import "../../styles/global.css";
 
 function Navbar({ onClick, onMenuItemClick }) {
@@ -22,7 +20,7 @@ function Navbar({ onClick, onMenuItemClick }) {
 
   return (
     <>
-      <div className="flex justify-center pl-[1vw] pr-[1vw] navbar">
+      <div className="flex justify-center pl-[1vw] pr-[1vw] navbar max-[450px]:hidden">
         <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
             <Link
@@ -89,17 +87,6 @@ function Navbar({ onClick, onMenuItemClick }) {
               <div className="absolute inset-0 rounded-full bg-[#0033A0] opacity-0 hover:opacity-20 transition-opacity duration-300 ease-in-out"></div>
             </div>
           </Link>
-          {hamburgerMenu ? (
-            <GiHamburgerMenu
-              onClick={handleMenuToggle}
-              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450.1px]:hidden"
-            />
-          ) : (
-            <RxCross1
-              onClick={handleMenuToggle}
-              className="w-[7vw] h-[7vw] cursor-pointer text-black min-[450.1px]:hidden"
-            />
-          )}
         </div>
       </div>
     </>

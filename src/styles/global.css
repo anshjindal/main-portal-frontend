@@ -77,6 +77,9 @@
     min-height: 35vw;
   }
 
+  .navbar-slider {
+     z-index: 11; /*should greater than page background */
+  }
 
   @media (max-width: 450px) {
     .page-background {
@@ -86,3 +89,8 @@
       min-height: 50vw;
     }
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+  
