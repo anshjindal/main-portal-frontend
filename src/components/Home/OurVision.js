@@ -18,7 +18,7 @@ function OurVision() {
               {Content.aboutUs}
             </h2>
             <h1 className="text-[3.5vw] text-left mb-[0.7vw] text-white font-bold max-[450px]:text-[7vw]">
-            {Content.aboutUs}
+            {Content.ourVision}
             </h1>
             <div className="flex justify-center justify-between mt-[2vw] max-[450px]:flex-col max-[450px]:gap-y-[5vw] max-[450px]:mt-[6vw]">
               <div className="flex flex-col text-left text-white w-[43%] max-[450px]:w-full gap-y-[2vw] max-[450px]:gap-y-[5vw]">
@@ -49,8 +49,8 @@ function OurVision() {
                   </p>
                 </div>
                 <div>
-                  <Link to="/AboutUs">
-                    <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-[#FF9900] hover:text-white hover:border-[#FF9900] transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
+                  <Link to={`/${lang}/AboutUs`}>
+                    <div className="border-white border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] mt-[2vw] w-[10vw] h-[10vw] text-[1.1vw] text-white cursor-pointer hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
                     {Content.viewMore}
                       <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[3vw]" />
                     </div>

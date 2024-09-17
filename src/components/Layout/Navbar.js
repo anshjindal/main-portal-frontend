@@ -29,7 +29,7 @@ function Navbar() {
       <div className="flex justify-center pl-[1vw] pr-[1vw] navbar max-[450px]:hidden">
         <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
-            <Link to={`/${currentLang}`} className="w-[20%] max-[450px]:w-[50%] z-10">
+            <Link to={`/${currentLang}/`} className="w-[20%] max-[450px]:w-[50%] z-10">
               <img alt="logo" src={logo} className="cursor-pointer" />
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">

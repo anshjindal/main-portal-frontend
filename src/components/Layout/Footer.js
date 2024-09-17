@@ -10,8 +10,6 @@ function Footer() {
   const { lang } = useParams(); 
   const Content = content[lang]; 
 
-  console.log(lang)
-
   return (
     <>
       <footer className="flex flex-wrap w-full h-screen align-center justify-center relative footer">

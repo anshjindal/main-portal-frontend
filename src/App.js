@@ -17,11 +17,12 @@ import TermsCondition from "./pages/TermsCondition";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
-import ErrorPage from "./pages/Error";
+import Error from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
 
 const Layout = ({ children }) => {
   const { lang } = useParams();
+  
 
   return (
     <div className={`text-center bg-[#F4F4F4]`}>
@@ -53,7 +54,7 @@ function App() {
           <Route path="/:lang/PrivacyPolicy" element={<Layout><PrivacyPolicy /></Layout>} />
           <Route path="/:lang/CookiePolicy" element={<Layout><CookiePolicy /></Layout>} />
           <Route path="/:lang/CopyrightPolicy" element={<Layout><CopyrightPolicy /></Layout>} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<Layout><Error /></Layout> }/>
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
