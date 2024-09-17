@@ -2,11 +2,10 @@ import { CgArrowLongUp } from "react-icons/cg";
 import OurVisionPic from "../../assets/SVG/HomepageOurVision.svg";
 import RedefineCollab from "../../assets/SVG/RedefineCollab.svg";
 import DriveTransformation from "../../assets/SVG/DriveTransformation.svg";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import content from "../../content/Home/OurVision.json"; 
 
-function OurVision() {
-  const { lang } = useParams(); 
+function OurVision({lang}) {
   const Content = content[lang]; 
 
   return (

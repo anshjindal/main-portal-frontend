@@ -2,16 +2,14 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { FaArrowRight } from "react-icons/fa";
 import content from "../../content/Home/Achievements.json";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Achievements = () => {
+const Achievements = ({lang}) => {
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
 
-  const {lang} = useParams();
   const Content = content[lang];
 
   return (

@@ -1,19 +1,15 @@
 {
     "en": {
-      "heading1": "TRANSFORM YOUR",
-      "heading2": "BUSINESS",
-      "subheading1": "BUSI",
-      "subheading2": "NESS",
-      "description": "We provide innovative digital solutions to help your business succeed.",
-      "buttonText": "See Our Work"
+      "pronunciationButton": {
+        "pronunciationHeading": "Wou-essi /wu: ε si:/",
+        "pronunciationText": "The way we pronounce our name is 'woo-eh-ssi'."
+      }
     },
     "fr": {
-      "heading1": "TRANSFORMEZ VOTRE",
-      "heading2": "ENTREPRISE",
-      "subheading1": "ENTRE",
-      "subheading2": "PRISE",
-      "description": "Nous fournissons des solutions numériques innovantes pour aider votre entreprise à réussir.",
-      "buttonText": "Voir Nos Réalisations"
-    }
+      "pronunciationButton": {
+        "pronunciationHeading": "Wou-essi /wu: ε si:/",
+        "pronunciationText": "La façon dont nous prononçons notre nom est 'woo-eh-ssi'."
+      }
+    }    
   }
   

@@ -19,29 +19,29 @@ function Home() {
     <div className="page-background">
 
       
-      <Hero />
+      <Hero lang={lang}/>
 
-      <PronunciationButton/>
+      <PronunciationButton lang={lang}/>
 
-      <OurClients />
+      <OurClients lang={lang}/>
 
-      <OurVision />
+      <OurVision lang={lang}/>
 
-      <OurServices />
+      <OurServices lang={lang}/>
 
-      <ServiceSpotlight />
+      <ServiceSpotlight lang={lang}/>
 
-      <WhyChooseUS />
+      <WhyChooseUS lang={lang}/>
 
-      <Achievements />
+      <Achievements lang={lang}/>
 
-      <RecentProjects />
+      <RecentProjects lang={lang}/>
 
-      <ClientTestimonySlider />
+      <ClientTestimonySlider lang={lang}/>
 
-      <NewsletterRegister />
+      <NewsletterRegister lang={lang}/>
 
-      <RecentBlogs />
+      <RecentBlogs lang={lang}/>
 
     </div>
   );

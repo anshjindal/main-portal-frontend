@@ -1,16 +1,17 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
 import clientLogos from "../../content/ClientsLogoData"; 
-import { Link, useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/Home/OurClients.json"; 
 
-function OurClients() {
+function OurClients({lang}) {
+  const Content = content[lang]; 
+
   return (
     <>
       <div className="flex justify-center mb-[2vw]">
         <div className="w-[80%]">
           <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
-            Our Clients
+            {Content.clients}
           </h1>
         </div>
       </div>

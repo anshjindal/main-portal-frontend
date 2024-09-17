@@ -1,11 +1,10 @@
 import WhyChooseUsBackground from "../../assets/Images/WhyChooseUsBackground.png";
 import { CgArrowLongUp } from "react-icons/cg";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import content from "../../content/Home/WhyChooseUs.json"; 
 
-function WhyChooseUS() {
-  const { lang } = useParams(); // Get language from the URL
-  const Content = content[lang]; // Load the respective language content
+function WhyChooseUS({lang}) {
+  const Content = content[lang]; 
 
   return (
     <>

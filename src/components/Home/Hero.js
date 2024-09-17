@@ -1,10 +1,9 @@
 import { CgArrowLongUp } from "react-icons/cg";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeroBannerVideo from "../../assets/Video/HeroBannerVideo.mp4";
 import content from "../../content/Home/Hero.json"; 
 
-function Hero() {
-  const { lang } = useParams(); 
+function Hero({lang}) {
   const Content = content[lang]; 
 
   return (

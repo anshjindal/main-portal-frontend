@@ -1,21 +1,22 @@
 import { useState, useEffect, useCallback } from "react";
-import HomepageTestimonyData from "../../content/HomepageTestimonyData";
-import AboutUsPageTestimonyData from "../../content/AboutUspageTestimonyData";
+import HomepageTestimonyData from "../../content/HomepageTestimonyData.json";
+import AboutUsPageTestimonyData from "../../content/AboutUspageTestimonyData.json";
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
-import { Link, useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import { useParams } from "react-router-dom";
 
 function ClientTestimonySlider({ isHomepage = true }) {
   const [testimonySlider, updateTestimonySlider] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const {lang} = useParams();
 
   const testimonyData = isHomepage
-    ? HomepageTestimonyData
-    : AboutUsPageTestimonyData;
+    ? HomepageTestimonyData[lang]
+    : AboutUsPageTestimonyData[lang];
   const testimonyCount = testimonyData.length;
   const backgroundColor = isHomepage ? "bg-white" : "bg-[#F4F4F4]";
   const cardColor = isHomepage ? "bg-[#F4F4F4]" : "bg-white";
+
 
 
   const handleNext = useCallback(() => {

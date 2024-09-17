@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import RecentProjectData from "../../content/RecentProjectData"; // Updated import path
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
-import { Link, useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/Home/RecentProjects.json"; 
 
-function RecentProjects() {
+function RecentProjects({lang}) {
   const [projSlider, updateProjSlider] = useState(0);
-  const sliderLength = RecentProjectData.length; 
+  const sliderLength = RecentProjectData.length;
+  const Content = content[lang]; 
 
   // Automatically slide every 2 seconds
   useEffect(() => {
@@ -25,7 +25,7 @@ function RecentProjects() {
       <div className="bg-[#2B00AC] flex justify-center pt-[6vw] pb-[6vw] max-[450px]:pb-[10vw]">
         <div className="w-[80%] text-left flex flex-col">
           <h1 className="text-[#FF9900] text-[1.1vw] font-normal max-[450px]:text-[2.5vw] max-[450px]:mt-[3vw]">
-            RECENT PROJECTS
+            {Content.recentprojects}
           </h1>
           <div className="flex items-center justify-center">
             <PiArrowCircleLeftLight

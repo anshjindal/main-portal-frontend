@@ -1,11 +1,10 @@
 import { CgArrowLongUp } from "react-icons/cg";
 import DigitalMarketingImage from "../../assets/Images/what-we-do-digital-marketing.jpeg";
 import SoftwareEngineeringImage from "../../assets/Images/what-we-do-software-engineering.jpeg";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import content from "../../content/Home/OurService.json";
 
-function OurServices() {
-  const { lang } = useParams(); 
+function OurServices({lang}) {
   const Content = content[lang]; 
   
   return (
