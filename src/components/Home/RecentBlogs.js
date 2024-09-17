@@ -1,6 +1,7 @@
 import MobileSEOServicesBlogImage from "../../assets/Images/MobileSEOServicesBlogImage.jpeg";
 import TechnicalSEOServicesBlogImage from "../../assets/Images/TechnicalSEOServicesBlogImage.jpeg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function RecentBlogs() {
   return (

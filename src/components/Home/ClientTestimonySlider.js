@@ -3,6 +3,8 @@ import HomepageTestimonyData from "../../content/HomepageTestimonyData";
 import AboutUsPageTestimonyData from "../../content/AboutUspageTestimonyData";
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function ClientTestimonySlider({ isHomepage = true }) {
   const [testimonySlider, updateTestimonySlider] = useState(0);

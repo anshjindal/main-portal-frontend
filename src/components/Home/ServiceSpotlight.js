@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ServicesSpotlightData from "../../content/ServicesSpotlightData"
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function ServiceSpotlight() {
   const [hoveredIndex, setHoveredIndex] = useState(null);

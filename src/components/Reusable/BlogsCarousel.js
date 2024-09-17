@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import { BsArrowRightShort } from "react-icons/bs";
 import BlogsData from "../../content/BlogData";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 const BlogsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

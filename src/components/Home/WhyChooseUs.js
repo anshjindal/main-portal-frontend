@@ -1,6 +1,8 @@
 import WhyChooseUsBackground from "../../assets/Images/WhyChooseUsBackground.png";
 import { CgArrowLongUp } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
+
 
 function WhyChooseUS() {
   return (

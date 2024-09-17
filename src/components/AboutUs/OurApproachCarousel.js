@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import OurApproachData from "../../content/OurApproach";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 import {
   PiArrowCircleLeftLight,

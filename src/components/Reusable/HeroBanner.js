@@ -1,4 +1,5 @@
-import React from "react";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function HeroBanner({ Header, Content, BannerImage }) {
   return (

@@ -4,6 +4,7 @@ import { HiOutlineArrowSmRight } from "react-icons/hi";
 import OurTeamData from '../../content/OurTeamData';
 import { FaLinkedin } from "react-icons/fa";
 
+
 const OurTeamCarousel = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);

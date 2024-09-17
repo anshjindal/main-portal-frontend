@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
 import clientLogos from "../../content/ClientsLogoData"; 
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function OurClients() {
   return (

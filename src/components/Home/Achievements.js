@@ -1,6 +1,8 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { FaArrowRight } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 const Achievements = () => {
   const { ref: sectionRef, inView: sectionInView } = useInView({

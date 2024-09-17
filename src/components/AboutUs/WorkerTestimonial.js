@@ -1,6 +1,8 @@
 
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
 import JasmineMHeadshot from "../../assets/Images/JasmineMHeadshot.png";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function WorkerTestimonial() {
     return <><div className="flex justify-center mb-[3vw] mt-[8vw]">

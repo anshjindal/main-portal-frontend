@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function PronunciationButton() {
   const [WouessiPronunciation, setWouessiPronunciation] = useState(false);

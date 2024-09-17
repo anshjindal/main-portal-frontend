@@ -1,6 +1,7 @@
 
 import TechLogos from "../../content/TechLogo";
-
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function TechStack () {
     return <>

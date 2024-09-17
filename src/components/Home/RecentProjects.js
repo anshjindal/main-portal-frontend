@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import RecentProjectData from "../../content/RecentProjectData"; // Updated import path
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
+import { Link, useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function RecentProjects() {
   const [projSlider, updateProjSlider] = useState(0);

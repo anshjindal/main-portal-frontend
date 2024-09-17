@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { LanguageProvider } from "./components/Utils/languageContext";
 import Home from "./pages/Home";
 import Footer from "./components/Layout/Footer";
@@ -20,36 +20,41 @@ import CopyrightPolicy from "./pages/CopyrightPolicy";
 import ErrorPage from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
 
+const Layout = ({ children }) => {
+  const { lang } = useParams();
+
+  return (
+    <div className={`text-center bg-[#F4F4F4]`}>
+      <Navbar lang={lang} />
+      <NavbarMobile lang={lang} />
+      {children}
+      <Footer lang={lang} />
+    </div>
+  );
+};
+
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <div className={`text-center bg-[#F4F4F4]`}>
-          <Navbar />
-          <NavbarMobile />
-          <Routes>
-            <Route path="/" element={<Navigate to="/en" />} />
-            <Route path="/:lang" element={<Home />} />
-            <Route path="/:lang/AboutUs" element={<AboutUs />} />
-            <Route path="/:lang/Services" element={<Services />} />
-            <Route path="/:lang/Products" element={<Products />} />
-            <Route path="/:lang/Portfolio" element={<Portfolio />} />
-            <Route path="/:lang/ContactUs" element={<ContactUs />} />
-            <Route path="/:lang/Careers" element={<Careers />} />
-            <Route path="/:lang/Blogs" element={<Blogs />} />
-            <Route path="/:lang/Blogpost" element={<BlogPost />} />
-            <Route path="/:lang/TermsCondition" element={<TermsCondition />} />
-            <Route path="/:lang/PrivacyPolicy" element={<PrivacyPolicy />} />
-            <Route path="/:lang/CookiePolicy" element={<CookiePolicy />} />
-            <Route
-              path="/:lang/CopyrightPolicy"
-              element={<CopyrightPolicy />}
-            />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-          <Footer />
-        </div>
+        <Routes>
+          <Route path="/" element={<Navigate to="/en" />} />
+          <Route path="/:lang" element={<Layout><Home /></Layout>} />
+          <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
+          <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />
+          <Route path="/:lang/Products" element={<Layout><Products /></Layout>} />
+          <Route path="/:lang/Portfolio" element={<Layout><Portfolio /></Layout>} />
+          <Route path="/:lang/ContactUs" element={<Layout><ContactUs /></Layout>} />
+          <Route path="/:lang/Careers" element={<Layout><Careers /></Layout>} />
+          <Route path="/:lang/Blogs" element={<Layout><Blogs /></Layout>} />
+          <Route path="/:lang/Blogpost" element={<Layout><BlogPost /></Layout>} />
+          <Route path="/:lang/TermsCondition" element={<Layout><TermsCondition /></Layout>} />
+          <Route path="/:lang/PrivacyPolicy" element={<Layout><PrivacyPolicy /></Layout>} />
+          <Route path="/:lang/CookiePolicy" element={<Layout><CookiePolicy /></Layout>} />
+          <Route path="/:lang/CopyrightPolicy" element={<Layout><CopyrightPolicy /></Layout>} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
       </BrowserRouter>
     </LanguageProvider>
   );

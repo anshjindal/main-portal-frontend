@@ -7,6 +7,8 @@ import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import "../../styles/global.css";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 const containerVariants = {
   hidden: { opacity: 0 },

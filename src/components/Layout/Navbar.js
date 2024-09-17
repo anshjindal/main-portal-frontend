@@ -4,22 +4,24 @@ import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { CgArrowLongUp } from "react-icons/cg";
 import "../../styles/global.css";
 import { LanguageContext } from "../Utils/languageContext";
+import content from "../../content/Layout/Navbar.json"; 
 
 function Navbar() {
   const [languageDropdown, setLanguageDropdown] = useState(false);
   const { language, switchLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
-  const { lang } = useParams(); // Capture the current language from the URL
+  const { lang } = useParams(); 
+  const Content = content[lang];
 
   // Default to 'en' if lang is undefined
   const currentLang = lang || "en"; 
 
-  // Function to handle language change and navigate
+
   const handleLanguageChange = (newLang) => {
-    switchLanguage(newLang); // Update context
+    switchLanguage(newLang); 
     navigate(`/${newLang}`);
-    window.location.reload(); // Update the route with the new language
-    setLanguageDropdown(false); // Close the dropdown after selection
+    window.location.reload(); 
+    setLanguageDropdown(false);
   };
 
   return (
@@ -32,22 +34,22 @@ function Navbar() {
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
               <Link to={`/${currentLang}/`} className="navbar-link">
-                <li className="py-2">Home</li>
+                <li className="py-2">{Content.home}</li>
               </Link>
               <Link to={`/${currentLang}/AboutUs`} className="navbar-link">
-                <li className="py-2">About Us</li>
+                <li className="py-2">{Content.aboutUs}</li>
               </Link>
               <Link to={`/${currentLang}/Services`} className="navbar-link">
-                <li className="py-2">Services</li>
+                <li className="py-2">{Content.services}</li>
               </Link>
               <Link to={`/${currentLang}/Products`} className="navbar-link">
-                <li className="py-2">Products</li>
+                <li className="py-2">{Content.products}</li>
               </Link>
               <Link to={`/${currentLang}/Portfolio`} className="navbar-link">
-                <li className="py-2">Portfolio</li>
+                <li className="py-2">{Content.portfolio}</li>
               </Link>
               <Link to={`/${currentLang}/Blogs`} className="navbar-link">
-                <li className="py-2">Blogs</li>
+                <li className="py-2">{Content.blogs}</li>
               </Link>
               <div
                 className="relative"
@@ -64,7 +66,7 @@ function Navbar() {
                   >
                     &gt;
                   </p>
-                  <p>{currentLang.toUpperCase()}</p> {/* Ensures lang is defined */}
+                  <p>{currentLang.toUpperCase()}</p> 
                 </div>
                 {languageDropdown && (
                   <div className="absolute left-0 w-max bg-white border border-gray-300 shadow-lg rounded-md">
@@ -87,7 +89,7 @@ function Navbar() {
           </div>
           <Link to={`/${currentLang}/ContactUs`}>
             <div className="max-[450px]:hidden w-[10vw] h-[3.5vw] rounded-full border-[0.1vw] z-10 border-[#2B00AC] hover:bg-[#0033A0] hover:text-[#FFFFFF] text-[#2B00AC] flex items-center justify-center transition-all duration-300 ease-in-out relative shadow-inner hover:shadow-inner-custom">
-              Let's Talk
+            {Content.letstalk}
               <CgArrowLongUp className="ml-[1vw] text-[1.2vw] rotate-[90deg]" />
               <div className="absolute inset-0 rounded-full bg-[#0033A0] opacity-0 hover:opacity-20 transition-opacity duration-300 ease-in-out"></div>
             </div>

@@ -1,6 +1,7 @@
-import React from "react";
 import NewsletterBanner from "../../assets/Images/NewsletterBanner.jpeg";
 import { FaArrowRight } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
+import content from "../../content/Home/OurVision.json"; 
 
 function NewsletterRegister() {
   return (
