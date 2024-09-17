@@ -8,7 +8,7 @@ import content from "../../content/Layout/Footer.json";
 
 function Footer() {
   const { lang } = useParams(); 
-  const Content = content[lang]; 
+  const Content = content[lang] || content["en"]; // Fallback to English if `Content` is undefined
 
   return (
     <>
@@ -83,66 +83,66 @@ function Footer() {
             <div className="flex gap-x-[2vw] max-[450px]:flex-wrap max-[450px]:gap-x-[6vw] justify-between">
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[40vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
-                  <Link to="/" className="footer-link">
+                  <Link to={`/${lang}/`} className="footer-link">
                     {Content.home}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/Products" className="footer-link">
+                  <Link to={`/${lang}/Products`} className="footer-link">
                     {Content.products}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/Portfolio" className="footer-link">
+                  <Link to={`/${lang}/Portfolio`} className="footer-link">
                     {Content.portfolio}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/Services" className="footer-link">
+                  <Link to={`/${lang}/Services`} className="footer-link">
                     {Content.services}
                   </Link>
                 </li>
               </ul>
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[30vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
-                  <Link to="/AboutUs" className="footer-link">
+                  <Link to={`/${lang}/AboutUs`} className="footer-link">
                     {Content.aboutUs}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/Blogs" className="footer-link">
+                  <Link to={`/${lang}/Blogs`} className="footer-link">
                     {Content.blogs}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/Careers" className="footer-link">
+                  <Link to={`/${lang}/Careers`} className="footer-link">
                     {Content.careers}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/CookiePolicy" className="footer-link">
+                  <Link to={`/${lang}/CookiePolicy`} className="footer-link">
                     {Content.cookiePolicy}
                   </Link>
                 </li>
               </ul>
               <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[45vw] max-[450px]:mt-[7vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
-                  <Link to="/ContactUs" className="footer-link">
+                  <Link to={`/${lang}/ContactUs`} className="footer-link">
                     {Content.contactUs}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/TermsCondition" className="footer-link">
+                  <Link to={`/${lang}/TermsCondition`} className="footer-link">
                     {Content.termsConditions}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/PrivacyPolicy" className="footer-link">
+                  <Link to={`/${lang}/PrivacyPolicy`} className="footer-link">
                     {Content.privacyPolicy}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/CopyrightPolicy" className="footer-link">
+                  <Link to={`/${lang}/CopyrightPolicy`} className="footer-link">
                     {Content.copyrightPolicy}
                   </Link>
                 </li>
