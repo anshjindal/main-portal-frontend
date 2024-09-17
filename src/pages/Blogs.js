@@ -12,7 +12,7 @@ function Blogs() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/data`)
+    fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/content`)
       .then(response => response.json())
       .then(data => setData(data.message))
       .catch(error => console.error('Error:', error))

@@ -1,7 +1,7 @@
 import React from "react";
 import HeroBanner from "../components/Reusable/HeroBanner";
 import Accordion from "../components/Services/Accordion";
-import Data from "../data/CareersAccordionInnerText.json";
+import Data from "../content/CareersAccordionInnerText.json";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
 

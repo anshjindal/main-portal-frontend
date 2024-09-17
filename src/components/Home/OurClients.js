@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
-import clientLogos from "../../data/ClientsLogoData"; 
+import clientLogos from "../../content/ClientsLogoData"; 
 
 function OurClients() {
   return (

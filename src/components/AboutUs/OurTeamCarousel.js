@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
-import OurTeamData from '../../data/OurTeamData';
+import OurTeamData from '../../content/OurTeamData';
 import { FaLinkedin } from "react-icons/fa";
 
 const OurTeamCarousel = () => {

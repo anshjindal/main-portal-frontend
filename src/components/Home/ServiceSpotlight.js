@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ServicesSpotlightData from "../../data/ServicesSpotlightData"
+import ServicesSpotlightData from "../../content/ServicesSpotlightData"
 
 function ServiceSpotlight() {
   const [hoveredIndex, setHoveredIndex] = useState(null);

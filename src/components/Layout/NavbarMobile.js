@@ -24,7 +24,7 @@ const itemVariants = {
 };
 
 function NavbarMobile() {
-  const [navMenu, updateNavMenu] = useState(false);
+  const [navMenu, updateNavMenu] = useState(false); //Tray
   const [languageDropdown, setLanguageDropdown] = useState(false);
   const [language, setLanguage] = useState("EN");
   const [hamburgerMenu, openHamburgerMenu] = useState(false);

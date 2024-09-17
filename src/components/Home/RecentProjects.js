@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RecentProjectData from "../../data/RecentProjectData"; // Updated import path
+import RecentProjectData from "../../content/RecentProjectData"; // Updated import path
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 
 function RecentProjects() {

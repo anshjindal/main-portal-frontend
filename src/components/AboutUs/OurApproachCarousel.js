@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OurApproachData from "../../data/OurApproach";
+import OurApproachData from "../../content/OurApproach";
 
 import {
   PiArrowCircleLeftLight,

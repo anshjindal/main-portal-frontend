@@ -4,7 +4,7 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 import HeroBanner from "../components/Reusable/HeroBanner";
 import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.jpeg";
 import Accordion from "../components/Services/Accordion";
-import Data from "../data/ServicesData.json";
+import Data from "../content/ServicesData.json";
 
 function Services() {
   return (

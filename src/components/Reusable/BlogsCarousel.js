@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import { BsArrowRightShort } from "react-icons/bs";
-import BlogsData from "../../data/BlogData";
+import BlogsData from "../../content/BlogData";
 
 const BlogsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

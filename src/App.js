@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/Home";
@@ -23,71 +23,32 @@ import NavbarMobile from "./components/Layout/NavbarMobile";
 // import { LanguageContext, LanguageProvider } from "./components/Utils/languageContext";
 
 function App() {
-
   return (
     <div className={`text-center bg-[#F4F4F4]`}>
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar/>
-        <NavbarMobile/>
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/AboutUs"
-              element={<AboutUs />}
-            />
-            <Route
-              path="/Services"
-              element={<Services />}
-            />
-            <Route
-              path="/Products"
-              element={<Products />}
-            />
-            <Route
-              path="/Portfolio"
-              element={<Portfolio />}
-            />
-            <Route
-              path="/ContactUs"
-              element={<ContactUs />}
-            />
-            <Route
-              path="/Careers"
-              element={<Careers />}
-            />
-            <Route
-              path="/Blogs"
-              element={<Blogs />}
-            />
-            <Route
-              path="/Blogpost"
-              element={<BlogPost />}
-            />
-            <Route
-              path="/TermsCondition"
-              element={<TermsCondition />}
-            />
-            <Route
-              path="/PrivacyPolicy"
-              element={<PrivacyPolicy />}
-            />
-            <Route
-              path="/CookiePolicy"
-              element={<CookiePolicy />}
-            />
-            <Route
-              path="/CopyrightPolicy"
-              element={<CopyrightPolicy />}
-            />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </div>
+        <Navbar />
+        <NavbarMobile />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Careers" element={<Careers />} />
+          <Route path="/Blogs" element={<Blogs />} />
+          <Route path="/Blogpost" element={<BlogPost />} />
+          <Route path="/TermsCondition" element={<TermsCondition />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/CookiePolicy" element={<CookiePolicy />} />
+          <Route path="/CopyrightPolicy" element={<CopyrightPolicy />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </div>
   );
 }
-// <LanguageProvider><App/></LanguageProvider> 
+// <LanguageProvider><App/></LanguageProvider>
 export default App;

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Services.css";
 import TermsIcon from "../assets/SVG/TermsConditionIcon.svg";
 import Accordion from "../components/Services/Accordion";
-import TermsData from "../data/TermsConditionText.json";
+import TermsData from "../content/TermsConditionText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
 
 function TermsCondition() {

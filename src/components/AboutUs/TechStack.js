@@ -1,5 +1,5 @@
 
-import TechLogos from "../../data/TechLogo";
+import TechLogos from "../../content/TechLogo";
 
 
 function TechStack () {

@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 import { CgArrowLongUp } from "react-icons/cg";
 import "../../styles/global.css";
 
-function Navbar({ onClick, onMenuItemClick }) {
+function Navbar() {
   const [languageDropdown, setLanguageDropdown] = useState(false);
   const [language, setLanguage] = useState("EN");
-  const [hamburgerMenu, openHamburgerMenu] = useState(false);
-
-  const handleMenuToggle = () => {
-    openHamburgerMenu(!hamburgerMenu);
-    onClick(hamburgerMenu);
-  };
-
-  useEffect(() => {
-    openHamburgerMenu(!onMenuItemClick);
-  }, [onMenuItemClick]);
 
   return (
     <>
