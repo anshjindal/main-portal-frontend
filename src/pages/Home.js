@@ -10,8 +10,10 @@ import OurServices from "../components/Home/OurServices";
 import OurVision from "../components/Home/OurVision";
 import Hero from "../components/Home/Hero";
 import PronunciationButton from "../components/Home/PronunciationButton";
+import { useParams } from "react-router-dom";
 
 function Home() {
+  const {lang} = useParams();
 
   return (
     <div className="page-background">

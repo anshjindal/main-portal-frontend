@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { LanguageProvider } from "./components/Utils/languageContext";
 import Home from "./pages/Home";
 import Footer from "./components/Layout/Footer";
 import Navbar from "./components/Layout/Navbar";
@@ -20,35 +20,39 @@ import CopyrightPolicy from "./pages/CopyrightPolicy";
 import ErrorPage from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
 
-// import { LanguageContext, LanguageProvider } from "./components/Utils/languageContext";
-
 function App() {
   return (
-    <div className={`text-center bg-[#F4F4F4]`}>
+    <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar />
-        <NavbarMobile />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/Products" element={<Products />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/Careers" element={<Careers />} />
-          <Route path="/Blogs" element={<Blogs />} />
-          <Route path="/Blogpost" element={<BlogPost />} />
-          <Route path="/TermsCondition" element={<TermsCondition />} />
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/CookiePolicy" element={<CookiePolicy />} />
-          <Route path="/CopyrightPolicy" element={<CopyrightPolicy />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        <Footer />
+        <div className={`text-center bg-[#F4F4F4]`}>
+          <Navbar />
+          <NavbarMobile />
+          <Routes>
+            <Route path="/" element={<Navigate to="/en" />} />
+            <Route path="/:lang" element={<Home />} />
+            <Route path="/:lang/AboutUs" element={<AboutUs />} />
+            <Route path="/:lang/Services" element={<Services />} />
+            <Route path="/:lang/Products" element={<Products />} />
+            <Route path="/:lang/Portfolio" element={<Portfolio />} />
+            <Route path="/:lang/ContactUs" element={<ContactUs />} />
+            <Route path="/:lang/Careers" element={<Careers />} />
+            <Route path="/:lang/Blogs" element={<Blogs />} />
+            <Route path="/:lang/Blogpost" element={<BlogPost />} />
+            <Route path="/:lang/TermsCondition" element={<TermsCondition />} />
+            <Route path="/:lang/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/:lang/CookiePolicy" element={<CookiePolicy />} />
+            <Route
+              path="/:lang/CopyrightPolicy"
+              element={<CopyrightPolicy />}
+            />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
-    </div>
+    </LanguageProvider>
   );
 }
-// <LanguageProvider><App/></LanguageProvider>
+
 export default App;
