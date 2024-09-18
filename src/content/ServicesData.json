@@ -1,101 +1,244 @@
-{"Engineering": [
-    {
-      "innerTitle": "Custom Software Development",
-      "innerText":
-        "At Wouessi, we not only design software solutions that are appropriately aligned with the requirements of your enterprise, but we also provide highly individualized solutions that are built to fit your company's goals."
+{
+  "en": {
+    "heroTitle": "Services We Offer",
+    "heroContent": "Our specialized team of researchers, strategists, designers, developers, and project managers work with streamlined processes to break through organizational roadblocks.",
+    "accordions": {
+      "Engineering": {
+        "heading": "Engineering",
+        "content": [
+          {
+            "innerTitle": "Custom Software Development",
+            "innerText": "At Wouessi, we design software solutions that align with the needs of your enterprise, providing individualized solutions tailored to your company's goals."
+          },
+          {
+            "innerTitle": "DevOps",
+            "innerText": "DevOps as a Service transforms how your organization builds, tests, and releases software. It reduces bureaucracy and promotes efficient processes."
+          },
+          {
+            "innerTitle": "IT Project Management",
+            "innerText": "Proper governance ensures the success of IT projects. Our consulting services apply best practices to design, coordinate, and manage technological projects."
+          },
+          {
+            "innerTitle": "IT Support and Managed Services",
+            "innerText": "Our team offers robust IT support and managed services to maintain and optimize your infrastructure while keeping your business running efficiently."
+          },
+          {
+            "innerTitle": "AI and Blockchain Consulting",
+            "innerText": "Our AI and blockchain consulting solutions help you innovate. We assist with the development and deployment of cutting-edge technologies to improve efficiency and decision-making."
+          },
+          {
+            "innerTitle": "Software, Mobile, and Web Development",
+            "innerText": "We offer a range of development services to create software, mobile apps, and websites tailored to meet the needs of your business."
+          },
+          {
+            "innerTitle": "Cleantech Industry IT Services",
+            "innerText": "We provide solutions for cleantech industries to optimize operations while reducing costs and energy use, supporting sustainable growth."
+          },
+          {
+            "innerTitle": "AI-Infused Products",
+            "innerText": "We offer AI solutions that integrate seamlessly into your products, driving innovation and efficiency across your operations."
+          }
+        ]
+      },
+      "Marketing": {
+        "heading": "Marketing",
+        "content": [
+          {
+            "innerTitle": "Search Engine Optimization",
+            "innerText": "We improve your site's visibility with SEO, helping your content rank higher in search engine results."
+          },
+          {
+            "innerTitle": "Social Media Marketing",
+            "innerText": "We harness social media to build awareness and trust for your brand through engaging campaigns."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Our email marketing services help you connect with customers through targeted, impactful email campaigns."
+          },
+          {
+            "innerTitle": "Display Marketing",
+            "innerText": "We create digital display ads, banners, and videos that increase your brand's visibility and engagement."
+          }
+        ]
+      },
+      "Content": {
+        "heading": "Content",
+        "content": [
+          {
+            "innerTitle": "Video Production",
+            "innerText": "We produce high-quality video content to help you communicate your brand's story and connect with your audience."
+          },
+          {
+            "innerTitle": "Social Media Marketing",
+            "innerText": "We create targeted social media content to help raise product awareness and build relationships with your audience."
+          },
+          {
+            "innerTitle": "Display Marketing",
+            "innerText": "We offer display marketing services, crafting and distributing ads that enhance visibility and drive traffic."
+          }
+        ]
+      },
+      "Branding": {
+        "heading": "Branding",
+        "content": [
+          {
+            "innerTitle": "Graphic/Print Design",
+            "innerText": "Our graphic design services visually communicate your message using typography, photography, and illustration."
+          },
+          {
+            "innerTitle": "Brand Design",
+            "innerText": "We help you create a strong, memorable brand identity that aligns with your business values and goals."
+          },
+          {
+            "innerTitle": "Content Writing and Marketing",
+            "innerText": "We produce high-quality content that engages your target market and establishes your expertise."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Our email marketing strategies are designed to communicate directly with your customers and drive sales."
+          }
+        ]
+      },
+      "Microsoft": {
+        "heading": "Microsoft",
+        "content": [
+          {
+            "innerText": "We offer Microsoft Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
+          }
+        ]
+      },
+      "Outsourcing": {
+        "heading": "Outsourcing",
+        "content": [
+          {
+            "innerText": "We provide talent outsourcing services, allowing businesses to hire teams for specific short-term projects or needs."
+          }
+        ]
+      }
     },
-    {
-      "innerTitle": "DevOps",
-      "innerText":
-        "DevOps as a Service represents a portfolio of services that can change how your organization builds, tests, and releases software. DevOps enables the organization to operate and develop concurrently by reducing bureaucracy and promoting efficient processes."
+    "callToActionTitle": "OUR PRODUCT",
+    "callToActionContent": "Looking for services and guidance? Let's get in touch!",
+    "callToActionButton": "Let's Talk!"
+  },
+  "fr": {
+    "heroTitle": "Services que nous offrons",
+    "heroContent": "Notre équipe spécialisée de chercheurs, de stratèges, de designers, de développeurs et de chefs de projet travaille avec des processus rationalisés pour surmonter les obstacles organisationnels.",
+    "accordions": {
+      "Engineering": {
+        "heading": "Ingénierie",
+        "content": [
+          {
+            "innerTitle": "Développement de logiciels sur mesure",
+            "innerText": "Chez Wouessi, nous concevons des solutions logicielles adaptées aux besoins de votre entreprise, en fournissant des solutions personnalisées en fonction des objectifs de votre société."
+          },
+          {
+            "innerTitle": "DevOps",
+            "innerText": "DevOps en tant que service transforme la façon dont votre organisation développe, teste et déploie des logiciels, réduisant la bureaucratie et promouvant l'efficacité."
+          },
+          {
+            "innerTitle": "Gestion de projet IT",
+            "innerText": "Une bonne gouvernance est essentielle pour la réussite des projets IT. Nos services de conseil appliquent les meilleures pratiques pour concevoir, coordonner et gérer les projets technologiques."
+          },
+          {
+            "innerTitle": "Support IT et services gérés",
+            "innerText": "Notre équipe propose un support IT robuste et des services gérés pour maintenir et optimiser votre infrastructure tout en assurant le bon fonctionnement de votre entreprise."
+          },
+          {
+            "innerTitle": "Consulting IA et Blockchain",
+            "innerText": "Nos solutions de conseil en IA et blockchain vous aident à innover. Nous vous assistons dans le développement et le déploiement de technologies de pointe pour améliorer l'efficacité et la prise de décision."
+          },
+          {
+            "innerTitle": "Développement de logiciels, mobile et web",
+            "innerText": "Nous offrons une gamme de services de développement pour créer des logiciels, des applications mobiles et des sites web adaptés aux besoins de votre entreprise."
+          },
+          {
+            "innerTitle": "Services IT pour l'industrie des cleantechs",
+            "innerText": "Nous fournissons des solutions pour les industries cleantech afin d'optimiser les opérations tout en réduisant les coûts et la consommation d'énergie, soutenant ainsi une croissance durable."
+          },
+          {
+            "innerTitle": "Produits infusés par IA",
+            "innerText": "Nous proposons des solutions IA qui s'intègrent parfaitement à vos produits, stimulant l'innovation et l'efficacité dans vos opérations."
+          }
+        ]
+      },
+      "Marketing": {
+        "heading": "Marketing",
+        "content": [
+          {
+            "innerTitle": "Optimisation pour les moteurs de recherche",
+            "innerText": "Nous améliorons la visibilité de votre site avec des techniques SEO, aidant votre contenu à se classer plus haut dans les résultats de recherche."
+          },
+          {
+            "innerTitle": "Marketing sur les réseaux sociaux",
+            "innerText": "Nous utilisons les réseaux sociaux pour créer de la notoriété et établir la confiance pour votre marque grâce à des campagnes engageantes."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Nos services d'email marketing vous aident à communiquer directement avec vos clients à travers des campagnes ciblées."
+          },
+          {
+            "innerTitle": "Marketing d'affichage",
+            "innerText": "Nous créons des publicités d'affichage numériques, bannières et vidéos qui augmentent la visibilité et l'engagement de votre marque."
+          }
+        ]
+      },
+      "Content": {
+        "heading": "Contenu",
+        "content": [
+          {
+            "innerTitle": "Production vidéo",
+            "innerText": "Nous produisons du contenu vidéo de haute qualité pour vous aider à communiquer l'histoire de votre marque et à engager votre audience."
+          },
+          {
+            "innerTitle": "Marketing sur les réseaux sociaux",
+            "innerText": "Nous créons du contenu ciblé sur les réseaux sociaux pour aider à accroître la notoriété des produits et à établir des relations avec votre audience."
+          },
+          {
+            "innerTitle": "Marketing d'affichage",
+            "innerText": "Nous offrons des services de marketing d'affichage, en créant et en distribuant des annonces pour améliorer la visibilité et générer du trafic."
+          }
+        ]
+      },
+      "Branding": {
+        "heading": "Branding",
+        "content": [
+          {
+            "innerTitle": "Design graphique / Impression",
+            "innerText": "Nos services de design graphique communiquent visuellement votre message en utilisant la typographie, la photographie et l'illustration."
+          },
+          {
+            "innerTitle": "Design de marque",
+            "innerText": "Nous vous aidons à créer une identité de marque forte et mémorable qui est alignée avec les valeurs et les objectifs de votre entreprise."
+          },
+          {
+            "innerTitle": "Rédaction de contenu et marketing",
+            "innerText": "Nous produisons du contenu de haute qualité qui engage votre marché cible et établit votre expertise."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Nos stratégies d'email marketing sont conçues pour communiquer directement avec vos clients et stimuler les ventes."
+          }
+        ]
+      },
+      "Microsoft": {
+        "heading": "Microsoft",
+        "content": [
+          {
+            "innerText": "Nous offrons des services Microsoft Cloud, y compris la consultation, la mise en œuvre, la migration et les services gérés, pour améliorer l'efficacité de l'entreprise."
+          }
+        ]
+      },
+      "Outsourcing": {
+        "heading": "Externalisation",
+        "content": [
+          {
+            "innerText": "Nous fournissons des services d'externalisation de talents, permettant aux entreprises de recruter des équipes pour des projets spécifiques à court terme."
+          }
+        ]
+      }
     },
-    {
-      "innerTitle": "IT Project Management",
-      "innerText":
-        "The management of any IT project depends on proper governance in order to enhance the achievement of any technological project. IT consulting services that would provide you with professional solutions in the management of different projects at Wouessi include applying processes and best practices to design, coordinate, and control contracted projects step by step."
-    },
-    {
-      "innerTitle": "IT Support and Managed Services",
-      "innerText":
-        "We are seeking a highly skilled and experienced Back End Developer to join our team. The Back End Developer will be responsible for designing, developing, and maintaining server-side applications and databases to support our web and mobile applications. The ideal candidate will have a strong background in backend technologies, database management, and API development, with a focus on delivering scalable, secure, and high-performance solutions."
-    },
-    {
-      "innerTitle": "AI and Blockchain Consulting",
-      "innerText":
-        "We offer consultancy and assistance in developing and deploying these innovative technologies. Our AI and blockchain consulting solutions help you gain an edge. You are assured of AI solutions that increase efficiency, support better decisions, and foster innovation in your enterprise."
-    },
-    {
-      "innerTitle": "Software, Mobile, and Web Development",
-      "innerText":
-        "Wouessi is an innovative software development company offering a broad range of services targeting to provide various businesses with enhanced systems, mobile applications, and websites."
-    },
-    {
-      "innerTitle": "Cleantech Industry IT Services",
-      "innerText":
-        "Cost and energy savings are ideal in the constantly growing field of cleantech. Every company active in renewable energy, manufacturing, or any other industry can benefit from our solutions and keep sustainability in mind while improving market positions."
-    },
-    {
-      "innerTitle": "AI-Infused Products",
-      "innerText":
-        "Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    }
-  ],
-  "Marketing": [
-    {
-      "innerTitle": "Search Engine Optimization",
-      "innerText": "Search Engine Optimization (SEO) affects the visibility of a website or a web page in search engine  results via organic search. We optimize your web pages, websites, and Blogs posts to rank higher on search engines through SEO techniques."
-    },
-    {
-      "innerTitle": "Search Media Marketing",
-      "innerText": "We harness the power of social media to create product awareness and build trust for your brand. Depending on your marketing needs and target audience, we craft engaging social media content and craft engaging social media campaigns."
-    },
-    {
-      "innerTitle": "Email Marketing",
-      "innerText": "With our email marketing services, we help you communicate directly with your customers and create targeted email campaigns that reach out to your customers, prospects, and clients, ensuring your message is delivered effectively to increase sales and build stronger relationships with your audience."
-    },
-    {
-      "innerTitle": "Display Marketing",
-      "innerText": "We offer exceptional digital display marketing services tailored to enhance your brand's visibility and drive traffic. We specialize in creating and distributing web banners, online videos, and social media banners, designed to integrate seamlessly with your existing marketing efforts.We leverage our expertise to boost your online presence, ensuring your brand reaches a wider audience and achieves higher engagement, for measurable results and growth."    
-    }
-  ],
-  "Content": [
-    {
-      "innerTitle": "Video Production",
-      "innerText": "Video marketing is the latest and top trend in digital marketing. It is a cost-effective method of communicating with the audience. It has become integral to every marketer's toolkit because it helps them tell their brand story, build trust, create awareness, and ultimately generate sales leads."
-    },
-    {
-      "innerTitle": "Social Media Marketing",
-      "innerText": "Social media is a powerful marketing tool for creating product awareness and building trust. Depending on your marketing needs and targeted audience, we make social media content and carry out successful social media campaigns.rrrr"
-    },
-    {
-      "innerTitle": "Display Marketing",
-      "innerText": "Display marketing is a form of online advertising in which marketers create and share web banners, online videos, and social media banners to increase visibility and traffic. Wouessi offers exceptional digital display marketing services, where, as your partner, you can boost your existing marketing efforts."
-    }
-  ],
-  "Branding": [
-    {
-      "innerTitle": "Graphic/Print Design",
-      "innerText": "Graphic design is the process of visual communication and problem-solving using one or more typography, photography, and illustration. Graphic designers use different fonts, colors, symbols, pictures, or icons to convey a message."
-    },
-    {
-      "innerTitle": "Brand Design",
-      "innerText": "A brand is an anchor from which all business development activities and marketing strategies align. A strong brand reflects what your business stands for, enabling it to stand out in the Crowd!"
-    },
-    {
-      "innerTitle": "Content Writing and Marketing",
-      "innerText": "Content engages your targeted markets and builds trust. Effective and consistent content marketing enables you to showcase your expertise and boost your business above your competitors."
-    },
-    {
-      "innerTitle": "Email Marketing",
-      "innerText": "Email marketing is one of the most popular forms of digital marketing. It enables you to communicate directly to customers. It's a cost-effective method of reaching out to your customers, prospects, and clients. It can be a very effective strategy for increasing sales when done right."
-    }
-  ],
-    "Microsoft": [
-      {
-        "innerText": "We specialize in boosting business efficiency with our expert Microsoft Cloud Services. We provide comprehensive Microsoft 365 consulting, implementation, customization, migration, and managed services. Whether you're initiating your cloud transition or seeking to refine your existing setup, we are your dedicated partner in maximizing the benefits of Microsoft 365."
-      }],    
-  "Outsourcing": [
-    {
-      "innerText": "We are able to assign or lend the team to other companies based on their requirements and needs. Talent based outsourcing we do it for the purpose of hiring a team for a short-term project or for a specific need."
-    }
-]}
+    "callToActionTitle": "NOTRE PRODUIT",
+    "callToActionContent": "Vous cherchez des services et des conseils ? Entrons en contact !",
+    "callToActionButton": "Parlons-en!"
+  }
+}

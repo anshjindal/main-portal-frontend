@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function CallToActionSection({ Title, Content, CallToAction, lang, RedirectTo="ContactUs" }) {
   return (
-    <div className="flex text-left justify-center items-center pt-[8vw] pb-[8vw] max-[450px]:mb-[14vw]">
+    <div className="flex text-left justify-center items-center pt-[8vw] pb-[8vw]">
       <div className="w-[58%]">
         <p className="text-[1.1vw] text-[#666666] max-[450px]:text-[2.5vw] font-medium">
           {Title}

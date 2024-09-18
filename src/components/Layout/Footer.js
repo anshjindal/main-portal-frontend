@@ -12,8 +12,8 @@ function Footer() {
 
   return (
     <>
-      <footer className="flex flex-wrap w-full h-screen align-center justify-center relative footer">
-        <div className="flex justify-center w-full h-auto pt-20 pb-[calc(80px_+_25vw)] md:mb-0 md:py-0 md:h-[calc(100%_-_25vw)]">
+      <footer className="flex flex-wrap w-full h-auto align-center justify-center relative footer">
+        <div className="flex justify-center w-full h-auto pt-20 max-[450px]:pt-0 pb-[calc(80px_+_25vw)] max-[450px]:pb-[calc(10px_+_25vw)] md:mb-0 md:py-0 md:h-[calc(100%_-_25vw)]">
           <div className="w-[90%] pt-[3vw] pb-[3vw] flex gap-x-[6vw] border-t-[0.2vw] border-[#2B00AC] max-[450px]:flex-col max-[450px]:border-t-[0.6vw]">
             <div className="space-y-[1vw] text-left mt-[-1vw] max-[450px]:mt-[2vw]">
               <h1 className="text-[3vw] font-bold max-[450px]:text-[7.5vw]">
@@ -81,7 +81,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex gap-x-[2vw] max-[450px]:flex-wrap max-[450px]:gap-x-[6vw] justify-between">
-              <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[40vw] max-[450px]:font-semibold">
+              <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[30vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
                   <Link to={`/${lang}/`} className="footer-link">
                     {Content.home}
@@ -103,7 +103,7 @@ function Footer() {
                   </Link>
                 </li>
               </ul>
-              <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[30vw] max-[450px]:font-semibold">
+              <ul className="w-[13vw] space-y-[1.5vw] text-left text-[#828282] text-[1vw] max-[450px]:text-[4.5vw] max-[450px]:w-[40vw] max-[450px]:font-semibold">
                 <li className="text-[#2B00AC]">
                   <Link to={`/${lang}/AboutUs`} className="footer-link">
                     {Content.aboutUs}
