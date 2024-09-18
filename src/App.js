@@ -40,7 +40,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Navigate to="/en" />} />
+          <Route path="/" element={<Navigate to="/en/" />} />
           <Route path="/:lang" element={<Layout><Home /></Layout>} />
           <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
           <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />
