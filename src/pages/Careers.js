@@ -1,10 +1,10 @@
 import React from "react";
 import HeroBanner from "../components/Reusable/HeroBanner";
-import Accordion from "../components/Services/Accordion";
+import Accordion from "../components/Reusable/Accordion";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
 import { useParams } from "react-router-dom";
-import content from "../content/CareersAccordionInnerText.json"
+import content from "../content/Careers/CareersAccordionInnerText.json"
 
 
 function Careers() {

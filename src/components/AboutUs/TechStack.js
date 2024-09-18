@@ -1,5 +1,5 @@
 
-import TechLogos from "../../content/TechLogo";
+import TechLogos from "../../content/AboutUs/TechLogo";
 import { useParams } from "react-router-dom";
 import content from "../../content/Home/OurVision.json"; 
 

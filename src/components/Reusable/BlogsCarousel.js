@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import { BsArrowRightShort } from "react-icons/bs";
-import BlogsData from "../../content/BlogData";
+import BlogsData from "../../content/Blogs/BlogData";
 import { useParams } from "react-router-dom";
 import content from "../../content/Home/OurVision.json"; 
 

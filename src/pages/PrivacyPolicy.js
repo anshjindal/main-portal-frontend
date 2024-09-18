@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Services.css";
 import PrivacyIcon from "../assets/SVG/PrivacyPolicyIcon.svg";
-import Accordion from "../components/Services/Accordion";
-import PrivacyData from "../content/PrivacyPolicyText.json";
+import Accordion from "../components/Reusable/Accordion";
+import PrivacyData from "../content/PolicyPages/PrivacyPolicyText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
 import { useParams } from "react-router-dom";
 

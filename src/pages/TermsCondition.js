@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Services.css";
 import TermsIcon from "../assets/SVG/TermsConditionIcon.svg";
-import Accordion from "../components/Services/Accordion";
-import content from "../content/TermsConditionText.json";
+import Accordion from "../components/Reusable/Accordion";
+import content from "../content/PolicyPages/TermsConditionText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
 import { useParams } from "react-router-dom";
 

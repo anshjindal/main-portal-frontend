@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ServicesSpotlightData from "../../content/ServicesSpotlightData";
+import ServicesSpotlightData from "../../content/Home/ServicesSpotlightData";
 import content from "../../content/Home/ServiceSpotlight.json"; 
 
 function ServiceSpotlight({lang}) {

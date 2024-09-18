@@ -3,8 +3,8 @@ import "../styles/Services.css";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import HeroBanner from "../components/Reusable/HeroBanner";
 import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.jpeg";
-import Accordion from "../components/Services/Accordion";
-import content from "../content/ServicesData.json";
+import Accordion from "../components/Reusable/Accordion";
+import content from "../content/Services/ServicesData.json";
 import { useParams } from "react-router-dom";
 
 function Services() {

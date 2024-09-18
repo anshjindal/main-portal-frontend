@@ -1,5 +1,5 @@
-import AfricaBlockChainImage from "../assets/Images/left-side-image-portfolio.jpeg";
-import AfroLifestyleImage from "../assets/Images/right-side-image-portfolio.png";
+import AfricaBlockChainImage from "../../assets/Images/left-side-image-portfolio.jpeg";
+import AfroLifestyleImage from "../../assets/Images/right-side-image-portfolio.png";
 
 const BlogsData = [
     {

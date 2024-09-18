@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
-import PortfolioData from "../content/PortfolioData";
+import PortfolioData from "../content/Portfolio/PortfolioData";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 

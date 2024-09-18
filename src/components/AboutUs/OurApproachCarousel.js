@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OurApproachData from "../../content/OurApproach";
+import OurApproachData from "../../content/AboutUs/OurApproach";
 import { useParams } from "react-router-dom";
 import content from "../../content/Home/OurVision.json"; 
 

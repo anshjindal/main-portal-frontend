@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import HomepageTestimonyData from "../../content/HomepageTestimonyData.json";
-import AboutUsPageTestimonyData from "../../content/AboutUspageTestimonyData.json";
+import HomepageTestimonyData from "../../content/Home/HomepageTestimonyData.json";
+import AboutUsPageTestimonyData from "../../content/AboutUs/AboutUspageTestimonyData.json";
 import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
 import { useParams } from "react-router-dom";

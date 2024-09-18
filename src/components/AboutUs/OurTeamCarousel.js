@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
-import OurTeamData from '../../content/OurTeamData';
+import OurTeamData from '../../content/AboutUs/OurTeamData';
 import { FaLinkedin } from "react-icons/fa";
 
 

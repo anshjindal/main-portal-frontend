@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
-import partnersLogos from "../../content/PartnersLogoData"; 
+import partnersLogos from "../../content/AboutUs/PartnersLogoData"; 
 import { useParams } from "react-router-dom";
 import content from "../../content/Home/OurVision.json"; 
 
