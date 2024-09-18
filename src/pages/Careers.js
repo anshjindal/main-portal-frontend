@@ -7,6 +7,7 @@ import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
 import { useParams } from "react-router-dom";
 
 function Careers() {
+  const {lang} = useParams();
   return (
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
@@ -47,6 +48,7 @@ function Careers() {
           Title="WORK WITH US"
           Content="Apply now and become part of our dynamic team!"
           CallToAction="Join Our Team"
+          lang ={lang}
         />
       </div>
     </div>

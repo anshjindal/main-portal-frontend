@@ -8,6 +8,7 @@ import Data from "../content/ServicesData.json";
 import { useParams } from "react-router-dom";
 
 function Services() {
+  const {lang} = useParams();
   return (
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
@@ -43,6 +44,7 @@ function Services() {
           Title="OUR PRODUCT"
           Content="Looking for services and guidance? Let's get in touch!"
           CallToAction="Let's Talk!"
+          lang ={lang}
         />
       </div>
     </div>

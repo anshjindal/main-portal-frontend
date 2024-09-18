@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 
 function Portfolio() {
+  const {lang} = useParams();
   const [visible, setVisible] = useState(4); // Show 4 cards initially
 
   const [portfolioItems, setPortfolioItems] = useState([]); // State to store portfolio data
@@ -104,6 +105,7 @@ function Portfolio() {
           Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
           Title="Work With Us"
+          lang ={lang}
         />
       </div>
     </div>

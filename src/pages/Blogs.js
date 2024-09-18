@@ -8,6 +8,7 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 import { useParams } from "react-router-dom";
 
 function Blogs() {
+  const {lang} = useParams();
 
   const [data, setData] = useState('');
 
@@ -236,6 +237,7 @@ function Blogs() {
           Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
           Title="Work With Us"
+          lang ={lang}
         />
       </div>
     </div>

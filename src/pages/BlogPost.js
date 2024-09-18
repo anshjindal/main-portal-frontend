@@ -17,6 +17,7 @@ function BlogPost() {
   const [activeIndex, setActiveIndex] = useState(null);
   const sections = ["SECTION 1", "SECTION 2", "SECTION 3", "SECTION 4"];
   const media_icons = [IconShare, IconLinkedin, IconTiktok, IconInsta];
+  const {lang} = useParams();
 
   return (
     <div className="flex justify-center mt-[5vw] mb-[5vw] max-[450px]:mt-0 page-background">
@@ -384,6 +385,7 @@ function BlogPost() {
           Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
           Title="Work With Us"
+          lang ={lang}
         />
       </div>
     </div>

@@ -35,8 +35,9 @@ function NavbarMobile() {
   const navigate = useNavigate();
 
   const handleLanguageChange = (newLang) => {
+    const path = window.location.pathname.replace(/^\/[a-z]{2}\//, '/');
     switchLanguage(newLang); 
-    navigate(`/${newLang}`);
+    navigate(`/${newLang}${path}`);
     window.location.reload(); 
     setLanguageDropdown(!languageDropdown);
     handleMenuToggle(); // Ensure menu closes when selecting language

@@ -134,6 +134,7 @@ function AboutUs() {
           Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
           Title="WORK WITH US"
+          lang ={lang}
         />
       </section>
     </div>
