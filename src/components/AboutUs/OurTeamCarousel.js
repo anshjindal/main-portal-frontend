@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { HiOutlineArrowSmLeft } from "react-icons/hi";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
-import OurTeamData from '../../content/AboutUs/OurTeamData';
+import content from '../../content/AboutUs/OurTeamData';
 import { FaLinkedin } from "react-icons/fa";
+import contenttitle from '../../content/AboutUs/OurTeam.json'
 
 
-const OurTeamCarousel = () => {
+const OurTeamCarousel = ({lang}) => {
+  const ContentTtile = contenttitle[lang];
+  const Content = content[lang];
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide
-      ? Math.ceil(OurTeamData.length / 3) - 1
+      ? Math.ceil(Content.length / 3) - 1
       : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === Math.ceil(OurTeamData.length / 3) - 1;
+    const isLastSlide = currentIndex === Math.ceil(Content.length / 3) - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -30,11 +34,11 @@ const OurTeamCarousel = () => {
         <HiOutlineArrowSmLeft />
       </div>
       <div className="overflow-hidden w-[80%]">
-        <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">Our Team</h1>
+        <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">{ContentTtile.title}</h1>
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {OurTeamData.map((card, index) => (
+          {Content.map((card, index) => (
             <div key={index} className="flex-shrink-0 w-[33.3%] max-[450px]:p-2 p-4 relative">
               <div className="bg-white rounded-lg overflow-hidden shadow-md relative group">
                 <div

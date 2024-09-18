@@ -11,12 +11,15 @@ import OurApproachCarousel from "../components/AboutUs/OurApproachCarousel";
 import TechStack from "../components/AboutUs/TechStack";
 import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
 import HeroAboutUs from "../components/AboutUs/HeroAbousUs.js";
+import content from "../content/AboutUs/AboutUsCTA.json"
 
 import { useParams } from "react-router-dom";
 
 
 function AboutUs() {
   const {lang} = useParams();
+
+  const Content = content[lang];
 
   return (
     <div className="page-background">
@@ -54,9 +57,9 @@ function AboutUs() {
 
       <section>
         <CallToActionSection
-          Content="We would love to hear more about your project"
-          CallToAction="Let's Talk"
-          Title="WORK WITH US"
+          Content={Content.Content}
+          CallToAction={Content.CallToAction}
+          Title={Content.Title}
           lang ={lang}
         />
       </section>

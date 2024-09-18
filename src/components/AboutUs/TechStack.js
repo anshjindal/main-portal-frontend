@@ -1,14 +1,16 @@
 
 import TechLogos from "../../content/AboutUs/TechLogo";
 import { useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/AboutUs/TechStack.json"; 
 
-function TechStack () {
+function TechStack ({lang}) {
+  const Content = content[lang];
+
     return <>
     <div className="flex justify-center my-[5vw] ">
           <div className="w-[80%]">
             <h1 className="text-[3vw] text-left font-bold max-[450px]:text-[7vw]">
-              Tech Stack
+              {Content.title}
             </h1>
             <div className="grid grid-cols-5 gap-4 mt-[3vw]  max-[450px]:mb-[8vw]">
               {TechLogos.map((LogoComponent, index) => (

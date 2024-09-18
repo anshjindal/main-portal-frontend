@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "./components/Utils/languageContext";
 import Home from "./pages/Home";
 import Footer from "./components/Layout/Footer";
@@ -21,15 +21,13 @@ import Error from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
 
 const Layout = ({ children }) => {
-  const { lang } = useParams();
-  
 
   return (
     <div className={`text-center bg-[#F4F4F4]`}>
-      <Navbar lang={lang} />
-      <NavbarMobile lang={lang} />
+      <Navbar />
+      <NavbarMobile  />
       {children}
-      <Footer lang={lang} />
+      <Footer />
     </div>
   );
 };
@@ -40,7 +38,13 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* Redirect default root path to /en */}
           <Route path="/" element={<Navigate to="/en/" />} />
+
+          {/* Catch invalid routes without language and show error page */}
+          <Route path="/*" element={<Layout><Error /></Layout>} />
+
+          {/* All routes with language parameter */}
           <Route path="/:lang" element={<Layout><Home /></Layout>} />
           <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
           <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />
@@ -49,12 +53,17 @@ function App() {
           <Route path="/:lang/ContactUs" element={<Layout><ContactUs /></Layout>} />
           <Route path="/:lang/Careers" element={<Layout><Careers /></Layout>} />
           <Route path="/:lang/Blogs" element={<Layout><Blogs /></Layout>} />
-          <Route path="/:lang/Blogpost" element={<Layout><BlogPost /></Layout>} />
+          <Route path="/:lang/BlogPost" element={<Layout><BlogPost /></Layout>} />
           <Route path="/:lang/TermsCondition" element={<Layout><TermsCondition /></Layout>} />
           <Route path="/:lang/PrivacyPolicy" element={<Layout><PrivacyPolicy /></Layout>} />
           <Route path="/:lang/CookiePolicy" element={<Layout><CookiePolicy /></Layout>} />
           <Route path="/:lang/CopyrightPolicy" element={<Layout><CopyrightPolicy /></Layout>} />
-          <Route path="*" element={<Layout><Error /></Layout> }/>
+
+          {/* Catch invalid routes with language and show error page */}
+          <Route path="/:lang/*" element={<Layout><Error /></Layout>} />
+
+          {/* Dedicated error page route */}
+          <Route path="/:lang/Error" element={<Layout><Error /></Layout>} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

@@ -1,28 +1,30 @@
 import React, { useState } from "react";
-import OurApproachData from "../../content/AboutUs/OurApproach";
-import { useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/AboutUs/OurApproach";
+import contenttitle from "../../content/AboutUs/OurApproachTitle.json"; 
 
 import {
   PiArrowCircleLeftLight,
   PiArrowCircleRightLight,
 } from "react-icons/pi";
 
-function OurApproachCarousel() {
+function OurApproachCarousel({lang}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const ContentTitle = contenttitle[lang];
+  const Content = content[lang];
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide
-      ? Math.ceil(OurApproachData.length / 3) - 1
+      ? Math.ceil(Content.length / 3) - 1
       : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const goToNext = () => {
     const isLastSlide =
-      currentIndex === Math.ceil(OurApproachData.length / 3) - 1;
+      currentIndex === Math.ceil(Content.length / 3) - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -38,13 +40,13 @@ function OurApproachCarousel() {
   return (
     <div className="overflow-hidden pl-[8vw] mt-[3vw]">
       <h1 className="text-[3vw] text-left pl-[1vw] font-bold max-[450px]:text-[7vw]">
-        Our Approach
+        {ContentTitle.title}
       </h1>
       <div
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${currentIndex * 99}%)` }}
       >
-        {OurApproachData.map((card, index) => (
+        {Content.map((card, index) => (
           <div key={index} className="flex-shrink-0 w-[33%] p-[1.3vw]">
             <div className="rounded-lg overflow-hidden">
               <div

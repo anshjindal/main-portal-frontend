@@ -1,42 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CgArrowLongDown, CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
-import PortfolioData from "../content/Portfolio/PortfolioData";
-import axios from 'axios';
-import { useParams } from "react-router-dom";
+import PortfolioData from "../content/Portfolio/PortfolioData"; // Import static data
+import { useParams } from 'react-router-dom';
+import content from "../content/Portfolio/Portfolio.json";
 
 function Portfolio() {
-  const {lang} = useParams();
   const [visible, setVisible] = useState(4); // Show 4 cards initially
+  const {lang} = useParams();
+  const Content = content[lang];
 
-  const [portfolioItems, setPortfolioItems] = useState([]); // State to store portfolio data
-  const [loading, setLoading] = useState(true); // Loading state
-  const [error, setError] = useState(null); // Error state
+  // Remove states and useEffect related to data fetching
+  // const [portfolioItems, setPortfolioItems] = useState([]); // State to store portfolio data
+  // const [loading, setLoading] = useState(true); // Loading state
+  // const [error, setError] = useState(null); // Error state
 
-  useEffect(() => {
-    // Function to fetch portfolio data
-    const fetchPortfolioData = async () => {
-      try {
-        const response = await axios.get(`${process.env.REACT_APP_WOUESSI_API_URL}/api/portfolios`);  // Replace with your actual API endpoint
-        setPortfolioItems(response.data);  // Set portfolio data in state
-        setLoading(false);  // Set loading to false after data is fetched
-      } catch (error) {
-        setError('Error fetching portfolio data');
-        setLoading(false);
-      }
-    };
+  // Use the static PortfolioData
+  const portfolioItems = PortfolioData;
 
-    fetchPortfolioData(); // Fetch the data when the component mounts
-  }, []); // Empty dependency array ensures this only runs on mount
+  // Remove loading and error handling
+  // const fetchPortfolioData = async () => { ... };
+  // useEffect(() => { fetchPortfolioData(); }, []);
 
-  if (loading) {
-    return <div className='page-background'>Loading...</div>;  // Show loading message while data is being fetched
-  }
-
-  if (error) {
-    return <div className='page-background'>{error}</div>;  // Show error message if there's an error
-  }
-
+  // const showMorePortfolioData = () => { ... }; // Keep this function for showing more/less functionality
   const showMorePortfolioData = () => {
     setVisible((prevValue) =>
       prevValue === 8 ? (prevValue = 2) : prevValue + 2
@@ -48,12 +34,10 @@ function Portfolio() {
       <div className="w-[80%] mt-[4vw]">
         <div className="flex gap-x-[10vw] PortfolioData-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
           <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:w-full">
-            Explore our new recently completed projects
+            {Content.title}
           </h1>
           <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[450px]:w-[100%] max-[450px]:text-[3vw] max-[450px]:font-semibold max-[450px]:mb-[-2vw]">
-            Our portfolio boasts an impressive array of successful
-            collaborations with esteemed clients. Each partnership stands as a
-            testament to our commitment to excellence and innovation.
+          {Content.description}
           </p>
         </div>
         <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
@@ -89,12 +73,12 @@ function Portfolio() {
             >
               {visible === 10 ? (
                 <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
-                  See Less
+                  {Content.buttonSeeLess}
                   <CgArrowLongUp className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               ) : (
                 <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
-                  See More
+                  {Content.buttonSeeMore}
                   <CgArrowLongDown className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               )}
@@ -102,10 +86,10 @@ function Portfolio() {
           </div>
         </div>
         <CallToActionSection
-          Content="We would love to hear more about your project"
-          CallToAction="Let's Talk"
-          Title="Work With Us"
-          lang ={lang}
+          Content={Content.Content}
+          CallToAction={Content.CallToAction}
+          Title={Content.Title}
+          lang={lang}
         />
       </div>
     </div>

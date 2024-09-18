@@ -1,10 +1,10 @@
 
 import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
 import JasmineMHeadshot from "../../assets/Images/JasmineMHeadshot.png";
-import { useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import content from "../../content/AboutUs/WorkerTestimonial.json"; 
 
-function WorkerTestimonial() {
+function WorkerTestimonial({lang}) {
+  const Content = content[lang]
     return <><div className="flex justify-center mb-[3vw] mt-[8vw]">
     <div className="flex justify-center w-[80%]">
       <div
@@ -18,19 +18,16 @@ function WorkerTestimonial() {
         <div className="flex justify-center items-center text-left w-[35vw] h-[27vw] bg-white ml-[-4vw]">
           <div className="p-[3vw]">
             <h1 className="text-[3vw]/[3vw] font-bold">
-              Amazing Work Culture
+              {Content.title}
             </h1>
             <p className="text-[1.1vw] mt-[1.5vw]">
-              I’ve been provided with the opportunity to expand my skillset
-              through the endless support, and choice in varying projects.
-              I’ve had a great experience so far and am excited to see where
-              this company goes in the future.
+              {Content.testimonial}
             </p>
             <h2 className="text-[1.8vw] font-bold text-[#0A0907] mt-[1vw]">
-              Jasmine M.
+              {Content.name}
             </h2>
             <p className="text-[0.9vw] text-[#666666]">
-              PROJECT COORDINATOR, Calgary, AB Canada
+              {`${Content.role}, ${Content.location}`}
             </p>
           </div>
         </div>
