@@ -1,0 +1,83 @@
+{
+  "en": {
+    "heroSection": {
+      "title": "Get in touch with us",
+      "subtitle": "We appreciate you taking the time to visit our website and learn more about Wouessi Inc. To learn more about us, we welcome you to contact our team at any time.",
+      "email": "Email us: info@wouessi.com",
+      "phone": "Call us: +1 844 317 2845",
+      "bannerText": "CONSULTING • DISCOVERY CALL • RESOURCES"
+    },
+    "formSection": {
+      "formDescription": "Awesome! We are excited to hear from you and help you in your journey! Leave us a message.",
+      "fields": {
+        "name": "name",
+        "email": "email",
+        "phone": "phone",
+        "subject": "subject",
+        "message": "message"
+      },
+      "submitButton": {
+        "text": "Send your message",
+        "loadingText": "Sending...",
+        "successMessage": "Message sent successfully!"
+      }
+    },
+    "contactInfoSection": {
+      "letstalk": "Let's Talk",
+      "call": {
+        "title": "Call Anytime",
+        "phone": "+1 844 317 2845"
+      },
+      "email": {
+        "title": "Send Email",
+        "email": "info@wouessi.com"
+      },
+      "location": {
+        "title": "Our Location",
+        "address": "Unit 202, 117 Peter street, Toronto, M5V1X1"
+      }
+    },
+    "followus": "Follow Us"
+  },
+  
+  "fr": {
+    "heroSection": {
+      "title": "Contactez-nous",
+      "subtitle": "Nous vous remercions d'avoir pris le temps de visiter notre site Web et d'en apprendre davantage sur Wouessi Inc. Pour en savoir plus, nous vous invitons à contacter notre équipe à tout moment.",
+      "email": "Envoyez-nous un e-mail : info@wouessi.com",
+      "phone": "Appelez-nous : +1 844 317 2845",
+      "bannerText": "CONSEIL • APPEL DÉCOUVERTE • RESSOURCES"
+    },
+    "formSection": {
+      "formDescription": "Génial ! Nous sommes ravis de vous entendre et de vous aider dans votre parcours ! Laissez-nous un message.",
+      "fields": {
+        "name": "nom",
+        "email": "email",
+        "phone": "téléphone",
+        "subject": "sujet",
+        "message": "message"
+      },
+      "submitButton": {
+        "text": "Envoyez votre message",
+        "loadingText": "Envoi...",
+        "successMessage": "Message envoyé avec succès !"
+      }
+    },
+    "contactInfoSection": {
+      "letstalk": "Discutons",
+      "call": {
+        "title": "Appelez à tout moment",
+        "phone": "+1 844 317 2845"
+      },
+      "email": {
+        "title": "Envoyez un e-mail",
+        "email": "info@wouessi.com"
+      },
+      "location": {
+        "title": "Notre emplacement",
+        "address": "Unité 202, 117 Rue Peter, Toronto, M5V1X1"
+      }
+    },
+    "followus": "Suivez-nous"
+  }
+}

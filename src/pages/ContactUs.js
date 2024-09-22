@@ -12,11 +12,13 @@ import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.png";
 import { ImCheckmark } from "react-icons/im";
 import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 import { useParams } from "react-router-dom";
+import content from "../content/ContactUs/ContactUs.json"
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
   const formRef = useRef(null);
   const {lang} = useParams();
+  const Content = content[lang];
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -37,19 +39,16 @@ function ContactUs() {
               className="text-[3.7vw]/[4vw] font-bold w-[
               70%] max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:mt-[-20vw]"
             >
-              Get in touch with us
+              {Content.heroSection.title}
             </h1>
             <div className="flex justify-between mt-[3vw]">
               <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw] max-[450px]:hidden"></div>
               <div className="flex flex-col w-[80%] mt-[-1vw]">
                 <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw]">
-                  We appreciate you taking the time to visit our website and
-                  learn more about Wouessi Inc. To learn more about us, we
-                  welcome you to contact our team at any time. <br></br>Email
-                  us: info@wouessi.com<br></br>Call us: +1 844 317 2845
+                {Content.heroSection.subtitle} <br></br>{Content.heroSection.email}<br></br>{Content.heroSection.phone}
                 </p>
                 <p className="mt-[2.5vw] text-[1vw] text-[#757575] max-[450px]:hidden">
-                  CONSULTING &#x2022; DISCOVERY CALL &#x2022; RESOURCES
+                {Content.heroSection.bannerText}
                 </p>
               </div>
             </div>
@@ -75,39 +74,38 @@ function ContactUs() {
             className="flex flex-col gap-y-[1.5vw] w-[44vw] rounded-xl max-[450px]:w-full max-[450px]:gap-y-[8vw]">
             <div className="text-left">
               <div className="text-[4vw] font-bold max-[450px]:text-[7.5vw]">
-                Let's talk
+              {Content.formSection.formTitle}
               </div>
               <p className="text-[1.1vw] max-[450px]:text-[2.5vw] max-[450px]:font-semibold">
-                Awesome! We are excited to hear from you and help you in your
-                journey! Leave us a message
+              {Content.formSection.formDescription}
               </p>
             </div>
             <div className="flex justify-between max-[450px]:flex-wrap max-[450px]:gap-y-[8vw] mt-[-3vw]">
               <input
                 type="text"
-                placeholder="Name*"
+                placeholder={Content.formSection.fields.name}
                 required
                 className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"></input>
               <input
                 type="email"
-                placeholder="Email*"
+                placeholder={Content.formSection.fields.email}
                 required
                 className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"></input>
             </div>
             <div className="flex justify-between max-[450px]:flex-wrap max-[450px]:gap-y-[8vw]">
               <input
                 type="tel"
-                placeholder="Phone"
+                placeholder={Content.formSection.fields.phone}
                 required
                 className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"></input>
               <input
                 type="Subject"
-                placeholder="Subject*"
+                placeholder={Content.formSection.fields.subject}
                 required
                 className="bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"></input>
             </div>
             <textarea
-              placeholder="Your Message*"
+              placeholder={Content.formSection.fields.message}
               rows="1"
               cols="10"
               className="bg-[#F4F4F4] border-b-[0.1vw] border-[#B8B8B8] pt-[0.5vw] pb-[1vw] min-h-[1vw] resize-none text-[1.1vw] placeholder:font-thin placeholder:text-black hover:placeholder-text:w-[3vw] max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[10vw] max-[450px]:mt-[3vw]"></textarea>
@@ -120,7 +118,7 @@ function ContactUs() {
               }>
               {submitButton === false ? (
                 <div className="flex items-center gap-x-[0.3vw] max-[450px]:w-[20vw]">
-                  <p>Send your message</p>
+                  <p>{Content.formSection.submitButton.text}</p>
                   <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[4vw]" />
                 </div>
               ) : (
@@ -135,10 +133,10 @@ function ContactUs() {
               </div>
               <div className="flex flex-col text-left mt-[-0.4vw] max-[450px]:ml-[2vw]">
                 <h2 className="text-[1.1vw] font-light text-[#2B00AC] font-extrabold max-[450px]:text-[3.5vw] max-[450px]:font-semibold">
-                  Call Anytime
+                {Content.contactInfoSection.call.title}
                 </h2>
                 <p className="text-[1.1vw] max-[450px]:text-[2.5vw]">
-                  +1 844 317 2845
+                {Content.contactInfoSection.call.phone}
                 </p>
               </div>
             </div>
@@ -148,10 +146,10 @@ function ContactUs() {
               </div>
               <div className="flex flex-col text-left mt-[-0.4vw] max-[450px]:ml-[2vw]">
                 <h2 className="text-[1.1vw] font-light text-[#2B00AC] font-extrabold max-[450px]:text-[3.5vw] max-[450px]:font-semibold">
-                  Send Email
+                {Content.contactInfoSection.email.title}
                 </h2>
                 <p className="text-[1.1vw] max-[450px]:text-[2.5vw]">
-                  info@wouessi.com
+                {Content.contactInfoSection.email.email}
                 </p>
               </div>
             </div>
@@ -161,16 +159,16 @@ function ContactUs() {
               </div>
               <div className="flex flex-col text-left mt-[-0.4vw] max-[450px]:ml-[2vw]">
                 <h2 className="text-[1.1vw] font-light text-[#2B00AC] font-extrabold max-[450px]:text-[3.5vw] max-[450px]:font-semibold">
-                  Visit Us
+                {Content.contactInfoSection.location.title}
                 </h2>
                 <p className="text-[1.1vw] w-[15vw] max-[450px]:text-[2.5vw] max-[450px]:w-full">
-                  Unit 202, 117 Peter street, Toronto, M5V1X1
+                {Content.contactInfoSection.location.address}
                 </p>
               </div>
             </div>
             <div className="text-left max-[450px]:w-full">
               <h1 className="text-[1.4vw] text-[#2B00AC] font-bold max-[450px]:text-[4vw] max-[450px]:mt-[5vw]">
-                Follow us
+                {Content.followus}
               </h1>
               <div className="flex justify-center gap-x-[1.5vw] mt-[2vw] max-[450px]:justify-between max-[450px]:mt-[4vw]">
               <a
@@ -220,12 +218,6 @@ function ContactUs() {
               </a>
               </div>
             </div>
-
-
-            {/* <h1 className="text-[1.4vw] text-[#2B00AC] font-bold">Follow us</h1>
-            <div className="flex justify-center gap-x-[1.1vw] mt-[2vw]">
-              
-            </div> */}
           </div>
         </div>
       </div>
