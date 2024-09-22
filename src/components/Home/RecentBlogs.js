@@ -27,9 +27,9 @@ function RecentBlogs({ lang }) {
                 style={{
                   backgroundImage: `url(${index === 0 ? MobileSEOServicesBlogImage : TechnicalSEOServicesBlogImage})`,
                 }}
-                className={`w-[20vw] h-[30vw] bg-cover bg-center ${index === 0 ? 'max-[450px]:w-[40vw] max-[450px]:h-[60vw]' : 'max-[450px]:hidden'}`}
+                className={`w-[20vw] h-[30vw] bg-cover bg-center max-[450px]:w-[40vw] max-[450px]:h-[60vw]`}
               ></div>
-              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:ml-[-15vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
+              <div className="w-[20vw] h-fit mt-[6vw] ml-[-5vw] p-[1.5vw] space-y-[2vw] bg-white max-[450px]:w-[60vw] max-[450px]:p-[6vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]">
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">
                   <p>{post.category}</p>
                   <p className="text-[#A7A9AA]">{post.date}</p>
