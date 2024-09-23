@@ -8,6 +8,7 @@ function Hero({lang}) {
 
   return (
     <>
+    {/* page is styled using tailwind css */}
       <div className="flex justify-center">
         <div className="flex justify-left w-[80%] text-left max-[450px]:justify-center">
           <div className="flex flex-col">
