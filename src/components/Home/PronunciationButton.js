@@ -9,7 +9,7 @@ function PronunciationButton({ lang }) {
 
   return (
     <>
-      {/* Mobile */}
+      {/* Mobile
       <div className="fixed bottom-4 right-4 z-50">
         <div className="w-[95%] h-fit mt-[-43vw] mb-[4vw] flex justify-end text-[#2703A5] z-10 min-[450.1px]:hidden">
           {WouessiPronunciation ? (
@@ -40,35 +40,35 @@ function PronunciationButton({ lang }) {
             )}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Desktop */}
-      <div className="fixed bottom-10 right-10 z-50 min-[450.1px]:block hidden">
+      <div className="fixed bottom-10 right-10 z-50">
         <div className="shadow-md hover:shadow-lg text-[#2703A5]">
           {WouessiPronunciation && (
             <div className="mt-[-9vw] p-[2vw] pt-[2vw] pb-[2vw] bg-white rounded-lg z-10">
-              <h1 className="text-[2vw] font-bold">{Content.pronunciationButton.pronunciationHeading}</h1>
+              <h1 className="text-[2vw] max-[450px]:text-[4vw] font-bold">{Content.pronunciationButton.pronunciationHeading}</h1>
               <div className="border-[0.1vw] border-[#2703A5]"></div>
-              <p className="text-[1.1vw] mt-[1.1vw]">
+              <p className="text-[1.1vw] max-[450px]:text-[2vw] mt-[1.1vw]">
                 {Content.pronunciationButton.pronunciationText}
               </p>
             </div>
           )}
         </div>
 
-        <div className="flex justify-end ">
+        <div className="flex justify-end z-11">
           <div
             onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
             className={`${
               WouessiPronunciation
                 ? "bg-[#FF9900]"
                 : "bg-[#2703A5] hover:bg-[#FF9900]"
-            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] text-[1.1vw] cursor-pointer`}
+            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] max-[450px]:w-[12vw] max-[450px]:h-[12vw] text-[1.1vw] cursor-pointer`}
           >
             {WouessiPronunciation ? (
-              <ImCross className="w-[3vw] h-[3vw] text-white" />
+              <ImCross className="w-[3vw] h-[3vw] max-[450px]:w-[6vw] max-[450px]:h-[6vw] text-white" />
             ) : (
-              <HiOutlineSpeakerWave className="w-[3vw] h-[3vw] rotate-[-30deg] text-white" />
+              <HiOutlineSpeakerWave className="w-[3vw] h-[3vw] max-[450px]:w-[6vw] max-[450px]:h-[6vw] [6vw rotate-[-30deg] text-white" />
             )}
           </div>
         </div>
