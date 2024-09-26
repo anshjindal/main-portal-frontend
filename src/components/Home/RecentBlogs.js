@@ -1,5 +1,5 @@
-import MobileSEOServicesBlogImage from "../../assets/Images/MobileSEOServicesBlogImage.jpeg";
-import TechnicalSEOServicesBlogImage from "../../assets/Images/TechnicalSEOServicesBlogImage.jpeg";
+import MobileSEOServicesBlogImage from "../../assets/Images/MobileSEOServicesBlogImage.webp";
+import TechnicalSEOServicesBlogImage from "../../assets/Images/TechnicalSEOServicesBlogImage.webp";
 import { Link } from "react-router-dom";
 import content from "../../content/Home/RecentBlogsContent.json"; 
 

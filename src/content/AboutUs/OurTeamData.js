@@ -1,12 +1,12 @@
-import RodrigueFouafouHeadshot from "../../assets/Images/OurTeam/RodrigueFouafouHeadshot.png";
-import RosalinRimjhimHeadshot from "../../assets/Images/OurTeam/RosalinRimjhimHeadshot.png";
-import StriveMazungaHeadshot from "../../assets/Images/OurTeam/StriveMazungaHeadshot.png";
-import ReginaldNugentHeadshot from "../../assets/Images/OurTeam/ReginaldNugentHeadshot.png";
-import NelsonNwankwoHeadshot from "../../assets/Images/OurTeam/NelsonNwankwoHeadshot.png";
-import MarieNsanaHeadshot from "../../assets/Images/OurTeam/MarieNsanaHeadshot.png";
-import PamelaDefoHeadshot from "../../assets/Images/OurTeam/PamelaDefoHeadshot.png";
-import BillTinglingHeadshot from "../../assets/Images/OurTeam/BillTinglingHeadshot.png";
-import DavidSmithHeadshot from "../../assets/Images/OurTeam/DavidSmithHeadshot.png"
+import RodrigueFouafouHeadshot from "../../assets/Images/OurTeam/RodrigueFouafouHeadshot.webp";
+import RosalinRimjhimHeadshot from "../../assets/Images/OurTeam/RosalinRimjhimHeadshot.webp";
+import StriveMazungaHeadshot from "../../assets/Images/OurTeam/StriveMazungaHeadshot.webp";
+import ReginaldNugentHeadshot from "../../assets/Images/OurTeam/ReginaldNugentHeadshot.webp";
+import NelsonNwankwoHeadshot from "../../assets/Images/OurTeam/NelsonNwankwoHeadshot.webp";
+import MarieNsanaHeadshot from "../../assets/Images/OurTeam/MarieNsanaHeadshot.webp";
+import PamelaDefoHeadshot from "../../assets/Images/OurTeam/PamelaDefoHeadshot.webp";
+import BillTinglingHeadshot from "../../assets/Images/OurTeam/BillTinglingHeadshot.webp";
+import DavidSmithHeadshot from "../../assets/Images/OurTeam/DavidSmithHeadshot.webp"
 
 const OurTeamData = {
   en: [

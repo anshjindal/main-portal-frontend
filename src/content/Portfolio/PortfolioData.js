@@ -1,13 +1,13 @@
-import AldeliaImage from "../../assets/Images/RecentProject/RecentProjectAldeliaImage.png";
-import ATRImage from "../../assets/Images/RecentProject/RecentProjectATRImage.png";
-import BuckheadImage from "../../assets/Images/RecentProject/RecentProjectBuckheadImage.png";
-import CanalPlus from "../../assets/Images/RecentProject/RecentProjectCanalPlus.png";
-import GIZImage from "../../assets/Images/RecentProject/RecentProjectGIZImage.png";
-import HamiltonCrescentImage from "../../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.png";
-import KeplerImage from "../../assets/Images/RecentProject/RecentProjectKeplerImage.png";
-import MasterNodedImage from "../../assets/Images/RecentProject/RecentProjectMasterNodedImage.png";
-import WatchReportImage from "../../assets/Images/RecentProject/RecentProjectWatchReportImage.png";
-import YellowCardImage from "../../assets/Images/RecentProject/RecentProjectYellowCardImage.png";
+import AldeliaImage from "../../assets/Images/RecentProject/RecentProjectAldeliaImage.webp";
+import ATRImage from "../../assets/Images/RecentProject/RecentProjectATRImage.webp";
+import BuckheadImage from "../../assets/Images/RecentProject/RecentProjectBuckheadImage.webp";
+import CanalPlus from "../../assets/Images/RecentProject/RecentProjectCanalPlus.webp";
+import GIZImage from "../../assets/Images/RecentProject/RecentProjectGIZImage.webp";
+import HamiltonCrescentImage from "../../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.webp";
+import KeplerImage from "../../assets/Images/RecentProject/RecentProjectKeplerImage.webp";
+import MasterNodedImage from "../../assets/Images/RecentProject/RecentProjectMasterNodedImage.webp";
+import WatchReportImage from "../../assets/Images/RecentProject/RecentProjectWatchReportImage.webp";
+import YellowCardImage from "../../assets/Images/RecentProject/RecentProjectYellowCardImage.webp";
 
 const RecentProjectData = [
     { image: GIZImage, title: "GIZ", link: "https://www.giz.de/en/html/index.html" },

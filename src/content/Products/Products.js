@@ -1,5 +1,5 @@
-import BantuEd from "../../assets/Images/BantuEdProductImage.png";
-import Egolu from "../../assets/Images/egolu-app.png";
+import BantuEd from "../../assets/Images/BantuEdProductImage.webp";
+import Egolu from "../../assets/Images/egolu-app.webp";
 
 const ProductsData = {
   "en": {

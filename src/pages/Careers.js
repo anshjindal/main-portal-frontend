@@ -2,7 +2,7 @@ import React from "react";
 import HeroBanner from "../components/Reusable/HeroBanner";
 import Accordion from "../components/Reusable/Accordion";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
-import CareersHeroBanner from "../assets/Images/CareersHeroImage.jpeg";
+import CareersHeroBanner from "../assets/Images/CareersHeroImage.webp";
 import { useParams } from "react-router-dom";
 import content from "../content/Careers/CareersAccordionInnerText.json"
 

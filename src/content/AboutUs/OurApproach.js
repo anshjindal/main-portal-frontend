@@ -1,8 +1,8 @@
-import OurApproachUnderstandYourBusiness from "../../assets/Images/OurApproach/OurApproachUnderstandYourBusiness.jpeg";
-import OurApproachStrategicPlanning from "../../assets/Images/OurApproach/OurApproachStrategicPlanning.jpeg";
-import OurApproachInnovativeExecution from "../../assets/Images/OurApproach/OurApproachInnovativeExecution.jpeg";
-import OurApproachCollaborativePartnership from "../../assets/Images/OurApproach/OurApproachCollaborativePartnership.jpg";
-import OurApproachContinuousImprovement from "../../assets/Images/OurApproach/OurApproachContinuousImprovement.jpg";
+import OurApproachUnderstandYourBusiness from "../../assets/Images/OurApproach/OurApproachUnderstandYourBusiness.webp";
+import OurApproachStrategicPlanning from "../../assets/Images/OurApproach/OurApproachStrategicPlanning.webp";
+import OurApproachInnovativeExecution from "../../assets/Images/OurApproach/OurApproachInnovativeExecution.webp";
+import OurApproachCollaborativePartnership from "../../assets/Images/OurApproach/OurApproachCollaborativePartnership.webp";
+import OurApproachContinuousImprovement from "../../assets/Images/OurApproach/OurApproachContinuousImprovement.webp";
 
 const OurApproachData = {
   en: [

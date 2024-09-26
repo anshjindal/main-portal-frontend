@@ -1,4 +1,4 @@
-import NewsletterBanner from "../../assets/Images/NewsletterBanner.jpeg";
+import NewsletterBanner from "../../assets/Images/NewsletterBanner.webp";
 import { FaArrowRight } from "react-icons/fa6";
 import content from "../../content/Reusable/NewsletterRegister.json";
 

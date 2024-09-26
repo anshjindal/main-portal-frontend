@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Blogpost.css";
-import BlogPost1 from "../assets/Images/BlogPost1.png";
-import BlogPost2 from "../assets/Images/BlogPost2.png";
+import BlogPost1 from "../assets/Images/BlogPost1.webp";
+import BlogPost2 from "../assets/Images/BlogPost2.webp";
 import BlogsCarousel from "../components/Reusable/BlogsCarousel";
 import IconShare from "../assets/Images/Icon-Share.png";
 import IconLinkedin from "../assets/Images/Icon-Linkedin.png";
@@ -12,12 +12,11 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 
-
 function BlogPost() {
   const [activeIndex, setActiveIndex] = useState(null);
   const sections = ["SECTION 1", "SECTION 2", "SECTION 3", "SECTION 4"];
   const media_icons = [IconShare, IconLinkedin, IconTiktok, IconInsta];
-  const {lang} = useParams();
+  const { lang } = useParams();
 
   return (
     <div className="flex justify-center mt-[5vw] mb-[5vw] max-[450px]:mt-0 page-background">
@@ -31,7 +30,8 @@ function BlogPost() {
                 key={index}
                 style={{ backgroundImage: `url(${icon})` }}
                 className="w-[1.4vw] h-[1.4vw] bg-cover bg-center bg-no-repeat border-none cursor-pointer focus:outline-none"
-                aria-label={`Social media icon ${index + 1}`}></button>
+                aria-label={`Social media icon ${index + 1}`}
+              ></button>
             ))}
           </div>
         </div>
@@ -52,7 +52,8 @@ function BlogPost() {
                       ? "border-[#250978]"
                       : "border-transparent"
                   } hover:bg-[#250978] hover:text-white`}
-                  onClick={() => setActiveIndex(index)}>
+                  onClick={() => setActiveIndex(index)}
+                >
                   {section}
                 </button>
                 {/* Adjust spacing or add any additional content here if needed */}
@@ -68,7 +69,8 @@ function BlogPost() {
               <div className="flex items-center mb-[1vw] space-x-[1vw]">
                 <button
                   className="border-[#D26B2F] text-[#D26B2F] border-[0.2vw] rounded-full px-[1vw] py-[0.2vw] text-[1.3vw] bg-transparent cursor-pointer hover:text-white hover:bg-[#D26B2F] transition duration-300 max-[450px]:text-[2vw]"
-                  disabled>
+                  disabled
+                >
                   SEO SERVICES
                 </button>
                 <p className="text-[1.3vw] max-[450px]:text-[2vw]">
@@ -82,7 +84,8 @@ function BlogPost() {
               </h1>
               <div
                 style={{ backgroundImage: `url(${BlogPost1})` }}
-                className="h-[40vw] bg-cover bg-center my-[6vw]"></div>
+                className="h-[40vw] bg-cover bg-center my-[6vw]"
+              ></div>
 
               {/* Blogs Content */}
               <div className="space-y-[2vw] text-left">
@@ -103,7 +106,8 @@ function BlogPost() {
                 <p className="font-bold">Explosive Growth of Mobile Users</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="mt-0 mb-[10vw] text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="mt-0 mb-[10vw] text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   With the proliferation of smartphones, more and more people
                   are accessing the internet through their mobile devices.
                   Statistics reveal that mobile devices account for over half of
@@ -116,12 +120,14 @@ function BlogPost() {
 
                 <div
                   style={{ backgroundImage: `url(${BlogPost2})` }}
-                  className="h-[40vw] bg-cover bg-center my-[6vw]"></div>
+                  className="h-[40vw] bg-cover bg-center my-[6vw]"
+                ></div>
 
                 <p className="font-bold">Enhanced User Experience (UX)</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   User experience plays a pivotal role in determining the
                   success of your online presence. Mobile SEO Services focus on
                   optimizing your website's design, speed, and functionality for
@@ -135,7 +141,8 @@ function BlogPost() {
                 <p className="font-bold">Higher Search Engine Rankings</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   Search engines, such as Google, prioritize mobile-friendly
                   websites in their search results. With Google's mobile-first
                   indexing, the mobile version of your site serves as the
@@ -149,7 +156,8 @@ function BlogPost() {
                 <p className="font-bold">Local SEO Optimization</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   Mobile devices play a significant role in local searches, with
                   users often seeking nearby businesses while on the go. Mobile
                   SEO Services incorporate local SEO strategies to optimize your
@@ -163,7 +171,8 @@ function BlogPost() {
                 <p className="font-bold">Improved Mobile Conversion Rates</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   A mobile-friendly website isn't just about providing a better
                   user experience—it's also about driving conversions. Mobile
                   SEO Services focus on optimizing key elements of your website,
@@ -177,7 +186,8 @@ function BlogPost() {
                 <p className="font-bold">Stay Ahead of the Competition</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   In today's fiercely competitive digital landscape, staying
                   ahead of the competition is essential for business survival.
                   By investing in Mobile SEO Services, you can gain a
@@ -191,7 +201,8 @@ function BlogPost() {
                 <p className="font-bold">Adaptation to Voice Search</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   The rise of voice search technology, driven by virtual
                   assistants like Siri, Alexa, and Google Assistant, has
                   transformed the way users search for information online.
@@ -206,7 +217,8 @@ function BlogPost() {
                 <p className="font-bold">Scalability and Future-Proofing</p>
                 <p
                   style={{ marginTop: "0" }}
-                  className="text-[1.5vw] max-[450px]:text-[2.3vw]">
+                  className="text-[1.5vw] max-[450px]:text-[2.3vw]"
+                >
                   Investing in Mobile SEO Services isn't just about short-term
                   gains—it's about laying a foundation for long-term success. As
                   mobile technology continues to evolve, businesses that
@@ -341,7 +353,8 @@ function BlogPost() {
                   <div className="flex pl-[0.5vw] pr-[0.5vw] items-center absolute h-full bg-[#2703A5]">
                     <button
                       type="submit"
-                      className="text-[2vw] text-orange-500 border-none cursor-pointer">
+                      className="text-[2vw] text-orange-500 border-none cursor-pointer"
+                    >
                       <FaArrowRightLong />
                     </button>
                   </div>
@@ -368,7 +381,8 @@ function BlogPost() {
                 <div className="flex justify-center pl-[0.5vw] pr-[0.5vw] items-center absolute h-full bg-[#2703A5] w-[6vw]">
                   <button
                     type="submit"
-                    className="text-[3vw] text-orange-500 border-none cursor-pointer">
+                    className="text-[3vw] text-orange-500 border-none cursor-pointer"
+                  >
                     <FaArrowRightLong />
                   </button>
                 </div>
@@ -385,7 +399,7 @@ function BlogPost() {
           Content="We would love to hear more about your project"
           CallToAction="Let's Talk"
           Title="Work With Us"
-          lang ={lang}
+          lang={lang}
         />
       </div>
     </div>
