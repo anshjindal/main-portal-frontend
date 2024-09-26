@@ -59,7 +59,7 @@ function ClientTestimonySlider({ isHomepage = true }) {
             className="w-[6vw] h-[6vw] mb-[1vw] max-[450px]:hidden"
           />
           <div
-            className={`flex justify-center items-center text-left w-[50vw] h-fit mt-[4vw] ${cardColor} overflow-hidden relative`}
+            className={`flex justify-center items-center text-left w-[50vw] max-[450px]:w-[72vw] h-fit mt-[4vw] ${cardColor} overflow-hidden relative`}
           >
             {/* Sliding Testimonial Content */}
             <div

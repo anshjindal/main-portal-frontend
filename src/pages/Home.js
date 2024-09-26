@@ -18,10 +18,9 @@ function Home() {
   return (
     <div className="page-background">
 
+      <PronunciationButton lang={lang}/>  
       
       <Hero lang={lang}/>
-
-      <PronunciationButton lang={lang}/>
 
       <OurClients lang={lang}/>
 

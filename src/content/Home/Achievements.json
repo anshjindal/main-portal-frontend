@@ -4,25 +4,25 @@
       "title": "Four Years of Achievements",
       "boxes": [
         {
-          "count": 500,
-          "description": "Engineers & Experts",
-          "cta": "See More",
-          "link": "/AboutUs"
-        },
-        {
-          "count": 125,
+          "count": 350,
           "description": "Projects",
           "cta": "See More",
           "link": "/Portfolio"
         },
         {
-          "count": 75,
+          "count": 125,
           "description": "Clients",
           "cta": "See More",
           "link": "/AboutUs"
         },
         {
-          "count": 15,
+          "count": 25,
+          "description": "Engineers & Experts",
+          "cta": "See More",
+          "link": "/AboutUs"
+        },
+        {
+          "count": 5,
           "description": "Countries",
           "cta": "See More",
           "link": "/AboutUs"
@@ -41,25 +41,25 @@
       "title": "Quatre ans de réalisations",
       "boxes": [
         {
-          "count": 500,
-          "description": "Ingénieurs et Experts",
-          "cta": "Voir Plus",
-          "link": "/AboutUs"
-        },
-        {
-          "count": 125,
+          "count": 350,
           "description": "Projets",
           "cta": "Voir Plus",
           "link": "/Portfolio"
         },
         {
-          "count": 75,
+          "count": 125,
           "description": "Clients",
           "cta": "Voir Plus",
           "link": "/AboutUs"
         },
         {
-          "count": 15,
+          "count": 25,
+          "description": "Ingénieurs et Experts",
+          "cta": "Voir Plus",
+          "link": "/AboutUs"
+        },
+        {
+          "count": 5,
           "description": "Pays",
           "cta": "Voir Plus",
           "link": "/AboutUs"

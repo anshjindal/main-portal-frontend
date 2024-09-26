@@ -17,7 +17,7 @@
         ]
       },
       "ProductDev": {
-        "heading": "Development",
+        "heading": "Project Management",
         "content": [
           {
             "innerTitle": "Project Manager",
@@ -26,7 +26,7 @@
         ]
       },
       "Sales": {
-        "heading": "Development",
+        "heading": "Sales",
         "content": [
           {
             "innerTitle": "Remote Sales Associate",
@@ -35,7 +35,7 @@
         ]
       },
       "Design": {
-        "heading": "Development",
+        "heading": "Design",
         "content": [
           {
             "innerTitle": "Talent Pool",
@@ -66,7 +66,7 @@
         ]
       },
       "ProductDev": {
-        "heading": "Development",
+        "heading": "Project Management",
         "content": [
           {
             "innerTitle": "Chef de Projet",
@@ -75,7 +75,7 @@
         ]
       },
       "Sales": {
-        "heading": "Development",
+        "heading": "Sales",
         "content": [
           {
             "innerTitle": "Associé Commercial à Distance",
@@ -84,7 +84,7 @@
         ]
       },
       "Design": {
-        "heading": "Development",
+        "heading": "Design",
         "content": [
           {
             "innerTitle": "Réserve de Talents",
