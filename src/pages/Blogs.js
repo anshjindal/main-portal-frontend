@@ -21,7 +21,7 @@ function Blogs() {
 
 
   return (
-    <div className="flex justify-center mt-[5vw] mb-[5vw] page-background">
+    <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-full">
       <p>{data}</p>
         {/* First Main Heading Div */}
