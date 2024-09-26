@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import BlogPageLaptop from "../assets/Images/blog_page_laptop.png";
-import bloglist1 from "../assets/Images/BlogPost1.png";
-import bloglist2 from "../assets/Images/BlogPost2.png";
-import bloglist3 from "../assets/Images/bloglist3.png";
+import BlogPageLaptop from "../assets/Images/blog_page_laptop.webp";
+import bloglist1 from "../assets/Images/BlogPost1.webp";
+import bloglist2 from "../assets/Images/BlogPost2.webp";
+import bloglist3 from "../assets/Images/bloglist3.webp";
 import BlogsCarousel from "../components/Reusable/BlogsCarousel";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import { useParams } from "react-router-dom";

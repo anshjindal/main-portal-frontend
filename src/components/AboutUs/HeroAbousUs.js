@@ -1,6 +1,6 @@
 import AboutPageHeroImage from "../../assets/SVG/AboutPageHeroImage.svg";
-import OurMissionTopImage from "../../assets/Images/OurMissionTopImage.png";
-import OurMissionSideImage from "../../assets/Images/OurMissionSideImage.png";
+import OurMissionTopImage from "../../assets/Images/OurMissionTopImage.webp";
+import OurMissionSideImage from "../../assets/Images/OurMissionSideImage.webp";
 import { CgArrowLongUp } from "react-icons/cg";
 import content from "../../content/AboutUs/HeroAboutUs.json";
 
@@ -51,7 +51,7 @@ function HeroAboutUs({ lang }) {
             </p>
           </div>
 
-          <div className="flex flex-col flex w-[33vw] max-[450px]:w-[100%] ">
+          <div className="flex flex-col w-[33vw] max-[450px]:w-[100%] ">
             <div
               style={{ backgroundImage: `url(${OurMissionTopImage})` }}
               className="w-full h-[15vw] bg-center bg-cover"

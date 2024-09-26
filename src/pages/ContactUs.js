@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.png";
+import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.webp";
 import { ImCheckmark } from "react-icons/im";
 import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 import { useParams } from "react-router-dom";
