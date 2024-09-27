@@ -47,7 +47,9 @@ function PronunciationButton({ lang }) {
         <div className="shadow-md hover:shadow-lg text-[#2703A5]">
           {WouessiPronunciation && (
             <div className="mt-[-9vw] p-[2vw] pt-[2vw] pb-[2vw] bg-white rounded-lg z-10">
-              <h1 className="text-[2vw] max-[450px]:text-[4vw] font-bold">{Content.pronunciationButton.pronunciationHeading}</h1>
+              <h1 className="text-[2vw] max-[450px]:text-[4vw] font-bold">
+                {Content.pronunciationButton.pronunciationHeading}
+              </h1>
               <div className="border-[0.1vw] border-[#2703A5]"></div>
               <p className="text-[1.1vw] max-[450px]:text-[2vw] mt-[1.1vw]">
                 {Content.pronunciationButton.pronunciationText}
@@ -56,15 +58,14 @@ function PronunciationButton({ lang }) {
           )}
         </div>
 
-        <div className="flex justify-end z-11">
+        <div className="flex justify-end z-11 max-[450px]:mt-[1vw]">
           <div
             onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
             className={`${
               WouessiPronunciation
                 ? "bg-[#FF9900]"
                 : "bg-[#2703A5] hover:bg-[#FF9900]"
-            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] max-[450px]:w-[12vw] max-[450px]:h-[12vw] text-[1.1vw] cursor-pointer`}
-          >
+            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] max-[450px]:w-[12vw] max-[450px]:h-[12vw] text-[1.1vw] cursor-pointer`}>
             {WouessiPronunciation ? (
               <ImCross className="w-[3vw] h-[3vw] max-[450px]:w-[6vw] max-[450px]:h-[6vw] text-white" />
             ) : (
