@@ -14,10 +14,7 @@ const ProductsMetaDataRender = () => {
 
         {/* open graph meta tags */}
         <meta property="og:title" content={Contents.meta.openGraph.title} />
-        <meta
-          property="og:description"
-          content={Contents.meta.openGraph.description}
-        />
+        <meta property="og:description" content={Contents.meta.openGraph.description}/>
         <meta property="og:image" content={Contents.meta.openGraph.ogImage} />
         <meta name="og:url" content={Contents.meta.openGraph.ogUrl} />
       </Helmet>
