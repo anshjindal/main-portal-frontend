@@ -4,6 +4,7 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 import PortfolioData from "../content/Portfolio/PortfolioData"; // Import static data
 import { useParams } from 'react-router-dom';
 import content from "../content/Portfolio/Portfolio.json";
+import PortifolioMetaDataRender from '../components/Portifolio/PortifolioMetaDataRender';
 
 function Portfolio() {
   const [visible, setVisible] = useState(4); // Show 4 cards initially
@@ -30,6 +31,8 @@ function Portfolio() {
   };
 
   return (
+   <>
+   <PortifolioMetaDataRender/>
     <div className="text-black flex justify-center page-background">
       <div className="w-[80%] mt-[4vw]">
         <div className="flex gap-x-[10vw] PortfolioData-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
@@ -93,6 +96,7 @@ function Portfolio() {
         />
       </div>
     </div>
+   </>
   );
 }
 

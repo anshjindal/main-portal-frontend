@@ -3,12 +3,15 @@ import { useParams } from "react-router-dom";
 import ProductsData from "../content/Products/Products"
 import { CgArrowLongUp } from "react-icons/cg";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
+import ProductsMetaDataRender from "../components/Products/ProductsMetaDataRender";
 
 function Products() {
   const { lang } = useParams();
-  const data = ProductsData[lang]; // Default to English if lang is not found
-
+  const data = ProductsData[lang];// Default to English if lang is not found
+  
   return (
+    <>
+    <ProductsMetaDataRender/>
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         {/* First Main Heading Div */}
@@ -63,6 +66,7 @@ function Products() {
         />
       </div>
     </div>
+    </>
   );
 }
 

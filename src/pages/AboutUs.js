@@ -11,10 +11,9 @@ import OurApproachCarousel from "../components/AboutUs/OurApproachCarousel";
 import TechStack from "../components/AboutUs/TechStack";
 import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
 import HeroAboutUs from "../components/AboutUs/HeroAbousUs.js";
-import content from "../content/AboutUs/AboutUsCTA.json"
-
+import content from "../content/AboutUs/AboutUsCTA.json";
 import { useParams } from "react-router-dom";
-
+import AboutMetaRender from "../components/AboutUs/AboutMetaRender.js";
 
 function AboutUs() {
   const {lang} = useParams();
@@ -22,6 +21,8 @@ function AboutUs() {
   const Content = content[lang];
 
   return (
+   <>
+    <AboutMetaRender lang={lang}/>
     <div className="page-background">
       <section>
         <HeroAboutUs lang={lang}/>
@@ -64,6 +65,7 @@ function AboutUs() {
         />
       </section>
     </div>
+   </>
   );
 }
 

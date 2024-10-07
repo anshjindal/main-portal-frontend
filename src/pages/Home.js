@@ -11,12 +11,14 @@ import OurVision from "../components/Home/OurVision";
 import Hero from "../components/Home/Hero";
 import PronunciationButton from "../components/Home/PronunciationButton";
 import { useParams } from "react-router-dom";
+import HomeMetaRender from "../components/Home/HomeMetaDataRender.js";
 
 function Home() {
   const {lang} = useParams();
 
   return (
     <div className="page-background">
+      <HomeMetaRender lang={lang}/>
 
       <PronunciationButton lang={lang}/>  
       

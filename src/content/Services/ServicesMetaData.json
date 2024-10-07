@@ -1,0 +1,42 @@
+
+{
+    "en": {
+      "meta":{
+        "title": "Our Services - Wouessi Tech Solutions",
+        "description": "Explore Wouessi's range of tech services, from software development to digital marketing, designed to elevate your business.",
+        "keyWords": "Tech services, software development, digital marketing, business solutions, Outsourcing, Branding,Search Engine Optimization,content,Email Marketing",
+        "openGraph": {
+          "title": "About Wouessi - Pioneering Digital Transformation",
+          "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions.",
+          "ogImage": "logonavbar",
+          "ogUrl": "https://www.wouessi.com/en/Services"
+        },
+        "twitter": {
+            "title": "Our Services - Wouessi Tech Solutions",
+        "description": "Explore Wouessi's range of tech services, from software development to digital marketing, designed to elevate your business.",
+        "twitterImage": "/",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta":
+      {
+        "title": "Nos services - Wouessi Tech Solutions",
+        "description": "Explorez la gamme de services technologiques de Wouessi, du développement de logiciels au marketing numérique, conçus pour développer votre entreprise.",
+        "keyWords": "Services techniques, développement de logiciels, marketing numérique, solutions commerciales, externalisation, image de marque, optimisation des moteurs de recherche, contenu, marketing par courrier électronique",
+        "openGraph": {
+            "title": "Nos services - Wouessi Tech Solutions",
+            "description": "Explorez la gamme de services technologiques de Wouessi, du développement de logiciels au marketing numérique, conçus pour développer votre entreprise.",
+             "ogImage": "logonavbar",
+          "ogUrl": "https://www.wouessi.com/en/Services"
+        },
+        "twitter": {
+            "title": "Nos services - Wouessi Tech Solutions",
+            "description": "Explorez la gamme de services technologiques de Wouessi, du développement de logiciels au marketing numérique, conçus pour développer votre entreprise.",
+            "twitterImage": "/",
+          "twitterCardContent": "résumé_grande_image"
+        }
+      }
+    }
+  }

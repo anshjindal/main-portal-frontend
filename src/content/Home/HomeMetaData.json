@@ -1,0 +1,40 @@
+{
+  "en": {
+    "meta": {
+      "title": "Wouessi: Pioneering Digital Excellence",
+      "description": "Unlock digital solutions with Wouessi. Offering cutting-edge technology services for businesses to thrive in today's digital world.",
+      "keyWords": "Digital solutions, technology services, tech consultancy, digital transformation,Software Engineering, Search engine optimization",
+      "openGraph": {
+        "title": "Wouessi: Pioneering Digital Excellence",
+        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions.",
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/AboutUs"
+      },
+      " twitter": {
+        "title": "Wouessi: Pioneering Digital Excellence",
+        "description": "Unlock digital solutions with Wouessi. Offering cutting-edge technology services for businesses to thrive in today's digital world.",
+        "twitterImage": "/",
+        "twitterCardContent": "summary_large_image"
+      }
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Wouessi : pionnier de l’excellence numérique",
+      "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+      "keyWords": "À propos de Wouessi, transformation numérique, solutions innovantes, entreprise technologique",
+      "openGraph": {
+        "title": "À propos de Wouessi - Pionnier de l'excellence numérique",
+        "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/AboutUs"
+      },
+      " twitter": {
+        "title": "Wouessi : pionnier de l’excellence numérique",
+        "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "twitterImage": "/",
+        "twitterCardContent": "résumé_large_image"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "en": {
+    "meta": {
+      "title": "About Wouessi: Pioneering Digital Transformation",
+      "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies, and tech solutions for Business growth.",
+      "keyWords": "About Wouessi, digital transformation, innovative solutions, tech companies, digital solutions, digital services, digital marketing company",
+      "openGraph": {
+        "title": "About Wouessi - Pioneering Digital Transformation",
+        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions for business growth.",
+        "ogImage": "http://localhost:3000/static/media/AboutPageHeroImage.80ede8e83d3c63a168b3ede91be49455.svg",
+        "ogUrl": "https://www.wouessi.com/en/AboutUs"
+      },
+      "twitter": {
+        "title": "About Wouessi - Pioneering Digital Transformation",
+        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions.",
+        "twitterImage": "/",
+        "twitterCardContent": "summary large image"
+      }
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "À propos de Wouessi : pionnier de la transformation numérique",
+      "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+      "keyWords": "À propos de Wouessi, transformation numérique, solutions innovantes, entreprise technologique",
+      "openGraph": {
+        "title": "À propos de Wouessi : pionnier de la transformation numérique",
+        "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/AboutUs"
+      },
+      "twitter": {
+        "title": "À propos de Wouessi : pionnier de la transformation numérique",
+        "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "twitterImage": "/",
+        "twitterCardContent": "summary_large_image"
+      }
+    }
+  }
+}

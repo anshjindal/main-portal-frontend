@@ -6,12 +6,11 @@ import bloglist3 from "../assets/Images/bloglist3.webp";
 import BlogsCarousel from "../components/Reusable/BlogsCarousel";
 import CallToActionSection from "../components/Reusable/CallToActionSection";
 import { useParams } from "react-router-dom";
+import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 
 function Blogs() {
   const {lang} = useParams();
-
   const [data, setData] = useState('');
-
   useEffect(() => {
     fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/content`)
       .then(response => response.json())
@@ -19,8 +18,9 @@ function Blogs() {
       .catch(error => console.error('Error:', error))
   }, []);
 
-
   return (
+   <>
+   <BlogMetaDataRender/>
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-full">
       <p>{data}</p>
@@ -241,6 +241,7 @@ function Blogs() {
         />
       </div>
     </div>
+   </>
   );
 }
 
