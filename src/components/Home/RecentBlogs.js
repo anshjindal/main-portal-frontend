@@ -37,7 +37,7 @@ function RecentBlogs({ lang }) {
               <div
                 className={`w-[18vw] h-fit mt-[6vw] ${
                   index === 1
-                    ? "ml-[5vw] max-[450px]:ml-[0vw] max-[450px]:mr-[-5vw]" // Add overlap margin for second post on mobile
+                    ? "ml-[-5vw] max-[450px]:ml-[0vw] max-[450px]:mr-[-5vw]" // Add overlap margin for second post on mobile
                     : "ml-[-5vw]"
                 } p-[1.5vw] drop-shadow-lg space-y-[4vw] bg-white max-[450px]:w-[55vw] max-[450px]:p-[6vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]`}
               >
