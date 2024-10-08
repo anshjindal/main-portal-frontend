@@ -198,7 +198,7 @@ function ContactUs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                     <div className="hover:scale-150 transition-transform duration-300">
                       <FaXTwitter className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                     </div>
@@ -209,7 +209,7 @@ function ContactUs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                     <div className="hover:scale-150 transition-transform duration-300">
                       <FaLinkedin className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                     </div>
@@ -220,7 +220,7 @@ function ContactUs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                     <div className="hover:scale-150 transition-transform duration-300">
                       <FaInstagram className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                     </div>
@@ -231,7 +231,7 @@ function ContactUs() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC]  hover:bg-[#FF9900] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
+                  <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                     <div className="hover:scale-150 transition-transform duration-300">
                       <FaYoutube className="text-[1.6vw] max-[450px]:text-[4.5vw]" />
                     </div>
