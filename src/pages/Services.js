@@ -6,12 +6,15 @@ import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.webp";
 import Accordion from "../components/Reusable/Accordion";
 import content from "../content/Services/ServicesData.json";
 import { useParams } from "react-router-dom";
+import ServicesMetaRender from "../components/Home/ServicesMetaRender";
 
 function Services() {
   const { lang } = useParams();
   const Content = content[lang];
 
   return (
+   <>
+    <ServicesMetaRender lang={lang} />
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <HeroBanner
@@ -42,6 +45,7 @@ function Services() {
         />
       </div>
     </div>
+   </>
   );
 }
 

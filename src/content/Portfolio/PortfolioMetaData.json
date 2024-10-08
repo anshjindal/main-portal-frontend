@@ -1,0 +1,40 @@
+{
+  "en": {
+    "meta": {
+      "title": "Wouessi Portfolio - Successful Digital Projects",
+      "description": "View our portfolio of successful digital projects, showcasing Wouessi's expertise in driving business success through technology.",
+      "keyWords": "Portfolio, successful projects, digital transformation, business technology,tech projects",
+      "openGraph": {
+        "title": " Wouessi Portfolio - Successful Digital Projects",
+        "description": "View our portfolio of successful digital projects, showcasing Wouessi's expertise in driving business success through technology.",
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Portfolio"
+      },
+      "twitter": {
+        "title": " Wouessi Portfolio - Successful Digital Projects",
+        "description": "View our portfolio of successful digital projects, showcasing Wouessi's expertise in driving business success through technology.",
+        "twitterImage": "/",
+        "twitterCardContent": "summary large image"
+      }
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Portfolio Wouessi - Projets numériques réussis",
+      "description": "Consultez notre portefeuille de projets numériques réussis, mettant en valeur l'expertise de Wouessi dans la réussite des entreprises grâce à la technologie.",
+      "keyWords": "Portfolio, projets réussis, transformation numérique, technologie d'entreprise, projets technologiques",
+      "openGraph": {
+        "title": "Portfolio Wouessi - Projets numériques réussis",
+        "description": "Consultez notre portefeuille de projets numériques réussis, mettant en valeur l'expertise de Wouessi dans la réussite des entreprises grâce à la technologie.",
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Portfolio"
+      },
+      "twitter": {
+        "title": "Portfolio Wouessi - Projets numériques réussis",
+        "description": "Consultez notre portefeuille de projets numériques réussis, mettant en valeur l'expertise de Wouessi dans la réussite des entreprises grâce à la technologie.",
+        "twitterImage": "/",
+        "twitterCardContent": "résumé_grande_image"
+      }
+    }
+  }
+}

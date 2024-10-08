@@ -59,7 +59,7 @@ function OurVision({lang}) {
             </div>
           </div>
         </div>
-        <img alt="" src={OurVisionPic} className="w-full mt-[-5vw]"></img>
+        <img alt="Wouessi’s vision: redefining collaboration and streamlining transactions." src={OurVisionPic} className="w-full mt-[-5vw]"></img>
       </div>
     </>
   );

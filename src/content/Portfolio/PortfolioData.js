@@ -10,16 +10,16 @@ import WatchReportImage from "../../assets/Images/RecentProject/RecentProjectWat
 import YellowCardImage from "../../assets/Images/RecentProject/RecentProjectYellowCardImage.webp";
 
 const RecentProjectData = [
-    { image: GIZImage, title: "GIZ", link: "https://www.giz.de/en/html/index.html" },
-    { image: CanalPlus, title: "Canal Plus", link: "https://www.canalplus.com/ " },
-    { image: HamiltonCrescentImage, title: "Hamilton Crescent", link: "https://hamiltonccm.com" },
-    { image: AldeliaImage, title: "Aldelia", link: "https://www.aldelia.com/en/" },
-    { image: ATRImage, title: "ATR Cyber", link: "https://atrcyber.com" },
-    { image: WatchReportImage, title: "Watch Report", link: "https://www.watchreport.com" },
-    { image: YellowCardImage, title: "Yellow Card", link: "https://yellowcard.io/" },
-    { image: MasterNodedImage, title: "Masternoded", link: "https://masternoded.com" },
-    { image: BuckheadImage, title: "Buckhead", link: "https://www.buckhead.com/" },
-    { image: KeplerImage, title: "Kepler", link: "https://kepler.org" },
+    { image: GIZImage, alt: "GIZ office building with people walking outside, modern architecture", title: "GIZ", link: "https://www.giz.de/en/html/index.html" },
+    { image: CanalPlus, alt: "Canal Plus promotional image featuring a man with a crowd in the background.", title: "Canal Plus", link: "https://www.canalplus.com/ " },
+    { image: HamiltonCrescentImage, alt: "Hamilton Crescent ad promoting financial freedom with a city skyline image",  title: "Hamilton Crescent", link: "https://hamiltonccm.com" },
+    { image: AldeliaImage, alt: "Aldelia ad featuring a smiling woman in a headscarf, bridging talent and industries", title: "Aldelia", link: "https://www.aldelia.com/en/" },
+    { image: ATRImage, alt: "", title: "ATR Cyber", link: "https://atrcyber.com" },
+    { image: WatchReportImage, alt: "",  title: "Watch Report", link: "https://www.watchreport.com" },
+    { image: YellowCardImage, alt: "", title: "Yellow Card", link: "https://yellowcard.io/" },
+    { image: MasterNodedImage, alt: "", title: "Masternoded", link: "https://masternoded.com" },
+    { image: BuckheadImage, alt: "", title: "Buckhead", link: "https://www.buckhead.com/" },
+    { image: KeplerImage, alt: "", title: "Kepler", link: "https://kepler.org" },
   ];
 
   export default RecentProjectData
