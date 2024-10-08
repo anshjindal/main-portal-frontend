@@ -54,7 +54,7 @@ function Portfolio() {
               <div className="relative w-full h-[29vw] max-[450px]:h-[65vw] overflow-hidden">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={item.alt? item.alt: item.title}
                   className="w-full h-full object-cover rounded-t-2xl transition-transform transform hover:scale-105 transition-all duration-500 ease-in-out"
                 />
               </div>
