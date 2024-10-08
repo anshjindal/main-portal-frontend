@@ -13,9 +13,8 @@ const ServicesMetaRender = ({ lang }) => {
 
         {/* open graph meta tags */}
         <meta property="og:title" content={Contents.meta.openGraph.title} />
-        <meta
-          property="og:description"
-          content={Contents.meta.openGraph.description}/>
+        <meta property="og:description" content={Contents.meta.openGraph.description}/>
+        <meta property="og:type" content="website"/>
         <meta property="og:image" content={Contents.meta.openGraph.ogImage} />
         <meta property="og:image:alt" content="Wouessi digital"></meta>
         <meta name="og:url" content={Contents.meta.openGraph.ogUrl} />
