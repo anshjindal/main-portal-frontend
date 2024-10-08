@@ -18,18 +18,18 @@ function HeroAboutUs({ lang }) {
     <div className="flex justify-center h-fit">
       <div className="w-[80%] text-left mt-[3vw]">
         <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
-          {Content.title} <span className="text-[#2703A5]">Business Growth</span>
+          {Content.title}{" "}
+          <span className="text-[#2703A5]">Business Growth</span>
         </h1>
         <div className="max-[450px]:block flex mt-[3vw] items-center justify-between">
           <p className="max-[450px]:w-[100%] max-[450px]:text-[3vw]/[5vw] max-[450px]:mb-[4vw] mb-[0vw] w-[65%] text-[1.3vw]">
             {Content.introText}
           </p>
           <div
-            className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.1vw] cursor-pointer"
-            onClick={handleScroll}
-          >
+            className="border-black border-[0.1vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out rounded-full flex items-center justify-center gap-x-[0.3vw] w-[25vw] h-[25vw] md:w-[14vw] md:h-[14vw] text-[1.5vw] cursor-pointer max-[450px]:text-[2.3vw]"
+            onClick={handleScroll}>
             {Content.buttonText}
-            <CgArrowLongUp className="text-[1.1vw] rotate-[60deg]" />
+            <CgArrowLongUp className="text-[1.5vw] rotate-[60deg] max-[450px]:text-[2.3vw]" />
           </div>
         </div>
 
@@ -54,8 +54,7 @@ function HeroAboutUs({ lang }) {
           <div className="flex flex-col w-[33vw] max-[450px]:w-[100%] ">
             <div
               style={{ backgroundImage: `url(${OurMissionTopImage})` }}
-              className="w-full h-[15vw] bg-center bg-cover"
-            ></div>
+              className="w-full h-[15vw] bg-center bg-cover"></div>
             <div className="flex">
               <div className="w-[23vw] max-[450px]:w-[100%] h-[30vw] mt-[-3vw] bg-[#F4F4F4]">
                 <p className="mt-[2vw] mb-[2vw] text-[1.3vw] max-[450px]:text-[3vw]/[5vw] font-[bold] text-[#666666]">
@@ -67,8 +66,7 @@ function HeroAboutUs({ lang }) {
               </div>
               <div
                 style={{ backgroundImage: `url(${OurMissionSideImage})` }}
-                className="w-[15vw] h-[27vw] bg-cover bg-center"
-              ></div>
+                className="w-[15vw] h-[27vw] bg-cover bg-center"></div>
             </div>
           </div>
         </div>
