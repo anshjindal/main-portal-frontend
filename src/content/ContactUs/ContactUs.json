@@ -10,11 +10,11 @@
     "formSection": {
       "formDescription": "Awesome! We are excited to hear from you and help you in your journey! Leave us a message.",
       "fields": {
-        "name": "name",
-        "email": "email",
-        "phone": "phone",
-        "subject": "subject",
-        "message": "message"
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Message"
       },
       "submitButton": {
         "text": "Send your message",
@@ -51,11 +51,11 @@
     "formSection": {
       "formDescription": "Génial ! Nous sommes ravis de vous entendre et de vous aider dans votre parcours ! Laissez-nous un message.",
       "fields": {
-        "name": "nom",
-        "email": "email",
-        "phone": "téléphone",
-        "subject": "sujet",
-        "message": "message"
+        "name": "Nom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "subject": "Sujet",
+        "message": "Message"
       },
       "submitButton": {
         "text": "Envoyez votre message",
