@@ -6,7 +6,7 @@ import NelsonNwankwoHeadshot from "../../assets/Images/OurTeam/NelsonNwankwoHead
 import MarieNsanaHeadshot from "../../assets/Images/OurTeam/MarieNsanaHeadshot.webp";
 import PamelaDefoHeadshot from "../../assets/Images/OurTeam/PamelaDefoHeadshot.webp";
 import BillTinglingHeadshot from "../../assets/Images/OurTeam/BillTinglingHeadshot.webp";
-import DavidSmithHeadshot from "../../assets/Images/OurTeam/DavidSmithHeadshot.webp"
+import PatriciacharekaHeadshot from "../../assets/Images/OurTeam/PatriciaCharekaHeadshot.png"
 
 const OurTeamData = {
   en: [
@@ -30,6 +30,13 @@ const OurTeamData = {
       subtitle: "CTO",
       hovertitle: "At Wouessi Inc., we are redefining what's possible in technology. Our team is at the cutting edge of AI, blockchain, and advanced digital solutions, driving innovations that shape the future.",
       linkedinlink: "https://www.linkedin.com/in/strivem/",
+    },
+    {
+      image: PatriciacharekaHeadshot,
+      title: "Patricia Chareka",
+      subtitle: "CCO",
+      hovertitle: "Welcome to the future of digital innovation at Wouessi Inc. Our mission is simple: to empower businesses globally through groundbreaking digital experiences.",
+      linkedinlink: "https://www.linkedin.com/in/patriciachareka/",
     },
     {
       image: ReginaldNugentHeadshot,
@@ -65,14 +72,7 @@ const OurTeamData = {
       subtitle: "Advisor",
       hovertitle: "Welcome to the future of digital innovation at Wouessi Inc. Our mission is simple: to empower businesses globally through groundbreaking digital experiences.",
       linkedinlink: "https://www.linkedin.com/in/billtingling/",
-    },
-    {
-      image: DavidSmithHeadshot,
-      title: "David Smith",
-      subtitle: "Advisor",
-      hovertitle: "Welcome to the future of digital innovation at Wouessi Inc. Our mission is simple: to empower businesses globally through groundbreaking digital experiences.",
-      linkedinlink: "https://www.linkedin.com/in/davidsmithsv/",
-    },
+    }
   ],
   fr: [
     {
@@ -95,6 +95,13 @@ const OurTeamData = {
       subtitle: "CTO",
       hovertitle: "Chez Wouessi Inc., nous redéfinissons ce qui est possible en matière de technologie. Notre équipe est à la pointe de l'IA, de la blockchain et des solutions numériques avancées, façonnant les innovations qui construisent l'avenir.",
       linkedinlink: "https://www.linkedin.com/in/strivem/",
+    },
+    {
+      image: PatriciacharekaHeadshot,
+      title: "Patricia Chareka",
+      subtitle: "CCO",
+      hovertitle: "Bienvenue dans l'avenir de l'innovation numérique chez Wouessi Inc. Notre mission est simple : autonomiser les entreprises à travers le monde grâce à des expériences numériques révolutionnaires.",
+      linkedinlink: "https://www.linkedin.com/in/patriciachareka/",
     },
     {
       image: ReginaldNugentHeadshot,
@@ -130,14 +137,7 @@ const OurTeamData = {
       subtitle: "Conseiller",
       hovertitle: "Bienvenue dans l'avenir de l'innovation numérique chez Wouessi Inc. Notre mission est simple : autonomiser les entreprises à travers le monde grâce à des expériences numériques révolutionnaires.",
       linkedinlink: "https://www.linkedin.com/in/billtingling/",
-    },
-    {
-      image: DavidSmithHeadshot,
-      title: "David Smith",
-      subtitle: "Conseiller",
-      hovertitle: "Bienvenue dans l'avenir de l'innovation numérique chez Wouessi Inc. Notre mission est simple : autonomiser les entreprises à travers le monde grâce à des expériences numériques révolutionnaires.",
-      linkedinlink: "https://www.linkedin.com/in/davidsmithsv/",
-    },
+    }
   ]
 };
 
