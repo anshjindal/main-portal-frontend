@@ -8,7 +8,7 @@ function WhyChooseUS({ lang }) {
 
   return (
     <>
-      <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw] mt-[2vw]">
+      <div className="flex justify-center bg-[#2B00AC] gap-x-[6vw]">
         <img
           alt="Team discussing digital solutions"
           src={WhyChooseUsBackground}

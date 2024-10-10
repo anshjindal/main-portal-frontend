@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import BlogPageLaptop from "../assets/Images/blog_page_laptop.webp";
 import bloglist1 from "../assets/Images/BlogPost1.webp";
 import bloglist2 from "../assets/Images/BlogPost2.webp";
@@ -10,20 +10,12 @@ import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 
 function Blogs() {
   const {lang} = useParams();
-  const [data, setData] = useState('');
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/content`)
-      .then(response => response.json())
-      .then(data => setData(data.message))
-      .catch(error => console.error('Error:', error))
-  }, []);
 
   return (
    <>
    <BlogMetaDataRender/>
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-full">
-      <p>{data}</p>
         {/* First Main Heading Div */}
         <div className="flex justify-center">
           <div className="w-[1000px]">

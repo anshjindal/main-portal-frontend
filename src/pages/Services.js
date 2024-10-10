@@ -24,7 +24,7 @@ function Services() {
         />
 
         {/* Accordion Section */}
-        <div className="mb-[-1vw] mt-[-5vw] max-[450px]:mt-[5vw]">
+        <div className="mb-[-1vw] mt-[-10vw] max-[450px]:mt-[5vw]">
           {Object.keys(Content.accordions).map((sectionKey, index) => {
             const section = Content.accordions[sectionKey];
             return (

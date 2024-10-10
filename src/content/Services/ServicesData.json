@@ -3,6 +3,14 @@
     "heroTitle": "Services We Offer",
     "heroContent": "Our specialized team of researchers, strategists, designers, developers, and project managers work with streamlined processes to break through organizational roadblocks.",
     "accordions": {
+      "B2CServices": {
+        "heading": "B2C Services",
+        "content": [
+          {
+            "innerText": "Our personal branding services help clients shape public perception by positioning them as an industry authority, enhancing their credibility, and differentiating them from the competition, ultimately expanding their value visibility. Our process leverages web design, generative AI consultancy, project management, business analysis, dev-ops and much more to advance individual marketability. Serving diverse sectors, we successfully support the crafting of a desirable digital reputation, ultimately creating an entity that can be further  monetized."
+          }
+        ]
+      },
       "Engineering": {
         "heading": "Engineering",
         "content": [
@@ -124,6 +132,14 @@
     "heroTitle": "Services que nous offrons",
     "heroContent": "Notre équipe spécialisée de chercheurs, de stratèges, de designers, de développeurs et de chefs de projet travaille avec des processus rationalisés pour surmonter les obstacles organisationnels.",
     "accordions": {
+      "B2CServices": {
+        "heading": "Services B2C",
+        "content": [
+          {
+            "innerText": "Nos services de branding personnel aident les clients à façonner la perception publique en les positionnant comme une autorité dans leur secteur, en renforçant leur crédibilité et en les distinguant de la concurrence, ce qui accroît la visibilité de leur valeur. Notre processus s'appuie sur la conception web, le conseil en IA générative, la gestion de projets, l'analyse commerciale, les opérations DevOps et bien plus encore pour améliorer la commercialisation individuelle. En desservant divers secteurs, nous soutenons avec succès la création d'une réputation numérique désirable, créant ainsi une entité pouvant être davantage monétisée."
+          }
+        ]
+      },
       "Engineering": {
         "heading": "Ingénierie",
         "content": [
