@@ -19,7 +19,7 @@ function HeroAboutUs({ lang }) {
       <div className="w-[80%] text-left mt-[3vw]">
         <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
           {Content.title}{" "}
-          <span className="text-[#2703A5]">Business Growth</span>
+          <span className="text-[#2703A5]">{Content.subtitle}</span>
         </h1>
         <div className="max-[450px]:block flex mt-[3vw] items-center justify-between">
           <p className="max-[450px]:w-[100%] max-[450px]:text-[3vw]/[5vw] max-[450px]:mb-[4vw] mb-[0vw] w-[65%] text-[1.3vw]">
