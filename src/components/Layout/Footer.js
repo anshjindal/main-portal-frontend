@@ -154,7 +154,7 @@ function Footer() {
           <div className="flex justify-center max-[450px]:pb-[5vw] pt-8 absolute bottom-0">
             <div className="w-[90%]">
               <img
-                alt=""
+                alt="Wouessi Logo"
                 src={WouessiLogoFooter}
                 className="w-[100%] h-[27vw] mt-[-10vw] max-[450px]:mt-0"
               />

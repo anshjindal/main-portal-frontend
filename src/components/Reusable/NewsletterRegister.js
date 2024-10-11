@@ -76,11 +76,12 @@ function NewsletterRegister({ lang }) {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)} // Update email state on input change
-                  className="bg-[#2B00AC] h-[3.5vw] w-full text-[1.2vw] focus-visible:outline-none placeholder:font-normal placeholder:text-white max-[450px]:text-[2.5vw] max-[450px]:h-[5vw]"
+                  className="bg-[#2B00AC] px-[6px] h-[3.5vw] w-full text-[1.2vw] focus-visible:outline-none placeholder:font-normal placeholder:text-white max-[450px]:text-[2.5vw] max-[450px]:h-[5vw]"
                 />
                 <button
                   type="submit"
-                  className="w-[3vw] text-[1.5vw] hover:pl-[1vw] hover:text-[#44c644] cursor-pointer transition-all ease-in-out duration-300 max-[450px]:text-[2.5vw]"
+                  className="w-[3vw] text-[1.5vw] hover:pl-[1vw] px-1 hover:text-[#44c644] cursor-pointer transition-all ease-in-out duration-300 max-[450px]:text-[2.5vw]"
+                  name ="Submit"
                 >
                   <FaArrowRight />
                 </button>
