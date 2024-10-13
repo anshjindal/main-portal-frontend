@@ -24,7 +24,7 @@ function Footer() {
               </p>
               <div className="flex gap-x-[4vw] items-center max-[450px]:gap-x-[14vw]">
                 <a
-                  href={require("../../assets/Documents/WouessiBrochure.pdf")}
+                  href="/Doc/WouessiBrochure.pdf"
                   download="WouessiBrochure.pdf"
                   className="border-black border-[0.1vw] bg-[#2703A5] hover:bg-white text-white hover:text-black transition ease-in-out duration-300 rounded-full flex items-center justify-center mt-[1vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] text-center cursor-pointer z-10 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[5vw]"
                 >

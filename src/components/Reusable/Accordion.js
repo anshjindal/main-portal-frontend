@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdArrowDropright } from "react-icons/io";
 
-function Accordion({ title, InnerTextData = [] }) { // Default to empty array
+function Accordion({ title, InnerTextData = [] }) {
   const [accordionOpen, setAccordionOpen] = useState(true);
 
   const accordionToggle = () => {
@@ -19,7 +19,8 @@ function Accordion({ title, InnerTextData = [] }) { // Default to empty array
         />
         <div
           onClick={accordionToggle}
-          className="max-[450px]:w-full cursor-pointer z-10">
+          className="max-[450px]:w-full cursor-pointer z-10"
+        >
           <h2 className="text-[3.8vw] hover:text-[#FF9900] font-bold max-[450px]:text-[5.5vw]/[6vw] transition-all duration-100 ease-in-out">
             {title}
           </h2>
@@ -31,7 +32,8 @@ function Accordion({ title, InnerTextData = [] }) { // Default to empty array
           key={index}
           className={`transition-all duration-200 ease-linear pl-[6vw] ${
             accordionOpen ? `opacity-0 h-0` : `opacity-100 h-full pt-[1vw]`
-          }`}>
+          }`}
+        >
           <h3 className="text-[2.8vw] font-bold max-[450px]:text-[4.5vw]/[5.5vw] max-[450px]:pt-[3vw]">
             {items.innerTitle}
           </h3>
@@ -50,6 +52,19 @@ function Accordion({ title, InnerTextData = [] }) { // Default to empty array
                 ))
               ) : (
                 <p>{items.innerText}</p>
+              )}
+
+              {/* Add download link for the Influencer job */}
+              {items.innerTitle === "Influencer" && (
+                <div className="mt-[1vw]">
+                  <a
+                    href="/Doc/Influencer.pdf"
+                    download="Influencer.pdf"
+                    className="text-[#FF9900] hover:underline"
+                  >
+                    Click here to download the job description PDF
+                  </a>
+                </div>
               )}
             </div>
           </div>
