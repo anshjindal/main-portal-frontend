@@ -8,11 +8,13 @@ const BlogMetaDataRender = () => {
   return (
     <>
         <Helmet>
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
         <title>{Contents.meta.title}</title>
         <meta name="description" content={Contents.meta.description} />
         <meta name="keywords" content={Contents.meta.kewyWords} />
 
         {/* open graph meta tags */}
+        <link rel="canonical" href="https://www.wouessi.com/en/Blogs"/>
         <meta property="og:title" content={Contents.meta.openGraph.title} />
         <meta property="og:description" content={Contents.meta.openGraph.description}/>
         <meta property="og:image" content={Contents.meta.openGraph.ogImage} />
