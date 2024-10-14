@@ -34,7 +34,7 @@ const OurTeamData = {
     {
       image: PatriciacharekaHeadshot,
       title: "Patricia Chareka",
-      subtitle: "CCO",
+      subtitle: "VP of Partnership & Inclusion",
       hovertitle: "Welcome to the future of digital innovation at Wouessi Inc. Our mission is simple: to empower businesses globally through groundbreaking digital experiences.",
       linkedinlink: "https://www.linkedin.com/in/patriciachareka/",
     },
