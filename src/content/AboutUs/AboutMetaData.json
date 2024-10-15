@@ -2,17 +2,17 @@
   "en": {
     "meta": {
       "title": "About Wouessi: Pioneering Digital Transformation",
-      "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies, and tech solutions for Business growth.",
+      "description": "Learn about Wouessi, a pioneer in digital solutions, offering innovative services in web development, apps, and digital marketing to drive business growth.",
       "keyWords": "About Wouessi, digital transformation, innovative solutions, tech companies, digital solutions, digital services, digital marketing company",
       "openGraph": {
         "title": "About Wouessi - Pioneering Digital Transformation",
-        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions for business growth.",
+        "description": "Learn about Wouessi, a pioneer in digital solutions, offering innovative services in web development, apps, and digital marketing to drive business growth.",
         "ogImage": "http://localhost:3000/static/media/AboutPageHeroImage.80ede8e83d3c63a168b3ede91be49455.svg",
         "ogUrl": "https://www.wouessi.com/en/AboutUs"
       },
       "twitter": {
         "title": "About Wouessi - Pioneering Digital Transformation",
-        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions.",
+        "description": "Learn about Wouessi, a pioneer in digital solutions, offering innovative services in web development, apps, and digital marketing to drive business growth.",
         "twitterImage": "/",
         "twitterCardContent": "summary large image"
       }
@@ -21,17 +21,17 @@
   "fr": {
     "meta": {
       "title": "À propos de Wouessi : pionnier de la transformation numérique",
-      "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+      "description": "Découvrez Wouessi, un pionnier des solutions numériques, proposant des services innovants en matière de développement Web, d'applications et de marketing numérique pour stimuler la croissance de l'entreprise.",
       "keyWords": "À propos de Wouessi, transformation numérique, solutions innovantes, entreprise technologique",
       "openGraph": {
         "title": "À propos de Wouessi : pionnier de la transformation numérique",
-        "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "description": "Découvrez Wouessi, un pionnier des solutions numériques, proposant des services innovants en matière de développement Web, d'applications et de marketing numérique pour stimuler la croissance de l'entreprise.",
         "ogImage": "logonavbar",
         "ogUrl": "https://www.wouessi.com/en/AboutUs"
       },
       "twitter": {
         "title": "À propos de Wouessi : pionnier de la transformation numérique",
-        "description": " Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "description": "Découvrez Wouessi, un pionnier des solutions numériques, proposant des services innovants en matière de développement Web, d'applications et de marketing numérique pour stimuler la croissance de l'entreprise.",
         "twitterImage": "/",
         "twitterCardContent": "summary_grand_image"
       }

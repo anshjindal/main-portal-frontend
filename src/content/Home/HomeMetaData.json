@@ -1,18 +1,18 @@
 {
   "en": {
     "meta": {
-      "title": "Wouessi: Pioneering Digital Excellence",
-      "description": "Unlock digital solutions with Wouessi. Offering cutting-edge technology services for businesses to thrive in today's digital world.",
+      "title": "Wouessi | Digital Solutions for Web, Apps & Marketing",
+      "description": "Wouessi delivers innovative web development, mobile apps, and digital marketing services, empowering businesses with cutting-edge digital solutions.",
       "keyWords": "Digital solutions, technology services, tech consultancy, digital transformation,Software Engineering, Search engine optimization",
       "openGraph": {
-        "title": "Wouessi: Pioneering Digital Excellence",
-        "description": " Learn about Wouessi's mission to empower businesses with innovative digital strategies and tech solutions.",
+        "title": "Wouessi | Digital Solutions for Web, Apps & Marketing",
+        "description": "Wouessi delivers innovative web development, mobile apps, and digital marketing services, empowering businesses with cutting-edge digital solutions.",
         "ogImage": "logonavbar",
         "ogUrl": "https://www.wouessi.com/en/AboutUs"
       },
       "twitter": {
-        "title": "Wouessi: Pioneering Digital Excellence",
-        "description": "Unlock digital solutions with Wouessi. Offering cutting-edge technology services for businesses to thrive in today's digital world.",
+        "title": "Wouessi | Digital Solutions for Web, Apps & Marketing",
+        "description": "Wouessi delivers innovative web development, mobile apps, and digital marketing services, empowering businesses with cutting-edge digital solutions.",
         "twitterImage": "https://www.wouessi.com/static/media/Wouessi_Logo_horizontal_tag.087336bda2f22c17fec688c73489fddb.svg",
         "twitterCardContent": "summary_large_image"
       }
@@ -20,18 +20,18 @@
   },
   "fr": {
     "meta": {
-      "title": "Wouessi : pionnier de l’excellence numérique",
-      "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+      "title": "Wouessi | Solutions numériques pour le Web, les applications et le marketing",
+      "description": "Wouessi propose des services innovants de développement Web, d'applications mobiles et de marketing numérique, offrant aux entreprises des solutions numériques de pointe.",
       "keyWords": "À propos de Wouessi, transformation numérique, solutions innovantes, entreprise technologique",
       "openGraph": {
-        "title": "À propos de Wouessi - Pionnier de l'excellence numérique",
-        "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "title": "Wouessi | Solutions numériques pour le Web, les applications et le marketing",
+        "description": "Wouessi propose des services innovants de développement Web, d'applications mobiles et de marketing numérique, offrant aux entreprises des solutions numériques de pointe.",
         "ogImage": "logonavbar",
         "ogUrl": "https://www.wouessi.com/en/AboutUs"
       },
       "twitter": {
-        "title": "Wouessi : pionnier de l’excellence numérique",
-        "description": "Découvrez la mission de Wouessi qui consiste à doter les entreprises de stratégies numériques et de solutions technologiques innovantes.",
+        "title": "Wouessi | Solutions numériques pour le Web, les applications et le marketing",
+        "description": "Wouessi propose des services innovants de développement Web, d'applications mobiles et de marketing numérique, offrant aux entreprises des solutions numériques de pointe",
         "twitterImage": "/",
         "twitterCardContent": "résumé_large_image"
       }
