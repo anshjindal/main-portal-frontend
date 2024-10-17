@@ -1,0 +1,40 @@
+{
+  "en": {
+    "meta": {
+      "title": "Careers at Wouessi: Join Our Digital Transformation Journey",
+      "description": "Explore exciting career opportunities at Wouessi. Be part of a dynamic team that drives digital innovation and delivers cutting-edge solutions to clients worldwide.",
+      "keyWords": "Careers at Wouessi, digital transformation jobs, tech careers, digital innovation, web development careers, digital marketing jobs",
+      "openGraph": {
+        "title": "Careers at Wouessi: Join Our Digital Transformation Journey",
+        "description": "Discover career opportunities at Wouessi, where digital innovation and transformative solutions meet to create impactful change for global businesses.",
+        "ogImage": "https://www.wouessi.com/static/media/CareersPageHeroImage.jpg",
+        "ogUrl": "https://www.wouessi.com/en/Careers"
+      },
+      "twitter": {
+        "title": "Careers at Wouessi: Join Our Digital Transformation Journey",
+        "description": "Explore exciting career opportunities at Wouessi. Join a team committed to driving innovation and delivering transformative digital solutions.",
+        "twitterImage": "/static/media/CareersTwitterImage.jpg",
+        "twitterCardContent": "summary large image"
+      }
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Carrières chez Wouessi : rejoignez notre parcours de transformation numérique",
+      "description": "Découvrez des opportunités de carrière passionnantes chez Wouessi. Faites partie d'une équipe dynamique qui innove dans le numérique et propose des solutions de pointe à ses clients à travers le monde.",
+      "keyWords": "Carrières chez Wouessi, emplois en transformation numérique, carrières technologiques, innovation numérique, carrières en développement web, emplois en marketing numérique",
+      "openGraph": {
+        "title": "Carrières chez Wouessi : Rejoignez notre parcours de transformation numérique",
+        "description": "Découvrez des opportunités de carrière chez Wouessi, où innovation numérique et solutions transformatrices se conjuguent pour créer un changement impactant pour les entreprises mondiales.",
+        "ogImage": "https://www.wouessi.com/static/media/CareersPageHeroImage.jpg",
+        "ogUrl": "https://www.wouessi.com/en/Careers"
+      },
+      "twitter": {
+        "title": "Carrières chez Wouessi : Rejoignez notre parcours de transformation numérique",
+        "description": "Explorez des opportunités de carrière passionnantes chez Wouessi. Rejoignez une équipe dédiée à l'innovation et à la fourniture de solutions numériques transformatrices.",
+        "twitterImage": "/static/media/CareersTwitterImage.jpg",
+        "twitterCardContent": "summary_grand_image"
+      }
+    }
+  }
+}

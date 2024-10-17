@@ -5,6 +5,7 @@ import Accordion from "../components/Reusable/Accordion";
 import content from "../content/PolicyPages/TermsConditionText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
 import { useParams } from "react-router-dom";
+import TermsMetaRender from "../components/PolicyPgesMetaRender/TermsMetaRender";
 
 function TermsCondition() {
   const { lang } = useParams(); 
@@ -32,6 +33,8 @@ function TermsCondition() {
   ];
 
   return (
+    <>
+    <TermsMetaRender lang= {lang} />
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <div className="items-center justify-between max-[450px]:flex-col max-[450px]:gap-y-[6vw] relative">
@@ -67,6 +70,7 @@ function TermsCondition() {
         <ContactUsSection />
       </div>
     </div>
+    </>
   );
 }
 

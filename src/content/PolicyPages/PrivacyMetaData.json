@@ -1,0 +1,41 @@
+{
+    "en": {
+      "meta": {
+        "title": "Wouessi Privacy Policy: Protecting Your Data and Privacy",
+        "description": "Read Wouessi's Privacy Policy to understand how we collect, use, and protect your personal data. Your privacy and data security are our top priorities.",
+        "keyWords": "Wouessi Privacy Policy, data protection, user privacy, personal data, data security, privacy practices",
+        "openGraph": {
+          "title": "Wouessi Privacy Policy: Protecting Your Data and Privacy",
+          "description": "Learn how Wouessi collects, processes, and protects your personal data in compliance with privacy laws. Your data security is our priority.",
+          "ogImage": "https://www.wouessi.com/static/media/PrivacyPolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/PrivacyPolicy"
+        },
+        "twitter": {
+          "title": "Wouessi Privacy Policy: Protecting Your Data and Privacy",
+          "description": "Review Wouessi's Privacy Policy to understand our commitment to safeguarding your personal data and ensuring your privacy is protected.",
+          "twitterImage": "/static/media/PrivacyPolicyTwitterImage.jpg",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta": {
+        "title": "Politique de confidentialité de Wouessi : Protection de vos données et de votre vie privée",
+        "description": "Lisez la politique de confidentialité de Wouessi pour comprendre comment nous collectons, utilisons et protégeons vos données personnelles. La sécurité de vos données et votre vie privée sont nos priorités.",
+        "keyWords": "Politique de confidentialité de Wouessi, protection des données, vie privée des utilisateurs, données personnelles, sécurité des données, pratiques de confidentialité",
+        "openGraph": {
+          "title": "Politique de confidentialité de Wouessi : Protection de vos données et de votre vie privée",
+          "description": "Découvrez comment Wouessi collecte, traite et protège vos données personnelles conformément aux lois sur la confidentialité. La sécurité de vos données est notre priorité.",
+          "ogImage": "https://www.wouessi.com/static/media/PrivacyPolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/PrivacyPolicy"
+        },
+        "twitter": {
+          "title": "Politique de confidentialité de Wouessi : Protection de vos données et de votre vie privée",
+          "description": "Consultez la politique de confidentialité de Wouessi pour comprendre notre engagement à protéger vos données personnelles et garantir la confidentialité.",
+          "twitterImage": "/static/media/PrivacyPolicyTwitterImage.jpg",
+          "twitterCardContent": "summary_grand_image"
+        }
+      }
+    }
+  }
+  
