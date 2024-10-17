@@ -13,6 +13,7 @@ import { ImCheckmark } from "react-icons/im";
 import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 import { useParams } from "react-router-dom";
 import content from "../content/ContactUs/ContactUs.json";
+import ContactMetaRender from "../components/ContactMetaRender/ContactMetaRender.js";
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
@@ -31,6 +32,8 @@ function ContactUs() {
   };
 
   return (
+    <>
+      <ContactMetaRender lang={lang} />
     <div className="pb-[5vw] max-[450px]:pt-[20vw] page-background">
       <div className="flex items-center justify-center">
         <div className="flex justify-center items-center w-[44vw] h-[32vw] mr-[6vw] z-10 max-[450px]:bg-[#F4F4F4] max-[450px]:mr-0 max-[450px]:items-start max-[450px]:w-full max-[450px]:pl-[10vw]">
@@ -244,6 +247,7 @@ function ContactUs() {
       </div>
       <NewsletterRegister lang={lang} />
     </div>
+  </>
   );
 }
 

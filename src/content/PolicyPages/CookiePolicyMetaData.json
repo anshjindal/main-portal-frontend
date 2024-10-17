@@ -1,0 +1,41 @@
+{
+    "en": {
+      "meta": {
+        "title": "Wouessi Cookie Policy: How We Use Cookies",
+        "description": "Learn about Wouessi's Cookie Policy and how we use cookies to improve your browsing experience. Understand the types of cookies we use and how you can manage your preferences.",
+        "keyWords": "Wouessi Cookie Policy, cookies usage, data tracking, user preferences, web cookies, manage cookies",
+        "openGraph": {
+          "title": "Wouessi Cookie Policy: How We Use Cookies",
+          "description": "Read Wouessi's Cookie Policy to understand how we use cookies to enhance user experience and how you can manage your cookie preferences.",
+          "ogImage": "https://www.wouessi.com/static/media/CookiePolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/CookiePolicy"
+        },
+        "twitter": {
+          "title": "Wouessi Cookie Policy: How We Use Cookies",
+          "description": "Learn about Wouessi's Cookie Policy and how cookies are used to improve your browsing experience. Find out how to manage your cookie settings.",
+          "twitterImage": "/static/media/CookiePolicyTwitterImage.jpg",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta": {
+        "title": "Politique relative aux cookies de Wouessi : Comment nous utilisons les cookies",
+        "description": "Découvrez la politique relative aux cookies de Wouessi et comment nous utilisons les cookies pour améliorer votre expérience de navigation. Comprenez les types de cookies que nous utilisons et comment gérer vos préférences.",
+        "keyWords": "Politique relative aux cookies de Wouessi, utilisation des cookies, suivi des données, préférences des utilisateurs, cookies Web, gérer les cookies",
+        "openGraph": {
+          "title": "Politique relative aux cookies de Wouessi : Comment nous utilisons les cookies",
+          "description": "Lisez la politique de cookies de Wouessi pour comprendre comment nous utilisons les cookies pour améliorer l'expérience utilisateur et comment gérer vos préférences.",
+          "ogImage": "https://www.wouessi.com/static/media/CookiePolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/CookiePolicy"
+        },
+        "twitter": {
+          "title": "Politique relative aux cookies de Wouessi : Comment nous utilisons les cookies",
+          "description": "Découvrez comment nous utilisons les cookies chez Wouessi pour améliorer votre expérience et comment vous pouvez gérer vos paramètres de cookies.",
+          "twitterImage": "/static/media/CookiePolicyTwitterImage.jpg",
+          "twitterCardContent": "summary_grand_image"
+        }
+      }
+    }
+  }
+  

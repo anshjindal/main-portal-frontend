@@ -1,0 +1,41 @@
+{
+    "en": {
+      "meta": {
+        "title": "Wouessi Terms and Conditions: User Agreement and Legal Guidelines",
+        "description": "Read Wouessi's Terms and Conditions to understand the legal guidelines governing the use of our digital services. By using our platform, you agree to these terms.",
+        "keyWords": "Wouessi Terms and Conditions, user agreement, legal guidelines, platform usage, service terms",
+        "openGraph": {
+          "title": "Wouessi Terms and Conditions: User Agreement and Legal Guidelines",
+          "description": "Understand the terms and conditions for using Wouessi’s platform, including guidelines on service usage, user responsibilities, and legal rights.",
+          "ogImage": "https://www.wouessi.com/static/media/TermsConditionsHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/TermsCondition"
+        },
+        "twitter": {
+          "title": "Wouessi Terms and Conditions: User Agreement and Legal Guidelines",
+          "description": "Review Wouessi's Terms and Conditions to understand your responsibilities when using our services, and the legal guidelines that apply.",
+          "twitterImage": "/static/media/TermsConditionsTwitterImage.jpg",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta": {
+        "title": "Conditions générales de Wouessi : Accord utilisateur et directives légales",
+        "description": "Lisez les conditions générales de Wouessi pour comprendre les directives légales régissant l'utilisation de nos services numériques. En utilisant notre plateforme, vous acceptez ces conditions.",
+        "keyWords": "Conditions générales de Wouessi, accord utilisateur, directives légales, utilisation de la plateforme, conditions de service",
+        "openGraph": {
+          "title": "Conditions générales de Wouessi : Accord utilisateur et directives légales",
+          "description": "Découvrez les conditions générales d'utilisation de la plateforme Wouessi, y compris les directives sur l'utilisation des services, les responsabilités des utilisateurs et les droits légaux.",
+          "ogImage": "https://www.wouessi.com/static/media/TermsConditionsHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/TermsCondition"
+        },
+        "twitter": {
+          "title": "Conditions générales de Wouessi : Accord utilisateur et directives légales",
+          "description": "Consultez les conditions générales de Wouessi pour comprendre vos responsabilités lors de l'utilisation de nos services et les directives légales applicables.",
+          "twitterImage": "/static/media/TermsConditionsTwitterImage.jpg",
+          "twitterCardContent": "summary_grand_image"
+        }
+      }
+    }
+  }
+  

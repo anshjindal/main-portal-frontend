@@ -5,6 +5,7 @@ import CallToActionSection from "../components/Reusable/CallToActionSection";
 import CareersHeroBanner from "../assets/Images/CareersHeroImage.webp";
 import { useParams } from "react-router-dom";
 import content from "../content/Careers/CareersAccordionInnerText.json"
+import CareerMetaRender from "../components/CareerMetaRender/CareerMetaRender";
 
 
 function Careers() {
@@ -13,6 +14,8 @@ function Careers() {
   const Content = content[lang];
 
   return (
+    <>
+    <CareerMetaRender lang={lang}/>
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <HeroBanner
@@ -43,6 +46,7 @@ function Careers() {
         />
       </div>
     </div>
+    </>
   );
 }
 

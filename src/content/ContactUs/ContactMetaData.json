@@ -1,0 +1,41 @@
+{
+    "en": {
+      "meta": {
+        "title": "Contact Wouessi: Get in Touch with Our Digital Experts",
+        "description": "Reach out to Wouessi for any inquiries or support. Our team of digital experts is here to assist with your web development, digital marketing, and innovative solution needs.",
+        "keyWords": "Contact Wouessi, get in touch, digital solutions support, tech inquiries, web development contact, digital marketing support",
+        "openGraph": {
+          "title": "Contact Wouessi: Get in Touch with Our Digital Experts",
+          "description": "Contact Wouessi for any questions or support on digital transformation, web development, and marketing solutions. Our team is here to assist you.",
+          "ogImage": "https://www.wouessi.com/static/media/ContactPageHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/ContactUs"
+        },
+        "twitter": {
+          "title": "Contact Wouessi: Get in Touch with Our Digital Experts",
+          "description": "Reach out to Wouessi for support and inquiries about our innovative digital solutions. Our team is ready to assist you.",
+          "twitterImage": "/static/media/ContactTwitterImage.jpg",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta": {
+        "title": "Contactez Wouessi : Entrez en contact avec nos experts numériques",
+        "description": "Contactez Wouessi pour toute demande ou assistance. Notre équipe d'experts numériques est à votre disposition pour répondre à vos besoins en développement web, marketing numérique, et solutions innovantes.",
+        "keyWords": "Contactez Wouessi, prendre contact, assistance solutions numériques, demandes techniques, contact développement web, assistance marketing numérique",
+        "openGraph": {
+          "title": "Contactez Wouessi : Entrez en contact avec nos experts numériques",
+          "description": "Contactez Wouessi pour toute question ou demande de support sur la transformation numérique, le développement web et les solutions marketing. Notre équipe est à votre service.",
+          "ogImage": "https://www.wouessi.com/static/media/ContactPageHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/ContactUs"
+        },
+        "twitter": {
+          "title": "Contactez Wouessi : Entrez en contact avec nos experts numériques",
+          "description": "Contactez Wouessi pour toute demande ou assistance sur nos solutions numériques innovantes. Notre équipe est prête à vous aider.",
+          "twitterImage": "/static/media/ContactTwitterImage.jpg",
+          "twitterCardContent": "summary_grand_image"
+        }
+      }
+    }
+  }
+  

@@ -5,6 +5,7 @@ import Accordion from "../components/Reusable/Accordion";
 import CookieData from "../content/PolicyPages/CookiePolicyText.json";
 import ContactUsSection from "../components/Reusable/ContactUsSection";
 import { useParams } from "react-router-dom";
+import CookiePolicyMetaRender from "../components/PolicyPgesMetaRender/CookiePolicyMetaRender";
 
 function CookiePolicy() {
   const { lang } = useParams(); 
@@ -26,6 +27,8 @@ function CookiePolicy() {
   ];
 
   return (
+    <>
+    <CookiePolicyMetaRender lang={lang}/>
     <div className="flex justify-center mt-[5vw] page-background">
       <div className="w-[80%]">
         <div className="items-center justify-between max-[450px]:flex-col max-[450px]:gap-y-[6vw] relative">
@@ -61,6 +64,7 @@ function CookiePolicy() {
         <ContactUsSection />
       </div>
     </div>
+    </>
   );
 }
 

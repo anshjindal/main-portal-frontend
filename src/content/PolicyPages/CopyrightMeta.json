@@ -1,0 +1,41 @@
+{
+    "en": {
+      "meta": {
+        "title": "Wouessi Copyright Policy: Protecting Intellectual Property",
+        "description": "Read Wouessi's Copyright Policy to understand how we protect intellectual property and handle copyright infringement claims. Respect for creative rights is a core part of our values.",
+        "keyWords": "Wouessi Copyright Policy, intellectual property, copyright protection, infringement claims, creative rights",
+        "openGraph": {
+          "title": "Wouessi Copyright Policy: Protecting Intellectual Property",
+          "description": "Learn about Wouessi's approach to intellectual property protection and how we handle copyright claims to ensure compliance and respect for creators' rights.",
+          "ogImage": "https://www.wouessi.com/static/media/CopyrightPolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/CopyrightPolicy"
+        },
+        "twitter": {
+          "title": "Wouessi Copyright Policy: Protecting Intellectual Property",
+          "description": "Review Wouessi's Copyright Policy and discover how we protect intellectual property and address copyright infringement claims to uphold creative integrity.",
+          "twitterImage": "/static/media/CopyrightPolicyTwitterImage.jpg",
+          "twitterCardContent": "summary large image"
+        }
+      }
+    },
+    "fr": {
+      "meta": {
+        "title": "Politique de droit d'auteur de Wouessi : Protection de la propriété intellectuelle",
+        "description": "Lisez la politique de droit d'auteur de Wouessi pour comprendre comment nous protégeons la propriété intellectuelle et traitons les réclamations pour violation de droits d'auteur. Le respect des droits créatifs fait partie de nos valeurs fondamentales.",
+        "keyWords": "Politique de droit d'auteur de Wouessi, propriété intellectuelle, protection des droits d'auteur, réclamations pour violation, droits créatifs",
+        "openGraph": {
+          "title": "Politique de droit d'auteur de Wouessi : Protection de la propriété intellectuelle",
+          "description": "Découvrez comment Wouessi protège la propriété intellectuelle et traite les réclamations pour violation de droits d'auteur, afin de garantir le respect des droits des créateurs.",
+          "ogImage": "https://www.wouessi.com/static/media/CopyrightPolicyHeroImage.jpg",
+          "ogUrl": "https://www.wouessi.com/en/CopyrightPolicy"
+        },
+        "twitter": {
+          "title": "Politique de droit d'auteur de Wouessi : Protection de la propriété intellectuelle",
+          "description": "Consultez la politique de droit d'auteur de Wouessi pour découvrir comment nous protégeons la propriété intellectuelle et traitons les réclamations de violation de droits d'auteur.",
+          "twitterImage": "/static/media/CopyrightPolicyTwitterImage.jpg",
+          "twitterCardContent": "summary_grand_image"
+        }
+      }
+    }
+  }
+  
