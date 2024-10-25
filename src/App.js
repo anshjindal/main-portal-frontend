@@ -19,6 +19,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
 import Error from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
+import Admin from "./pages/Admin";
 
 const Layout = ({ children }) => {
 
@@ -46,6 +47,8 @@ function App() {
 
           {/* All routes with language parameter */}
           <Route path="/:lang" element={<Layout><Home /></Layout>} />
+          <Route path="/:lang/admin" element={<Layout><Admin /></Layout>} />
+          <Route path="/:lang/:slug" element={<Layout><BlogPost /></Layout>} />
           <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
           <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />
           <Route path="/:lang/Products" element={<Layout><Products /></Layout>} />
