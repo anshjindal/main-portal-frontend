@@ -14,16 +14,17 @@ import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
 import { useParams } from "react-router-dom";
 import content from "../content/ContactUs/ContactUs.json";
 import ContactMetaRender from "../components/ContactMetaRender/ContactMetaRender.js";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
+  const [Loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const formRef = useRef(null);
   const { lang } = useParams();
@@ -47,37 +48,43 @@ function ContactUs() {
     return phoneRegex.test(phone);
   };
 
-
   const submitHandler = async (event) => {
     event.preventDefault();
 
     if (!isEmailValid(formData.email)) {
-      return toast.error("Please enter a valid email address.", { duration: 5000 });
+      return toast.error("Please enter a valid email address.", {
+        duration: 5000,
+      });
     }
 
     if (!isPhoneValid(formData.phone)) {
-      return toast.error("Please enter a 10-digit phone number.", { duration: 5000 });
+      return toast.error("Please enter a 10-digit phone number.", {
+        duration: 5000,
+      });
     }
 
-    updateSubmitButton(true);
-
     try {
+      setLoading(true);
       // Mock database request (replace with your API/database request)
-      const response = await fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_WOUESSI_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
-      console.log("re", response);
-      console.log("d", data);
-
+      // Check if the email was sent successfully
       if (!response.ok) {
-        return toast.error(data?.error, { duration: 5000, });
+        setLoading(false);
+        return toast.error(data?.error || "Email could not be sent.", {
+          duration: 5000,
+        });
       }
 
       setFormData({
@@ -88,18 +95,25 @@ function ContactUs() {
         message: "",
       });
 
-      // Reset the form (optional, if you're not using controlled components)
+      updateSubmitButton(true);
+      setLoading(false);
       formRef.current.reset();
 
-      return toast.success(data?.message, { duration: 5000, });
+      return toast.success(data?.message || "Email sent successfully!", {
+        duration: 5000,
+      });
     } catch (error) {
-      return toast.error(error, { duration: 5000, });
+      setLoading(false);
+      return toast.error("An error occurred while sending the email.", {
+        duration: 5000,
+      });
     } finally {
-      updateSubmitButton(false);
       formRef.current.reset();
+      setTimeout(() => {
+        updateSubmitButton(false);
+      }, 5000);
     }
   };
-
 
   return (
     <>
@@ -203,22 +217,31 @@ function ContactUs() {
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder={Content.formSection.fields.message}
-                rows="1"
+                rows="5"
                 cols="10"
                 className="px-2 bg-[#F4F4F4] border-b-[0.1vw] border-[#B8B8B8] pt-[0.5vw] pb-[1vw] min-h-[1vw] resize-none text-[1.1vw] placeholder:font-thin placeholder:text-black hover:placeholder-text:w-[3vw] max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[10vw] max-[450px]:mt-[3vw]"
               ></textarea>
               <button
                 type="submit"
+                disabled={Loading}
                 className={
                   submitButton === false
                     ? "border-[0.01vw] border-black transition-all ease-in-out duration-300 rounded-full flex items-center justify-center mt-[3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer hover:bg-[#2B00AC] hover:text-white max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]"
                     : "border-black bg-[green] border-[0.1vw] transition-all duration-300 ease-in-out rounded-full flex items-center justify-center mt-[3vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]"
                 }
               >
+                {/* loading && submitButton=false ? spinner
+                !loading && submitButtton ? tickmark */}
                 {submitButton === false ? (
                   <div className="flex items-center gap-x-[0.3vw] max-[450px]:w-[20vw]">
-                    <p>{Content.formSection.submitButton.text}</p>
-                    <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[4vw]" />
+                    {Loading ? (
+                      <span className="h-5 w-5 animate-spin rounded-full border-b-2 border-red-500"></span>
+                    ) : (
+                      <>
+                        <p>{Content.formSection.submitButton.text}</p>{" "}
+                        <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[4vw]" />
+                      </>
+                    )}
                   </div>
                 ) : (
                   <ImCheckmark className="max-[450px]:text-[3vw]" />
