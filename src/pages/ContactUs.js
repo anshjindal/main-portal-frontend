@@ -65,7 +65,6 @@ function ContactUs() {
 
     try {
       setLoading(true);
-      // Mock database request (replace with your API/database request)
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/contact`,
         {
@@ -79,7 +78,6 @@ function ContactUs() {
 
       const data = await response.json();
 
-      // Check if the email was sent successfully
       if (!response.ok) {
         setLoading(false);
         return toast.error(data?.error || "Email could not be sent.", {
