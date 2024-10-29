@@ -7,7 +7,6 @@ import rehypeRaw from "rehype-raw";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom"; // Assuming you use this to get the language from URL params
 import AdminData from "../content/Admin/Admin";
-import logo from "../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 
 const Admin = () => {
   const [description, setDescription] = useState({ text: "", html: "" });

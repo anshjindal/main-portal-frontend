@@ -15,7 +15,6 @@ import { useParams } from "react-router-dom";
 import content from "../content/ContactUs/ContactUs.json";
 import ContactMetaRender from "../components/ContactMetaRender/ContactMetaRender.js";
 import toast, { Toaster } from "react-hot-toast";
-import logo from "../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
