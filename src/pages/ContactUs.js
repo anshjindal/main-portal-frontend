@@ -97,9 +97,7 @@ function ContactUs() {
       setLoading(false);
       formRef.current.reset();
 
-      return toast.success(data?.message || "Email sent successfully!", {
-        duration: 5000,
-      });
+      return toast.success(data?.message, { duration: 5000 });
     } catch (error) {
       setLoading(false);
       return toast.error("An error occurred while sending the email.", {
@@ -116,6 +114,9 @@ function ContactUs() {
   return (
     <>
       <ContactMetaRender lang={lang} />
+      <div className="!z-50">
+        <Toaster position="top-right" />
+      </div>
       <div className="pb-[5vw] max-[450px]:pt-[20vw] page-background">
         <div className="flex items-center justify-center">
           <div className="flex justify-center items-center w-[44vw] h-[32vw] mr-[6vw] z-10 max-[450px]:bg-[#F4F4F4] max-[450px]:mr-0 max-[450px]:items-start max-[450px]:w-full max-[450px]:pl-[10vw]">
@@ -178,7 +179,7 @@ function ContactUs() {
                   onChange={handleInputChange}
                   placeholder={Content.formSection.fields.name}
                   required
-                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
+                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
                 ></input>
                 <input
                   name="email"
@@ -187,7 +188,7 @@ function ContactUs() {
                   onChange={handleInputChange}
                   placeholder={Content.formSection.fields.email}
                   required
-                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
+                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
                 ></input>
               </div>
               <div className="flex justify-between max-[450px]:flex-wrap max-[450px]:gap-y-[8vw]">
@@ -198,7 +199,7 @@ function ContactUs() {
                   type="number"
                   placeholder={Content.formSection.fields.phone}
                   required
-                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
+                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
                 ></input>
                 <input
                   type="text"
@@ -207,7 +208,7 @@ function ContactUs() {
                   onChange={handleInputChange}
                   placeholder={Content.formSection.fields.subject}
                   required
-                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
+                  className="px-2 bg-[#F4F4F4] h-[3.5vw] border-b-[0.1vw] border-[#B8B8B8] w-[48%] text-[1.1vw] placeholder:font-thin placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[12vw]"
                 ></input>
               </div>
               <textarea
@@ -217,7 +218,7 @@ function ContactUs() {
                 placeholder={Content.formSection.fields.message}
                 rows="5"
                 cols="10"
-                className="px-2 bg-[#F4F4F4] border-b-[0.1vw] border-[#B8B8B8] pt-[0.5vw] pb-[1vw] min-h-[1vw] resize-none text-[1.1vw] placeholder:font-thin placeholder:text-black hover:placeholder-text:w-[3vw] max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[10vw] max-[450px]:mt-[3vw]"
+                className="px-2 bg-[#F4F4F4]  border-b-[0.1vw] border-[#B8B8B8]  pt-[1vw] pb-[1vw] min-h-[10vh] resize-y max-h-28  text-[1.1vw] placeholder:font-thin placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black hover:placeholder-text:w-[3vw] max-[450px]:text-[3.5vw] max-[450px]:placeholder:font-semibold max-[450px]:w-full max-[450px]:border-b-[0.3vw] max-[450px]:h-[10vw] max-[450px]:mt-[3vw] sm:resize-none"
               ></textarea>
               <button
                 type="submit"
@@ -231,7 +232,7 @@ function ContactUs() {
                 {/* loading && submitButton=false ? spinner
                 !loading && submitButtton ? tickmark */}
                 {submitButton === false ? (
-                  <div className="flex items-center gap-x-[0.3vw] max-[450px]:w-[20vw]">
+                  <div className="flex items-center justify-center gap-x-[0.3vw] max-[450px]:w-[20vw]">
                     {Loading ? (
                       <span className="h-5 w-5 animate-spin rounded-full border-b-2 border-red-500"></span>
                     ) : (
@@ -351,7 +352,7 @@ function ContactUs() {
             </div>
           </div>
         </div>
-        <Toaster position="top-right" />
+
         <NewsletterRegister lang={lang} />
       </div>
     </>
