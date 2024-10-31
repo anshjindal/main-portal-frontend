@@ -21,6 +21,9 @@ import Error from "./pages/Error";
 import NavbarMobile from "./components/Layout/NavbarMobile";
 import Admin from "./pages/Admin";
 
+import { useUser } from "@clerk/clerk-react";
+import Login from "./components/Login/Login";
+
 const Layout = ({ children }) => {
 
   return (
@@ -34,6 +37,13 @@ const Layout = ({ children }) => {
 };
 
 function App() {
+
+  const { isSignedIn, user, isLoaded } = useUser();
+
+  if (!isLoaded) {
+    return null;
+  }
+
   return (
     <LanguageProvider>
       <BrowserRouter>
@@ -47,7 +57,7 @@ function App() {
 
           {/* All routes with language parameter */}
           <Route path="/:lang" element={<Layout><Home /></Layout>} />
-          <Route path="/:lang/admin" element={<Layout><Admin /></Layout>} />
+          <Route path="/:lang/admin" element={<Layout> {isSignedIn ? <Admin /> : <Login />}  </Layout>} />
           <Route path="/:lang/:slug" element={<Layout><BlogPost /></Layout>} />
           <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
           <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />

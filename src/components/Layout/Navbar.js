@@ -5,6 +5,7 @@ import { CgArrowLongUp } from "react-icons/cg";
 import "../../styles/global.css";
 import { LanguageContext } from "../Utils/languageContext";
 import content from "../../content/Layout/Navbar.json";
+import { UserButton, useUser } from "@clerk/clerk-react";
 
 function Navbar() {
   const [languageDropdown, setLanguageDropdown] = useState(false);
@@ -12,6 +13,7 @@ function Navbar() {
   const navigate = useNavigate();
   const { lang } = useParams();
   const Content = content[lang];
+  const { isSignedIn, user, isLoaded } = useUser();
 
   // Default to 'en' if lang is undefined
   const currentLang = lang || "en";
@@ -83,6 +85,7 @@ function Navbar() {
                   </div>
                 )}
               </div>
+              {isSignedIn &&  <UserButton afterSignOutUrl="/"  />}
             </ul>
           </div>
           <Link to={`/${currentLang}/ContactUs`}>
