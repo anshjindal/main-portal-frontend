@@ -90,6 +90,7 @@ const Admin = () => {
       setDescription({ text: "", html: "" });
       setErrors({});
       setLoading(false);
+
       return toast.success("Blog created successfully!", { duration: 5000 });
     } catch (error) {
       setLoading(false);
@@ -98,101 +99,107 @@ const Admin = () => {
   };
 
   return (
-    <div className="page-background max-w-6xl mx-auto px-2">
-      <h1 className="text-3xl font-bold mb-4">{content.title}</h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Blog Title Input */}
-        <div>
-          <label className="block text-lg font-semibold">
-            {content.InputTitle}
-          </label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className={`w-full p-3 my-3 border ${
-              errors.title ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400`}
-            placeholder="Enter the blog title"
-          />
-          {errors.title && (
-            <p className="text-red-500 text-sm">{errors.title}</p>
-          )}
-        </div>
-
-        {/* Slug Input */}
-        <div>
-          <label className="block text-lg font-semibold">
-            {content.InputSlug}
-          </label>
-          <input
-            type="text"
-            value={slug}
-            onChange={handleSlugChange}
-            className={`w-full p-3 my-3 border ${
-              errors.slug ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400`}
-            placeholder="Generated slug"
-            maxLength={50}
-          />
-          {errors.slug && <p className="text-red-500 text-sm">{errors.slug}</p>}
-        </div>
-
-        {/* Author Input */}
-        <div>
-          <label className="block text-lg font-semibold">
-            {content.InputAuthor}
-          </label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            className={`w-full p-3 my-3 border ${
-              errors.author ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400`}
-            placeholder="Enter the author's name"
-          />
-          {errors.author && (
-            <p className="text-red-500 text-sm">{errors.author}</p>
-          )}
-        </div>
+    <>
+      <div className="!z-50">
+        <Toaster position="top-right" />
       </div>
+      <div className="page-background max-w-6xl mx-auto px-2">
+        <h1 className="text-3xl font-bold mb-4">{content.title}</h1>
 
-      {/* Markdown Editor */}
-      <MarkdownEditor
-        value={description.text}
-        onChange={(ev) => setDescription({ text: ev.text, html: ev.html })}
-        style={{ width: "100%", height: "400px", marginTop: "1em" }}
-        renderHTML={(text) => (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-          >
-            {text}
-          </ReactMarkdown>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Blog Title Input */}
+          <div>
+            <label className="block text-lg font-semibold">
+              {content.InputTitle}
+            </label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className={`w-full p-3 my-3 border ${
+                errors.title ? "border-red-500" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
+              placeholder="Enter the blog title"
+            />
+            {errors.title && (
+              <p className="text-red-500 text-sm">{errors.title}</p>
+            )}
+          </div>
+
+          {/* Slug Input */}
+          <div>
+            <label className="block text-lg font-semibold">
+              {content.InputSlug}
+            </label>
+            <input
+              type="text"
+              value={slug}
+              onChange={handleSlugChange}
+              className={`w-full p-3 my-3 border ${
+                errors.slug ? "border-red-500" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
+              placeholder="Generated slug"
+              maxLength={50}
+            />
+            {errors.slug && (
+              <p className="text-red-500 text-sm">{errors.slug}</p>
+            )}
+          </div>
+
+          {/* Author Input */}
+          <div>
+            <label className="block text-lg font-semibold">
+              {content.InputAuthor}
+            </label>
+            <input
+              type="text"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className={`w-full p-3 my-3 border ${
+                errors.author ? "border-red-500" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
+              placeholder="Enter the author's name"
+            />
+            {errors.author && (
+              <p className="text-red-500 text-sm">{errors.author}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Markdown Editor */}
+        <MarkdownEditor
+          value={description.text}
+          onChange={(ev) => setDescription({ text: ev.text, html: ev.html })}
+          style={{ width: "100%", height: "400px", marginTop: "1em" }}
+          renderHTML={(text) => (
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            >
+              {text}
+            </ReactMarkdown>
+          )}
+        />
+        {errors.description && (
+          <p className="text-red-500 text-sm">{errors.description}</p>
         )}
-      />
-      {errors.description && (
-        <p className="text-red-500 text-sm">{errors.description}</p>
-      )}
 
-      <Toaster position="top-right" />
-      <div className="flex justify-center items-center">
-        <button
-          type="submit"
-          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-blue-500 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-blue-600 active:scale-105 mt-10 mb-10 disabled:scale-100 disabled:bg-opacity-65"
-          onClick={handleSubmit}
-          disabled={Loading}
-        >
-          {Loading ? (
-            <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
-          ) : (
-            <>{AdminData[lang].SubmitButtonText}</>
-          )}
-        </button>
+        <div className="flex justify-center items-center">
+          <button
+            type="submit"
+            className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-blue-500 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-blue-600 active:scale-105 mt-10 mb-10 disabled:scale-100 disabled:bg-opacity-65"
+            onClick={handleSubmit}
+            disabled={Loading}
+          >
+            {Loading ? (
+              <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+            ) : (
+              <>{AdminData[lang].SubmitButtonText}</>
+            )}
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
