@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MarkdownEditor from "react-markdown-editor-lite";
 import ReactMarkdown from "react-markdown";
 import "react-markdown-editor-lite/lib/index.css";
-import remarkGfm from "remark-gfm";
+import remarkGfm from 'remark-gfm';
 import rehypeRaw from "rehype-raw";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom"; // Assuming you use this to get the language from URL params
