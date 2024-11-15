@@ -129,13 +129,15 @@ function ContactUs() {
               </h1>
               <div className="flex justify-between mt-[3vw]">
                 <div className="border-t-[0.1vw] border-black w-[5vw] h-[5vw] max-[450px]:hidden"></div>
-                <div className="flex flex-col w-[80%] mt-[-1vw]">
-                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw]">
+                <div className="flex flex-col w-[80%] mt-[-1vw] space-y-2">
+                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">
                     {Content.heroSection.subtitle} <br></br>
-                    {Content.heroSection.email}
+                    {/* {Content.heroSection.email}
                     <br></br>
-                    {Content.heroSection.phone}
+                    {Content.heroSection.phone} */}
                   </p>
+                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">{Content.heroSection.email} <br></br></p>
+                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">{Content.heroSection.phone} <br></br></p>
                   <p className="mt-[2.5vw] text-[1vw] text-[#757575] max-[450px]:hidden">
                     {Content.heroSection.bannerText}
                   </p>

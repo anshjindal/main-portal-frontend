@@ -10,6 +10,7 @@ import "../../styles/global.css";
 import { useParams, useNavigate } from "react-router-dom";
 import content from "../../content/Layout/Navbar.json"; 
 import { LanguageContext } from "../Utils/languageContext";
+import { UserButton, useUser } from "@clerk/clerk-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -48,6 +49,7 @@ function NavbarMobile() {
   const Content = content[lang];
 
   const currentLang = lang || "en"; 
+  const { isSignedIn, user, isLoaded } = useUser();
 
   const handleMenuToggle = () => {
     openHamburgerMenu((prev) => !prev); // Toggle hamburger menu state
@@ -183,6 +185,7 @@ function NavbarMobile() {
                   )}
                 </div>
               </motion.div>
+              {isSignedIn &&  <UserButton afterSignOutUrl="/"  />}
             </motion.div>
           </motion.div>
         )}
