@@ -23,6 +23,8 @@ import Admin from "./pages/Admin";
 
 import { useUser } from "@clerk/clerk-react";
 import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
+import Register from "./components/SignUp/SignUp";
 
 const Layout = ({ children }) => {
 
@@ -58,6 +60,7 @@ function App() {
           {/* All routes with language parameter */}
           <Route path="/:lang" element={<Layout><Home /></Layout>} />
           <Route path="/:lang/admin" element={<Layout> {isSignedIn ? <Admin /> : <Login />}  </Layout>} />
+          <Route path="/:lang/admin/signup" element={<Layout><Register/></Layout>} />
           <Route path="/:lang/:slug" element={<Layout><BlogPost /></Layout>} />
           <Route path="/:lang/AboutUs" element={<Layout><AboutUs /></Layout>} />
           <Route path="/:lang/Services" element={<Layout><Services /></Layout>} />
