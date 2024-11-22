@@ -88,11 +88,6 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={`/${lang}/Products`} className="footer-link">
-                    {Content.products}
-                  </Link>
-                </li>
-                <li>
                   <Link to={`/${lang}/Portfolio`} className="footer-link">
                     {Content.portfolio}
                   </Link>

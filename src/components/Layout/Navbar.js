@@ -46,9 +46,6 @@ function Navbar() {
               <Link to={`/${currentLang}/Services`} className="navbar-link">
                 <li className="py-2">{Content.services}</li>
               </Link>
-              <Link to={`/${currentLang}/Products`} className="navbar-link">
-                <li className="py-2">{Content.products}</li>
-              </Link>
               <Link to={`/${currentLang}/Portfolio`} className="navbar-link">
                 <li className="py-2">{Content.portfolio}</li>
               </Link>
