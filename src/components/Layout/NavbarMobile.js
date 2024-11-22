@@ -131,7 +131,7 @@ function NavbarMobile() {
                   </div>
                 </Link>
               </motion.div>
-              {[{ name: `${Content.home}`, route: "/" }, { name: `${Content.aboutUs}`, route: "/AboutUs" }, { name: `${Content.services}`, route: "/Services" }, { name: `${Content.products}`, route: "/Products" }, { name: `${Content.portfolio}`, route: "/Portfolio" }].map((item, index) => (
+              {[{ name: `${Content.home}`, route: "/" }, { name: `${Content.aboutUs}`, route: "/AboutUs" }, { name: `${Content.services}`, route: "/Services" }, { name: `${Content.portfolio}`, route: "/Portfolio" }].map((item, index) => (
                 <div onClick={handleMenuToggle} key={index}>
                   <motion.h1
                     className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
