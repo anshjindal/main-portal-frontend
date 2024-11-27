@@ -13,15 +13,15 @@ const Admin = () => {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [author, setAuthor] = useState("");
-  const [timeToRead, settimeToRead] = useState(0);
+  const [timeToRead, setTimeToRead] = useState(0);
   const [errors, setErrors] = useState({});
   const [Loading, setLoading] = useState(false);
+  const [imageUrl, setImageUrl] = useState(""); // To store uploaded image URL
   const { lang } = useParams(); // Language selected
 
   // Get the content based on the selected language (default to 'en')
   const content = AdminData[lang] || AdminData["en"];
 
-  // Function to handle slug generation (remove spaces and replace with '-')
   const handleSlugChange = (e) => {
     const inputSlug = e.target.value;
     const lowercaseInput = inputSlug.toLowerCase();
@@ -34,18 +34,17 @@ const Admin = () => {
     setSlug(formattedSlug);
   };
 
-  // Validation before submitting the form
   const validateForm = () => {
     const newErrors = {};
-    const languageErrors = AdminData[lang].errors; // Get errors based on selected language
+    const languageErrors = AdminData[lang].errors;
 
     if (!title.trim()) newErrors.title = languageErrors.title;
     if (!slug.trim()) newErrors.slug = languageErrors.slug;
     if (!author.trim()) newErrors.author = languageErrors.author;
     if (!description.text.trim())
       newErrors.description = languageErrors.description;
+    if (!imageUrl) newErrors.image = languageErrors.image;
 
-    // Validate TimeToRead
     if (!timeToRead || isNaN(timeToRead)) {
       newErrors.timeToRead = languageErrors.timeToRead;
     } else if (timeToRead <= 0 || timeToRead > 60) {
@@ -56,11 +55,42 @@ const Admin = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  // Cloudinary widget upload
+  const handleImageUpload = () => {
+    const widget = window.cloudinary.createUploadWidget(
+      {
+        cloudName: process.env.REACT_APP_CLOUDINARY_CLOUDNAME, // Replace with your Cloudinary cloud name
+        uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET, // Replace with your Cloudinary upload preset
+        sources: [
+          "local",
+          "url",
+          "camera",
+          "dropbox",
+          "shutterstock",
+          "istock",
+          "google_drive",
+          "unsplash",
+        ],
+        showAdvancedOptions: true,
+        cropping: true,
+        multiple: false,
+      },
+      (error, result) => {
+        if (result.event === "success") {
+          setImageUrl(result.info.secure_url); // Set image URL on successful upload
+          toast.success("Image uploaded successfully!");
+        } else if (error) {
+          toast.error("Error uploading image. Please try again.");
+        }
+      }
+    );
+    widget.open();
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // Run validation
     if (!validateForm()) {
       setLoading(false);
       return toast.error("Please fill out all fields", { duration: 5000 });
@@ -69,9 +99,10 @@ const Admin = () => {
     const blogData = {
       title,
       slug,
+      timeToRead,
+      imageUrl,
       markdownContent: description.text,
       author,
-      timeToRead
     };
 
     try {
@@ -97,7 +128,8 @@ const Admin = () => {
       setSlug("");
       setAuthor("");
       setDescription({ text: "", html: "" });
-      settimeToRead(0)
+      setTimeToRead(0);
+      setImageUrl(""); // Reset image URL
       setErrors({});
       setLoading(false);
 
@@ -182,40 +214,71 @@ const Admin = () => {
             </label>
             <input
               type="number"
-              value={timeToRead === 0 ? '' : timeToRead} 
-              onChange={(e) => {
-                const value = e.target.value;
-                const numericValue = value === '' ? '' : Math.floor(Number(value)); // Ensure empty string handling
-                settimeToRead(numericValue); 
-              }}
+              value={timeToRead === 0 ? "" : timeToRead}
+              onChange={(e) => setTimeToRead(e.target.value)}
               className={`w-full p-3 my-3 border ${
                 errors.timeToRead ? "border-red-500" : "border-gray-300"
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
-              placeholder="Enter the author's name"
+              placeholder="Enter time to read"
             />
             {errors.timeToRead && (
               <p className="text-red-500 text-sm">{errors.timeToRead}</p>
             )}
           </div>
+
+          {/* Upload Image Input  */}
+          <div>
+            <label className="block text-lg font-semibold">
+              {content.Image}
+            </label>
+            <button
+              className={`w-full p-3 my-3 bg-white text-[#9ca3af] text-left border ${
+                errors.image ? "border-red-500" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
+              onClick={handleImageUpload}
+            >
+              Upload Image
+            </button>
+            {errors.image && (
+              <p className="text-red-500 text-sm">{errors.image}</p>
+            )}
+          </div>
+
+          <div className="flex justify-center items-center mb-7">
+            {imageUrl && (
+              <div className="mt-2">
+                <img
+                  src={imageUrl}
+                  alt="Uploaded preview"
+                  className="w-24 h-24 ml-5 object-cover rounded-md"
+                />
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Markdown Editor */}
-        <MarkdownEditor
-          value={description.text}
-          onChange={(ev) => setDescription({ text: ev.text, html: ev.html })}
-          style={{ width: "100%", height: "400px", marginTop: "1em" }}
-          renderHTML={(text) => (
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]}
-            >
-              {text}
-            </ReactMarkdown>
+        {/* Description Editor */}
+        <div className="my-3">
+          <label className="block text-lg font-semibold">
+            {content.InputDescription}
+          </label>
+          <MarkdownEditor
+            value={description.text}
+            onChange={(ev) => setDescription({ text: ev.text, html: ev.html })}
+            style={{ width: "100%", height: "400px", marginTop: "1em" }}
+            renderHTML={(text) => (
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+              >
+                {text}
+              </ReactMarkdown>
+            )}
+          />
+          {errors.description && (
+            <p className="text-red-500 text-sm">{errors.description}</p>
           )}
-        />
-        {errors.description && (
-          <p className="text-red-500 text-sm">{errors.description}</p>
-        )}
+        </div>
 
         <div className="flex justify-center items-center">
           <button

@@ -68,10 +68,6 @@ function BlogPost() {
     fetchBlogData();
   }, [slug, navigate]);
 
-  useEffect(() => {
-    console.log("d",blogData );
-  })
-
   if (loading) {
     return <div>Loading...</div>; // Show a loading indicator
   }
@@ -97,7 +93,7 @@ function BlogPost() {
         <div className="w-[80%] max-[450px]:w-[100%]">
           {/* Header Section */}
           <div className="flex justify-between mb-[1vw] max-[450px]:hidden">
-            <p className="text-[2vw]">July 12th, 2024</p>
+            <p className="text-[2vw]"> </p>
 
             <div className="flex justify-center items-center text-[#2703A5] text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
               <Link
@@ -160,7 +156,8 @@ function BlogPost() {
                     SEO SERVICES
                   </button>
                   <p className="text-[1.3vw] max-[450px]:text-[2vw]">
-                    {blogData[0]?.timeToRead || 5 } MIN Read
+                    {blogData[0]?.timeToRead || 5}{" "}
+                    {lang === "en" ? "Mins To Read" : "Minutes à lire"}
                   </p>
 
                   <div className="space-x-2">
