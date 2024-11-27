@@ -68,6 +68,10 @@ function BlogPost() {
     fetchBlogData();
   }, [slug, navigate]);
 
+  useEffect(() => {
+    console.log("d",blogData );
+  })
+
   if (loading) {
     return <div>Loading...</div>; // Show a loading indicator
   }
@@ -156,7 +160,7 @@ function BlogPost() {
                     SEO SERVICES
                   </button>
                   <p className="text-[1.3vw] max-[450px]:text-[2vw]">
-                    5 MIN Read
+                    {blogData[0]?.timeToRead || 5 } MIN Read
                   </p>
 
                   <div className="space-x-2">

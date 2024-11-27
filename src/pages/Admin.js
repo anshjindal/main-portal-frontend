@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MarkdownEditor from "react-markdown-editor-lite";
 import ReactMarkdown from "react-markdown";
 import "react-markdown-editor-lite/lib/index.css";
-import remarkGfm from 'remark-gfm';
+import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom"; // Assuming you use this to get the language from URL params
@@ -13,6 +13,7 @@ const Admin = () => {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [author, setAuthor] = useState("");
+  const [timeToRead, settimeToRead] = useState(0);
   const [errors, setErrors] = useState({});
   const [Loading, setLoading] = useState(false);
   const { lang } = useParams(); // Language selected
@@ -44,6 +45,13 @@ const Admin = () => {
     if (!description.text.trim())
       newErrors.description = languageErrors.description;
 
+    // Validate TimeToRead
+    if (!timeToRead || isNaN(timeToRead)) {
+      newErrors.timeToRead = languageErrors.timeToRead;
+    } else if (timeToRead <= 0 || timeToRead > 60) {
+      newErrors.timeToRead = languageErrors.validateTimeToRead;
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -63,6 +71,7 @@ const Admin = () => {
       slug,
       markdownContent: description.text,
       author,
+      timeToRead
     };
 
     try {
@@ -88,6 +97,7 @@ const Admin = () => {
       setSlug("");
       setAuthor("");
       setDescription({ text: "", html: "" });
+      settimeToRead(0)
       setErrors({});
       setLoading(false);
 
@@ -162,6 +172,29 @@ const Admin = () => {
             />
             {errors.author && (
               <p className="text-red-500 text-sm">{errors.author}</p>
+            )}
+          </div>
+
+          {/* TimeTo Read Input */}
+          <div>
+            <label className="block text-lg font-semibold">
+              {content.InputTimeToRead}
+            </label>
+            <input
+              type="number"
+              value={timeToRead === 0 ? '' : timeToRead} 
+              onChange={(e) => {
+                const value = e.target.value;
+                const numericValue = value === '' ? '' : Math.floor(Number(value)); // Ensure empty string handling
+                settimeToRead(numericValue); 
+              }}
+              className={`w-full p-3 my-3 border ${
+                errors.timeToRead ? "border-red-500" : "border-gray-300"
+              } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
+              placeholder="Enter the author's name"
+            />
+            {errors.timeToRead && (
+              <p className="text-red-500 text-sm">{errors.timeToRead}</p>
             )}
           </div>
         </div>
