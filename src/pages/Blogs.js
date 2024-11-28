@@ -32,7 +32,6 @@ function Blogs() {
       );
 
       const data = await response.json();
-      console.log("d", data);
 
       if (!response?.ok) {
         return toast.error(data?.error, { duration: 5000 });
@@ -50,9 +49,7 @@ function Blogs() {
     getBlogs();
   }, []);
 
-  useEffect(() => {
-    console.log("bb", blogData);
-  }, [blogData]);
+ 
 
   const remainingBlogs = blogData.slice(3);
 

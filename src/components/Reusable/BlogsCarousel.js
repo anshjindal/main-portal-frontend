@@ -8,7 +8,6 @@ const BlogsCarousel = ({ blogs }) => {
   const { lang } = useParams();
   const itemsToShow = 2; // Number of visible items at a time
   const totalItems = blogs.length;
-  console.log("bbblos", blogs);
 
   // Calculate the number of slides required
   const slides = [];

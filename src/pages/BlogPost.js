@@ -49,7 +49,6 @@ function BlogPost() {
 
       const data = await response.json();
 
-      console.log("d", data);
 
       if (response?.status === 404) {
         toast.error(data?.error, { duration: 5000 });

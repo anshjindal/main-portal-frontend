@@ -112,7 +112,6 @@ const Admin = () => {
       },
       (error, result) => {
         if (result.event === "success") {
-          console.log("wd", result);
           setImageUrl(result.info.secure_url);
           setcloudinaryPubicUrl(result.info.public_id);
           setcloudinaryAssetId(result.info.asset_id);
