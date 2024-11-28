@@ -28,7 +28,7 @@ import {
 } from "react-share";
 
 function BlogPost() {
-  const [blogData, setBlogData] = useState(null);
+  const [blogData, setBlogData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
   const { lang, slug } = useParams();
@@ -49,6 +49,7 @@ function BlogPost() {
 
       const data = await response.json();
 
+
       if (response?.status === 404) {
         toast.error(data?.error, { duration: 5000 });
         setTimeout(() => {
@@ -58,7 +59,8 @@ function BlogPost() {
         setBlogData(data?.message);
       }
     } catch (err) {
-      toast.error(err.message, { duration: 5000 });
+      toast.error(err.message , { duration: 5000 });
+      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -82,7 +84,7 @@ function BlogPost() {
       ? blogData[0].translations.find(
           (translation) => translation.language === lang
         )?.title
-      : "";
+      : "wdwd";
 
   return (
     <>
@@ -93,7 +95,7 @@ function BlogPost() {
         <div className="w-[80%] max-[450px]:w-[100%]">
           {/* Header Section */}
           <div className="flex justify-between mb-[1vw] max-[450px]:hidden">
-            <p className="text-[2vw]">July 12th, 2024</p>
+            <p className="text-[2vw]"> </p>
 
             <div className="flex justify-center items-center text-[#2703A5] text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
               <Link
@@ -156,7 +158,8 @@ function BlogPost() {
                     SEO SERVICES
                   </button>
                   <p className="text-[1.3vw] max-[450px]:text-[2vw]">
-                    5 MIN Read
+                    {blogData[0]?.timeToRead || 5}{" "}
+                    {lang === "en" ? "Mins To Read" : "Minutes à lire"}
                   </p>
 
                   <div className="space-x-2">
@@ -187,9 +190,10 @@ function BlogPost() {
                   </div>
                 </div>
 
+
                 {/* Blog Title and Image */}
                 <div className="blog-list prose max-w-full">
-                  {blogData &&
+                  { blogData && 
                     blogData.map((blog) => {
                       const selectedTranslation = blog.translations.find(
                         (translation) => translation.language === lang
@@ -265,6 +269,8 @@ function BlogPost() {
                       );
                     })}
                 </div>
+
+
               </div>
             </div>
 
@@ -323,7 +329,7 @@ function BlogPost() {
           </div>
 
           {/* Carousel Section */}
-          <BlogsCarousel />
+          {/* <BlogsCarousel /> */}
 
           {/* Call to Action Section */}
           <CallToActionSection
