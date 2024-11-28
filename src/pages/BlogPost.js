@@ -28,7 +28,7 @@ import {
 } from "react-share";
 
 function BlogPost() {
-  const [blogData, setBlogData] = useState(null);
+  const [blogData, setBlogData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
   const { lang, slug } = useParams();
@@ -49,6 +49,8 @@ function BlogPost() {
 
       const data = await response.json();
 
+      console.log("d", data);
+
       if (response?.status === 404) {
         toast.error(data?.error, { duration: 5000 });
         setTimeout(() => {
@@ -58,7 +60,8 @@ function BlogPost() {
         setBlogData(data?.message);
       }
     } catch (err) {
-      toast.error(err.message, { duration: 5000 });
+      toast.error(err.message , { duration: 5000 });
+      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -82,7 +85,7 @@ function BlogPost() {
       ? blogData[0].translations.find(
           (translation) => translation.language === lang
         )?.title
-      : "";
+      : "wdwd";
 
   return (
     <>
@@ -188,9 +191,10 @@ function BlogPost() {
                   </div>
                 </div>
 
+
                 {/* Blog Title and Image */}
                 <div className="blog-list prose max-w-full">
-                  {blogData &&
+                  { blogData && 
                     blogData.map((blog) => {
                       const selectedTranslation = blog.translations.find(
                         (translation) => translation.language === lang
@@ -266,6 +270,8 @@ function BlogPost() {
                       );
                     })}
                 </div>
+
+
               </div>
             </div>
 
@@ -324,7 +330,7 @@ function BlogPost() {
           </div>
 
           {/* Carousel Section */}
-          <BlogsCarousel />
+          {/* <BlogsCarousel /> */}
 
           {/* Call to Action Section */}
           <CallToActionSection
