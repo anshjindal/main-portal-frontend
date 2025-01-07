@@ -30,10 +30,7 @@
             "innerTitle": "IT Support and Managed Services",
             "innerText": "Our team offers robust IT support and managed services to maintain and optimize your infrastructure while keeping your business running efficiently."
           },
-          {
-            "innerTitle": "AI and Blockchain Consulting",
-            "innerText": "Our AI and blockchain consulting solutions help you innovate. We assist with the development and deployment of cutting-edge technologies to improve efficiency and decision-making."
-          },
+          
           {
             "innerTitle": "Software, Mobile, and Web Development",
             "innerText": "We offer a range of development services to create software, mobile apps, and websites tailored to meet the needs of your business."
@@ -41,31 +38,19 @@
           {
             "innerTitle": "Cleantech Industry IT Services",
             "innerText": "We provide solutions for cleantech industries to optimize operations while reducing costs and energy use, supporting sustainable growth."
+          }
+        ]
+      },
+      "AiServices": {
+        "heading": "AI Services",
+        "content": [
+          {
+            "innerTitle": "AI and Blockchain Consulting",
+            "innerText": "Our AI and blockchain consulting solutions help you innovate. We assist with the development and deployment of cutting-edge technologies to improve efficiency and decision-making."
           },
           {
             "innerTitle": "AI-Infused Products",
             "innerText": "We offer AI solutions that integrate seamlessly into your products, driving innovation and efficiency across your operations."
-          }
-        ]
-      },
-      "Marketing": {
-        "heading": "Marketing",
-        "content": [
-          {
-            "innerTitle": "Search Engine Optimization",
-            "innerText": "We improve your site's visibility with SEO, helping your content rank higher in search engine results."
-          },
-          {
-            "innerTitle": "Social Media Marketing",
-            "innerText": "We harness social media to build awareness and trust for your brand through engaging campaigns."
-          },
-          {
-            "innerTitle": "Email Marketing",
-            "innerText": "Our email marketing services help you connect with customers through targeted, impactful email campaigns."
-          },
-          {
-            "innerTitle": "Display Marketing",
-            "innerText": "We create digital display ads, banners, and videos that increase your brand's visibility and engagement."
           }
         ]
       },
@@ -160,41 +145,25 @@
             "innerText": "Notre équipe propose un support IT robuste et des services gérés pour maintenir et optimiser votre infrastructure tout en assurant le bon fonctionnement de votre entreprise."
           },
           {
-            "innerTitle": "Consulting IA et Blockchain",
-            "innerText": "Nos solutions de conseil en IA et blockchain vous aident à innover. Nous vous assistons dans le développement et le déploiement de technologies de pointe pour améliorer l'efficacité et la prise de décision."
-          },
-          {
             "innerTitle": "Développement de logiciels, mobile et web",
             "innerText": "Nous offrons une gamme de services de développement pour créer des logiciels, des applications mobiles et des sites web adaptés aux besoins de votre entreprise."
           },
           {
             "innerTitle": "Services IT pour l'industrie des cleantechs",
             "innerText": "Nous fournissons des solutions pour les industries cleantech afin d'optimiser les opérations tout en réduisant les coûts et la consommation d'énergie, soutenant ainsi une croissance durable."
+          }
+        ]
+      },
+      "AiServices": {
+        "heading": "Services AI",
+        "content": [
+          {
+            "innerTitle": "Consulting IA et Blockchain",
+            "innerText": "Nos solutions de conseil en IA et blockchain vous aident à innover. Nous vous assistons dans le développement et le déploiement de technologies de pointe pour améliorer l'efficacité et la prise de décision."
           },
           {
             "innerTitle": "Produits infusés par IA",
             "innerText": "Nous proposons des solutions IA qui s'intègrent parfaitement à vos produits, stimulant l'innovation et l'efficacité dans vos opérations."
-          }
-        ]
-      },
-      "Marketing": {
-        "heading": "Marketing",
-        "content": [
-          {
-            "innerTitle": "Optimisation pour les moteurs de recherche",
-            "innerText": "Nous améliorons la visibilité de votre site avec des techniques SEO, aidant votre contenu à se classer plus haut dans les résultats de recherche."
-          },
-          {
-            "innerTitle": "Marketing sur les réseaux sociaux",
-            "innerText": "Nous utilisons les réseaux sociaux pour créer de la notoriété et établir la confiance pour votre marque grâce à des campagnes engageantes."
-          },
-          {
-            "innerTitle": "Email Marketing",
-            "innerText": "Nos services d'email marketing vous aident à communiquer directement avec vos clients à travers des campagnes ciblées."
-          },
-          {
-            "innerTitle": "Marketing d'affichage",
-            "innerText": "Nous créons des publicités d'affichage numériques, bannières et vidéos qui augmentent la visibilité et l'engagement de votre marque."
           }
         ]
       },
