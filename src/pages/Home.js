@@ -9,7 +9,7 @@ import ServiceSpotlight from "../components/Home/ServiceSpotlight";
 import OurServices from "../components/Home/OurServices";
 import OurVision from "../components/Home/OurVision";
 import Hero from "../components/Home/Hero";
-import PronunciationButton from "../components/Home/PronunciationButton";
+// import PronunciationButton from "../components/Home/PronunciationButton";
 import { useParams } from "react-router-dom";
 import HomeMetaRender from "../components/Home/HomeMetaDataRender.js";
 
@@ -20,7 +20,7 @@ function Home() {
     <div className="page-background">
       <HomeMetaRender lang={lang}/>
 
-      <PronunciationButton lang={lang}/>  
+      {/* <PronunciationButton lang={lang}/>   */}
       
       <Hero lang={lang}/>
 
