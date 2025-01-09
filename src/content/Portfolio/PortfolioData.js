@@ -2,7 +2,7 @@ import AldeliaImage from "../../assets/Images/RecentProject/RecentProjectAldelia
 import ATRImage from "../../assets/Images/RecentProject/RecentProjectATRImage.webp";
 import BuckheadImage from "../../assets/Images/RecentProject/RecentProjectBuckheadImage.webp";
 import CanalPlus from "../../assets/Images/RecentProject/RecentProjectCanalPlus.webp";
-import GIZImage from "../../assets/Images/RecentProject/RecentProjectGIZImage.webp";
+import GIZImage from "../../assets/Images/RecentProject/RecentProjectGIZImage.png";
 import HamiltonCrescentImage from "../../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.webp";
 import KeplerImage from "../../assets/Images/RecentProject/RecentProjectKeplerImage.webp";
 import MasterNodedImage from "../../assets/Images/RecentProject/RecentProjectMasterNodedImage.webp";
