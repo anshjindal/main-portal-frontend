@@ -8,7 +8,7 @@ const OurApproachData = {
   en: [
     {
       image: OurApproachUnderstandYourBusiness,
-      title: "Understand",
+      title: "Understanding",
       subtitle: "Your Business",
       hoverTitle: "Understanding Your Business",
       hoverContent:
