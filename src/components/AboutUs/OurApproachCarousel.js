@@ -74,11 +74,12 @@ function OurApproachCarousel({lang}) {
                       </p>
                     </div>
                   ) : (
-                    card.item
+                    <h2 className="font-bold text-white text-[2vw] text-left pl-[0.4vw]">
+                      {card.title}
+                    </h2>
                   )}
                 </div>
               </div>
-
               <h2 className="font-bold text-[2vw] text-left pl-[0.4vw]">
                 {card.subtitle}
               </h2>

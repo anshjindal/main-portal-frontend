@@ -54,49 +54,11 @@
           }
         ]
       },
-      "Content": {
-        "heading": "Content",
-        "content": [
-          {
-            "innerTitle": "Video Production",
-            "innerText": "We produce high-quality video content to help you communicate your brand's story and connect with your audience."
-          },
-          {
-            "innerTitle": "Social Media Marketing",
-            "innerText": "We create targeted social media content to help raise product awareness and build relationships with your audience."
-          },
-          {
-            "innerTitle": "Display Marketing",
-            "innerText": "We offer display marketing services, crafting and distributing ads that enhance visibility and drive traffic."
-          }
-        ]
-      },
-      "Branding": {
-        "heading": "Branding",
-        "content": [
-          {
-            "innerTitle": "Graphic/Print Design",
-            "innerText": "Our graphic design services visually communicate your message using typography, photography, and illustration."
-          },
-          {
-            "innerTitle": "Brand Design",
-            "innerText": "We help you create a strong, memorable brand identity that aligns with your business values and goals."
-          },
-          {
-            "innerTitle": "Content Writing and Marketing",
-            "innerText": "We produce high-quality content that engages your target market and establishes your expertise."
-          },
-          {
-            "innerTitle": "Email Marketing",
-            "innerText": "Our email marketing strategies are designed to communicate directly with your customers and drive sales."
-          }
-        ]
-      },
       "Microsoft": {
-        "heading": "Microsoft",
+        "heading": "Cloud Services",
         "content": [
           {
-            "innerText": "We offer Microsoft Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
+            "innerText": "We offer Microsoft Azure, GCP, AWS Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
           }
         ]
       },
@@ -167,49 +129,11 @@
           }
         ]
       },
-      "Content": {
-        "heading": "Contenu",
-        "content": [
-          {
-            "innerTitle": "Production vidéo",
-            "innerText": "Nous produisons du contenu vidéo de haute qualité pour vous aider à communiquer l'histoire de votre marque et à engager votre audience."
-          },
-          {
-            "innerTitle": "Marketing sur les réseaux sociaux",
-            "innerText": "Nous créons du contenu ciblé sur les réseaux sociaux pour aider à accroître la notoriété des produits et à établir des relations avec votre audience."
-          },
-          {
-            "innerTitle": "Marketing d'affichage",
-            "innerText": "Nous offrons des services de marketing d'affichage, en créant et en distribuant des annonces pour améliorer la visibilité et générer du trafic."
-          }
-        ]
-      },
-      "Branding": {
-        "heading": "Branding",
-        "content": [
-          {
-            "innerTitle": "Design graphique / Impression",
-            "innerText": "Nos services de design graphique communiquent visuellement votre message en utilisant la typographie, la photographie et l'illustration."
-          },
-          {
-            "innerTitle": "Design de marque",
-            "innerText": "Nous vous aidons à créer une identité de marque forte et mémorable qui est alignée avec les valeurs et les objectifs de votre entreprise."
-          },
-          {
-            "innerTitle": "Rédaction de contenu et marketing",
-            "innerText": "Nous produisons du contenu de haute qualité qui engage votre marché cible et établit votre expertise."
-          },
-          {
-            "innerTitle": "Email Marketing",
-            "innerText": "Nos stratégies d'email marketing sont conçues pour communiquer directement avec vos clients et stimuler les ventes."
-          }
-        ]
-      },
       "Microsoft": {
-        "heading": "Microsoft",
+        "heading": "Services Cloud",
         "content": [
           {
-            "innerText": "Nous offrons des services Microsoft Cloud, y compris la consultation, la mise en œuvre, la migration et les services gérés, pour améliorer l'efficacité de l'entreprise."
+            "innerText": "Nous offrons des services Microsoft Azure, GCP, AZure Cloud, y compris la consultation, la mise en œuvre, la migration et les services gérés, pour améliorer l'efficacité de l'entreprise."
           }
         ]
       },
