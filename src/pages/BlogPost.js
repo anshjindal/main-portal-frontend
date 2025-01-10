@@ -192,83 +192,81 @@ function BlogPost() {
 
 
                 {/* Blog Title and Image */}
-                <div className="blog-list prose max-w-full">
-                  { blogData && 
-                    blogData.map((blog) => {
-                      const selectedTranslation = blog.translations.find(
-                        (translation) => translation.language === lang
-                      );
+                <div className="blog-list prose max-w-full text-left">
+  {blogData && 
+    blogData.map((blog) => {
+      const selectedTranslation = blog.translations.find(
+        (translation) => translation.language === lang
+      );
 
-                      if (!selectedTranslation) {
-                        return null; // If no translation for the selected language, skip this blog
-                      }
+      if (!selectedTranslation) {
+        return null; // If no translation for the selected language, skip this blog
+      }
 
-                      const { title, markdownContent, author } =
-                        selectedTranslation;
+      const { title, markdownContent, author } = selectedTranslation;
 
-                      return (
-                        <div
-                          key={blog._id}
-                          className="blog-post mb-8 space-y-4"
-                        >
-                          <h1 className="text-3xl font-semibold mb-2">
-                            {title}
-                          </h1>
-                          <p className="text-sm text-gray-600">
-                            <em>By {author}</em> |{" "}
-                            <em>
-                              {new Date(blog.createdAt).toLocaleDateString()}
-                            </em>
-                          </p>
+      return (
+        <div
+          key={blog._id}
+          className="blog-post mb-8 space-y-4"
+        >
+          <h1 className="text-3xl font-semibold mb-2 prose text-left">
+            {title}
+          </h1>
+          <p className="text-sm text-gray-600 text-left">
+            <em>By {author}</em> |{" "}
+            <em>{new Date(blog.createdAt).toLocaleDateString()}</em>
+          </p>
 
-                          {/* Render Markdown content */}
-                          <ReactMarkdown
-                            remarkPlugins={[remarkGfm]} // Enables GFM (tables, task lists, etc.)
-                            rehypePlugins={[rehypeRaw]} // Allows raw HTML rendering
-                            components={{
-                              img: ({ node, ...props }) => (
-                                <img
-                                  {...props}
-                                  className="sm:w-[70vw] h-auto mx-auto object-contain rounded-lg shadow-lg"
-                                  alt="blog-image"
-                                />
-                              ),
-                              table: ({ node, ...props }) => (
-                                <table
-                                  {...props}
-                                  className="w-full prose max-w-full border-collapse text-center table-auto"
-                                >
-                                  {props.children}
-                                </table>
-                              ),
-                              th: ({ node, ...props }) => (
-                                <th
-                                  {...props}
-                                  className="p-2 text-center border border-gray-300 bg-gray-200"
-                                ></th>
-                              ),
-                              td: ({ node, ...props }) => (
-                                <td
-                                  {...props}
-                                  className="p-2 text-center border border-gray-300"
-                                ></td>
-                              ),
-                              li: ({ node, ...props }) => (
-                                <td
-                                  {...props}
-                                  className="list-item text-center list-inside"
-                                ></td>
-                              ),
-                            }}
-                          >
-                            {markdownContent}
-                          </ReactMarkdown>
+          {/* Render Markdown content */}
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]} // Enables GFM (tables, task lists, etc.)
+            rehypePlugins={[rehypeRaw]} // Allows raw HTML rendering
+            components={{
+              img: ({ node, ...props }) => (
+                <img
+                  {...props}
+                  className="w-[100%] h-auto mx-auto object-contain rounded-lg shadow-lg"
+                  alt="blog-image"
+                />
+              ),
+              table: ({ node, ...props }) => (
+                <table
+                  {...props}
+                  className="w-full prose max-w-full border-collapse text-left table-auto"
+                >
+                  {props.children}
+                </table>
+              ),
+              th: ({ node, ...props }) => (
+                <th
+                  {...props}
+                  className="p-2 text-left prose border border-gray-300 bg-gray-200"
+                ></th>
+              ),
+              td: ({ node, ...props }) => (
+                <td
+                  {...props}
+                  className="p-2 text-left prose border border-gray-300"
+                ></td>
+              ),
+              li: ({ node, ...props }) => (
+                <li
+                  {...props}
+                  className="list-item prose text-left list-outside"
+                ></li>
+              ),
+            }}
+          >
+            {markdownContent}
+          </ReactMarkdown>
 
-                          <hr className="my-4" />
-                        </div>
-                      );
-                    })}
-                </div>
+          <hr className="my-4" />
+        </div>
+      );
+    })}
+</div>
+
 
 
               </div>
