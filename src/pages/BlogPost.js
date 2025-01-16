@@ -91,10 +91,10 @@ function BlogPost() {
       <div className="!z-50">
         <Toaster position="top-right" />
       </div>
-      <div className="flex justify-center  mb-[5vw] max-[450px]:mt-0 page-background">
+      <div className="flex justify-center max-[450px]:mt-0 page-background">
         <div className="w-[80%] max-[450px]:w-[100%]">
           {/* Header Section */}
-          <div className="flex justify-between mb-[1vw] max-[450px]:hidden">
+          {/*<div className="flex justify-between mb-[1vw] max-[450px]:hidden">
             <p className="text-[2vw]"> </p>
 
             <div className="flex justify-center items-center text-[#2703A5] text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
@@ -139,7 +139,7 @@ function BlogPost() {
                 <FaYoutube />
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Main Content Section */}
           <div className="flex justify-center">
