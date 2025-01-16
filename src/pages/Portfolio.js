@@ -26,7 +26,7 @@ function Portfolio() {
   // const showMorePortfolioData = () => { ... }; // Keep this function for showing more/less functionality
   const showMorePortfolioData = () => {
     setVisible((prevValue) =>
-      prevValue === 8 ? (prevValue = 2) : prevValue + 2
+      prevValue === 10 ? (prevValue = 2) : prevValue + 2
     );
   };
 
@@ -75,12 +75,12 @@ function Portfolio() {
               onClick={showMorePortfolioData}
             >
               {visible === 10 ? (
-                <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
+                <div className="flex justify-center items-center PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-x-[1vw]">
                   {Content.buttonSeeLess}
                   <CgArrowLongUp className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
               ) : (
-                <div className="flex PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
+                <div className="flex justify-center items-center PortfolioData-center gap-x-[0.3vw] max-[450px]:gap-y-[1vw]">
                   {Content.buttonSeeMore}
                   <CgArrowLongDown className="text-[1.1vw] max-[450px]:text-[2.5vw]" />
                 </div>
