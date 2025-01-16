@@ -18,11 +18,11 @@ const Error = () => {
         </p>
 
         <div>
+        <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] size-[14vw] text-[1.1vw * 10px] text-white cursor-pointer bg-[#2B00AC] hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
           <Link to={`/${lang}/`}>
-            <div className="border-black border-[0.1vw] rounded-full flex items-center justify-center gap-x-[0.3vw] size-[14vw] text-[1.1vw * 10px] text-white cursor-pointer bg-[#2B00AC] hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-300 max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw]">
               Return
-            </div>
           </Link>
+        </div>
         </div>
       </div>
     </div>
