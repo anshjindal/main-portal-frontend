@@ -3,16 +3,8 @@
     "heroTitle": "Services We Offer",
     "heroContent": "Our specialized team of researchers, strategists, designers, developers, and project managers work with streamlined processes to break through organizational roadblocks.",
     "accordions": {
-      "B2CServices": {
-        "heading": "B2C Services",
-        "content": [
-          {
-            "innerText": "Our personal branding services help clients shape public perception by positioning them as an industry authority, enhancing their credibility, and differentiating them from the competition, ultimately expanding their value visibility. Our process leverages web design, generative AI consultancy, project management, business analysis, dev-ops and much more to advance individual marketability. Serving diverse sectors, we successfully support the crafting of a desirable digital reputation, ultimately creating an entity that can be further  monetized."
-          }
-        ]
-      },
-      "Engineering": {
-        "heading": "Engineering",
+      "Web": {
+        "heading": "Web Development",
         "content": [
           {
             "innerTitle": "Custom Software Development",
@@ -48,8 +40,14 @@
           }
         ]
       },
-      "Marketing": {
-        "heading": "Marketing",
+      "Logo": {
+        "heading": "Logo design",
+        "content": [
+          
+        ]
+      },
+      "AI": {
+        "heading": "AI Services",
         "content": [
           {
             "innerTitle": "Search Engine Optimization",
@@ -69,8 +67,8 @@
           }
         ]
       },
-      "Content": {
-        "heading": "Content",
+      "Brand": {
+        "heading": "Brand Design",
         "content": [
           {
             "innerTitle": "Video Production",
@@ -86,8 +84,8 @@
           }
         ]
       },
-      "Branding": {
-        "heading": "Branding",
+      "Social": {
+        "heading": "Social Media",
         "content": [
           {
             "innerTitle": "Graphic/Print Design",
@@ -107,16 +105,16 @@
           }
         ]
       },
-      "Microsoft": {
-        "heading": "Microsoft",
+      "Graphic": {
+        "heading": "Graphic Design",
         "content": [
           {
             "innerText": "We offer Microsoft Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
           }
         ]
       },
-      "Outsourcing": {
-        "heading": "Outsourcing",
+      "Software": {
+        "heading": "Software Engineering",
         "content": [
           {
             "innerText": "We provide talent outsourcing services, allowing businesses to hire teams for specific short-term projects or needs."
@@ -140,8 +138,8 @@
           }
         ]
       },
-      "Engineering": {
-        "heading": "Ingénierie",
+      "Concept": {
+        "heading": "Concept Development",
         "content": [
           {
             "innerTitle": "Développement de logiciels sur mesure",
@@ -177,8 +175,8 @@
           }
         ]
       },
-      "Marketing": {
-        "heading": "Marketing",
+      "Video": {
+        "heading": "Video Production",
         "content": [
           {
             "innerTitle": "Optimisation pour les moteurs de recherche",
@@ -198,8 +196,8 @@
           }
         ]
       },
-      "Content": {
-        "heading": "Contenu",
+      "DevOPs": {
+        "heading": "DevOPs",
         "content": [
           {
             "innerTitle": "Production vidéo",
