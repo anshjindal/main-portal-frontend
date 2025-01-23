@@ -1,13 +1,13 @@
-import GIZSlider from "../../assets/Images/RecentProject/RecentProjectGIZImage.webp";
-import CanalPlusSlider from "../../assets/Images/RecentProject/RecentProjectCanalPlus.webp";
-import HamiltonCrescentSlider from "../../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.webp";
-import AldeliaSlider from "../../assets/Images/RecentProject/RecentProjectAldeliaImage.webp";
-import ATRSlider from "../../assets/Images/RecentProject/RecentProjectATRImage.webp";
-import WatchReportSlider from "../../assets/Images/RecentProject/RecentProjectWatchReportImage.webp";
-import YellowCardSlider from "../../assets/Images/RecentProject/RecentProjectYellowCardImage.webp";
-import MasterNodedSlider from "../../assets/Images/RecentProject/RecentProjectMasterNodedImage.webp";
-import BuckheadSlider from "../../assets/Images/RecentProject/RecentProjectBuckheadImage.webp";
-import KeplerSlider from "../../assets/Images/RecentProject/RecentProjectKeplerImage.webp";
+import GIZSlider from "../../assets/Images/Logos/GizLogo.png";
+import CanalPlusSlider from "../../assets/Images/Logos/CanalLogo.png";
+import HamiltonCrescentSlider from "../../assets/Images/Logos/HamiltonLogo.png";
+import AldeliaSlider from "../../assets/Images/Logos/AldeliaLogo.png";
+import ATRSlider from "../../assets/Images/Logos/ATRLogo.png";
+import WatchReportSlider from "../../assets/Images/Logos/WatchReportLogo.png";
+import YellowCardSlider from "../../assets/Images/Logos/YellowCardLogo.png";
+import MasterNodedSlider from "../../assets/Images/Logos/MasterNodedLogo.png";
+import BuckheadSlider from "../../assets/Images/Logos/BuckHeadLogo.png";
+import KeplerSlider from "../../assets/Images/Logos/KeplerLogo.png";
 
 const RecentProjectData = [
   {
