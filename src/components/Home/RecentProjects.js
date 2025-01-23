@@ -8,16 +8,14 @@ function RecentProjects({lang}) {
   const sliderLength = RecentProjectData.length;
   const Content = content[lang]; 
 
-  // Automatically slide every 2 seconds
   useEffect(() => {
     const slideInterval = setInterval(() => {
       updateProjSlider((prevIndex) => (prevIndex === sliderLength - 1 ? 0 : prevIndex + 1));
     }, 2000);
 
-    return () => clearInterval(slideInterval); // Clear interval on component unmount
+    return () => clearInterval(slideInterval); 
   }, [sliderLength]);
 
-  // Get the current project data
   const currentProject = RecentProjectData[projSlider];
 
   return (
