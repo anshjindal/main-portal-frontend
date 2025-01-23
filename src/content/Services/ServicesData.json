@@ -22,10 +22,7 @@
             "innerTitle": "IT Support and Managed Services",
             "innerText": "Our team offers robust IT support and managed services to maintain and optimize your infrastructure while keeping your business running efficiently."
           },
-          {
-            "innerTitle": "AI and Blockchain Consulting",
-            "innerText": "Our AI and blockchain consulting solutions help you innovate. We assist with the development and deployment of cutting-edge technologies to improve efficiency and decision-making."
-          },
+          
           {
             "innerTitle": "Software, Mobile, and Web Development",
             "innerText": "We offer a range of development services to create software, mobile apps, and websites tailored to meet the needs of your business."
@@ -33,6 +30,15 @@
           {
             "innerTitle": "Cleantech Industry IT Services",
             "innerText": "We provide solutions for cleantech industries to optimize operations while reducing costs and energy use, supporting sustainable growth."
+          }
+        ]
+      },
+      "AiServices": {
+        "heading": "AI Services",
+        "content": [
+          {
+            "innerTitle": "AI and Blockchain Consulting",
+            "innerText": "Our AI and blockchain consulting solutions help you innovate. We assist with the development and deployment of cutting-edge technologies to improve efficiency and decision-making."
           },
           {
             "innerTitle": "AI-Infused Products",
@@ -40,14 +46,8 @@
           }
         ]
       },
-      "Logo": {
-        "heading": "Logo design",
-        "content": [
-          
-        ]
-      },
-      "AI": {
-        "heading": "AI Services",
+      "Marketing": {
+        "heading": "Marketing",
         "content": [
           {
             "innerTitle": "Search Engine Optimization",
@@ -67,8 +67,8 @@
           }
         ]
       },
-      "Brand": {
-        "heading": "Brand Design",
+      "Content": {
+        "heading": "Content",
         "content": [
           {
             "innerTitle": "Video Production",
@@ -84,8 +84,8 @@
           }
         ]
       },
-      "Social": {
-        "heading": "Social Media",
+      "Branding": {
+        "heading": "Branding",
         "content": [
           {
             "innerTitle": "Graphic/Print Design",
@@ -105,11 +105,11 @@
           }
         ]
       },
-      "Graphic": {
+      "Microsoft": {
         "heading": "Microsoft",
         "content": [
           {
-            "innerText": "We offer Microsoft Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
+            "innerText": "We offer Microsoft Azure, GCP, AWS Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
           }
         ]
       },
@@ -158,16 +158,21 @@
             "innerText": "Notre équipe propose un support IT robuste et des services gérés pour maintenir et optimiser votre infrastructure tout en assurant le bon fonctionnement de votre entreprise."
           },
           {
-            "innerTitle": "Consulting IA et Blockchain",
-            "innerText": "Nos solutions de conseil en IA et blockchain vous aident à innover. Nous vous assistons dans le développement et le déploiement de technologies de pointe pour améliorer l'efficacité et la prise de décision."
-          },
-          {
             "innerTitle": "Développement de logiciels, mobile et web",
             "innerText": "Nous offrons une gamme de services de développement pour créer des logiciels, des applications mobiles et des sites web adaptés aux besoins de votre entreprise."
           },
           {
             "innerTitle": "Services IT pour l'industrie des cleantechs",
             "innerText": "Nous fournissons des solutions pour les industries cleantech afin d'optimiser les opérations tout en réduisant les coûts et la consommation d'énergie, soutenant ainsi une croissance durable."
+          }
+        ]
+      },
+      "AiServices": {
+        "heading": "Services AI",
+        "content": [
+          {
+            "innerTitle": "Consulting IA et Blockchain",
+            "innerText": "Nos solutions de conseil en IA et blockchain vous aident à innover. Nous vous assistons dans le développement et le déploiement de technologies de pointe pour améliorer l'efficacité et la prise de décision."
           },
           {
             "innerTitle": "Produits infusés par IA",
@@ -175,8 +180,8 @@
           }
         ]
       },
-      "Video": {
-        "heading": "Video Production",
+      "Marketing": {
+        "heading": "Marketing",
         "content": [
           {
             "innerTitle": "Optimisation pour les moteurs de recherche",
@@ -196,8 +201,8 @@
           }
         ]
       },
-      "DevOPs": {
-        "heading": "DevOPs",
+      "Content": {
+        "heading": "Contenu",
         "content": [
           {
             "innerTitle": "Production vidéo",
@@ -235,10 +240,10 @@
         ]
       },
       "Microsoft": {
-        "heading": "Microsoft",
+        "heading": "Services Cloud",
         "content": [
           {
-            "innerText": "Nous offrons des services Microsoft Cloud, y compris la consultation, la mise en œuvre, la migration et les services gérés, pour améliorer l'efficacité de l'entreprise."
+            "innerText": "Nous offrons des services Microsoft Azure, GCP, AZure Cloud, y compris la consultation, la mise en œuvre, la migration et les services gérés, pour améliorer l'efficacité de l'entreprise."
           }
         ]
       },

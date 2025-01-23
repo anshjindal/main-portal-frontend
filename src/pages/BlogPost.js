@@ -49,7 +49,6 @@ function BlogPost() {
 
       const data = await response.json();
 
-
       if (response?.status === 404) {
         toast.error(data?.error, { duration: 5000 });
         setTimeout(() => {
@@ -59,7 +58,7 @@ function BlogPost() {
         setBlogData(data?.message);
       }
     } catch (err) {
-      toast.error(err.message , { duration: 5000 });
+      toast.error(err.message, { duration: 5000 });
       setError(err.message);
     } finally {
       setLoading(false);
@@ -91,10 +90,10 @@ function BlogPost() {
       <div className="!z-50">
         <Toaster position="top-right" />
       </div>
-      <div className="flex justify-center  mb-[5vw] max-[450px]:mt-0 page-background">
+      <div className="flex justify-center max-[450px]:mt-0 page-background">
         <div className="w-[80%] max-[450px]:w-[100%]">
           {/* Header Section */}
-          <div className="flex justify-between mb-[1vw] max-[450px]:hidden">
+          {/*<div className="flex justify-between mb-[1vw] max-[450px]:hidden">
             <p className="text-[2vw]"> </p>
 
             <div className="flex justify-center items-center text-[#2703A5] text-[1.5vw] gap-x-[1.6vw] max-[450px]:text-[8vw] max-[450px]:w-[30vw] max-[450px]:flex-wrap max-[450px]:gap-x-[10vw] max-[450px]:gap-y-[5vw]">
@@ -139,7 +138,7 @@ function BlogPost() {
                 <FaYoutube />
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Main Content Section */}
           <div className="flex justify-center">
@@ -190,10 +189,9 @@ function BlogPost() {
                   </div>
                 </div>
 
-
                 {/* Blog Title and Image */}
-                <div className="blog-list prose max-w-full">
-                  { blogData && 
+                <div className="blog-list prose max-w-full text-left">
+                  {blogData &&
                     blogData.map((blog) => {
                       const selectedTranslation = blog.translations.find(
                         (translation) => translation.language === lang
@@ -211,10 +209,10 @@ function BlogPost() {
                           key={blog._id}
                           className="blog-post mb-8 space-y-4"
                         >
-                          <h1 className="text-3xl font-semibold mb-2">
+                          <h1 className="text-3xl font-semibold mb-2 prose text-left">
                             {title}
                           </h1>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-600 text-left">
                             <em>By {author}</em> |{" "}
                             <em>
                               {new Date(blog.createdAt).toLocaleDateString()}
@@ -229,14 +227,14 @@ function BlogPost() {
                               img: ({ node, ...props }) => (
                                 <img
                                   {...props}
-                                  className="sm:w-[70vw] h-auto mx-auto object-contain rounded-lg shadow-lg"
+                                  className="w-[100%] h-auto mx-auto object-contain rounded-lg shadow-lg"
                                   alt="blog-image"
                                 />
                               ),
                               table: ({ node, ...props }) => (
                                 <table
                                   {...props}
-                                  className="w-full prose max-w-full border-collapse text-center table-auto"
+                                  className="w-full prose max-w-full border-collapse text-left table-auto"
                                 >
                                   {props.children}
                                 </table>
@@ -244,20 +242,20 @@ function BlogPost() {
                               th: ({ node, ...props }) => (
                                 <th
                                   {...props}
-                                  className="p-2 text-center border border-gray-300 bg-gray-200"
+                                  className="p-2 text-left prose border border-gray-300 bg-gray-200"
                                 ></th>
                               ),
                               td: ({ node, ...props }) => (
                                 <td
                                   {...props}
-                                  className="p-2 text-center border border-gray-300"
+                                  className="p-2 text-left prose border border-gray-300"
                                 ></td>
                               ),
                               li: ({ node, ...props }) => (
-                                <td
+                                <li
                                   {...props}
-                                  className="list-item text-center list-inside"
-                                ></td>
+                                  className="list-item prose text-left list-outside"
+                                ></li>
                               ),
                             }}
                           >
@@ -269,8 +267,6 @@ function BlogPost() {
                       );
                     })}
                 </div>
-
-
               </div>
             </div>
 

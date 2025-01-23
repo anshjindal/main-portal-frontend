@@ -7,7 +7,6 @@ const ServicesSpotlightData = [
     "GRAPHIC DESIGN",
     "SOFTWARE ENGINEERING",
     "CONCEPT DEVELOPMENT",
-    "DIGITAL MARKETING",
     "VIDEO PRODUCTION",
     "DEVOPS",
   ];
