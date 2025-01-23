@@ -3,16 +3,8 @@
     "heroTitle": "Services We Offer",
     "heroContent": "Our specialized team of researchers, strategists, designers, developers, and project managers work with streamlined processes to break through organizational roadblocks.",
     "accordions": {
-      "B2CServices": {
-        "heading": "B2C Services",
-        "content": [
-          {
-            "innerText": "Our personal branding services help clients shape public perception by positioning them as an industry authority, enhancing their credibility, and differentiating them from the competition, ultimately expanding their value visibility. Our process leverages web design, generative AI consultancy, project management, business analysis, dev-ops and much more to advance individual marketability. Serving diverse sectors, we successfully support the crafting of a desirable digital reputation, ultimately creating an entity that can be further  monetized."
-          }
-        ]
-      },
-      "Engineering": {
-        "heading": "Engineering",
+      "Web": {
+        "heading": "Web Development",
         "content": [
           {
             "innerTitle": "Custom Software Development",
@@ -54,16 +46,75 @@
           }
         ]
       },
+      "Marketing": {
+        "heading": "Marketing",
+        "content": [
+          {
+            "innerTitle": "Search Engine Optimization",
+            "innerText": "We improve your site's visibility with SEO, helping your content rank higher in search engine results."
+          },
+          {
+            "innerTitle": "Social Media Marketing",
+            "innerText": "We harness social media to build awareness and trust for your brand through engaging campaigns."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Our email marketing services help you connect with customers through targeted, impactful email campaigns."
+          },
+          {
+            "innerTitle": "Display Marketing",
+            "innerText": "We create digital display ads, banners, and videos that increase your brand's visibility and engagement."
+          }
+        ]
+      },
+      "Content": {
+        "heading": "Content",
+        "content": [
+          {
+            "innerTitle": "Video Production",
+            "innerText": "We produce high-quality video content to help you communicate your brand's story and connect with your audience."
+          },
+          {
+            "innerTitle": "Social Media Marketing",
+            "innerText": "We create targeted social media content to help raise product awareness and build relationships with your audience."
+          },
+          {
+            "innerTitle": "Display Marketing",
+            "innerText": "We offer display marketing services, crafting and distributing ads that enhance visibility and drive traffic."
+          }
+        ]
+      },
+      "Branding": {
+        "heading": "Branding",
+        "content": [
+          {
+            "innerTitle": "Graphic/Print Design",
+            "innerText": "Our graphic design services visually communicate your message using typography, photography, and illustration."
+          },
+          {
+            "innerTitle": "Brand Design",
+            "innerText": "We help you create a strong, memorable brand identity that aligns with your business values and goals."
+          },
+          {
+            "innerTitle": "Content Writing and Marketing",
+            "innerText": "We produce high-quality content that engages your target market and establishes your expertise."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Our email marketing strategies are designed to communicate directly with your customers and drive sales."
+          }
+        ]
+      },
       "Microsoft": {
-        "heading": "Cloud Services",
+        "heading": "Microsoft",
         "content": [
           {
             "innerText": "We offer Microsoft Azure, GCP, AWS Cloud Services, including consulting, implementation, migration, and managed services, to boost business efficiency."
           }
         ]
       },
-      "Outsourcing": {
-        "heading": "Outsourcing",
+      "Software": {
+        "heading": "Software Engineering",
         "content": [
           {
             "innerText": "We provide talent outsourcing services, allowing businesses to hire teams for specific short-term projects or needs."
@@ -87,8 +138,8 @@
           }
         ]
       },
-      "Engineering": {
-        "heading": "Ingénierie",
+      "Concept": {
+        "heading": "Concept Development",
         "content": [
           {
             "innerTitle": "Développement de logiciels sur mesure",
@@ -126,6 +177,65 @@
           {
             "innerTitle": "Produits infusés par IA",
             "innerText": "Nous proposons des solutions IA qui s'intègrent parfaitement à vos produits, stimulant l'innovation et l'efficacité dans vos opérations."
+          }
+        ]
+      },
+      "Marketing": {
+        "heading": "Marketing",
+        "content": [
+          {
+            "innerTitle": "Optimisation pour les moteurs de recherche",
+            "innerText": "Nous améliorons la visibilité de votre site avec des techniques SEO, aidant votre contenu à se classer plus haut dans les résultats de recherche."
+          },
+          {
+            "innerTitle": "Marketing sur les réseaux sociaux",
+            "innerText": "Nous utilisons les réseaux sociaux pour créer de la notoriété et établir la confiance pour votre marque grâce à des campagnes engageantes."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Nos services d'email marketing vous aident à communiquer directement avec vos clients à travers des campagnes ciblées."
+          },
+          {
+            "innerTitle": "Marketing d'affichage",
+            "innerText": "Nous créons des publicités d'affichage numériques, bannières et vidéos qui augmentent la visibilité et l'engagement de votre marque."
+          }
+        ]
+      },
+      "Content": {
+        "heading": "Contenu",
+        "content": [
+          {
+            "innerTitle": "Production vidéo",
+            "innerText": "Nous produisons du contenu vidéo de haute qualité pour vous aider à communiquer l'histoire de votre marque et à engager votre audience."
+          },
+          {
+            "innerTitle": "Marketing sur les réseaux sociaux",
+            "innerText": "Nous créons du contenu ciblé sur les réseaux sociaux pour aider à accroître la notoriété des produits et à établir des relations avec votre audience."
+          },
+          {
+            "innerTitle": "Marketing d'affichage",
+            "innerText": "Nous offrons des services de marketing d'affichage, en créant et en distribuant des annonces pour améliorer la visibilité et générer du trafic."
+          }
+        ]
+      },
+      "Branding": {
+        "heading": "Branding",
+        "content": [
+          {
+            "innerTitle": "Design graphique / Impression",
+            "innerText": "Nos services de design graphique communiquent visuellement votre message en utilisant la typographie, la photographie et l'illustration."
+          },
+          {
+            "innerTitle": "Design de marque",
+            "innerText": "Nous vous aidons à créer une identité de marque forte et mémorable qui est alignée avec les valeurs et les objectifs de votre entreprise."
+          },
+          {
+            "innerTitle": "Rédaction de contenu et marketing",
+            "innerText": "Nous produisons du contenu de haute qualité qui engage votre marché cible et établit votre expertise."
+          },
+          {
+            "innerTitle": "Email Marketing",
+            "innerText": "Nos stratégies d'email marketing sont conçues pour communiquer directement avec vos clients et stimuler les ventes."
           }
         ]
       },

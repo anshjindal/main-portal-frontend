@@ -26,15 +26,27 @@ function Services() {
         {/* Accordion Section */}
         <div className="mb-[-1vw] mt-[-10vw] max-[450px]:mt-[5vw]">
           {Object.keys(Content.accordions).map((sectionKey, index) => {
-            const section = Content.accordions[sectionKey];
+          const section = Content.accordions[sectionKey];
+          if (sectionKey === "Logo") {
             return (
-              <Accordion
-                key={index}
-                title={section.heading}
-                InnerTextData={section.content}
-              />
+              <Accordion key={index} title={section.heading}>
+                {section.content.map((item, innerIndex) => (
+                  <div key={innerIndex}>
+                    <h3>{item.innerTitle}</h3>
+                    <p>{item.innerText}</p>
+                  </div>
+                ))}
+              </Accordion>
             );
-          })}
+          }
+          return (
+            <Accordion
+              key={index}
+              title={section.heading}
+              InnerTextData={section.content}
+            />
+          );
+        })}
         </div>
         
         <CallToActionSection

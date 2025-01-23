@@ -1,13 +1,13 @@
-import AldeliaImage from "../../assets/Images/RecentProject/RecentProjectAldeliaImage.webp";
-import ATRImage from "../../assets/Images/RecentProject/RecentProjectATRImage.webp";
-import BuckheadImage from "../../assets/Images/RecentProject/RecentProjectBuckheadImage.webp";
-import CanalPlus from "../../assets/Images/RecentProject/RecentProjectCanalPlus.webp";
-import GIZImage from "../../assets/Images/RecentProject/RecentProjectGIZImage.png";
-import HamiltonCrescentImage from "../../assets/Images/RecentProject/RecentProjectHamiltonCrescentImage.webp";
-import KeplerImage from "../../assets/Images/RecentProject/RecentProjectKeplerImage.webp";
-import MasterNodedImage from "../../assets/Images/RecentProject/RecentProjectMasterNodedImage.webp";
-import WatchReportImage from "../../assets/Images/RecentProject/RecentProjectWatchReportImage.webp";
-import YellowCardImage from "../../assets/Images/RecentProject/RecentProjectYellowCardImage.webp";
+import AldeliaImage from "../../assets/Images/Logos/AldeliaLogo.png";
+import ATRImage from "../../assets/Images/Logos/ATRLogo.png";
+import BuckheadImage from "../../assets/Images/Logos/BuckHeadLogo.png";
+import CanalPlus from "../../assets/Images/Logos/CanalLogo.png";
+import GIZImage from "../../assets/Images/Logos/GizLogo.png";
+import HamiltonCrescentImage from "../../assets/Images/Logos/HamiltonLogo.png";
+import KeplerImage from "../../assets/Images/Logos/KeplerLogo.png";
+import MasterNodedImage from "../../assets/Images/Logos/MasterNodedLogo.png";
+import WatchReportImage from "../../assets/Images/Logos/WatchReportLogo.png";
+import YellowCardImage from "../../assets/Images/Logos/WatchReportLogo.png";
 
 const RecentProjectData = [
     { image: GIZImage, alt: "GIZ office building with people walking outside, modern architecture", title: "GIZ", link: "https://www.giz.de/en/html/index.html" },
