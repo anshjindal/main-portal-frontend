@@ -1,12 +1,12 @@
-import React from "react";
-import "../styles/Services.css";
-import CallToActionSection from "../components/Reusable/CallToActionSection";
-import HeroBanner from "../components/Reusable/HeroBanner";
-import ServicesHeroBanner from "../assets/Images/ServicesHeroImage.webp";
-import Accordion from "../components/Reusable/Accordion";
-import content from "../content/Services/ServicesData.json";
-import { useParams } from "react-router-dom";
-import ServicesMetaRender from "../components/Home/ServicesMetaRender";
+import React from 'react';
+import '../styles/Services.css';
+import CallToActionSection from '../components/Reusable/CallToActionSection';
+import HeroBanner from '../components/Reusable/HeroBanner';
+import ServicesHeroBanner from '../assets/Images/ServicesHeroImage.webp';
+import Accordion from '../components/Reusable/Accordion';
+import content from '../content/Services/ServicesData.json';
+import { useParams } from 'react-router-dom';
+import ServicesMetaRender from '../components/Home/ServicesMetaRender';
 
 function Services() {
   const { lang } = useParams();
@@ -27,7 +27,7 @@ function Services() {
           <div className="mb-[-1vw] mt-[-10vw] max-[450px]:mt-[5vw]">
             {Object.keys(Content.accordions).map((sectionKey, index) => {
               const section = Content.accordions[sectionKey];
-              if (sectionKey === "Logo") {
+              if (sectionKey === 'Logo') {
                 return (
                   <Accordion key={index} title={section.heading}>
                     {section.content.map((item, innerIndex) => (

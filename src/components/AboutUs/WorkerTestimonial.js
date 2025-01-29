@@ -1,6 +1,6 @@
-import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
-import JasmineMHeadshot from "../../assets/Images/JasmineMHeadshot.webp";
-import content from "../../content/AboutUs/WorkerTestimonial.json";
+import QuoteIcon from '../../assets/SVG/QuoteIcon.svg';
+import JasmineMHeadshot from '../../assets/Images/JasmineMHeadshot.webp';
+import content from '../../content/AboutUs/WorkerTestimonial.json';
 
 function WorkerTestimonial({ lang }) {
   const Content = content[lang];

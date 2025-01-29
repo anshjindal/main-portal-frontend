@@ -1,9 +1,9 @@
-import React from "react";
-import { CgArrowLongUp } from "react-icons/cg";
-import { Link } from "react-router-dom";
-import content from "../../content/Reusable/CallToActionSection.json";
+import React from 'react';
+import { CgArrowLongUp } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
+import content from '../../content/Reusable/CallToActionSection.json';
 
-function CallToActionSection({ CallToAction, lang, RedirectTo = "ContactUs" }) {
+function CallToActionSection({ CallToAction, lang, RedirectTo = 'ContactUs' }) {
   const Content = content[CallToAction][lang];
 
   return (

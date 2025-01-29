@@ -1,41 +1,40 @@
-
 {
-    "en": {
-      "meta":{
+  "en": {
+    "meta": {
+      "title": "Wouessi Blog - Tech Trends and Insights",
+      "description": "Stay updated with the latest trends in tech and business innovations. Wouessi's blog offers insights into digital transformation and technology",
+      "keyWords": "Tech trends, digital insights, business innovation, technology blog",
+      "openGraph": {
         "title": "Wouessi Blog - Tech Trends and Insights",
         "description": "Stay updated with the latest trends in tech and business innovations. Wouessi's blog offers insights into digital transformation and technology",
-        "keyWords": "Tech trends, digital insights, business innovation, technology blog",
-        "openGraph": {
-            "title": "Wouessi Blog - Tech Trends and Insights",
-            "description": "Stay updated with the latest trends in tech and business innovations. Wouessi's blog offers insights into digital transformation and technology",
-            "ogImage": "logonavbar",
-          "ogUrl": "https://www.wouessi.com/en/Blogs"
-        },
-        "twitter": {
-            "title": "Wouessi Blog - Tech Trends and Insights",
-            "description": "Stay updated with the latest trends in tech and business innovations. Wouessi's blog offers insights into digital transformation and technology",
-            "twitterImage": "/",
-          "twitterCardContent": "summary_large_image"
-        }
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Blogs"
+      },
+      "twitter": {
+        "title": "Wouessi Blog - Tech Trends and Insights",
+        "description": "Stay updated with the latest trends in tech and business innovations. Wouessi's blog offers insights into digital transformation and technology",
+        "twitterImage": "/",
+        "twitterCardContent": "summary_large_image"
       }
-    },
-    "fr": {
-      "meta":  {
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Blog Wouessi - Tendances et perspectives technologiques",
+      "description": "Restez à jour avec les dernières tendances en matière d'innovations technologiques et commerciales. Le blog de Wouessi offre un aperçu de la transformation numérique et de la technologie",
+      "keyWords": "Tendances technologiques, perspectives numériques, innovation commerciale, blog technologique",
+      "openGraph": {
         "title": "Blog Wouessi - Tendances et perspectives technologiques",
         "description": "Restez à jour avec les dernières tendances en matière d'innovations technologiques et commerciales. Le blog de Wouessi offre un aperçu de la transformation numérique et de la technologie",
-        "keyWords": "Tendances technologiques, perspectives numériques, innovation commerciale, blog technologique",
-        "openGraph": {
-            "title": "Blog Wouessi - Tendances et perspectives technologiques",
-            "description": "Restez à jour avec les dernières tendances en matière d'innovations technologiques et commerciales. Le blog de Wouessi offre un aperçu de la transformation numérique et de la technologie",
-             "ogImage": "logonavbar",
-          "ogUrl": "https://www.wouessi.com/en/Blogs"
-        },
-        "twitter": {
-            "title": "Blog Wouessi - Tendances et perspectives technologiques",
-            "description": "Restez à jour avec les dernières tendances en matière d'innovations technologiques et commerciales. Le blog de Wouessi offre un aperçu de la transformation numérique et de la technologie",
-            "twitterImage": "/",
-          "twitterCardContent": "résumé_grande_image"
-        }
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Blogs"
+      },
+      "twitter": {
+        "title": "Blog Wouessi - Tendances et perspectives technologiques",
+        "description": "Restez à jour avec les dernières tendances en matière d'innovations technologiques et commerciales. Le blog de Wouessi offre un aperçu de la transformation numérique et de la technologie",
+        "twitterImage": "/",
+        "twitterCardContent": "résumé_grande_image"
       }
-      }
+    }
   }
+}

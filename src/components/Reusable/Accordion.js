@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { IoMdArrowDropright } from "react-icons/io";
+import React, { useState } from 'react';
+import { IoMdArrowDropright } from 'react-icons/io';
 
 function Accordion({ title, InnerTextData = [] }) {
   const [accordionOpen, setAccordionOpen] = useState(true);
@@ -14,7 +14,7 @@ function Accordion({ title, InnerTextData = [] }) {
         <IoMdArrowDropright
           onClick={accordionToggle}
           className={`text-[2vw] max-[450px]:text-[5vw]  ${
-            accordionOpen ? "" : "transition-all duration-300 rotate-[90deg]"
+            accordionOpen ? '' : 'transition-all duration-300 rotate-[90deg]'
           }`}
         />
         <div
@@ -41,7 +41,7 @@ function Accordion({ title, InnerTextData = [] }) {
             {items.innerTitle ? (
               <div className="w-[7vw] border-t-[0.1vw] border-[#666666] max-[450px]:mt-[1vw] max-[450px]:w-[20vw]"></div>
             ) : (
-              ""
+              ''
             )}
             <div className="text-[1vw] w-[90%] max-[450px]:text-[2.5vw]">
               {Array.isArray(items.innerText) ? (
@@ -55,7 +55,7 @@ function Accordion({ title, InnerTextData = [] }) {
               )}
 
               {/* Add download link for the Influencer job */}
-              {items.innerTitle === "Influencer" && (
+              {items.innerTitle === 'Influencer' && (
                 <div className="mt-[1vw]">
                   <a
                     href="/Doc/Influencer.pdf"

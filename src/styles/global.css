@@ -12,7 +12,7 @@
 }
 
 .navbar-link:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -2.5px;
@@ -35,7 +35,7 @@
 }
 
 .footer-link:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -2.5px;
@@ -96,6 +96,6 @@
   margin: auto;
   cursor: pointer;
 }
-.Returnbtn:hover{
- background: white;
+.Returnbtn:hover {
+  background: white;
 }

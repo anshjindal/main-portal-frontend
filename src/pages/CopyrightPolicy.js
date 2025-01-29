@@ -1,28 +1,28 @@
-import React from "react";
-import "../styles/Services.css";
-import CopyrightIcon from "../assets/SVG/CopyrightPolicyIcon.svg";
-import Accordion from "../components/Reusable/Accordion";
-import CopyrightData from "../content/PolicyPages/CopyrightPolicyText.json";
-import ContactUsSection from "../components/Reusable/ContactUsSection";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import '../styles/Services.css';
+import CopyrightIcon from '../assets/SVG/CopyrightPolicyIcon.svg';
+import Accordion from '../components/Reusable/Accordion';
+import CopyrightData from '../content/PolicyPages/CopyrightPolicyText.json';
+import ContactUsSection from '../components/Reusable/ContactUsSection';
+import { useParams } from 'react-router-dom';
 
 function CopyrightPolicy() {
-  const { lang } = useParams(); 
-  const Content = CopyrightData[lang]; 
+  const { lang } = useParams();
+  const Content = CopyrightData[lang];
 
   // Define section titles and data keys
   const sections = [
-    "OwnershipofContent",
-    "LimitedLicense",
-    "ProhibitedUses",
-    "UserContributions",
-    "Trademarks",
-    "CopyrightDisclaimer",
-    "CopyrightInfringementNotification",
-    "LinkstoThirdPartySites",
-    "TerminationofAccess",
-    "ChangestoCopyrightNotice",
-    "ContactUs"
+    'OwnershipofContent',
+    'LimitedLicense',
+    'ProhibitedUses',
+    'UserContributions',
+    'Trademarks',
+    'CopyrightDisclaimer',
+    'CopyrightInfringementNotification',
+    'LinkstoThirdPartySites',
+    'TerminationofAccess',
+    'ChangestoCopyrightNotice',
+    'ContactUs',
   ];
 
   return (
@@ -49,7 +49,7 @@ function CopyrightPolicy() {
         </div>
 
         <div className="mb-[1vw] mt-[5vw] max-[450px]:mt-[5vw]">
-          {sections.map(section => (
+          {sections.map((section) => (
             <Accordion
               key={section}
               title={Content[section]?.Heading || section} // Default to section name if Heading is missing

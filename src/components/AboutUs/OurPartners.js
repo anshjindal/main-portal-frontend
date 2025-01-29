@@ -1,9 +1,9 @@
-import React from "react";
-import Slider from "react-infinite-logo-slider";
-import partnersLogos from "../../content/AboutUs/PartnersLogoData"; 
-import content from "../../content/AboutUs/OurPartners.json"; 
+import React from 'react';
+import Slider from 'react-infinite-logo-slider';
+import partnersLogos from '../../content/AboutUs/PartnersLogoData';
+import content from '../../content/AboutUs/OurPartners.json';
 
-function OurClients({lang}) {
+function OurClients({ lang }) {
   const Content = content[lang];
 
   return (
@@ -20,7 +20,7 @@ function OurClients({lang}) {
         duration={60}
         pauseOnHover={true}
         blurBorders={false}
-        blurBoderColor={"#fff"}
+        blurBoderColor={'#fff'}
       >
         {partnersLogos.map((logo, index) => (
           <Slider.Slide key={index}>

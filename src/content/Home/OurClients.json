@@ -1,9 +1,8 @@
 {
-    "en": {
-      "clients": "Recent Clients"
-    },
-    "fr": {
-      "clients": "Clients récents"
-    }
+  "en": {
+    "clients": "Recent Clients"
+  },
+  "fr": {
+    "clients": "Clients récents"
   }
-  
+}

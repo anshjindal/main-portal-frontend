@@ -30,7 +30,7 @@
             "innerTitle": "IT Support and Managed Services",
             "innerText": "Our team offers robust IT support and managed services to maintain and optimize your infrastructure while keeping your business running efficiently."
           },
-          
+
           {
             "innerTitle": "Software, Mobile, and Web Development",
             "innerText": "We offer a range of development services to create software, mobile apps, and websites tailored to meet the needs of your business."
@@ -70,7 +70,6 @@
           }
         ]
       }
-
     },
     "callToActionTitle": "OUR PRODUCT",
     "callToActionContent": "Looking for services and guidance? Let's get in touch!",

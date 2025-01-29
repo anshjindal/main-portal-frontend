@@ -1,41 +1,40 @@
-
 {
-    "en": {
-      "meta":  {
+  "en": {
+    "meta": {
+      "title": " Wouessi Products - Innovative Tech Solutions",
+      "description": "Discover Wouessi's cutting-edge products that drive business growth through technology and innovation",
+      "keyWords": "Tech products, business growth solutions, innovation, software products,Software Solutions,Software development",
+      "openGraph": {
         "title": " Wouessi Products - Innovative Tech Solutions",
         "description": "Discover Wouessi's cutting-edge products that drive business growth through technology and innovation",
-        "keyWords": "Tech products, business growth solutions, innovation, software products,Software Solutions,Software development",
-        "openGraph": {
-          "title": " Wouessi Products - Innovative Tech Solutions",
-          "description": "Discover Wouessi's cutting-edge products that drive business growth through technology and innovation",
-          "ogImage": "logonavbar",
-          "ogUrl": "https://www.wouessi.com/en/Products"
-        },
-        "twitter": {
-          "title": " Wouessi Products - Innovative Tech Solutions",
-          "description": "Discover Wouessi's cutting-edge products that drive business growth through technology and innovation",
-          "twitterImage": "/",
-          "twitterCardContent": "summary_large_image"
-        }
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Products"
+      },
+      "twitter": {
+        "title": " Wouessi Products - Innovative Tech Solutions",
+        "description": "Discover Wouessi's cutting-edge products that drive business growth through technology and innovation",
+        "twitterImage": "/",
+        "twitterCardContent": "summary_large_image"
       }
-    },
-    "fr": {
-      "meta":  {
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": " Produits Wouessi - Solutions technologiques innovantes",
+      "description": "Découvrez les produits de pointe de Wouessi qui stimulent la croissance des entreprises grâce à la technologie et à l'innovation",
+      "keyWords": "Produits technologiques, solutions de croissance d'entreprise, innovation, produits logiciels, solutions logicielles, développement de logiciels",
+      "openGraph": {
         "title": " Produits Wouessi - Solutions technologiques innovantes",
         "description": "Découvrez les produits de pointe de Wouessi qui stimulent la croissance des entreprises grâce à la technologie et à l'innovation",
-        "keyWords": "Produits technologiques, solutions de croissance d'entreprise, innovation, produits logiciels, solutions logicielles, développement de logiciels",
-        "openGraph": {
-          "title": " Produits Wouessi - Solutions technologiques innovantes",
-          "description": "Découvrez les produits de pointe de Wouessi qui stimulent la croissance des entreprises grâce à la technologie et à l'innovation",
-          "ogImage": "logonavbar",
-          "ogUrl": "https://www.wouessi.com/en/Products"
-        },
-        "twitter": {
-          "title": " Produits Wouessi - Solutions technologiques innovantes",
-          "description": "Découvrez les produits de pointe de Wouessi qui stimulent la croissance des entreprises grâce à la technologie et à l'innovation",
-          "twitterImage": "/",
-          "twitterCardContent": "résumé_grande_image"
-        }
+        "ogImage": "logonavbar",
+        "ogUrl": "https://www.wouessi.com/en/Products"
+      },
+      "twitter": {
+        "title": " Produits Wouessi - Solutions technologiques innovantes",
+        "description": "Découvrez les produits de pointe de Wouessi qui stimulent la croissance des entreprises grâce à la technologie et à l'innovation",
+        "twitterImage": "/",
+        "twitterCardContent": "résumé_grande_image"
       }
-      }
+    }
   }
+}

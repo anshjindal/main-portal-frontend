@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
-import { BsArrowRightShort } from "react-icons/bs";
-import { NavLink, useParams } from "react-router-dom";
+import React, { useState } from 'react';
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from 'react-icons/hi';
+import { BsArrowRightShort } from 'react-icons/bs';
+import { NavLink, useParams } from 'react-router-dom';
 
 const BlogsCarousel = ({ blogs }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +28,7 @@ const BlogsCarousel = ({ blogs }) => {
     setCurrentIndex(newIndex);
   };
 
-  if(!blogs) return
+  if (!blogs) return;
   return (
     <div>
       <div className="relative flex items-center justify-center mt-[5vw]">
@@ -39,7 +39,9 @@ const BlogsCarousel = ({ blogs }) => {
           <HiOutlineArrowSmLeft />
         </div>
         <div className="overflow-hidden w-[80%]">
-          <h1 className="text-[1.5vw] text-left font-bold mb-[2vw]">Explore more articles</h1>
+          <h1 className="text-[1.5vw] text-left font-bold mb-[2vw]">
+            Explore more articles
+          </h1>
           <div
             className="flex transition-transform ease-out duration-500"
             style={{
@@ -47,10 +49,7 @@ const BlogsCarousel = ({ blogs }) => {
             }}
           >
             {slides.map((slide, slideIndex) => (
-              <div
-                key={slideIndex}
-                className="flex flex-shrink-0 w-full"
-              >
+              <div key={slideIndex} className="flex flex-shrink-0 w-full">
                 {slide.map((card, cardIndex) => (
                   <div
                     key={cardIndex}
@@ -58,7 +57,7 @@ const BlogsCarousel = ({ blogs }) => {
                   >
                     <div className="flex w-full h-[29vw]">
                       <img
-                        src={card.imageUrl || "/default-image.jpg"} // Handle missing image URL
+                        src={card.imageUrl || '/default-image.jpg'} // Handle missing image URL
                         alt={card.title[lang]}
                         className="h-full object-cover rounded-t-2xl"
                       />
@@ -66,9 +65,14 @@ const BlogsCarousel = ({ blogs }) => {
                     <div className="flex justify-center">
                       <div className="w-[90%] flex justify-between items-center bg-white text-black h-[7vw]">
                         <div className="flex flex-col text-left pt-8">
-                          <h2 className="text-[1.2vw] font-bold mb-[0.5vw]">{card.title[lang]}</h2>
+                          <h2 className="text-[1.2vw] font-bold mb-[0.5vw]">
+                            {card.title[lang]}
+                          </h2>
                         </div>
-                        <NavLink to={`/${lang}/${card.slug}`} className="w-[15vw] h-[3.5vw] border-[#250978] border-[0.1vw] rounded-md bg-white text-[1.1vw] mr-[1vw] flex items-center justify-center cursor-pointer">
+                        <NavLink
+                          to={`/${lang}/${card.slug}`}
+                          className="w-[15vw] h-[3.5vw] border-[#250978] border-[0.1vw] rounded-md bg-white text-[1.1vw] mr-[1vw] flex items-center justify-center cursor-pointer"
+                        >
                           See Articles
                           <BsArrowRightShort className="text-[2vw]" />
                         </NavLink>

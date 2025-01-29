@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import content from "../../content/AboutUs/OurApproach";
-import contenttitle from "../../content/AboutUs/OurApproachTitle.json"; 
+import React, { useState } from 'react';
+import content from '../../content/AboutUs/OurApproach';
+import contenttitle from '../../content/AboutUs/OurApproachTitle.json';
 
 import {
   PiArrowCircleLeftLight,
   PiArrowCircleRightLight,
-} from "react-icons/pi";
+} from 'react-icons/pi';
 
-function OurApproachCarousel({lang}) {
+function OurApproachCarousel({ lang }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -23,8 +23,7 @@ function OurApproachCarousel({lang}) {
   };
 
   const goToNext = () => {
-    const isLastSlide =
-      currentIndex === Math.ceil(Content.length / 3) - 1;
+    const isLastSlide = currentIndex === Math.ceil(Content.length / 3) - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -60,8 +59,8 @@ function OurApproachCarousel({lang}) {
                     hoveredIndex === index &&
                     card.hoverTitle &&
                     card.hoverContent
-                      ? "w-full h-full bg-[#2B00AC] p-[2vw] text-white text-left"
-                      : "flex items-end text-left pl-[0.4vw] text-white bg-gray-500/35 w-full h-full font-bold text-[2vw]"
+                      ? 'w-full h-full bg-[#2B00AC] p-[2vw] text-white text-left'
+                      : 'flex items-end text-left pl-[0.4vw] text-white bg-gray-500/35 w-full h-full font-bold text-[2vw]'
                   } transition duration-300 ease-out`}
                 >
                   {hoveredIndex === index ? (

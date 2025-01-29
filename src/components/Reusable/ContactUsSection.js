@@ -1,9 +1,9 @@
-import React from "react";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { useParams } from "react-router-dom";
-import content from "../../content/Home/OurVision.json"; 
+import React from 'react';
+import { FaPhoneVolume } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
+import { FaLocationDot } from 'react-icons/fa6';
+import { useParams } from 'react-router-dom';
+import content from '../../content/Home/OurVision.json';
 
 function ContactUsSection() {
   return (

@@ -1,20 +1,20 @@
 {
-    "en": {
-      "title": "Explore our new recently completed projects",
-      "description": "Our portfolio boasts an impressive array of successful collaborations with esteemed clients. Each partnership stands as a testament to our commitment to excellence and innovation.",
-      "buttonSeeLess": "See Less",
-      "buttonSeeMore": "See More",
-      "Content": "We would love to hear more about your project",
-      "CallToAction": "Let's Talk",
-      "Title": "WORK WITH US"
-    },
-    "fr": {
-      "title": "Découvrez nos nouveaux projets récemment achevés",
-      "description": "Notre portefeuille présente une impressionnante gamme de collaborations réussies avec des clients prestigieux. Chaque partenariat témoigne de notre engagement envers l'excellence et l'innovation.",
-      "buttonSeeLess": "Voir Moins",
-      "buttonSeeMore": "Voir Plus",
-      "Title": "TRAVAILLEZ AVEC NOUS",
-      "Content": "Nous aimerions en savoir plus sur votre projet",
-      "CallToAction": "Discutons"
-    }
+  "en": {
+    "title": "Explore our new recently completed projects",
+    "description": "Our portfolio boasts an impressive array of successful collaborations with esteemed clients. Each partnership stands as a testament to our commitment to excellence and innovation.",
+    "buttonSeeLess": "See Less",
+    "buttonSeeMore": "See More",
+    "Content": "We would love to hear more about your project",
+    "CallToAction": "Let's Talk",
+    "Title": "WORK WITH US"
+  },
+  "fr": {
+    "title": "Découvrez nos nouveaux projets récemment achevés",
+    "description": "Notre portefeuille présente une impressionnante gamme de collaborations réussies avec des clients prestigieux. Chaque partenariat témoigne de notre engagement envers l'excellence et l'innovation.",
+    "buttonSeeLess": "Voir Moins",
+    "buttonSeeMore": "Voir Plus",
+    "Title": "TRAVAILLEZ AVEC NOUS",
+    "Content": "Nous aimerions en savoir plus sur votre projet",
+    "CallToAction": "Discutons"
   }
+}

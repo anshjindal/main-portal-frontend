@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet";
-import content from "../../content/Portfolio/PortfolioMetaData.json";
-import { useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+import content from '../../content/Portfolio/PortfolioMetaData.json';
+import { useParams } from 'react-router-dom';
 const PortifolioMetaDataRender = () => {
   const { lang } = useParams();
 
@@ -8,13 +8,16 @@ const PortifolioMetaDataRender = () => {
   return (
     <>
       <Helmet>
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
         <title>{Contents.meta.title}</title>
         <meta name="description" content={Contents.meta.description} />
         <meta name="keywords" content={Contents.meta.kewyWords} />
 
         {/* open graph meta tags */}
-        <link rel="canonical" href="https://www.wouessi.com/en/Portfolio"/>
+        <link rel="canonical" href="https://www.wouessi.com/en/Portfolio" />
         <meta property="og:title" content={Contents.meta.openGraph.title} />
         <meta
           property="og:description"
@@ -27,9 +30,18 @@ const PortifolioMetaDataRender = () => {
 
         {/* Twitter meta tags */}
         <meta name="twitter:title" content={Contents.meta.twitter.title} />
-        <meta name="twitter:description" content={Contents.meta.twitter.description}/>
-        <meta name="twitter:image" content={Contents.meta.twitter.twitterImage}/>
-        <meta name="twitter:card" content={Contents.meta.twitter.twitterCardContent}/>
+        <meta
+          name="twitter:description"
+          content={Contents.meta.twitter.description}
+        />
+        <meta
+          name="twitter:image"
+          content={Contents.meta.twitter.twitterImage}
+        />
+        <meta
+          name="twitter:card"
+          content={Contents.meta.twitter.twitterCardContent}
+        />
       </Helmet>
     </>
   );

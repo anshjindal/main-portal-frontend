@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import ServicesSpotlightData from "../../content/Home/ServicesSpotlightData";
-import content from "../../content/Home/ServiceSpotlight.json"; 
+import React, { useState } from 'react';
+import ServicesSpotlightData from '../../content/Home/ServicesSpotlightData';
+import content from '../../content/Home/ServiceSpotlight.json';
 
-function ServiceSpotlight({lang}) {
+function ServiceSpotlight({ lang }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const handleMouseEnter = (index) => setHoveredIndex(index);
   const handleMouseLeave = () => setHoveredIndex(null);
 
-  const Content = content[lang]; 
+  const Content = content[lang];
 
   return (
     <>
@@ -26,13 +26,13 @@ function ServiceSpotlight({lang}) {
                 className={`rounded-full border-[0.02vw] text-[3vw] border-[#2B00AC] p-[1vw] text-[#2B00AC] cursor-pointer transition-all ease-in-out duration-500 max-[450px]:text-[4vw] max-[450px]:p-[2vw]
         ${
           hoveredIndex === index
-            ? "scale-100 border-[#FF9900] text-[#FF9900]"
-            : "scale-95"
+            ? 'scale-100 border-[#FF9900] text-[#FF9900]'
+            : 'scale-95'
         }
         ${
           hoveredIndex !== null && hoveredIndex !== index
-            ? "scale-95 opacity-50"
-            : ""
+            ? 'scale-95 opacity-50'
+            : ''
         }`}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}

@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import BlogPageLaptop from "../assets/Images/blog_page_laptop.webp";
-import CallToActionSection from "../components/Reusable/CallToActionSection";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import BlogMetaDataRender from "../components/Blog/BlogMetaDataRender";
-import toast, { Toaster } from "react-hot-toast";
-import AdminData from "../content/Admin/Admin";
-import blogcontent from "../content/Blogs/BlogsPageData.json";
-import BlogCard from "../components/Blog/BlogCard"; // Import the BlogCard component
+import React, { useEffect, useState } from 'react';
+import BlogPageLaptop from '../assets/Images/blog_page_laptop.webp';
+import CallToActionSection from '../components/Reusable/CallToActionSection';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
+import toast, { Toaster } from 'react-hot-toast';
+import AdminData from '../content/Admin/Admin';
+import blogcontent from '../content/Blogs/BlogsPageData.json';
+import BlogCard from '../components/Blog/BlogCard'; // Import the BlogCard component
 
 function Blogs() {
   const [blogData, setBlogData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { lang } = useParams();
 
-  const content = AdminData[lang] || AdminData["en"];
+  const content = AdminData[lang] || AdminData['en'];
   const BlogPageContent = blogcontent[lang];
 
   const navigate = useNavigate();
@@ -23,9 +23,9 @@ function Blogs() {
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog`,
         {
-          method: "GET",
+          method: 'GET',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -84,12 +84,9 @@ function Blogs() {
               ))}
             </div>
           </div>
-          
+
           {/* Last Div */}
-          <CallToActionSection
-          CallToAction="workwithus"
-          lang={lang}
-        />
+          <CallToActionSection CallToAction="workwithus" lang={lang} />
         </div>
       </div>
     </>

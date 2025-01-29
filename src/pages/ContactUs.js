@@ -1,30 +1,30 @@
-import React, { useState, useRef } from "react";
-import { CgArrowLongUp } from "react-icons/cg";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import ContactPageHeroImage from "../assets/Images/ContactPageHeroImage.webp";
-import { ImCheckmark } from "react-icons/im";
-import NewsletterRegister from "../components/Reusable/NewsletterRegister.js";
-import { useParams } from "react-router-dom";
-import content from "../content/ContactUs/ContactUs.json";
-import ContactMetaRender from "../components/ContactMetaRender/ContactMetaRender.js";
-import toast, { Toaster } from "react-hot-toast";
+import React, { useState, useRef } from 'react';
+import { CgArrowLongUp } from 'react-icons/cg';
+import { FaFacebook } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FaPhoneVolume } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
+import { FaLocationDot } from 'react-icons/fa6';
+import ContactPageHeroImage from '../assets/Images/ContactPageHeroImage.webp';
+import { ImCheckmark } from 'react-icons/im';
+import NewsletterRegister from '../components/Reusable/NewsletterRegister.js';
+import { useParams } from 'react-router-dom';
+import content from '../content/ContactUs/ContactUs.json';
+import ContactMetaRender from '../components/ContactMetaRender/ContactMetaRender.js';
+import toast, { Toaster } from 'react-hot-toast';
 
 function ContactUs() {
   const [submitButton, updateSubmitButton] = useState(false);
   const [Loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
   });
   const formRef = useRef(null);
   const { lang } = useParams();
@@ -52,13 +52,13 @@ function ContactUs() {
     event.preventDefault();
 
     if (!isEmailValid(formData.email)) {
-      return toast.error("Please enter a valid email address.", {
+      return toast.error('Please enter a valid email address.', {
         duration: 5000,
       });
     }
 
     if (!isPhoneValid(formData.phone)) {
-      return toast.error("Please enter a 10-digit phone number.", {
+      return toast.error('Please enter a 10-digit phone number.', {
         duration: 5000,
       });
     }
@@ -68,9 +68,9 @@ function ContactUs() {
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/contact`,
         {
-          method: "POST",
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
         }
@@ -80,17 +80,17 @@ function ContactUs() {
 
       if (!response.ok) {
         setLoading(false);
-        return toast.error(data?.error || "Email could not be sent.", {
+        return toast.error(data?.error || 'Email could not be sent.', {
           duration: 5000,
         });
       }
 
       setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
       });
 
       updateSubmitButton(true);
@@ -100,7 +100,7 @@ function ContactUs() {
       return toast.success(data?.message, { duration: 5000 });
     } catch (error) {
       setLoading(false);
-      return toast.error("An error occurred while sending the email.", {
+      return toast.error('An error occurred while sending the email.', {
         duration: 5000,
       });
     } finally {
@@ -136,8 +136,12 @@ function ContactUs() {
                     <br></br>
                     {Content.heroSection.phone} */}
                   </p>
-                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">{Content.heroSection.email} <br></br></p>
-                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">{Content.heroSection.phone} <br></br></p>
+                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">
+                    {Content.heroSection.email} <br></br>
+                  </p>
+                  <p className="text-[1.1vw] max-[450px]:text-[2.7vw] font-semibold max-[450px]:mt-[3vw] space-y-3">
+                    {Content.heroSection.phone} <br></br>
+                  </p>
                   <p className="mt-[2.5vw] text-[1vw] text-[#757575] max-[450px]:hidden">
                     {Content.heroSection.bannerText}
                   </p>
@@ -227,8 +231,8 @@ function ContactUs() {
                 disabled={Loading}
                 className={
                   submitButton === false
-                    ? "border-[0.01vw] border-black transition-all ease-in-out duration-300 rounded-full flex items-center justify-center mt-[3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer hover:bg-[#2B00AC] hover:text-white max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]"
-                    : "border-black bg-[green] border-[0.1vw] transition-all duration-300 ease-in-out rounded-full flex items-center justify-center mt-[3vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]"
+                    ? 'border-[0.01vw] border-black transition-all ease-in-out duration-300 rounded-full flex items-center justify-center mt-[3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer hover:bg-[#2B00AC] hover:text-white max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]'
+                    : 'border-black bg-[green] border-[0.1vw] transition-all duration-300 ease-in-out rounded-full flex items-center justify-center mt-[3vw] gap-x-[0.3vw] w-[14vw] h-[14vw] text-[1.1vw] cursor-pointer max-[450px]:w-[25vw] max-[450px]:h-[25vw] max-[450px]:text-[3vw] max-[450px]:mb-[10vw] max-[450px]:mt-[1vw]'
                 }
               >
                 {/* loading && submitButton=false ? spinner
@@ -239,7 +243,7 @@ function ContactUs() {
                       <span className="h-5 w-5 animate-spin rounded-full border-b-2 border-red-500"></span>
                     ) : (
                       <>
-                        <p>{Content.formSection.submitButton.text}</p>{" "}
+                        <p>{Content.formSection.submitButton.text}</p>{' '}
                         <CgArrowLongUp className="text-[1.1vw] rotate-[60deg] max-[450px]:text-[4vw]" />
                       </>
                     )}
@@ -301,7 +305,7 @@ function ContactUs() {
                   >
                     <div className="w-[3.5vw] h-[3.5vw] bg-[#2B00AC] rounded-full flex justify-center items-center text-[2vw] text-white  max-[450px]:w-[9vw] max-[450px]:h-[9vw]">
                       <div className="hover:scale-150 transition-transform duration-300">
-                        <FaFacebook className="text-[1.6vw] max-[450px]:text-[4.5vw]" />{" "}
+                        <FaFacebook className="text-[1.6vw] max-[450px]:text-[4.5vw]" />{' '}
                       </div>
                     </div>
                   </a>

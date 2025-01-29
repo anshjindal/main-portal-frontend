@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "../styles/Blogpost.css";
-import CallToActionSection from "../components/Reusable/CallToActionSection";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { useNavigate, useParams } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm"; // for rendering tables, strikethrough, task lists, etc.
-import rehypeRaw from "rehype-raw"; // to allow rendering raw HTML inside Markdown
-import Contents from "../content/Layout/Footer.json";
+import React, { useEffect, useState } from 'react';
+import '../styles/Blogpost.css';
+import CallToActionSection from '../components/Reusable/CallToActionSection';
+import { FaArrowRightLong } from 'react-icons/fa6';
+import { useNavigate, useParams } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'; // for rendering tables, strikethrough, task lists, etc.
+import rehypeRaw from 'rehype-raw'; // to allow rendering raw HTML inside Markdown
+import Contents from '../content/Layout/Footer.json';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -17,7 +17,7 @@ import {
   TwitterIcon,
   LinkedinIcon,
   WhatsappIcon,
-} from "react-share";
+} from 'react-share';
 
 function BlogPost() {
   const [blogData, setBlogData] = useState([]);
@@ -25,7 +25,7 @@ function BlogPost() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const { lang, slug } = useParams();
-  const Content = Contents[lang] || Contents["en"]; // Fallback to English if `Content` is undefined
+  const Content = Contents[lang] || Contents['en']; // Fallback to English if `Content` is undefined
   const navigate = useNavigate();
 
   const fetchBlogData = async () => {
@@ -33,9 +33,9 @@ function BlogPost() {
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog/${slug}`,
         {
-          method: "GET",
+          method: 'GET',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
         }
       );
@@ -45,7 +45,7 @@ function BlogPost() {
       if (response?.status === 404) {
         toast.error(data?.error, { duration: 5000 });
         setTimeout(() => {
-          navigate("/en/error");
+          navigate('/en/error');
         }, 3000);
       } else {
         setBlogData(data?.message);
@@ -79,7 +79,7 @@ function BlogPost() {
       ? blogData[0].translations.find(
           (translation) => translation.language === lang
         )?.title
-      : "Blog Post";
+      : 'Blog Post';
 
   return (
     <>
@@ -115,14 +115,14 @@ function BlogPost() {
                         {/* Tags and Read Time */}
                         <div className="flex items-center justify-between mb-[1vw]">
                           <p className="text-sm text-gray-600 text-left">
-                            <em>By {author}</em> |{" "}
+                            <em>By {author}</em> |{' '}
                             <em>
                               {new Date(blog.createdAt).toLocaleDateString()}
                             </em>
                           </p>
                           <p className="text-sm text-gray-600">
-                            {blogData[0]?.timeToRead || 5}{" "}
-                            {lang === "en" ? "Mins" : "Mins"}
+                            {blogData[0]?.timeToRead || 5}{' '}
+                            {lang === 'en' ? 'Mins' : 'Mins'}
                           </p>
 
                           <div className="space-x-2">
@@ -235,43 +235,37 @@ function BlogPost() {
                 </form>
               </div>
             </div>
+          </div>
+          {/* Subscription Section for mobile interface */}
+          <div className="flex justify-center w-full space-y-[2vw] min-[450.1px]:hidden">
+            <div className="bg-white p-[1vw] w-[40vw]">
+              <p className="text-[3vw]/[3.5vw] font-semibold text-left">
+                SIGN UP TO BE NOTIFIED FOR MORE
+              </p>
+              <form>
+                <div className="flex justify-end relative h-[6vw] bg-[red] mt-[2vw]">
+                  <input
+                    type="email"
+                    placeholder="EMAIL HERE"
+                    required
+                    className="w-full text-[2.5vw] p-[0.4vw] border-[0.2vw] border-[#2703A5] placeholder:text-[2.5vw] focus:outline-none"
+                  />
+                  <div className="flex justify-center pl-[0.5vw] pr-[0.5vw] items-center absolute h-full bg-[#2703A5] w-[6vw]">
+                    <button
+                      type="submit"
+                      className="text-[3vw] text-orange-500 border-none cursor-pointer"
+                    >
+                      <FaArrowRightLong />
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-            {/* Subscription Section for mobile interface */}
-      <div className="flex justify-center w-full space-y-[2vw] min-[450.1px]:hidden">
-        <div className="bg-white p-[1vw] w-[40vw]">
-          <p className="text-[3vw]/[3.5vw] font-semibold text-left">
-            SIGN UP TO BE NOTIFIED FOR MORE
-          </p>
-          <form>
-            <div className="flex justify-end relative h-[6vw] bg-[red] mt-[2vw]">
-              <input
-                type="email"
-                placeholder="EMAIL HERE"
-                required
-                className="w-full text-[2.5vw] p-[0.4vw] border-[0.2vw] border-[#2703A5] placeholder:text-[2.5vw] focus:outline-none"
-              />
-              <div className="flex justify-center pl-[0.5vw] pr-[0.5vw] items-center absolute h-full bg-[#2703A5] w-[6vw]">
-                <button
-                  type="submit"
-                  className="text-[3vw] text-orange-500 border-none cursor-pointer"
-                >
-                  <FaArrowRightLong />
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>      
-            {/* Call to Action Section */}
-            <CallToActionSection
-          CallToAction="workwithus"
-          lang={lang}
-        />
-            
-         
+          </div>
+          {/* Call to Action Section */}
+          <CallToActionSection CallToAction="workwithus" lang={lang} />
         </div>
       </div>
-
     </>
   );
 }

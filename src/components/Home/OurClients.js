@@ -1,7 +1,7 @@
-import React from "react";
-import Slider from "react-infinite-logo-slider";
-import clientLogos from "../../content/Home/ClientsLogoData";
-import content from "../../content/Home/OurClients.json";
+import React from 'react';
+import Slider from 'react-infinite-logo-slider';
+import clientLogos from '../../content/Home/ClientsLogoData';
+import content from '../../content/Home/OurClients.json';
 
 function OurClients({ lang }) {
   const Content = content[lang];
@@ -20,7 +20,8 @@ function OurClients({ lang }) {
         duration={40}
         pauseOnHover={true}
         blurBorders={false}
-        blurBoderColor={"#fff"}>
+        blurBoderColor={'#fff'}
+      >
         {clientLogos.map((logo, index) => (
           <div className="flex mr-[5vw] ">
             <Slider.Slide key={index}>

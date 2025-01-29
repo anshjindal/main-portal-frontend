@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import { SignUp } from '@clerk/clerk-react'
+import { motion } from 'framer-motion';
+import { SignUp } from '@clerk/clerk-react';
 import LoginIllustrator from '../Login/LoginIllustrator';
 
 const Register = () => {
@@ -22,8 +22,7 @@ const Register = () => {
         </div>
       </motion.div>
     </div>
-  )
-}
-
+  );
+};
 
 export default Register;

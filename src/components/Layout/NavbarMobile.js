@@ -1,16 +1,16 @@
-import { IoIosArrowForward } from "react-icons/io";
-import { motion } from "framer-motion";
-import { CgArrowLongUp } from "react-icons/cg";
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/SVG/Wouessi_Logo_horizontal_tag.svg";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross1 } from "react-icons/rx";
-import "../../styles/global.css";
-import { useParams, useNavigate } from "react-router-dom";
-import content from "../../content/Layout/Navbar.json"; 
-import { LanguageContext } from "../Utils/languageContext";
-import { UserButton, useUser } from "@clerk/clerk-react";
+import { IoIosArrowForward } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import { CgArrowLongUp } from 'react-icons/cg';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/SVG/Wouessi_Logo_horizontal_tag.svg';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RxCross1 } from 'react-icons/rx';
+import '../../styles/global.css';
+import { useParams, useNavigate } from 'react-router-dom';
+import content from '../../content/Layout/Navbar.json';
+import { LanguageContext } from '../Utils/languageContext';
+import { UserButton, useUser } from '@clerk/clerk-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,18 +37,17 @@ function NavbarMobile() {
 
   const handleLanguageChange = (newLang) => {
     const path = window.location.pathname.replace(/^\/[a-z]{2}\//, '/');
-    switchLanguage(newLang); 
+    switchLanguage(newLang);
     navigate(`/${newLang}${path}`);
-    // window.location.reload(); 
+    // window.location.reload();
     setLanguageDropdown(!languageDropdown);
     handleMenuToggle(); // Ensure menu closes when selecting language
   };
 
-
-  const { lang } = useParams(); 
+  const { lang } = useParams();
   const Content = content[lang];
 
-  const currentLang = lang || "en"; 
+  const currentLang = lang || 'en';
   const { isSignedIn, user, isLoaded } = useUser();
 
   const handleMenuToggle = () => {
@@ -71,10 +70,10 @@ function NavbarMobile() {
       openHamburgerMenu(false);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
       document.body.classList.remove('no-scroll'); // Clean up class on component unmount
     };
   }, [navMenu]);
@@ -84,7 +83,10 @@ function NavbarMobile() {
       <div className="flex justify-center pl-[1vw] pr-[1vw] navbar min-[450px]:hidden">
         <div className="flex items-center justify-center h-[8vw] border-b-[0.001vw] text-[#2B00AC] border-[#B8B8B8] max-[450px]:w-[80%] max-[450px]:border-none max-[450px]:pt-[13vw] max-[450px]:pb-[9vw]">
           <div className="flex items-center gap-x-[10vw] w-[95%]">
-            <Link to={`/${currentLang}`} className="w-[20%] max-[450px]:w-[50%]">
+            <Link
+              to={`/${currentLang}`}
+              className="w-[20%] max-[450px]:w-[50%]"
+            >
               <img alt="" src={logo} className="cursor-pointer"></img>
             </Link>
           </div>
@@ -103,9 +105,9 @@ function NavbarMobile() {
         </div>
       </div>
       <motion.div
-        className={`fixed navbar-slider top-0 left-0 w-full bg-[#F4F4F4] z-100 overflow-hidden ${navMenu ? "h-screen" : "h-0"}`}
+        className={`fixed navbar-slider top-0 left-0 w-full bg-[#F4F4F4] z-100 overflow-hidden ${navMenu ? 'h-screen' : 'h-0'}`}
         initial={{ height: 0 }}
-        animate={{ height: navMenu ? "100vh" : 0 }}
+        animate={{ height: navMenu ? '100vh' : 0 }}
         transition={{ duration: 0.5 }}
       >
         {navMenu && (
@@ -120,42 +122,51 @@ function NavbarMobile() {
               variants={containerVariants}
             >
               <motion.div variants={itemVariants}>
-                <Link to={`/${currentLang}/ContactUs`} onClick={handleMenuToggle}>
+                <Link
+                  to={`/${currentLang}/ContactUs`}
+                  onClick={handleMenuToggle}
+                >
                   <div className="w-full flex justify-center">
-                    <div
-                      className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center"
-                    >
+                    <div className="w-[40vw] h-[12vw] gap-x-[1vw] rounded-full border-[0.1vw] border-[#2B00AC] hover:border-[#FF9900] hover:text-[#FF9900] text-[6vw] font-semibold flex items-center justify-center">
                       {Content.letstalk}
                       <CgArrowLongUp className="ml-[1vw] text-[6vw] rotate-[90deg]" />
                     </div>
                   </div>
                 </Link>
               </motion.div>
-              {[{ name: `${Content.home}`, route: "/" }, { name: `${Content.aboutUs}`, route: "/AboutUs" }, { name: `${Content.services}`, route: "/Services" }, { name: `${Content.portfolio}`, route: "/Portfolio" }].map((item, index) => (
+              {[
+                { name: `${Content.home}`, route: '/' },
+                { name: `${Content.aboutUs}`, route: '/AboutUs' },
+                { name: `${Content.services}`, route: '/Services' },
+                { name: `${Content.portfolio}`, route: '/Portfolio' },
+              ].map((item, index) => (
                 <div onClick={handleMenuToggle} key={index}>
                   <motion.h1
                     className="text-[6vw] hover:text-[#FF9900] underline font-semibold"
                     variants={itemVariants}
                   >
-                    <Link to={`/${currentLang+item.route}`}>
+                    <Link to={`/${currentLang + item.route}`}>
                       <div>{item.name}</div>
                     </Link>
                   </motion.h1>
                 </div>
               ))}
-              <motion.div variants={itemVariants} className="flex justify-center">
+              <motion.div
+                variants={itemVariants}
+                className="flex justify-center"
+              >
                 <div className="w-fit">
                   <div
                     onClick={() => {
                       setLanguageDropdown(!languageDropdown);
                     }}
-                    className={`${languageDropdown ? "text-[#FF9900]" : ""} py-[2vw] gap-x-[1vw] flex items-center cursor-pointer hover:text-[#FF9900] text-[#2B00AC] text-[5vw] font-bold`}
+                    className={`${languageDropdown ? 'text-[#FF9900]' : ''} py-[2vw] gap-x-[1vw] flex items-center cursor-pointer hover:text-[#FF9900] text-[#2B00AC] text-[5vw] font-bold`}
                   >
                     <IoIosArrowForward
                       className={`${
                         languageDropdown
-                          ? "rotate-[90deg] transition-all duration-300 font-bold"
-                          : "font-bold transition-all duration-300"
+                          ? 'rotate-[90deg] transition-all duration-300 font-bold'
+                          : 'font-bold transition-all duration-300'
                       }`}
                     />
                     <div className="transition-all duration-300">
@@ -167,8 +178,7 @@ function NavbarMobile() {
                       <div
                         className="flex items-center text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-bold cursor-pointer"
                         onClick={() => {
-                          handleLanguageChange("en");
-                         
+                          handleLanguageChange('en');
                         }}
                       >
                         <IoIosArrowForward className="text-[4vw]" /> EN
@@ -176,7 +186,7 @@ function NavbarMobile() {
                       <div
                         className="flex items-center text-[#2B00AC] hover:text-[#FF9900] text-[5vw] font-bold cursor-pointer"
                         onClick={() => {
-                          handleLanguageChange("fr");
+                          handleLanguageChange('fr');
                         }}
                       >
                         <IoIosArrowForward className="text-[4vw]" /> FR
@@ -185,7 +195,7 @@ function NavbarMobile() {
                   )}
                 </div>
               </motion.div>
-              {isSignedIn &&  <UserButton afterSignOutUrl="/"  />}
+              {isSignedIn && <UserButton afterSignOutUrl="/" />}
             </motion.div>
           </motion.div>
         )}

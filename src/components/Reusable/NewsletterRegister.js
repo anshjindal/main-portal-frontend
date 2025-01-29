@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import NewsletterBanner from "../../assets/Images/NewsletterBanner.webp";
-import { FaArrowRight } from "react-icons/fa6";
-import content from "../../content/Reusable/NewsletterRegister.json";
+import { useState, useEffect } from 'react';
+import NewsletterBanner from '../../assets/Images/NewsletterBanner.webp';
+import { FaArrowRight } from 'react-icons/fa6';
+import content from '../../content/Reusable/NewsletterRegister.json';
 
 function NewsletterRegister({ lang }) {
-  const [email, setEmail] = useState(""); // State to manage the email input
-  const [message, setMessage] = useState(""); // State to manage success/error messages
+  const [email, setEmail] = useState(''); // State to manage the email input
+  const [message, setMessage] = useState(''); // State to manage success/error messages
   const [isSubmitting, setIsSubmitting] = useState(false); // State to trigger useEffect on form submission
   const Content = content[lang]; // Default to English if lang is not found
 
@@ -14,33 +14,35 @@ function NewsletterRegister({ lang }) {
     const subscribeToNewsletter = async () => {
       if (isSubmitting) {
         try {
-          const response = await fetch(`${process.env.REACT_APP_WOUESSI_API_URL}/api/newsletter`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email }),
-          });
-  
+          const response = await fetch(
+            `${process.env.REACT_APP_WOUESSI_API_URL}/api/newsletter`,
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ email }),
+            }
+          );
+
           const result = await response.json();
-  
+
           if (response.ok) {
             setMessage(result.message); // Display success message
-            setEmail(""); // Clear the input field
+            setEmail(''); // Clear the input field
           } else {
             setMessage(result.message); // Display error message
           }
         } catch (error) {
-          setMessage("An error occurred. Please try again."); // Handle fetch errors
+          setMessage('An error occurred. Please try again.'); // Handle fetch errors
         } finally {
           setIsSubmitting(false); // Reset the submission state
         }
       }
     };
-  
+
     subscribeToNewsletter(); // Call the async function when isSubmitting changes
   }, [isSubmitting, email]); // Dependency array includes isSubmitting and email
-  
 
   // Handle form submission
   const handleSubmit = (e) => {
@@ -81,7 +83,7 @@ function NewsletterRegister({ lang }) {
                 <button
                   type="submit"
                   className="w-[3vw] text-[1.5vw] hover:pl-[1vw] px-1 hover:text-[#44c644] cursor-pointer transition-all ease-in-out duration-300 max-[450px]:text-[2.5vw]"
-                  name ="Submit"
+                  name="Submit"
                 >
                   <FaArrowRight />
                 </button>

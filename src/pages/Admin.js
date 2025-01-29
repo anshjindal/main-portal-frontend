@@ -1,49 +1,49 @@
-import React, { useState } from "react";
-import MarkdownEditor from "react-markdown-editor-lite";
-import ReactMarkdown from "react-markdown";
-import "react-markdown-editor-lite/lib/index.css";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import toast, { Toaster } from "react-hot-toast";
-import { useParams } from "react-router-dom"; // Assuming you use this to get the language from URL params
-import AdminData from "../content/Admin/Admin";
-import { BsClipboard2CheckFill } from "react-icons/bs";
+import React, { useState } from 'react';
+import MarkdownEditor from 'react-markdown-editor-lite';
+import ReactMarkdown from 'react-markdown';
+import 'react-markdown-editor-lite/lib/index.css';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import toast, { Toaster } from 'react-hot-toast';
+import { useParams } from 'react-router-dom'; // Assuming you use this to get the language from URL params
+import AdminData from '../content/Admin/Admin';
+import { BsClipboard2CheckFill } from 'react-icons/bs';
 
 const Admin = () => {
-  const [description, setDescription] = useState({ text: "", html: "" });
-  const [title, setTitle] = useState("");
-  const [slug, setSlug] = useState("");
-  const [author, setAuthor] = useState("");
+  const [description, setDescription] = useState({ text: '', html: '' });
+  const [title, setTitle] = useState('');
+  const [slug, setSlug] = useState('');
+  const [author, setAuthor] = useState('');
   const [timeToRead, setTimeToRead] = useState(0);
   const [tags, setTags] = useState([]);
-  const [tagInput, setTagInput] = useState("");
-  const [shortDesc, setshortDesc] = useState("");
+  const [tagInput, setTagInput] = useState('');
+  const [shortDesc, setshortDesc] = useState('');
   const [errors, setErrors] = useState({});
   const [Loading, setLoading] = useState(false);
-  const [imageUrl, setImageUrl] = useState("");
-  const [cloudinaryPubicUrl, setcloudinaryPubicUrl] = useState("");
-  const [cloudinaryAssetId, setcloudinaryAssetId] = useState("");
+  const [imageUrl, setImageUrl] = useState('');
+  const [cloudinaryPubicUrl, setcloudinaryPubicUrl] = useState('');
+  const [cloudinaryAssetId, setcloudinaryAssetId] = useState('');
   const { lang } = useParams();
 
-  const content = AdminData[lang] || AdminData["en"];
+  const content = AdminData[lang] || AdminData['en'];
 
   const handleSlugChange = (e) => {
     const inputSlug = e.target.value
       .toLowerCase()
-      .replace(/[^a-z0-9\- ]/g, "")
-      .replace(/\s+/g, " ")
+      .replace(/[^a-z0-9\- ]/g, '')
+      .replace(/\s+/g, ' ')
       .trim()
-      .replace(/\s/g, "-")
-      .replace(/-+/g, "-");
+      .replace(/\s/g, '-')
+      .replace(/-+/g, '-');
     setSlug(inputSlug);
-    if (inputSlug) clearError("slug");
+    if (inputSlug) clearError('slug');
   };
 
   const handleAddTag = () => {
     if (tagInput.trim()) {
       setTags([...tags, tagInput.trim()]);
-      setTagInput("");
-      clearError("tags");
+      setTagInput('');
+      clearError('tags');
     }
   };
 
@@ -98,27 +98,27 @@ const Admin = () => {
         cloudName: process.env.REACT_APP_CLOUDINARY_CLOUDNAME,
         uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET,
         sources: [
-          "local",
-          "url",
-          "camera",
-          "dropbox",
-          "shutterstock",
-          "google_drive",
-          "unsplash",
+          'local',
+          'url',
+          'camera',
+          'dropbox',
+          'shutterstock',
+          'google_drive',
+          'unsplash',
         ],
         showAdvancedOptions: true,
         cropping: true,
         multiple: false,
       },
       (error, result) => {
-        if (result.event === "success") {
+        if (result.event === 'success') {
           setImageUrl(result.info.secure_url);
           setcloudinaryPubicUrl(result.info.public_id);
           setcloudinaryAssetId(result.info.asset_id);
-          clearError("image");
-          toast.success("Image uploaded successfully!");
+          clearError('image');
+          toast.success('Image uploaded successfully!');
         } else if (error) {
-          toast.error("Error uploading image. Please try again.");
+          toast.error('Error uploading image. Please try again.');
         }
       }
     );
@@ -131,7 +131,7 @@ const Admin = () => {
 
     if (!validateForm()) {
       setLoading(false);
-      return toast.error("Please fill out all fields", { duration: 5000 });
+      return toast.error('Please fill out all fields', { duration: 5000 });
     }
 
     const blogData = {
@@ -151,9 +151,9 @@ const Admin = () => {
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog`,
         {
-          method: "POST",
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(blogData),
         }
@@ -166,18 +166,18 @@ const Admin = () => {
         return toast.error(data?.message, { duration: 5000 });
       }
 
-      setTitle("");
-      setSlug("");
-      setAuthor("");
-      setDescription({ text: "", html: "" });
+      setTitle('');
+      setSlug('');
+      setAuthor('');
+      setDescription({ text: '', html: '' });
       setTimeToRead(0);
-      setImageUrl("");
-      setshortDesc("");
+      setImageUrl('');
+      setshortDesc('');
       setTags([]);
       setErrors({});
       setLoading(false);
 
-      return toast.success("Blog created successfully!", { duration: 5000 });
+      return toast.success('Blog created successfully!', { duration: 5000 });
     } catch (error) {
       setLoading(false);
       return toast.error(error.message, { duration: 5000 });
@@ -202,10 +202,10 @@ const Admin = () => {
               type="text"
               value={title}
               onChange={(e) =>
-                handleInputChange(setTitle, "title", e.target.value)
+                handleInputChange(setTitle, 'title', e.target.value)
               }
               className={`w-full p-3 my-3 border ${
-                errors.title ? "border-red-500" : "border-gray-300"
+                errors.title ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
               placeholder="Enter the blog title"
             />
@@ -224,7 +224,7 @@ const Admin = () => {
               value={slug}
               onChange={handleSlugChange}
               className={`w-full p-3 my-3 border ${
-                errors.slug ? "border-red-500" : "border-gray-300"
+                errors.slug ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
               placeholder="Generated slug"
               maxLength={50}
@@ -243,10 +243,10 @@ const Admin = () => {
               type="text"
               value={author}
               onChange={(e) =>
-                handleInputChange(setAuthor, "author", e.target.value)
+                handleInputChange(setAuthor, 'author', e.target.value)
               }
               className={`w-full p-3 my-3 border ${
-                errors.author ? "border-red-500" : "border-gray-300"
+                errors.author ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
               placeholder="Enter the author's name"
             />
@@ -264,10 +264,10 @@ const Admin = () => {
               type="text"
               value={shortDesc}
               onChange={(e) =>
-                handleInputChange(setshortDesc, "desc", e.target.value)
+                handleInputChange(setshortDesc, 'desc', e.target.value)
               }
               className={`w-full p-3 my-3 border ${
-                errors.desc ? "border-red-500" : "border-gray-300"
+                errors.desc ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
               placeholder="Enter the author's name"
             />
@@ -283,12 +283,12 @@ const Admin = () => {
             </label>
             <input
               type="number"
-              value={timeToRead === 0 ? "" : timeToRead}
+              value={timeToRead === 0 ? '' : timeToRead}
               onChange={(e) =>
-                handleInputChange(setTimeToRead, "timeToRead", e.target.value)
+                handleInputChange(setTimeToRead, 'timeToRead', e.target.value)
               }
               className={`w-full p-3 my-3 border ${
-                errors.timeToRead ? "border-red-500" : "border-gray-300"
+                errors.timeToRead ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
               placeholder="Enter time to read"
             />
@@ -306,12 +306,12 @@ const Admin = () => {
               type="text"
               value={tagInput}
               onChange={(e) =>
-                handleInputChange(setTagInput, "tagInput", e.target.value)
+                handleInputChange(setTagInput, 'tagInput', e.target.value)
               }
-              onKeyDown={(e) => e.key === "Enter" && handleAddTag()}
+              onKeyDown={(e) => e.key === 'Enter' && handleAddTag()}
               placeholder="Enter a tag and press Enter"
               className={`w-full p-3 my-3 border ${
-                errors.tags ? "border-red-500" : "border-gray-300"
+                errors.tags ? 'border-red-500' : 'border-gray-300'
               } rounded-md focus:outline-none focus:ring-2 focus:ring-black`}
             />
 
@@ -349,7 +349,7 @@ const Admin = () => {
                 className="w-full p-3 my-3 border bg-white  text-[#9ca3af] text-left border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black flex justify-between items-center"
                 placeholder="Image URL will appear here"
               >
-                Upload Image{" "}
+                Upload Image{' '}
                 {imageUrl && (
                   <img
                     src={imageUrl}
@@ -384,9 +384,9 @@ const Admin = () => {
             onChange={(ev) => {
               const { text, html } = ev;
               setDescription({ text, html });
-              if (text.trim()) clearError("description");
+              if (text.trim()) clearError('description');
             }}
-            style={{ width: "100%", height: "400px", marginTop: "1em" }}
+            style={{ width: '100%', height: '400px', marginTop: '1em' }}
             renderHTML={(text) => (
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}

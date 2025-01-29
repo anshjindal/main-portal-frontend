@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet";
-import content from "../../content/Products/ProductsMetaData.json";
-import { useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+import content from '../../content/Products/ProductsMetaData.json';
+import { useParams } from 'react-router-dom';
 const ProductsMetaDataRender = () => {
   const { lang } = useParams();
 
@@ -8,7 +8,10 @@ const ProductsMetaDataRender = () => {
   return (
     <>
       <Helmet>
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
         <title>{Contents.meta.title}</title>
         <meta name="description" content={Contents.meta.description} />
         <meta name="keywords" content={Contents.meta.kewyWords} />

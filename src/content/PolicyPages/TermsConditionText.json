@@ -373,45 +373,44 @@
         }
       ]
     },
-      "Third-PartyLinks": {
-        "Heading": "Liens vers des tiers",
-        "Content": [
-          {
-            "innerText": "Le site peut contenir des liens vers des sites Web tiers. Nous ne sommes pas responsables du contenu ou des pratiques de ces sites tiers. L'utilisation de ces sites se fait à vos propres risques."
-          }
-        ]
-      },
-      "PrivacyandDataProtection": {
-        "Heading": "Confidentialité et protection des données",
-        "Content": [
-          {
-            "innerTitle": "Collecte d'informations personnelles",
-            "innerText": "Nous collectons des informations personnelles comme décrit dans notre politique de confidentialité. Cela peut inclure des informations telles que votre nom, adresse e-mail et autres coordonnées."
-          },
-          {
-            "innerTitle": "Utilisation des informations personnelles",
-            "innerText": "Nous utilisons les informations personnelles conformément à notre politique de confidentialité, y compris pour fournir et améliorer nos services, communiquer avec vous et respecter les obligations légales."
-          },
-          {
-            "innerTitle": "Divulgation des informations personnelles",
-            "innerText": "Nous pouvons divulguer des informations personnelles à des tiers comme décrit dans notre politique de confidentialité, notamment pour des raisons légales, des opérations commerciales et des prestataires de services."
-          },
-          {
-            "innerTitle": "Sécurité",
-            "innerText": "Nous mettons en œuvre des mesures de sécurité raisonnables pour protéger vos informations personnelles contre tout accès, utilisation ou divulgation non autorisé."
-          },
-          {
-            "innerTitle": "Conformité au RGPD",
-            "innerText": "Si vous êtes situé dans l'Union européenne (UE), vous avez le droit d'accéder à vos données personnelles, de les rectifier et de les effacer. Nous obtiendrons votre consentement explicite avant de traiter vos données personnelles et vous informerons de toute violation dans un délai de 72 heures."
-          },
-          {
-            "innerTitle": "Conformité à la CCPA",
-            "innerText": "Si vous êtes résident de Californie, vous avez le droit de savoir quelles informations personnelles sont collectées, de refuser la vente de vos informations personnelles et de demander la suppression de vos informations personnelles."
-          }
-        ]
-      },
-    
-    
+    "Third-PartyLinks": {
+      "Heading": "Liens vers des tiers",
+      "Content": [
+        {
+          "innerText": "Le site peut contenir des liens vers des sites Web tiers. Nous ne sommes pas responsables du contenu ou des pratiques de ces sites tiers. L'utilisation de ces sites se fait à vos propres risques."
+        }
+      ]
+    },
+    "PrivacyandDataProtection": {
+      "Heading": "Confidentialité et protection des données",
+      "Content": [
+        {
+          "innerTitle": "Collecte d'informations personnelles",
+          "innerText": "Nous collectons des informations personnelles comme décrit dans notre politique de confidentialité. Cela peut inclure des informations telles que votre nom, adresse e-mail et autres coordonnées."
+        },
+        {
+          "innerTitle": "Utilisation des informations personnelles",
+          "innerText": "Nous utilisons les informations personnelles conformément à notre politique de confidentialité, y compris pour fournir et améliorer nos services, communiquer avec vous et respecter les obligations légales."
+        },
+        {
+          "innerTitle": "Divulgation des informations personnelles",
+          "innerText": "Nous pouvons divulguer des informations personnelles à des tiers comme décrit dans notre politique de confidentialité, notamment pour des raisons légales, des opérations commerciales et des prestataires de services."
+        },
+        {
+          "innerTitle": "Sécurité",
+          "innerText": "Nous mettons en œuvre des mesures de sécurité raisonnables pour protéger vos informations personnelles contre tout accès, utilisation ou divulgation non autorisé."
+        },
+        {
+          "innerTitle": "Conformité au RGPD",
+          "innerText": "Si vous êtes situé dans l'Union européenne (UE), vous avez le droit d'accéder à vos données personnelles, de les rectifier et de les effacer. Nous obtiendrons votre consentement explicite avant de traiter vos données personnelles et vous informerons de toute violation dans un délai de 72 heures."
+        },
+        {
+          "innerTitle": "Conformité à la CCPA",
+          "innerText": "Si vous êtes résident de Californie, vous avez le droit de savoir quelles informations personnelles sont collectées, de refuser la vente de vos informations personnelles et de demander la suppression de vos informations personnelles."
+        }
+      ]
+    },
+
     "GoverningLaw": {
       "Heading": "Droit Applicable",
       "Content": [

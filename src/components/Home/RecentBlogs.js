@@ -1,7 +1,7 @@
-import MobileSEOServicesBlogImage from "../../assets/Images/MobileSEOServicesBlogImage.webp";
-import TechnicalSEOServicesBlogImage from "../../assets/Images/TechnicalSEOServicesBlogImage.webp";
-import { Link } from "react-router-dom";
-import content from "../../content/Home/RecentBlogsContent.json"; 
+import MobileSEOServicesBlogImage from '../../assets/Images/MobileSEOServicesBlogImage.webp';
+import TechnicalSEOServicesBlogImage from '../../assets/Images/TechnicalSEOServicesBlogImage.webp';
+import { Link } from 'react-router-dom';
+import content from '../../content/Home/RecentBlogsContent.json';
 
 function RecentBlogs({ lang }) {
   const Content = content[lang];
@@ -25,7 +25,7 @@ function RecentBlogs({ lang }) {
             <div
               key={index}
               className={`flex ${
-                index === 1 ? "max-[450px]:flex-row-reverse" : ""
+                index === 1 ? 'max-[450px]:flex-row-reverse' : ''
               }`} // Reverse layout for second post on mobile
             >
               <div
@@ -37,8 +37,8 @@ function RecentBlogs({ lang }) {
               <div
                 className={`w-[18vw] h-fit mt-[6vw] ${
                   index === 1
-                    ? "ml-[-5vw] max-[450px]:ml-[0vw] max-[450px]:mr-[-5vw]" // Add overlap margin for second post on mobile
-                    : "ml-[-5vw]"
+                    ? 'ml-[-5vw] max-[450px]:ml-[0vw] max-[450px]:mr-[-5vw]' // Add overlap margin for second post on mobile
+                    : 'ml-[-5vw]'
                 } p-[1.5vw] drop-shadow-lg space-y-[4vw] bg-white max-[450px]:w-[55vw] max-[450px]:p-[6vw] max-[450px]:mt-[10vw] max-[450px]:space-y-[7vw]`}
               >
                 <div className="text-[1.2vw] text-[#666666] border-[0.1vw] border-[#F2F2F2] p-[0.5vw] max-[450px]:text-[3vw]">

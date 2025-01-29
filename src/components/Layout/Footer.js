@@ -1,14 +1,14 @@
-import { Link, useParams } from "react-router-dom";
-import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { CgArrowLongUp } from "react-icons/cg";
-import WouessiLogoFooter from "../../assets/SVG/WouessiLogoFooter.svg";
-import "../../styles/global.css";
-import content from "../../content/Layout/Footer.json";
+import { Link, useParams } from 'react-router-dom';
+import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { CgArrowLongUp } from 'react-icons/cg';
+import WouessiLogoFooter from '../../assets/SVG/WouessiLogoFooter.svg';
+import '../../styles/global.css';
+import content from '../../content/Layout/Footer.json';
 
 function Footer() {
-  const { lang } = useParams(); 
-  const Content = content[lang] || content["en"]; // Fallback to English if `Content` is undefined
+  const { lang } = useParams();
+  const Content = content[lang] || content['en']; // Fallback to English if `Content` is undefined
 
   return (
     <>

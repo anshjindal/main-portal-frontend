@@ -1,14 +1,14 @@
-import AboutPageHeroImage from "../../assets/SVG/AboutPageHeroImage.svg";
-import OurMissionTopImage from "../../assets/Images/OurMissionTopImage.webp";
-import OurMissionSideImage from "../../assets/Images/OurMissionSideImage.webp";
-import { CgArrowLongUp } from "react-icons/cg";
-import content from "../../content/AboutUs/HeroAboutUs.json";
+import AboutPageHeroImage from '../../assets/SVG/AboutPageHeroImage.svg';
+import OurMissionTopImage from '../../assets/Images/OurMissionTopImage.webp';
+import OurMissionSideImage from '../../assets/Images/OurMissionSideImage.webp';
+import { CgArrowLongUp } from 'react-icons/cg';
+import content from '../../content/AboutUs/HeroAboutUs.json';
 
 function HeroAboutUs({ lang }) {
   const handleScroll = () => {
     document
-      .getElementById("OurApproach")
-      ?.scrollIntoView({ behavior: "smooth" });
+      .getElementById('OurApproach')
+      ?.scrollIntoView({ behavior: 'smooth' });
   };
 
   // Get content based on the selected language
@@ -18,7 +18,7 @@ function HeroAboutUs({ lang }) {
     <div className="flex justify-center h-fit">
       <div className="w-[80%] text-left mt-[3vw]">
         <h1 className="text-[4vw]/[5vw] max-[450px]:text-[7vw]/[10vw] font-extrabold w-[75%] max-[450px]:w-[100%]">
-          {Content.title}{" "}
+          {Content.title}{' '}
           <span className="text-[#2703A5]">{Content.subtitle}</span>
         </h1>
         <div className="max-[450px]:block flex mt-[3vw] items-center justify-between">

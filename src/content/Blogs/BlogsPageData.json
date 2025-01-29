@@ -1,11 +1,10 @@
 {
-    "en": {
-      "mainHeading": "Blogs",
-      "description": "Discover insights for businesses seeking digital transformation. Explore trends, strategies, and technologies related to software optimization, and the online platform ecosystem. Get practical tips to stay updated and gain a competitive edge."
-    },
-    "fr": {
-      "mainHeading": "Blogs",
-      "description": "Découvrez des informations pour les entreprises cherchant à se transformer numériquement. Explorez les tendances, stratégies et technologies liées à l'optimisation des logiciels et à l'écosystème des plateformes en ligne. Obtenez des conseils pratiques pour rester à jour et obtenir un avantage concurrentiel."
-    }
+  "en": {
+    "mainHeading": "Blogs",
+    "description": "Discover insights for businesses seeking digital transformation. Explore trends, strategies, and technologies related to software optimization, and the online platform ecosystem. Get practical tips to stay updated and gain a competitive edge."
+  },
+  "fr": {
+    "mainHeading": "Blogs",
+    "description": "Découvrez des informations pour les entreprises cherchant à se transformer numériquement. Explorez les tendances, stratégies et technologies liées à l'optimisation des logiciels et à l'écosystème des plateformes en ligne. Obtenez des conseils pratiques pour rester à jour et obtenir un avantage concurrentiel."
   }
-  
+}

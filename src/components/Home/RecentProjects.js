@@ -1,19 +1,24 @@
-import { useState, useEffect } from "react";
-import RecentProjectData from "../../content/Home/RecentProjectData"; // Updated import path
-import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
-import content from "../../content/Home/RecentProjects.json"; 
+import { useState, useEffect } from 'react';
+import RecentProjectData from '../../content/Home/RecentProjectData'; // Updated import path
+import {
+  PiArrowCircleRightLight,
+  PiArrowCircleLeftLight,
+} from 'react-icons/pi';
+import content from '../../content/Home/RecentProjects.json';
 
-function RecentProjects({lang}) {
+function RecentProjects({ lang }) {
   const [projSlider, updateProjSlider] = useState(0);
   const sliderLength = RecentProjectData.length;
-  const Content = content[lang]; 
+  const Content = content[lang];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
-      updateProjSlider((prevIndex) => (prevIndex === sliderLength - 1 ? 0 : prevIndex + 1));
+      updateProjSlider((prevIndex) =>
+        prevIndex === sliderLength - 1 ? 0 : prevIndex + 1
+      );
     }, 2000);
 
-    return () => clearInterval(slideInterval); 
+    return () => clearInterval(slideInterval);
   }, [sliderLength]);
 
   const currentProject = RecentProjectData[projSlider];
@@ -28,7 +33,9 @@ function RecentProjects({lang}) {
           <div className="flex items-center justify-center">
             <PiArrowCircleLeftLight
               onClick={() =>
-                updateProjSlider(projSlider === 0 ? sliderLength - 1 : projSlider - 1)
+                updateProjSlider(
+                  projSlider === 0 ? sliderLength - 1 : projSlider - 1
+                )
               }
               className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer mr-[4vw] max-[450px]:text-[10vw]"
             />
@@ -60,7 +67,9 @@ function RecentProjects({lang}) {
             </a>
             <PiArrowCircleRightLight
               onClick={() =>
-                updateProjSlider(projSlider === sliderLength - 1 ? 0 : projSlider + 1)
+                updateProjSlider(
+                  projSlider === sliderLength - 1 ? 0 : projSlider + 1
+                )
               }
               className="text-[7vw] text-[#C8CFD5] hover:fill-[#FF9900] cursor-pointer ml-[4vw] max-[450px]:text-[10vw]"
             />

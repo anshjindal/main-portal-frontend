@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { SignIn } from '@clerk/clerk-react'
-import LoginIllustrator from './LoginIllustrator'
+import { motion } from 'framer-motion';
+import { SignIn } from '@clerk/clerk-react';
+import LoginIllustrator from './LoginIllustrator';
 
 export default function Component() {
   return (
@@ -22,5 +22,5 @@ export default function Component() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }

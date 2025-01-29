@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const AIChatbot = () => {
   const [iframeKey, setIframeKey] = useState(0);
@@ -9,11 +9,11 @@ const AIChatbot = () => {
   }, []);
 
   return (
-    <div className="webchat" style={{ height: "600px", width: "400px" }}>
+    <div className="webchat" style={{ height: '600px', width: '400px' }}>
       <iframe
         key={iframeKey} // This ensures the iframe is reloaded
         title={iframeKey}
-        style={{ height: "100%", width: "100%", border: "none" }}
+        style={{ height: '100%', width: '100%', border: 'none' }}
         srcDoc={`
     <!doctype html>
     <html lang="en">

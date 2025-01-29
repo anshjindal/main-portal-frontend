@@ -1,21 +1,20 @@
 {
-    "en": {
-      "home": "Home",
-      "products": "Products",
-      "portfolio": "Portfolio",
-      "services": "Services",
-      "aboutUs": "About Us",
-      "blogs": "Blogs",
-      "letstalk": "Lets Talk"
-    },
-    "fr": {
-      "home": "Accueil",
-      "products": "Produits",
-      "portfolio": "Portfolio",
-      "services": "Services",
-      "aboutUs": "À propos de nous",
-      "blogs": "Blogs",
-      "letstalk": "Carrières"
-    }
+  "en": {
+    "home": "Home",
+    "products": "Products",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "blogs": "Blogs",
+    "letstalk": "Lets Talk"
+  },
+  "fr": {
+    "home": "Accueil",
+    "products": "Produits",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "aboutUs": "À propos de nous",
+    "blogs": "Blogs",
+    "letstalk": "Carrières"
   }
-  
+}

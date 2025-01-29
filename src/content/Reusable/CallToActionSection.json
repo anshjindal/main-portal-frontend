@@ -1,38 +1,38 @@
 {
   "workwithus": {
     "en": {
-        "title": "WORK WITH US",
-        "content": "We would love to hear more about your project",
-        "callToAction": "Let's Talk"
+      "title": "WORK WITH US",
+      "content": "We would love to hear more about your project",
+      "callToAction": "Let's Talk"
     },
     "fr": {
-        "title": "TRAVAILLEZ AVEC NOUS",
-        "content": "Nous aimerions en savoir plus sur votre projet",
-        "callToAction": "Discutons"
+      "title": "TRAVAILLEZ AVEC NOUS",
+      "content": "Nous aimerions en savoir plus sur votre projet",
+      "callToAction": "Discutons"
     }
-},
-"career": {
+  },
+  "career": {
     "en": {
-        "title": "JOIN OUR TEAM",
-        "content": "Apply now and become part of our dynamic team!",
-        "callToAction": "Join Our Team"
+      "title": "JOIN OUR TEAM",
+      "content": "Apply now and become part of our dynamic team!",
+      "callToAction": "Join Our Team"
     },
     "fr": {
-        "title": "REJOIGNEZ NOTRE ÉQUIPE",
-        "content": "Postulez maintenant et faites partie de notre équipe dynamique!",
-        "callToAction": "Rejoignez notre équipe"
+      "title": "REJOIGNEZ NOTRE ÉQUIPE",
+      "content": "Postulez maintenant et faites partie de notre équipe dynamique!",
+      "callToAction": "Rejoignez notre équipe"
     }
-},
-"services": {
+  },
+  "services": {
     "en": {
-        "title": "OUR SERVICES",
-        "content": "Looking for services and guidance? Let's get in touch!",
-        "callToAction": "Let's Talk!"
+      "title": "OUR SERVICES",
+      "content": "Looking for services and guidance? Let's get in touch!",
+      "callToAction": "Let's Talk!"
     },
     "fr": {
-        "title": "NOS SERVICES",
-        "content": "Vous recherchez des services et des conseils? Prenons contact!",
-        "callToAction": "Discutons!"
+      "title": "NOS SERVICES",
+      "content": "Vous recherchez des services et des conseils? Prenons contact!",
+      "callToAction": "Discutons!"
     }
-}
   }
+}

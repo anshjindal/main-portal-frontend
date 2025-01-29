@@ -1,17 +1,16 @@
 {
-    "en": {
-      "title": "Amazing Work Culture",
-      "testimonial": "I’ve been provided with the opportunity to expand my skillset through the endless support, and choice in varying projects. I’ve had a great experience so far and am excited to see where this company goes in the future.",
-      "name": "Jasmine M.",
-      "role": "PROJECT COORDINATOR",
-      "location": "Calgary, AB Canada"
-    },
-    "fr": {
-      "title": "Culture de travail incroyable",
-      "testimonial": "J'ai eu l'opportunité d'élargir mes compétences grâce au soutien sans fin et au choix de projets variés. J'ai eu une excellente expérience jusqu'à présent et je suis impatient de voir où cette entreprise ira à l'avenir.",
-      "name": "Jasmine M.",
-      "role": "COORDINATRICE DE PROJET",
-      "location": "Calgary, AB Canada"
-    }
+  "en": {
+    "title": "Amazing Work Culture",
+    "testimonial": "I’ve been provided with the opportunity to expand my skillset through the endless support, and choice in varying projects. I’ve had a great experience so far and am excited to see where this company goes in the future.",
+    "name": "Jasmine M.",
+    "role": "PROJECT COORDINATOR",
+    "location": "Calgary, AB Canada"
+  },
+  "fr": {
+    "title": "Culture de travail incroyable",
+    "testimonial": "J'ai eu l'opportunité d'élargir mes compétences grâce au soutien sans fin et au choix de projets variés. J'ai eu une excellente expérience jusqu'à présent et je suis impatient de voir où cette entreprise ira à l'avenir.",
+    "name": "Jasmine M.",
+    "role": "COORDINATRICE DE PROJET",
+    "location": "Calgary, AB Canada"
   }
-  
+}

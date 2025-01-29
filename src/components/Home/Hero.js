@@ -1,7 +1,7 @@
-import { CgArrowLongUp } from "react-icons/cg";
-import { Link } from "react-router-dom";
-import HeroBannerVideo from "../../assets/Video/HeroBannerVideo.mp4";
-import content from "../../content/Home/Hero.json";
+import { CgArrowLongUp } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
+import HeroBannerVideo from '../../assets/Video/HeroBannerVideo.mp4';
+import content from '../../content/Home/Hero.json';
 
 function Hero({ lang }) {
   const Content = content[lang];
@@ -52,7 +52,8 @@ function Hero({ lang }) {
               autoPlay
               muted
               loop
-              controls={false}>
+              controls={false}
+            >
               Your browser does not support the video tag.
             </video>
           </div>

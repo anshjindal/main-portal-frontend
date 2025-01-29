@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, useQuery } from '@apollo/client';
 
 const { error, loading, data } = useQuery(SLIDER_HOME);
 
@@ -125,14 +125,16 @@ const BOTTOM_QUOTE = gql`
   }
 `;
 
-
-{/* <div>
+{
+  /* <div>
         {loading && <h3> Data is loading...</h3>}
         {error && <h3> {error.message} </h3>}
         {data && parse(data.page.content)}
-      </div> */}
+      </div> */
+}
 
-      {/* <motion.div
+{
+  /* <motion.div
         className="text-end font-bold text-[9vw] text-[#2B00AC] mb-4 mt-4 flex max-[450px]:text-[15vw]"
         initial={{ x: "100%" }}
         animate={{ x: ["-98%", "3%", "-98%"] }}
@@ -146,4 +148,5 @@ const BOTTOM_QUOTE = gql`
         Digital<span className="text-[#FF9900]"> - </span>Design
         <span className="text-[#FF9900]"> - </span>Development
         <span className="text-[#FF9900]"> - </span>Technology
-      </motion.div> */}
+      </motion.div> */
+}

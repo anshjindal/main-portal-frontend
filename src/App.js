@@ -1,31 +1,31 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { LanguageProvider } from "./components/Utils/languageContext";
-import Home from "./pages/Home";
-import Footer from "./components/Layout/Footer";
-import Navbar from "./components/Layout/Navbar";
-import ScrollToTop from "./components/Utils/ScollToTop";
-import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
-import Products from "./pages/Products";
-import Portfolio from "./pages/Portfolio";
-import ContactUs from "./pages/ContactUs";
-import Careers from "./pages/Careers";
-import Blogs from "./pages/Blogs";
-import BlogPost from "./pages/BlogPost";
-import TermsCondition from "./pages/TermsCondition";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
-import CopyrightPolicy from "./pages/CopyrightPolicy";
-import Error from "./pages/Error";
-import NavbarMobile from "./components/Layout/NavbarMobile";
-import Admin from "./pages/Admin";
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { LanguageProvider } from './components/Utils/languageContext';
+import Home from './pages/Home';
+import Footer from './components/Layout/Footer';
+import Navbar from './components/Layout/Navbar';
+import ScrollToTop from './components/Utils/ScollToTop';
+import AboutUs from './pages/AboutUs';
+import Services from './pages/Services';
+import Products from './pages/Products';
+import Portfolio from './pages/Portfolio';
+import ContactUs from './pages/ContactUs';
+import Careers from './pages/Careers';
+import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
+import TermsCondition from './pages/TermsCondition';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+import CopyrightPolicy from './pages/CopyrightPolicy';
+import Error from './pages/Error';
+import NavbarMobile from './components/Layout/NavbarMobile';
+import Admin from './pages/Admin';
 
-import { useUser } from "@clerk/clerk-react";
-import Login from "./components/Login/Login";
-import SignUp from "./components/SignUp/SignUp";
-import Register from "./components/SignUp/SignUp";
-import AIChatbot from "./components/Reusable/AIChatbot";
+import { useUser } from '@clerk/clerk-react';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
+import Register from './components/SignUp/SignUp';
+import AIChatbot from './components/Reusable/AIChatbot';
 
 const Layout = ({ children }) => {
   return (

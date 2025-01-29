@@ -1,24 +1,25 @@
-import { useState, useEffect, useCallback } from "react";
-import HomepageTestimonyData from "../../content/Home/HomepageTestimonyData.json";
-import AboutUsPageTestimonyData from "../../content/AboutUs/AboutUspageTestimonyData.json";
-import { PiArrowCircleRightLight, PiArrowCircleLeftLight } from "react-icons/pi";
-import QuoteIcon from "../../assets/SVG/QuoteIcon.svg";
-import { useParams } from "react-router-dom";
-import content from "../../content/Home/ClientTestimony.json"
+import { useState, useEffect, useCallback } from 'react';
+import HomepageTestimonyData from '../../content/Home/HomepageTestimonyData.json';
+import AboutUsPageTestimonyData from '../../content/AboutUs/AboutUspageTestimonyData.json';
+import {
+  PiArrowCircleRightLight,
+  PiArrowCircleLeftLight,
+} from 'react-icons/pi';
+import QuoteIcon from '../../assets/SVG/QuoteIcon.svg';
+import { useParams } from 'react-router-dom';
+import content from '../../content/Home/ClientTestimony.json';
 
 function ClientTestimonySlider({ isHomepage = true }) {
   const [testimonySlider, updateTestimonySlider] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const {lang} = useParams();
+  const { lang } = useParams();
 
   const testimonyData = isHomepage
     ? HomepageTestimonyData[lang]
     : AboutUsPageTestimonyData[lang];
   const testimonyCount = testimonyData.length;
-  const backgroundColor = isHomepage ? "bg-white" : "bg-[#F4F4F4]";
-  const cardColor = isHomepage ? "bg-[#F4F4F4]" : "bg-white";
-
-
+  const backgroundColor = isHomepage ? 'bg-white' : 'bg-[#F4F4F4]';
+  const cardColor = isHomepage ? 'bg-[#F4F4F4]' : 'bg-white';
 
   const handleNext = useCallback(() => {
     setIsAnimating(true);
@@ -26,15 +27,15 @@ function ClientTestimonySlider({ isHomepage = true }) {
       updateTestimonySlider((testimonySlider + 1) % testimonyCount);
       setIsAnimating(false);
     }, 500);
-  }, [testimonySlider, testimonyCount]); 
+  }, [testimonySlider, testimonyCount]);
 
   // Autoplay functionality with useEffect
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
     }, 8000); // Change slide every 8 seconds
-    return () => clearInterval(interval); 
-  }, [handleNext]); 
+    return () => clearInterval(interval);
+  }, [handleNext]);
 
   const handlePrev = () => {
     setIsAnimating(true);
@@ -64,7 +65,7 @@ function ClientTestimonySlider({ isHomepage = true }) {
             {/* Sliding Testimonial Content */}
             <div
               className={`w-fit h-fit transform transition-transform duration-500 ${
-                isAnimating ? "translate-x-[-100%]" : "translate-x-0"
+                isAnimating ? 'translate-x-[-100%]' : 'translate-x-0'
               }`}
             >
               <div className="flex flex-col justify-center items-center p-[3vw] h-[25vw] max-[450px]:h-[50vw] text-center max-[450px]:p-[5vw]">
@@ -76,7 +77,9 @@ function ClientTestimonySlider({ isHomepage = true }) {
                 </h2>
                 <div className="flex flex-wrap space-x-[0.5vw] justify-center text-[1.5vw] text-[#666666] max-[450px]:text-[3vw]">
                   <p>{testimonyData[testimonySlider].role}</p>
-                  <p className="w-fit">{testimonyData[testimonySlider].location}</p>
+                  <p className="w-fit">
+                    {testimonyData[testimonySlider].location}
+                  </p>
                 </div>
               </div>
             </div>

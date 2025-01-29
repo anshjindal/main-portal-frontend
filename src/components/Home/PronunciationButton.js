@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { HiOutlineSpeakerWave } from "react-icons/hi2";
-import { ImCross } from "react-icons/im";
-import content from "../../content/Home/PronunciationButton.json";
+import { useState } from 'react';
+import { HiOutlineSpeakerWave } from 'react-icons/hi2';
+import { ImCross } from 'react-icons/im';
+import content from '../../content/Home/PronunciationButton.json';
 
 function PronunciationButton({ lang }) {
   const [WouessiPronunciation, setWouessiPronunciation] = useState(false);
@@ -63,9 +63,10 @@ function PronunciationButton({ lang }) {
             onClick={() => setWouessiPronunciation(!WouessiPronunciation)}
             className={`${
               WouessiPronunciation
-                ? "bg-[#FF9900]"
-                : "bg-[#2703A5] hover:bg-[#FF9900]"
-            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] max-[450px]:w-[12vw] max-[450px]:h-[12vw] text-[1.1vw] cursor-pointer`}>
+                ? 'bg-[#FF9900]'
+                : 'bg-[#2703A5] hover:bg-[#FF9900]'
+            } transition ease-in-out duration-300 shadow-xl hover:shadow-2xl rounded-full flex items-center justify-center mt-[1vw] w-[6vw] h-[6vw] max-[450px]:w-[12vw] max-[450px]:h-[12vw] text-[1.1vw] cursor-pointer`}
+          >
             {WouessiPronunciation ? (
               <ImCross className="w-[3vw] h-[3vw] max-[450px]:w-[6vw] max-[450px]:h-[6vw] text-white" />
             ) : (

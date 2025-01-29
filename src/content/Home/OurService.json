@@ -1,32 +1,30 @@
 {
-    "en": {
-      "heading": "What we do",
-      "softwareEngineering": {
-        "title1": "Software",
-        "title2": "Engineering",
-        "description": "Dedicated to building robust, scalable, and high-performance digital solutions.",
-        "link": "Details"
-      },
-      "digitalMarketing": {
-        "title1": "AI Services",
-        "description": "Propel your business forward with cutting edge Artificial Intelligence.",
-        "link": "Details"
-      }
+  "en": {
+    "heading": "What we do",
+    "softwareEngineering": {
+      "title1": "Software",
+      "title2": "Engineering",
+      "description": "Dedicated to building robust, scalable, and high-performance digital solutions.",
+      "link": "Details"
+    },
+    "digitalMarketing": {
+      "title1": "AI Services",
+      "description": "Propel your business forward with cutting edge Artificial Intelligence.",
+      "link": "Details"
     }
-    ,
-    "fr": {
-      "heading": "Ce que nous faisons",
-      "softwareEngineering": {
-        "title1": "Ingénierie ",
-        "title2": "Logicielle",
-        "description": "Dédié à la construction de solutions numériques robustes, évolutives et performantes.",
-        "link": "Détails"
-      },
-      "digitalMarketing": {
-        "title1": "Services AI",
-        "description": "Propulsez votre entreprise vers l'avant avec une intelligence artificielle de pointe.",
-        "link": "Détails"
-      }
+  },
+  "fr": {
+    "heading": "Ce que nous faisons",
+    "softwareEngineering": {
+      "title1": "Ingénierie ",
+      "title2": "Logicielle",
+      "description": "Dédié à la construction de solutions numériques robustes, évolutives et performantes.",
+      "link": "Détails"
+    },
+    "digitalMarketing": {
+      "title1": "Services AI",
+      "description": "Propulsez votre entreprise vers l'avant avec une intelligence artificielle de pointe.",
+      "link": "Détails"
     }
   }
-  
+}

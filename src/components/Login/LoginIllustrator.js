@@ -1,5 +1,4 @@
-
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export default function LoginIllustrator() {
   return (
@@ -15,7 +14,9 @@ export default function LoginIllustrator() {
         aria-labelledby="loginIllustratorTitle loginIllustratorDesc"
       >
         <title id="loginIllustratorTitle">Login Illustration</title>
-        <desc id="loginIllustratorDesc">An illustration showing a person logging into a computer system</desc>
+        <desc id="loginIllustratorDesc">
+          An illustration showing a person logging into a computer system
+        </desc>
 
         {/* Computer Screen */}
         <motion.rect
@@ -29,7 +30,7 @@ export default function LoginIllustrator() {
           strokeWidth="4"
           variants={{
             hidden: { scale: 0.8, opacity: 0 },
-            visible: { scale: 1, opacity: 1 }
+            visible: { scale: 1, opacity: 1 },
           }}
           transition={{ duration: 0.5, delay: 0.2 }}
         />
@@ -40,7 +41,7 @@ export default function LoginIllustrator() {
           fill="#2563eb"
           variants={{
             hidden: { scaleY: 0, opacity: 0 },
-            visible: { scaleY: 1, opacity: 1 }
+            visible: { scaleY: 1, opacity: 1 },
           }}
           transition={{ duration: 0.3, delay: 0.7 }}
         />
@@ -55,7 +56,7 @@ export default function LoginIllustrator() {
           fill="#f3f4f6"
           variants={{
             hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 }
+            visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.5, delay: 0.4 }}
         />
@@ -71,7 +72,7 @@ export default function LoginIllustrator() {
           stroke="#d1d5db"
           variants={{
             hidden: { width: 0 },
-            visible: { width: 260 }
+            visible: { width: 260 },
           }}
           transition={{ duration: 0.5, delay: 0.6 }}
         />
@@ -87,7 +88,7 @@ export default function LoginIllustrator() {
           stroke="#d1d5db"
           variants={{
             hidden: { width: 0 },
-            visible: { width: 260 }
+            visible: { width: 260 },
           }}
           transition={{ duration: 0.5, delay: 0.8 }}
         />
@@ -102,7 +103,7 @@ export default function LoginIllustrator() {
           fill="#2563eb"
           variants={{
             hidden: { scale: 0 },
-            visible: { scale: 1 }
+            visible: { scale: 1 },
           }}
           transition={{ duration: 0.3, delay: 1 }}
         />
@@ -115,7 +116,7 @@ export default function LoginIllustrator() {
           fill="#2563eb"
           variants={{
             hidden: { scale: 0, opacity: 0 },
-            visible: { scale: 1, opacity: 1 }
+            visible: { scale: 1, opacity: 1 },
           }}
           transition={{ duration: 0.5, delay: 1.2 }}
         />
@@ -126,7 +127,7 @@ export default function LoginIllustrator() {
           fill="none"
           variants={{
             hidden: { pathLength: 0 },
-            visible: { pathLength: 1 }
+            visible: { pathLength: 1 },
           }}
           transition={{ duration: 0.5, delay: 1.4 }}
         />
@@ -140,7 +141,7 @@ export default function LoginIllustrator() {
           fill="none"
           variants={{
             hidden: { pathLength: 0 },
-            visible: { pathLength: 1 }
+            visible: { pathLength: 1 },
           }}
           transition={{ duration: 1, delay: 1.6 }}
         />
@@ -153,7 +154,7 @@ export default function LoginIllustrator() {
           fill="none"
           variants={{
             hidden: { scale: 0, opacity: 0 },
-            visible: { scale: 1, opacity: 1 }
+            visible: { scale: 1, opacity: 1 },
           }}
           transition={{ duration: 0.3, delay: 1.8 }}
         />
@@ -166,11 +167,11 @@ export default function LoginIllustrator() {
           fill="#2563eb"
           variants={{
             hidden: { scale: 0, opacity: 0 },
-            visible: { scale: 1, opacity: 1 }
+            visible: { scale: 1, opacity: 1 },
           }}
           transition={{ duration: 0.3, delay: 2 }}
         />
       </motion.svg>
     </div>
-  )
+  );
 }
