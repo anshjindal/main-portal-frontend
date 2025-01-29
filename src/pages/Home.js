@@ -42,7 +42,7 @@ function Home() {
 
       <NewsletterRegister lang={lang}/>
 
-      <RecentBlogs lang={lang}/>
+      {/*<RecentBlogs lang={lang}/> */}
 
     </div>
   );
