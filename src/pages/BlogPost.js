@@ -264,11 +264,9 @@ function BlogPost() {
       </div>      
             {/* Call to Action Section */}
             <CallToActionSection
-              Content="We would love to hear more about your project"
-              CallToAction="Let's Talk"
-              Title="Work With Us"
-              lang={lang}
-            />
+          CallToAction="workwithus"
+          lang={lang}
+        />
             
          
         </div>

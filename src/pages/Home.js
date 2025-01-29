@@ -4,6 +4,7 @@ import OurClients from "../components/Home/OurClients";
 import ClientTestimonySlider from "../components/Home/ClientTestimonySlider";
 import RecentProjects from "../components/Home/RecentProjects";
 import RecentBlogs from "../components/Home/RecentBlogs";
+import CallToActionSection from "../components/Reusable/CallToActionSection";
 import WhyChooseUS from "../components/Home/WhyChooseUs";
 import ServiceSpotlight from "../components/Home/ServiceSpotlight";
 import OurServices from "../components/Home/OurServices";
@@ -40,9 +41,14 @@ function Home() {
 
       <ClientTestimonySlider lang={lang}/>
 
-      <NewsletterRegister lang={lang}/>
+      {/*<NewsletterRegister lang={lang}/> */}
 
       {/*<RecentBlogs lang={lang}/> */}
+
+      <CallToActionSection
+          CallToAction="workwithus"
+          lang={lang}
+        />
 
     </div>
   );

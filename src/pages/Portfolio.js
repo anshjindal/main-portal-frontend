@@ -89,9 +89,7 @@ function Portfolio() {
           </div>
         </div>
         <CallToActionSection
-          Content={Content.Content}
-          CallToAction={Content.CallToAction}
-          Title={Content.Title}
+          CallToAction="workwithus"
           lang={lang}
         />
       </div>

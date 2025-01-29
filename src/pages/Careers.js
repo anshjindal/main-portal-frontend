@@ -39,9 +39,7 @@ function Careers() {
         </div>
         
         <CallToActionSection
-          Title={Content.callToActionTitle}
-          Content={Content.callToActionContent}
-          CallToAction={Content.callToActionButton}
+          CallToAction="career"
           lang={lang}
         />
       </div>

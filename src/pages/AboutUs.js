@@ -11,14 +11,11 @@ import OurApproachCarousel from "../components/AboutUs/OurApproachCarousel";
 import TechStack from "../components/AboutUs/TechStack";
 import WorkerTestimonial from "../components/AboutUs/WorkerTestimonial";
 import HeroAboutUs from "../components/AboutUs/HeroAbousUs.js";
-import content from "../content/AboutUs/AboutUsCTA.json";
 import { useParams } from "react-router-dom";
 import AboutMetaRender from "../components/AboutUs/AboutMetaRender.js";
 
 function AboutUs() {
   const {lang} = useParams();
-
-  const Content = content[lang];
 
   return (
    <>
@@ -53,15 +50,9 @@ function AboutUs() {
       </section>
 
       <section>
-        <NewsletterRegister lang={lang} />
-      </section>
-
-      <section>
-        <CallToActionSection
-          Content={Content.Content}
-          CallToAction={Content.CallToAction}
-          Title={Content.Title}
-          lang ={lang}
+      <CallToActionSection
+          CallToAction="workwithus"
+          lang={lang}
         />
       </section>
     </div>

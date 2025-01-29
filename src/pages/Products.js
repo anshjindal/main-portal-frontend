@@ -58,10 +58,8 @@ function Products() {
           </div>
         ))}
 
-        <CallToActionSection
-          Title={data.cta.title}
-          Content={data.cta.content}
-          CallToAction={data.cta.callToAction}
+<CallToActionSection
+          CallToAction="workwithus"
           lang={lang}
         />
       </div>
