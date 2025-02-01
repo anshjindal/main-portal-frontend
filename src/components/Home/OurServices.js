@@ -15,7 +15,7 @@ function OurServices({ lang }) {
             {Content.heading}
           </p>
           <h1 className="text-[3.5vw] text-[#2E2E2E] font-bold mb-[1vw] max-[450px]:text-[6vw] max-[450px]:mt-[2vw]">
-            {Content.heading}
+            {Content.subheading}
           </h1>
 
           <div className="flex justify-between pt-[2vw] pb-[2vw] max-[450px]:flex-col">

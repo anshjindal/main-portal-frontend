@@ -28,26 +28,31 @@ function AboutUs() {
           <OurTeamCarousel lang={lang} />
         </section>
 
-        <section>
-          <WorkerTestimonial lang={lang} />
-        </section>
 
         <section>
           <OurPartners lang={lang} />
         </section>
 
-        <section id="OurApproach">
-          <OurApproachCarousel lang={lang} />
-        </section>
 
         <section>
           <ClientTestimonySlider lang={lang} isHomepage={false} />
         </section>
 
-        <section>
+
+       {/* 
+
+        <section id="OurApproach">
+          <OurApproachCarousel lang={lang} />
+        </section>
+       
+       <section>
+          <WorkerTestimonial lang={lang} />
+        </section>
+       
+       <section>
           <TechStack lang={lang} />
         </section>
-
+        */} 
         <section>
           <CallToActionSection CallToAction="workwithus" lang={lang} />
         </section>

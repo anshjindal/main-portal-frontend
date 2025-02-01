@@ -5,6 +5,7 @@ import PortfolioData from '../content/Portfolio/PortfolioData'; // Import static
 import { useParams } from 'react-router-dom';
 import content from '../content/Portfolio/Portfolio.json';
 import PortifolioMetaDataRender from '../components/Portifolio/PortifolioMetaDataRender';
+import HeaderSection from '../components/Reusable/HeaderSection';
 
 function Portfolio() {
   const [visible, setVisible] = useState(4); // Show 4 cards initially
@@ -34,15 +35,9 @@ function Portfolio() {
     <>
       <PortifolioMetaDataRender />
       <div className="text-black flex justify-center page-background">
-        <div className="w-[80%] mt-[4vw]">
-          <div className="flex gap-x-[10vw] PortfolioData-center max-[450px]:flex-col max-[450px]:gap-y-[6vw] max-[450px]:mb-[8vw]">
-            <h1 className="text-[3.5vw]/[4.5vw] text-left w-[75vw] font-bold max-[450px]:text-[7.5vw]/[8.5vw] max-[450px]:w-full">
-              {Content.title}
-            </h1>
-            <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[450px]:w-[100%] max-[450px]:text-[3vw] max-[450px]:font-semibold max-[450px]:mb-[-2vw]">
-              {Content.description}
-            </p>
-          </div>
+        <div className="w-[80%]">
+          <HeaderSection Header={Content.title} Content={Content.description} />
+
           <div className="flex flex-wrap justify-between gap-x-[2vw] mt-[1vw]">
             {portfolioItems.slice(0, visible).map((item) => (
               <a

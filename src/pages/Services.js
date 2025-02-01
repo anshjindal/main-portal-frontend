@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/Services.css';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
-import HeroBanner from '../components/Reusable/HeroBanner';
-import ServicesHeroBanner from '../assets/Images/ServicesHeroImage.webp';
+import HeaderSection from '../components/Reusable/HeaderSection';
 import Accordion from '../components/Reusable/Accordion';
 import content from '../content/Services/ServicesData.json';
 import { useParams } from 'react-router-dom';
@@ -15,16 +14,15 @@ function Services() {
   return (
     <>
       <ServicesMetaRender lang={lang} />
-      <div className="flex justify-center mt-[5vw] page-background">
+      <div className="flex justify-center page-background">
         <div className="w-[80%]">
-          <HeroBanner
-            BannerImage={ServicesHeroBanner}
+          <HeaderSection
             Header={Content.heroTitle}
             Content={Content.heroContent}
           />
 
           {/* Accordion Section */}
-          <div className="mb-[-1vw] mt-[-10vw] max-[450px]:mt-[5vw]">
+          <div className="max-[450px]:mt-[5vw]">
             {Object.keys(Content.accordions).map((sectionKey, index) => {
               const section = Content.accordions[sectionKey];
               if (sectionKey === 'Logo') {

@@ -23,8 +23,16 @@ function OurClients({ lang }) {
         blurBoderColor={'#fff'}
       >
         {partnersLogos.map((logo, index) => (
-          <Slider.Slide key={index}>
-            <img src={logo.src} alt={logo.alt} className="w-25" />
+          <Slider.Slide
+            key={index}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              margin: '0 10px', // Add horizontal margin to create space
+            }}
+          >
+            <img src={logo.src} alt={logo.alt} style={{ maxWidth: '100%', maxHeight: '100%' }} />
           </Slider.Slide>
         ))}
       </Slider>

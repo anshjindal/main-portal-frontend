@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import AdminData from '../content/Admin/Admin';
 import blogcontent from '../content/Blogs/BlogsPageData.json';
 import BlogCard from '../components/Blog/BlogCard'; // Import the BlogCard component
+import HeaderSection from '../components/Reusable/HeaderSection';
 
 function Blogs() {
   const [blogData, setBlogData] = useState([]);
@@ -57,19 +58,11 @@ function Blogs() {
       </div>
       <BlogMetaDataRender />
       <div className="flex justify-center page-background">
-        <div className="w-full">
-          <div className="flex mb-[5vw] justify-center text-black text-left">
-            <div className="w-[80%] max-[450px]:mt-[5vw] max-[450px]:mb-[5vw] max-[450px]:w-full">
-              <div className="flex mt-[1vw] items-center max-[450px]:flex-col max-[450px]:space-y-[8vw]">
-                <h1 className="text-[4vw]/[5vw] text-left w-[40vw] font-bold max-[450px]:text-[7vw]/[7.5vw] max-[450px]:w-[80%] max-[450px]:mt-[3vw]">
-                  {BlogPageContent.mainHeading}
-                </h1>
-                <p className="w-[40vw] text-[1.1vw] text-left text-black float-right max-[450px]:text-[3vw] max-[450px]:w-[80%]">
-                  {BlogPageContent.description}
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="w-[80%]">
+          <HeaderSection
+            Header={BlogPageContent.mainHeading}
+            Content={BlogPageContent.description}
+          />
 
           {/* Blog Cards Section */}
           <div className="flex justify-center">

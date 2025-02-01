@@ -1,6 +1,6 @@
 {
   "en": {
-    "heroTitle": "Services We Offer",
+    "heroTitle": "Our Services",
     "heroContent": "Our specialized team of researchers, strategists, designers, developers, and project managers work with streamlined processes to break through organizational roadblocks.",
     "accordions": {
       "B2CServices": {
@@ -76,7 +76,7 @@
     "callToActionButton": "Let's Talk!"
   },
   "fr": {
-    "heroTitle": "Services que nous offrons",
+    "heroTitle": "Nos Services",
     "heroContent": "Notre équipe spécialisée de chercheurs, de stratèges, de designers, de développeurs et de chefs de projet travaille avec des processus rationalisés pour surmonter les obstacles organisationnels.",
     "accordions": {
       "B2CServices": {

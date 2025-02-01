@@ -1,6 +1,7 @@
 {
   "en": {
-    "heading": "What we do",
+    "heading": "About Us",
+    "subheading": "What we do",
     "softwareEngineering": {
       "title1": "Software",
       "title2": "Engineering",
@@ -14,7 +15,8 @@
     }
   },
   "fr": {
-    "heading": "Ce que nous faisons",
+    "heading": "À Propos De Nous",
+    "subheading": "What we do",
     "softwareEngineering": {
       "title1": "Ingénierie ",
       "title2": "Logicielle",

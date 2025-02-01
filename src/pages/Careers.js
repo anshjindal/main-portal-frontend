@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroBanner from '../components/Reusable/HeroBanner';
+import HeaderSection from '../components/Reusable/HeaderSection';
 import Accordion from '../components/Reusable/Accordion';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import CareersHeroBanner from '../assets/Images/CareersHeroImage.webp';
@@ -14,16 +14,15 @@ function Careers() {
   return (
     <>
       <CareerMetaRender lang={lang} />
-      <div className="flex justify-center mt-[5vw] page-background">
+      <div className="flex justify-center page-background">
         <div className="w-[80%]">
-          <HeroBanner
-            BannerImage={CareersHeroBanner}
+          <HeaderSection
             Header={Content.heroTitle}
             Content={Content.heroContent}
           />
 
           {/* Accordion Section */}
-          <div className="mb-[-1vw] mt-[-5vw] max-[450px]:mt-[5vw]">
+          <div className="max-[450px]:mt-[5vw]">
             {Object.keys(Content.accordions).map((sectionKey, index) => {
               const section = Content.accordions[sectionKey];
               return (
