@@ -8,48 +8,21 @@ import AdminData from '../content/Admin/Admin';
 import blogcontent from '../content/Blogs/BlogsPageData.json';
 import BlogCard from '../components/Blog/BlogCard'; // Import the BlogCard component
 import HeaderSection from '../components/Reusable/HeaderSection';
+import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
-  const [blogData, setBlogData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { lang } = useParams();
+  const {
+    // State
+    blogData,
+    loading,
+    lang,
+    content,
+    BlogPageContent,
+    categoryData,
+    navigate,
 
-  const content = AdminData[lang] || AdminData['en'];
-  const BlogPageContent = blogcontent[lang];
-
-  const navigate = useNavigate();
-
-  const getBlogs = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog`,
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response?.ok) {
-        return toast.error(data?.error, { duration: 5000 });
-      }
-
-      setBlogData(data?.blogs); // Access the blogs array from the response
-    } catch (err) {
-      return toast.error(err, { duration: 5000 });
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getBlogs();
-  }, []);
-
-  const remainingBlogs = blogData.slice(3);
+    // Handlers
+  } = useBlogController();
 
   return (
     <>
@@ -64,8 +37,16 @@ function Blogs() {
             Content={BlogPageContent.description}
           />
 
+          <div className="mx-20">
+            <div className="w-full flex gap-4 justify-start items-start">
+              {categoryData.map((item)=>{
+                return <button key={item?.slug} className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"> {item?.translations[0].name} </button>
+              })}
+            </div>
+          </div>
+
           {/* Blog Cards Section */}
-          <div className="flex justify-center">
+          <div className="mt-4 flex justify-center">
             <div className="w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogData.map((blog, index) => (
                 <BlogCard
