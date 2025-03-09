@@ -12,7 +12,7 @@ function Navbar() {
   const { language, switchLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
   const { lang } = useParams();
-  const Content = content[lang];
+  const Content = content[lang] || content['en'] || {};
   const { isSignedIn, user, isLoaded } = useUser();
 
   // Default to 'en' if lang is undefined
@@ -39,7 +39,8 @@ function Navbar() {
             </Link>
             <ul className="flex gap-x-[2vw] py-3 w-[58vw] text-[1.1vw] justify-center cursor-pointer max-[450px]:hidden">
               <Link to={`/${currentLang}/`} className="navbar-link">
-                <li className="py-2">{Content.home}</li>
+              <li className="py-2">{Content?.home || "Home"}</li>
+
               </Link>
               <Link to={`/${currentLang}/AboutUs`} className="navbar-link">
                 <li className="py-2">{Content.aboutUs}</li>

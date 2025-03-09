@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom';
 import content from '../../content/Reusable/CallToActionSection.json';
 
 function CallToActionSection({ CallToAction, lang, RedirectTo = 'ContactUs' }) {
-  const Content = content[CallToAction][lang];
+  const Content = content[CallToAction]?.[lang] || content[CallToAction]?.['en'] || {};
+
 
   return (
     <div className="flex text-left justify-center items-center pt-[5vw] pb-[5vw]">
       <div className="w-[58%]">
         <p className="text-[1.1vw] text-[#666666] max-[450px]:text-[2.5vw] font-medium">
-          {Content.title}
+          {Content?.title || "Default Title"}
+
         </p>
         <h1 className="text-[4.5vw]/[5vw] font-bold max-[450px]:text-[7vw]/[7.5vw] max-[450px]:mt-[2vw]">
-          {Content.content}
+        {Content?.content || "Default Content"}
         </h1>
       </div>
       <Link to={`/${lang}/${RedirectTo}`}>
