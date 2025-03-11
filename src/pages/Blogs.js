@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
@@ -8,7 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
-  const { lang, slug } = useParams();
+  const { lang } = useParams();
 
   const {
     blogData,
@@ -18,33 +18,9 @@ function Blogs() {
     setPage,
     totalPages,
     search,
-    setSearch,
-    categoryData,
+    setDebouncedSearch,
+    categoryData, // 🔹 Category Data Restored
   } = useBlogController();
-  console.log(blogData);
-  
-  const [debouncedSearch, setDebouncedSearch] = useState(search);
-  const [filteredBlogs, setFilteredBlogs] = useState(blogData);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-        setSearch(debouncedSearch);
-
-        const filtered = blogData.filter((blog) => {
-         
-            if (typeof blog !== 'object' || blog === null) return false;
-
-            const title = blog?.title?.en || '';
-
-            return typeof title === 'string' && title.toLowerCase().includes(debouncedSearch.toLowerCase());
-        });
-
-        setFilteredBlogs(filtered);
-    }, 500);
-
-    return () => clearTimeout(handler);
-  }, [debouncedSearch, blogData]);
-
 
   return (
     <>
@@ -66,7 +42,7 @@ function Blogs() {
             <input
               type="text"
               placeholder="Search for a blog..."
-              value={debouncedSearch}
+              value={search}
               onChange={(e) => setDebouncedSearch(e.target.value)}
               className="p-3 border rounded-md w-[50%] text-left"
             />
@@ -93,7 +69,7 @@ function Blogs() {
               {loading ? (
                 <p>Loading blogs...</p>
               ) : (
-                filteredBlogs.map((blog, index) => (
+                blogData.map((blog, index) => (
                   <BlogCard key={index} blog={blog} lang={lang} />
                 ))
               )}

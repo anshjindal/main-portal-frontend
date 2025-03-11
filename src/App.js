@@ -141,7 +141,7 @@ function App() {
             }
           />
           <Route
-            path="/:lang/Blogs"
+            path="/:lang/Blogs/:page?"
             element={
               <Layout>
                 <Blogs />

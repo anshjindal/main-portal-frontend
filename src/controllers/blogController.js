@@ -10,23 +10,32 @@ export const useBlogController = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
 
-  const { lang = 'en' } = useParams(); // Set default to "en"
+  const { lang = 'en', page: pageParam } = useParams();
   const content = AdminData?.[lang] || AdminData['en'];
   const BlogPageContent = blogcontent?.[lang] || blogcontent['en'];
 
   // 🔹 Pagination & Search States
-  const [page, setPage] = useState(1);
-  const [perPage] = useState(12); // Default 12 blogs per page
-  const [search, setSearch] = useState(''); // Search query
-  const [totalPages, setTotalPages] = useState(1); // Store total pages
+  const [page, setPage] = useState(Number(pageParam) || 1);
+  const [perPage] = useState(12);
+  const [search, setSearch] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const [totalPages, setTotalPages] = useState(1);
 
-  const { slug } = useParams();
   const navigate = useNavigate();
+
+  // 🔹 Debouncer Logic
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setSearch(debouncedSearch);
+    }, 500); // 500ms debounce delay
+
+    return () => clearTimeout(handler); // Cleanup timeout
+  }, [debouncedSearch]);
 
   const getBlogs = async () => {
     try {
       const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${search}`;
-      console.log('Fetching from:', apiUrl); //  Debug API URL
+      console.log('Fetching from:', apiUrl);
 
       const response = await fetch(apiUrl, {
         method: 'GET',
@@ -34,33 +43,29 @@ export const useBlogController = () => {
       });
 
       const data = await response.json();
-      console.log('API Response:', data); // 🔹 Debug console log
+      console.log('API Response:', data);
 
       if (!response.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
 
-      setBlogData(data?.blogs || []); //  Vérifie que c'est un tableau
-      setTotalPages(data?.pagination?.lastPage || 1); //  Assure que `totalPages` ne soit pas undefined
+      setBlogData(data?.blogs || []);
+      setTotalPages(data?.pagination?.lastPage || 1);
     } catch (err) {
-      return toast.error(err, { duration: 5000 });
+      return toast.error(err.message || 'Failed to fetch blogs', { duration: 5000 });
     } finally {
       setLoading(false);
     }
   };
-  useEffect(() => {
-    getBlogs();
-  }, [page, search]);
 
+  // 🔹 Category Fetch Logic
   const getCategory = async () => {
     try {
       const response = await fetch(
         `${process.env.REACT_APP_WOUESSI_API_URL}/api/category`,
         {
           method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
         }
       );
 
@@ -69,29 +74,39 @@ export const useBlogController = () => {
       if (!response?.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
-      setCategoryData(data?.categories); // Access the blogs array from the response
+      setCategoryData(data?.categories || []);
     } catch (err) {
-      return toast.error(err, { duration: 5000 });
+      return toast.error(err.message || 'Failed to fetch categories', { duration: 5000 });
     } finally {
       setLoadingCategory(false);
     }
   };
 
   useEffect(() => {
-    getCategory();
+    getCategory();  // Ensure categories are fetched when component loads
   }, []);
 
+  // 🔹 Sync URL with Pagination
+  useEffect(() => {
+    navigate(`/${lang}/Blogs/${page}`);
+  }, [page, lang, navigate]);
+
+  // 🔹 Fetch Blogs when `page` or `search` changes
+  useEffect(() => {
+    getBlogs();
+  }, [page, search]);
+
   return {
-    blogData: blogData || [], //  Default to an empty array
+    blogData: blogData || [],
     loading,
     navigate,
     page,
     setPage,
     perPage,
-    search,
-    setSearch,
-    totalPages: totalPages || 1, //  Default to 1
-    categoryData: categoryData || [],
+    search: debouncedSearch,
+    setDebouncedSearch,
+    totalPages: totalPages || 1,
+    categoryData: categoryData || [], // 🔹 Restored Category Data
   };
 };
 
