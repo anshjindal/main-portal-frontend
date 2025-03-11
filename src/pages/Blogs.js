@@ -8,7 +8,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
-  // 🔹 useParams() doit être utilisé à l'intérieur du composant fonctionnel
   const { lang, slug } = useParams();
 
   const {
@@ -20,8 +19,32 @@ function Blogs() {
     totalPages,
     search,
     setSearch,
-    categoryData, // Added categoryData
+    categoryData,
   } = useBlogController();
+  console.log(blogData);
+  
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
+  const [filteredBlogs, setFilteredBlogs] = useState(blogData);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+        setSearch(debouncedSearch);
+
+        const filtered = blogData.filter((blog) => {
+         
+            if (typeof blog !== 'object' || blog === null) return false;
+
+            const title = blog?.title?.en || '';
+
+            return typeof title === 'string' && title.toLowerCase().includes(debouncedSearch.toLowerCase());
+        });
+
+        setFilteredBlogs(filtered);
+    }, 500);
+
+    return () => clearTimeout(handler);
+  }, [debouncedSearch, blogData]);
+
 
   return (
     <>
@@ -33,7 +56,6 @@ function Blogs() {
 
       <div className="flex justify-center page-background">
         <div className="w-[80%]">
-          {/* Page Title */}
           <HeaderSection
             Header="Explore Our Blogs"
             Content="Discover insights, stories, and updates"
@@ -44,8 +66,8 @@ function Blogs() {
             <input
               type="text"
               placeholder="Search for a blog..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              value={debouncedSearch}
+              onChange={(e) => setDebouncedSearch(e.target.value)}
               className="p-3 border rounded-md w-[50%] text-left"
             />
           </div>
@@ -71,10 +93,9 @@ function Blogs() {
               {loading ? (
                 <p>Loading blogs...</p>
               ) : (
-                blogData.map((blog, index) => {
-                  console.log('Blog Data:', blog); //  Debug : voir chaque blog
-                  return <BlogCard key={index} blog={blog} lang={lang} />;
-                })
+                filteredBlogs.map((blog, index) => (
+                  <BlogCard key={index} blog={blog} lang={lang} />
+                ))
               )}
             </div>
           </div>
