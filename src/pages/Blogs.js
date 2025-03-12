@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import HeaderSection from '../components/Reusable/HeaderSection';
@@ -9,18 +9,29 @@ import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
   const { lang } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const {
     blogData,
     loading,
-    navigate,
     page,
     setPage,
     totalPages,
     search,
     setDebouncedSearch,
-    categoryData, // 🔹 Category Data Restored
+    categoryData,
   } = useBlogController();
+
+  const handleSearchChange = (e) => {
+    const searchValue = e.target.value;
+    setDebouncedSearch(searchValue);
+    setSearchParams({ page: 1, search: searchValue });
+  };
+
+  const handlePagination = (newPage) => {
+    setPage(newPage);  // Change the page state
+    setSearchParams({ page: newPage, search });  // Update URL with the current search
+  };
 
   return (
     <>
@@ -43,7 +54,7 @@ function Blogs() {
               type="text"
               placeholder="Search for a blog..."
               value={search}
-              onChange={(e) => setDebouncedSearch(e.target.value)}
+              onChange={handleSearchChange}
               className="p-3 border rounded-md w-[50%] text-left"
             />
           </div>
@@ -55,7 +66,7 @@ function Blogs() {
                 <button
                   key={item?.slug}
                   className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"
-                  onClick={() => navigate(`/category/${item?.slug}`)}
+                  onClick={() => setSearchParams({ page: 1, search: item?.slug })}
                 >
                   {item?.translations[0]?.name}
                 </button>
@@ -79,7 +90,7 @@ function Blogs() {
           {/* Pagination Controls */}
           <div className="flex justify-center mt-4">
             <button
-              onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+              onClick={() => handlePagination(page - 1)}
               disabled={page === 1}
               className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
             >
@@ -87,9 +98,7 @@ function Blogs() {
             </button>
             <span className="px-4 py-2">{`Page ${page} of ${totalPages}`}</span>
             <button
-              onClick={() =>
-                setPage((prev) => (prev < totalPages ? prev + 1 : prev))
-              }
+              onClick={() => handlePagination(page + 1)}
               disabled={page >= totalPages}
               className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
             >

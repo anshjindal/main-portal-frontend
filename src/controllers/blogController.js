@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import AdminData from '../content/Admin/Admin';
 import blogcontent from '../content/Blogs/BlogsPageData.json';
 import toast from 'react-hot-toast';
@@ -10,26 +10,26 @@ export const useBlogController = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
 
-  const { lang = 'en', page: pageParam } = useParams();
-  const content = AdminData?.[lang] || AdminData['en'];
-  const BlogPageContent = blogcontent?.[lang] || blogcontent['en'];
+  const { lang = 'en' } = useParams();
+  const [searchParams] = useSearchParams();
 
-  // 🔹 Pagination & Search States
-  const [page, setPage] = useState(Number(pageParam) || 1);
+  const pageParam = Number(searchParams.get('page')) || 1;
+  const searchParam = searchParams.get('search') || '';
+
+  const [page, setPage] = useState(pageParam);
   const [perPage] = useState(12);
-  const [search, setSearch] = useState('');
-  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const [search, setSearch] = useState(searchParam);
+  const [debouncedSearch, setDebouncedSearch] = useState(searchParam);
   const [totalPages, setTotalPages] = useState(1);
 
   const navigate = useNavigate();
 
-  // 🔹 Debouncer Logic
   useEffect(() => {
     const handler = setTimeout(() => {
       setSearch(debouncedSearch);
-    }, 500); // 500ms debounce delay
+    }, 500);
 
-    return () => clearTimeout(handler); // Cleanup timeout
+    return () => clearTimeout(handler);
   }, [debouncedSearch]);
 
   const getBlogs = async () => {
@@ -43,8 +43,6 @@ export const useBlogController = () => {
       });
 
       const data = await response.json();
-      console.log('API Response:', data);
-
       if (!response.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
@@ -58,7 +56,6 @@ export const useBlogController = () => {
     }
   };
 
-  // 🔹 Category Fetch Logic
   const getCategory = async () => {
     try {
       const response = await fetch(
@@ -83,15 +80,9 @@ export const useBlogController = () => {
   };
 
   useEffect(() => {
-    getCategory();  // Ensure categories are fetched when component loads
+    getCategory();
   }, []);
 
-  // 🔹 Sync URL with Pagination
-  useEffect(() => {
-    navigate(`/${lang}/Blogs/${page}`);
-  }, [page, lang, navigate]);
-
-  // 🔹 Fetch Blogs when `page` or `search` changes
   useEffect(() => {
     getBlogs();
   }, [page, search]);
@@ -99,14 +90,13 @@ export const useBlogController = () => {
   return {
     blogData: blogData || [],
     loading,
-    navigate,
     page,
     setPage,
     perPage,
     search: debouncedSearch,
     setDebouncedSearch,
     totalPages: totalPages || 1,
-    categoryData: categoryData || [], // 🔹 Restored Category Data
+    categoryData: categoryData || [],
   };
 };
 
