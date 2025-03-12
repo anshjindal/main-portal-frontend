@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import AdminData from '../content/Admin/Admin';
 import blogcontent from '../content/Blogs/BlogsPageData.json';
 import toast from 'react-hot-toast';
+import { useDebounce } from '../hooks/useDebounce'; // 🔹 Import du hook
+
 
 export const useBlogController = () => {
   const [blogData, setBlogData] = useState([]);
@@ -16,9 +18,11 @@ const content = AdminData?.[lang] || AdminData['en'];
 const BlogPageContent = blogcontent?.[lang] || blogcontent['en']
 
   // 🔹 Pagination & Search States
+
   const [page, setPage] = useState(1);
   const [perPage] = useState(12); // Default 12 blogs per page
-  const [search, setSearch] = useState(""); // Search query
+  const [search, setSearch] = useState(''); // Search query
+  const debouncedSearch = useDebounce(search, 2000);  // 🔹 Appliquer le debouncer
   const [totalPages, setTotalPages] = useState(1); // Store total pages
 
   const { slug } = useParams();
@@ -27,9 +31,10 @@ const BlogPageContent = blogcontent?.[lang] || blogcontent['en']
 
   const getBlogs = async () => {
     try {
-      const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${search}`;
-      console.log("Fetching from:", apiUrl); //  Debug API URL
-  
+     const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${debouncedSearch}`;
+
+      console.log('Fetching from:', apiUrl); //  Debug API URL
+
       const response = await fetch(apiUrl, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -53,7 +58,7 @@ const BlogPageContent = blogcontent?.[lang] || blogcontent['en']
   };
   useEffect(() => {
     getBlogs();
-  }, [page, search]);
+  }, [page, debouncedSearch]);
 
   const getCategory = async () => {
     try {
