@@ -8,7 +8,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
-  // 🔹 useParams() doit être utilisé à l'intérieur du composant fonctionnel
   const { lang, slug } = useParams();
 
   const {
@@ -16,11 +15,11 @@ function Blogs() {
     loading,
     navigate,
     page,
-    setPage,
+    updatePage,
     totalPages,
     search,
-    setSearch,
-    categoryData, // Added categoryData
+    updateSearch,
+    categoryData,
   } = useBlogController();
 
   return (
@@ -45,7 +44,7 @@ function Blogs() {
               type="text"
               placeholder="Search for a blog..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => updateSearch(e.target.value)}
               className="p-3 border rounded-md w-[50%] text-left"
             />
           </div>
@@ -72,17 +71,17 @@ function Blogs() {
                 <p>Loading blogs...</p>
               ) : (
                 blogData.map((blog, index) => {
-                  console.log('Blog Data:', blog); //  Debug : voir chaque blog
+                  console.log('Blog Data:', blog);
                   return <BlogCard key={index} blog={blog} lang={lang} />;
                 })
               )}
             </div>
           </div>
 
-          {/* Pagination Controls */}
+          {/* Pagination Controls with useSearchParams */}
           <div className="flex justify-center mt-4">
             <button
-              onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+              onClick={() => updatePage(Math.max(page - 1, 1))}
               disabled={page === 1}
               className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
             >
@@ -90,9 +89,7 @@ function Blogs() {
             </button>
             <span className="px-4 py-2">{`Page ${page} of ${totalPages}`}</span>
             <button
-              onClick={() =>
-                setPage((prev) => (prev < totalPages ? prev + 1 : prev))
-              }
+              onClick={() => updatePage(page < totalPages ? page + 1 : page)}
               disabled={page >= totalPages}
               className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
             >
