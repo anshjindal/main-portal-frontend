@@ -61,7 +61,7 @@ function Blogs() {
 
           {/* Category Filter Buttons */}
           <div className="mx-20">
-            <div className="w-full flex gap-4 justify-start items-start">
+            <div className="w-full flex gap-4 justify-start items-start flex-wrap">
               {categoryData.map((item) => (
                 <button
                   key={item?.slug}
