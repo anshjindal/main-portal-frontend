@@ -149,6 +149,14 @@ function App() {
             }
           />
           <Route
+            path="/:lang/Blogs/:category/:page?"
+            element={
+              <Layout>
+                <Blogs />
+              </Layout>
+            }
+          />
+          <Route
             path="/:lang/BlogPost"
             element={
               <Layout>

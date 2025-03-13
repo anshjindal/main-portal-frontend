@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import AdminData from '../content/Admin/Admin';
-import blogcontent from '../content/Blogs/BlogsPageData.json';
 import toast from 'react-hot-toast';
 
 export const useBlogController = () => {
@@ -10,7 +8,7 @@ export const useBlogController = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
 
-  const { lang = 'en' } = useParams();
+  const { lang = 'en', category = '' } = useParams();
   const [searchParams] = useSearchParams();
 
   const pageParam = Number(searchParams.get('page')) || 1;
@@ -34,7 +32,12 @@ export const useBlogController = () => {
 
   const getBlogs = async () => {
     try {
-      const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${search}`;
+      let apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${search}`;
+
+      if (category) {
+        apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/category/${category}?page=${page}&perPage=${perPage}&search=${search}`;
+      }
+
       console.log('Fetching from:', apiUrl);
 
       const response = await fetch(apiUrl, {
@@ -85,7 +88,7 @@ export const useBlogController = () => {
 
   useEffect(() => {
     getBlogs();
-  }, [page, search]);
+  }, [page, search, category]);
 
   return {
     blogData: blogData || [],
@@ -97,6 +100,7 @@ export const useBlogController = () => {
     setDebouncedSearch,
     totalPages: totalPages || 1,
     categoryData: categoryData || [],
+    navigate,
   };
 };
 

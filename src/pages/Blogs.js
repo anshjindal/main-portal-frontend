@@ -8,7 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
-  const { lang } = useParams();
+  const { lang, category } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const {
@@ -20,6 +20,7 @@ function Blogs() {
     search,
     setDebouncedSearch,
     categoryData,
+    navigate
   } = useBlogController();
 
   const handleSearchChange = (e) => {
@@ -28,9 +29,13 @@ function Blogs() {
     setSearchParams({ page: 1, search: searchValue });
   };
 
+  const handleCategoryClick = (slug) => {
+    navigate(`/${lang}/Blogs/${slug}/1`);
+  };
+
   const handlePagination = (newPage) => {
-    setPage(newPage);  // Change the page state
-    setSearchParams({ page: newPage, search });  // Update URL with the current search
+    setPage(newPage);
+    setSearchParams({ page: newPage, search });
   };
 
   return (
@@ -65,8 +70,10 @@ function Blogs() {
               {categoryData.map((item) => (
                 <button
                   key={item?.slug}
-                  className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"
-                  onClick={() => setSearchParams({ page: 1, search: item?.slug })}
+                  className={`bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white ${
+                    category === item.slug ? 'bg-opacity-100' : ''
+                  }`}
+                  onClick={() => handleCategoryClick(item?.slug)}
                 >
                   {item?.translations[0]?.name}
                 </button>
@@ -96,7 +103,7 @@ function Blogs() {
             >
               Previous
             </button>
-            <span className="px-4 py-2">{`Page ${page} of ${totalPages}`}</span>
+            <span className="px-4 py-2">Page {page} of {totalPages}</span>
             <button
               onClick={() => handlePagination(page + 1)}
               disabled={page >= totalPages}
