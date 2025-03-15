@@ -9,7 +9,7 @@ import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
   // 🔹 useParams() doit être utilisé à l'intérieur du composant fonctionnel
-  const { lang, slug } = useParams(); 
+  const { lang, slug } = useParams();
 
   const {
     blogData,
@@ -22,6 +22,11 @@ function Blogs() {
     setSearch,
     categoryData, // Added categoryData
   } = useBlogController();
+
+  // ✅ Scroll to top when page changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [page]); 
 
   return (
     <>
@@ -46,7 +51,7 @@ function Blogs() {
               placeholder="Search for a blog..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="p-3 border rounded-md w-[50%] text-left" 
+              className="p-3 border rounded-md w-[50%] text-left"
             />
           </div>
 
@@ -54,8 +59,8 @@ function Blogs() {
           <div className="mx-20">
             <div className="w-full flex gap-4 justify-start items-start">
               {categoryData.map((item) => (
-                <button 
-                  key={item?.slug} 
+                <button
+                  key={item?.slug}
                   className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"
                   onClick={() => navigate(`/category/${item?.slug}`)}
                 >
@@ -66,16 +71,15 @@ function Blogs() {
           </div>
 
           {/* Blog Cards Section */}
-          <div className="flex justify-center">
+          <div className="mt-8 flex justify-center">
             <div className="w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {loading ? (
                 <p>Loading blogs...</p>
               ) : (
-                blogData.map((blog, index) => 
-                  {
-                    console.log("Blog Data:", blog); //  Debug : voir chaque blog
-                    return <BlogCard key={index} blog={blog} />;
-                  })
+                blogData.map((blog, index) => {
+                  console.log('Blog Data:', blog); //  Debug : voir chaque blog
+                  return <BlogCard key={index} blog={blog} lang={lang} />;
+                })
               )}
             </div>
           </div>
@@ -91,7 +95,9 @@ function Blogs() {
             </button>
             <span className="px-4 py-2">{`Page ${page} of ${totalPages}`}</span>
             <button
-              onClick={() => setPage((prev) => (prev < totalPages ? prev + 1 : prev))}
+              onClick={() =>
+                setPage((prev) => (prev < totalPages ? prev + 1 : prev))
+              }
               disabled={page >= totalPages}
               className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
             >
