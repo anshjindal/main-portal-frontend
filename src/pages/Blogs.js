@@ -6,9 +6,10 @@ import HeaderSection from '../components/Reusable/HeaderSection';
 import BlogCard from '../components/Blog/BlogCard';
 import toast, { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
+import Select from 'react-select';
 
 function Blogs() {
-  const { lang, slug } = useParams();
+  const { lang } = useParams();
 
   const {
     blogData,
@@ -20,7 +21,18 @@ function Blogs() {
     search,
     updateSearch,
     categoryData,
+    selectedCategory,
+    updateCategory,
   } = useBlogController();
+
+  const categoryOptions = categoryData.map((item) => ({
+    value: item.slug,
+    label: item.translations[0]?.name,
+  }));
+
+  const handleCategoryChange = (selectedOption) => {
+    updateCategory(selectedOption?.value || '');
+  };
 
   return (
     <>
@@ -49,19 +61,15 @@ function Blogs() {
             />
           </div>
 
-          {/* Category Filter Buttons */}
-          <div className="mx-20">
-            <div className="w-full flex gap-4 justify-start items-start">
-              {categoryData.map((item) => (
-                <button
-                  key={item?.slug}
-                  className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"
-                  onClick={() => navigate(`/category/${item?.slug}`)}
-                >
-                  {item?.translations[0]?.name}
-                </button>
-              ))}
-            </div>
+          {/* Category Dropdown with Search Button */}
+          <div className="flex items-center gap-4 justify-center">
+            <Select
+              options={categoryOptions}
+              onChange={handleCategoryChange}
+              placeholder="Select a category..."
+              className="w-[50%]"
+              isClearable
+            />
           </div>
 
           {/* Blog Cards Section */}
@@ -70,15 +78,14 @@ function Blogs() {
               {loading ? (
                 <p>Loading blogs...</p>
               ) : (
-                blogData.map((blog, index) => {
-                  console.log('Blog Data:', blog);
-                  return <BlogCard key={index} blog={blog} lang={lang} />;
-                })
+                blogData.map((blog, index) => (
+                  <BlogCard key={index} blog={blog} lang={lang} />
+                ))
               )}
             </div>
           </div>
 
-          {/* Pagination Controls with useSearchParams */}
+          {/* Pagination Controls */}
           <div className="flex justify-center mt-4">
             <button
               onClick={() => updatePage(Math.max(page - 1, 1))}

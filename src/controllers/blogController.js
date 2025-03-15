@@ -10,13 +10,13 @@ export const useBlogController = () => {
   const [loading, setLoading] = useState(true);
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [totalPages, setTotalPages] = useState(1);
 
   const { lang = "en" } = useParams();
   const content = AdminData?.[lang] || AdminData['en'];
   const BlogPageContent = blogcontent?.[lang] || blogcontent['en'];
 
-  // Using useSearchParams for pagination and search
   const [searchParams, setSearchParams] = useSearchParams();
   const page = parseInt(searchParams.get('page') || '1', 10);
   const search = searchParams.get('search') || '';
@@ -37,15 +37,21 @@ export const useBlogController = () => {
   const updateSearch = (newSearch) => {
     const updatedParams = new URLSearchParams(searchParams);
     updatedParams.set('search', newSearch);
-    updatedParams.set('page', '1'); // Reset to page 1 when search changes
+    updatedParams.set('page', '1');
     setSearchParams(updatedParams);
+  };
+
+  const updateCategory = (category) => {
+    setSelectedCategory(category);
   };
 
   const getBlogs = async () => {
     try {
-      const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${debouncedSearch}`;
-
-      console.log('Fetching from:', apiUrl);
+      let apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${debouncedSearch}`;
+      
+      if (selectedCategory) {
+        apiUrl += `&category=${selectedCategory}`;
+      }
 
       const response = await fetch(apiUrl, {
         method: "GET",
@@ -53,8 +59,6 @@ export const useBlogController = () => {
       });
 
       const data = await response.json();
-      console.log("API Response:", data);
-
       if (!response.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
@@ -96,7 +100,7 @@ export const useBlogController = () => {
 
   useEffect(() => {
     getBlogs();
-  }, [page, debouncedSearch]);
+  }, [page, debouncedSearch, selectedCategory]);
 
   useEffect(() => {
     getCategory();
@@ -111,6 +115,8 @@ export const useBlogController = () => {
     perPage,
     search,
     updateSearch,
+    selectedCategory,
+    updateCategory,
     totalPages: totalPages || 1,
     categoryData: categoryData || [],
   };
