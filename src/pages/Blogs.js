@@ -23,10 +23,7 @@ function Blogs() {
     categoryData, // Added categoryData
   } = useBlogController();
 
-  // ✅ Scroll to top when page changes
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [page]); 
+
 
   return (
     <>

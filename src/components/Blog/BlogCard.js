@@ -31,13 +31,26 @@ const BlogCard = ({ blog, lang = "en" }) => {
         className="w-full h-24 bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
       ></div>
-      <div className="p-6 text-left">
-        <div className="flex gap-4 items-center mb-2">
-          <p className="flex-1 text-sm text-[#666666] line-clamp-1 border-4 border-red-500">{blog.tags?.join(", ") || "No Tags"}</p>
-          <p className="flex-none text-sm text-[#666666]">{blog.timeToRead || 0} Mins</p>
+
+=======
+      <div className="p-6">
+        <div className="flex items-center mb-4">
+          <div className="flex gap-4 justify-start items-center w-full">
+            <p className="flex-1 text-sm line-clamp-1 text-start text-[#666666]">
+              {blog.tags}
+            </p>
+            <p className="flex-none text-sm text-[#666666]">
+              {blog.timeToRead} Mins
+            </p>
+          </div>
         </div>
-        <h2 className="text-xl font-bold mb-2 line-clamp-1">{title}</h2>
-        <p className="text-gray-700 line-clamp-2">{shortDesc}</p>
+        <h2 className="text-lg text-start font-bold line-clamp-2 mb-2">
+          {blog.title[lang]}
+        </h2>
+        <p className="text-gray-700 text-start line-clamp-2">
+          {blog.shortDesc[lang]}
+        </p>
+
       </div>
 
     </div>
