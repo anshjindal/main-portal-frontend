@@ -10,13 +10,14 @@ import { useBlogController } from '../controllers/blogController';
 
 function Blogs() {
   const { lang, slug } = useParams();
+  const [isOpen, setIsOpen] = useState(false);
 
   const {
     blogData,
     loading,
     navigate,
-    page,
     perPage,
+    setPerPage,
     updatePage,
     totalPages,
     search,
@@ -86,22 +87,50 @@ function Blogs() {
 
           {/* Pagination Controls with useSearchParams */}
           <div className="flex justify-center mt-6">
-          <ReactPaginate
-            className="flex space-x-2 text-sm"
-            pageClassName="border border-gray-300 px-4 py-1.5 rounded-md text-[#2B00AC] hover:bg-gray-200 transition"
-            activeClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
-            previousClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
-            nextClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
-            breakClassName="px-4 py-1.5 rounded-md text-[#2B00AC]"
-            disabledClassName="border border-gray-300 opacity-50 cursor-not-allowed transition"
-            breakLabel="..."
-            nextLabel="Next"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={1}
-            pageCount={totalPages}
-            previousLabel="Previous"
-            renderOnZeroPageCount={null}
-          />
+            <ReactPaginate
+              className="flex space-x-2 text-sm"
+              pageClassName="border border-gray-300 px-4 py-1.5 rounded-md text-[#2B00AC] hover:bg-gray-200 transition"
+              activeClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              previousClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              nextClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              breakClassName="px-4 py-1.5 rounded-md text-[#2B00AC]"
+              disabledClassName="border border-gray-300 opacity-50 cursor-not-allowed transition"
+              breakLabel="..."
+              nextLabel="Next"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={1}
+              pageCount={totalPages}
+              previousLabel="Previous"
+              renderOnZeroPageCount={null}
+            />
+            {/* Dropdown */}
+            <div className="relative ml-4 flex justify-center">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              >
+                {perPage} ▼
+              </button>
+
+              {isOpen && (
+                <div className="absolute bg-gray-200 text-white border border-gray-300 mt-10 rounded-lg shadow-lg transition">
+                <ul className="py-2">
+                  {[12, 15, 18, 21].map((num) => (
+                    <li
+                      key={num}
+                      className="px-4 py-2 hover:bg-gray-100 hover:text-[#2B00AC] cursor-pointer transition"
+                      onClick={() => {
+                        setPerPage(num);
+                        setIsOpen(false);
+                      }}
+                    >
+                      {num}
+                    </li>
+                  ))}
+                </ul>
+                </div>
+              )}
+            </div>
         </div>
           
           {/* Call-To-Action */}

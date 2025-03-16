@@ -11,6 +11,7 @@ export const useBlogController = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
   const [totalPages, setTotalPages] = useState(1);
+  const [perPage, setPerPage] = useState(12); // Default 12 blogs per page
 
   const { lang = "en" } = useParams();
   const content = AdminData?.[lang] || AdminData['en'];
@@ -20,7 +21,6 @@ export const useBlogController = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = parseInt(searchParams.get('page') || '1', 10);
   const search = searchParams.get('search') || '';
-  const perPage = 12; // Default 12 blogs per page
 
   const debouncedSearch = useDebounce(search, 700);
 
@@ -96,7 +96,7 @@ export const useBlogController = () => {
 
   useEffect(() => {
     getBlogs();
-  }, [page, debouncedSearch]);
+  }, [page, debouncedSearch, perPage]);
 
   useEffect(() => {
     getCategory();
@@ -109,6 +109,7 @@ export const useBlogController = () => {
     page,
     updatePage,
     perPage,
+    setPerPage,
     search,
     updateSearch,
     totalPages: totalPages || 1,
