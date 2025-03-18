@@ -67,6 +67,7 @@ function Blogs() {
             <Select
               options={categoryOptions}
               onChange={handleCategoryChange}
+              value={categoryOptions.find((option) => option.value === selectedCategory) || null}
               placeholder="Select a category..."
               className="w-[50%]"
               isClearable
