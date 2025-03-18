@@ -42,36 +42,52 @@ export const useBlogController = () => {
   };
 
   const updateCategory = (category) => {
-    setSelectedCategory(category);
+    const updatedParams = new URLSearchParams(searchParams);
+    if (category) {
+      updatedParams.set('category', category);
+    } else {
+      updatedParams.delete('category');
+    }
+    updatedParams.set('page', '1'); // Reset to first page when category changes
+    setSearchParams(updatedParams);
   };
+  
 
   const getBlogs = async () => {
     try {
+      const currentCategory = searchParams.get('category') || '';
+  
       let apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${debouncedSearch}`;
       
-      if (selectedCategory) {
-        apiUrl += `&category=${selectedCategory}`;
+      if (currentCategory) {
+        apiUrl += `&category=${currentCategory}`;
       }
-
+  
       const response = await fetch(apiUrl, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
-
+  
       const data = await response.json();
       if (!response.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
-
+  
       setBlogData(data?.blogs || []);
       setTotalPages(data?.pagination?.totalBlogs || 1);
-
+  
     } catch (err) {
       return toast.error(err, { duration: 5000 });
     } finally {
       setLoading(false);
     }
   };
+  
+  useEffect(() => {
+    const categoryFromParams = searchParams.get('category') || '';
+    setSelectedCategory(categoryFromParams);
+  }, [searchParams]);
+  
 
   const getCategory = async () => {
     try {

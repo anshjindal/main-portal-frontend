@@ -24,7 +24,8 @@ function Blogs() {
     selectedCategory,
     updateCategory,
   } = useBlogController();
-
+  console.log(page, totalPages);
+  
   const categoryOptions = categoryData.map((item) => ({
     value: item.slug,
     label: item.translations[0]?.name,
