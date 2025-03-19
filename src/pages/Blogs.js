@@ -7,6 +7,7 @@ import BlogCard from '../components/Blog/BlogCard';
 import { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 import Select from 'react-select';
+import { colourStyles } from '../utils/select';
 
 function Blogs() {
   const { lang } = useParams();
@@ -40,22 +41,23 @@ function Blogs() {
             Header="Explore Our Blogs"
             Content="Discover insights, stories, and updates"
           />
-          <div className="flex flex-row items-center gap-4 justify-center">
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
             {/* Search Bar */}
             <input
               type="text"
               placeholder="Search for a blog..."
               value={search}
               onChange={(e) => updateSearch(e.target.value)}
-              className="p-3 border rounded-md text-left w-64"
+              className="flex-1 p-3 border rounded-md text-left w-full"
             />
             {/* Category Dropdown */}
             <Select
               options={categoryOptions}
+              styles={colourStyles}
               onChange={handleCategoryChange}
               value={categoryOptions.find((option) => option.value === selectedCategory) || null}
               placeholder="Select a category..."
-              className="w-64" // Adjust the width as needed
+              className="w-full md:w-96" // Adjust the width as needed
               isClearable
             />
           </div>
