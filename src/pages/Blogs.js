@@ -118,12 +118,12 @@ function Blogs() {
               </button>
 
               {isOpen && (
-                <div className="absolute bg-gray-200 text-white border border-gray-300 mt-10 rounded-lg shadow-lg transition">
+                <div className="absolute bg-gray-100 text-[#2B00AC] border border-gray-300 mt-10 rounded-lg shadow-lg transition">
                 <ul className="py-2">
                   {[12, 15, 18, 21].map((num) => (
                     <li
                       key={num}
-                      className="px-4 py-2 hover:bg-gray-100 hover:text-[#2B00AC] cursor-pointer transition"
+                      className="px-4 py-2 hover:bg-gray-200 cursor-pointer transition"
                       onClick={() => {
                         setPerPage(num);
                         setIsOpen(false);
