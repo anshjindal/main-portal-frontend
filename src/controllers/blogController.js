@@ -1,56 +1,91 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import AdminData from '../content/Admin/Admin';
 import blogcontent from '../content/Blogs/BlogsPageData.json';
 import toast from 'react-hot-toast';
+import { useDebounce } from '../hooks/useDebounce';
 
 export const useBlogController = () => {
   const [blogData, setBlogData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [totalPages, setTotalPages] = useState(1);
 
-  const { lang = 'en' } = useParams(); // Set default to "en"
+  const { lang = "en" } = useParams();
   const content = AdminData?.[lang] || AdminData['en'];
   const BlogPageContent = blogcontent?.[lang] || blogcontent['en'];
 
-  // 🔹 Pagination & Search States
-  const [page, setPage] = useState(1);
-  const [perPage] = useState(12); // Default 12 blogs per page
-  const [search, setSearch] = useState(''); // Search query
-  const [totalPages, setTotalPages] = useState(1); // Store total pages
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = parseInt(searchParams.get('page') || '1', 10);
+  const search = searchParams.get('search') || '';
+  const perPage = 12; // Default 12 blogs per page
+
+  const debouncedSearch = useDebounce(search, 700);
 
   const { slug } = useParams();
   const navigate = useNavigate();
 
+  // Function to update search params
+  const updatePage = (newPage) => {
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.set('page', newPage.toString());
+    setSearchParams(updatedParams);
+  };
+
+  const updateSearch = (newSearch) => {
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.set('search', newSearch);
+    updatedParams.set('page', '1');
+    setSearchParams(updatedParams);
+  };
+
+  const updateCategory = (category) => {
+    const updatedParams = new URLSearchParams(searchParams);
+    if (category) {
+      updatedParams.set('category', category);
+    } else {
+      updatedParams.delete('category');
+    }
+    updatedParams.set('page', '1'); // Reset to first page when category changes
+    setSearchParams(updatedParams);
+  };
+
   const getBlogs = async () => {
     try {
-      const apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${search}`;
-      console.log('Fetching from:', apiUrl); //  Debug API URL
-
+      const currentCategory = searchParams.get('category') || '';
+  
+      let apiUrl = `${process.env.REACT_APP_WOUESSI_API_URL}/api/blog?page=${page}&perPage=${perPage}&search=${debouncedSearch}`;
+      
+      if (currentCategory) {
+        apiUrl += `&category=${currentCategory}`;
+      }
+  
       const response = await fetch(apiUrl, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
       });
-
+  
       const data = await response.json();
-      console.log('API Response:', data); // 🔹 Debug console log
-
       if (!response.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
-
-      setBlogData(data?.blogs || []); //  Vérifie que c'est un tableau
-      setTotalPages(data?.pagination?.lastPage || 1); //  Assure que `totalPages` ne soit pas undefined
+  
+      setBlogData(data?.blogs || []);
+      setTotalPages(data?.pagination?.totalBlogs || 1);
+  
     } catch (err) {
       return toast.error(err, { duration: 5000 });
     } finally {
       setLoading(false);
     }
   };
+  
   useEffect(() => {
-    getBlogs();
-  }, [page, search]);
+    const categoryFromParams = searchParams.get('category') || '';
+    setSelectedCategory(categoryFromParams);
+  }, [searchParams]);
 
   const getCategory = async () => {
     try {
@@ -69,7 +104,7 @@ export const useBlogController = () => {
       if (!response?.ok) {
         return toast.error(data?.error, { duration: 5000 });
       }
-      setCategoryData(data?.categories); // Access the blogs array from the response
+      setCategoryData(data?.categories);
     } catch (err) {
       return toast.error(err, { duration: 5000 });
     } finally {
@@ -77,21 +112,38 @@ export const useBlogController = () => {
     }
   };
 
+  useEffect(() => {    
+    getBlogs();
+  }, [page, debouncedSearch, selectedCategory]);
+
   useEffect(() => {
     getCategory();
   }, []);
 
+  const categoryOptions = categoryData.map((item) => ({
+    value: item.slug,
+    label: item.translations[0]?.name,
+  }));
+
+  const handleCategoryChange = (selectedOption) => {
+    updateCategory(selectedOption?.value || '');
+  };
+
   return {
-    blogData: blogData || [], //  Default to an empty array
+    blogData: blogData || [],
     loading,
     navigate,
     page,
-    setPage,
+    updatePage,
     perPage,
     search,
-    setSearch,
-    totalPages: totalPages || 1, //  Default to 1
+    updateSearch,
+    selectedCategory,
+    updateCategory,
+    totalPages: totalPages || 1,
     categoryData: categoryData || [],
+    categoryOptions,
+    handleCategoryChange,
   };
 };
 
