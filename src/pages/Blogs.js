@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import HeaderSection from '../components/Reusable/HeaderSection';
 import BlogCard from '../components/Blog/BlogCard';
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
+import Select from 'react-select';
+import { colourStyles } from '../utils/select';
 
 function Blogs() {
-  const { lang, slug } = useParams();
+  const { lang } = useParams();
 
   const {
     blogData,
@@ -19,7 +21,9 @@ function Blogs() {
     totalPages,
     search,
     updateSearch,
-    categoryData,
+    categoryOptions,
+    selectedCategory,
+    handleCategoryChange,
   } = useBlogController();
 
   return (
@@ -37,48 +41,40 @@ function Blogs() {
             Header="Explore Our Blogs"
             Content="Discover insights, stories, and updates"
           />
-
-          {/* Search Bar */}
-          <div className="flex justify-center mb-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
+            {/* Search Bar */}
             <input
               type="text"
               placeholder="Search for a blog..."
               value={search}
               onChange={(e) => updateSearch(e.target.value)}
-              className="p-3 border rounded-md w-[50%] text-left"
+              className="flex-1 p-3 border rounded-md text-left w-full"
+            />
+            {/* Category Dropdown */}
+            <Select
+              options={categoryOptions}
+              styles={colourStyles}
+              onChange={handleCategoryChange}
+              value={categoryOptions.find((option) => option.value === selectedCategory) || null}
+              placeholder="Select a category..."
+              className="w-full md:w-96" // Adjust the width as needed
+              isClearable
             />
           </div>
-
-          {/* Category Filter Buttons */}
-          <div className="mx-20">
-            <div className="w-full flex gap-4 justify-start items-start">
-              {categoryData.map((item) => (
-                <button
-                  key={item?.slug}
-                  className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white"
-                  onClick={() => navigate(`/category/${item?.slug}`)}
-                >
-                  {item?.translations[0]?.name}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Blog Cards Section */}
           <div className="mt-8 flex justify-center">
             <div className="w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {loading ? (
                 <p>Loading blogs...</p>
               ) : (
-                blogData.map((blog, index) => {
-                  console.log('Blog Data:', blog);
-                  return <BlogCard key={index} blog={blog} lang={lang} />;
-                })
+                blogData.map((blog, index) => (
+                  <BlogCard key={index} blog={blog} lang={lang} />
+                ))
               )}
             </div>
           </div>
 
-          {/* Pagination Controls with useSearchParams */}
+          {/* Pagination Controls */}
           <div className="flex justify-center mt-4">
             <button
               onClick={() => updatePage(Math.max(page - 1, 1))}
