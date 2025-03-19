@@ -40,30 +40,25 @@ function Blogs() {
             Header="Explore Our Blogs"
             Content="Discover insights, stories, and updates"
           />
-
-          {/* Search Bar */}
-            <div className="flex justify-center mb-4">
-              <input
-                type="text"
-                placeholder="Search for a blog..."
-                value={search}
-                onChange={(e) => updateSearch(e.target.value)}
-                className="p-3 border rounded-md w-[50%] text-left"
-              />
-            </div>
-
-            {/* Category Dropdown with Search Button */}
-            <div className="flex items-center gap-4 justify-center">
-              <Select
-                options={categoryOptions}
-                onChange={handleCategoryChange}
-                value={categoryOptions.find((option) => option.value === selectedCategory) || null}
-                placeholder="Select a category..."
-                className="w-[50%]"
-                isClearable
-                />
-            </div>
-
+          <div className="flex flex-row items-center gap-4 justify-center">
+            {/* Search Bar */}
+            <input
+              type="text"
+              placeholder="Search for a blog..."
+              value={search}
+              onChange={(e) => updateSearch(e.target.value)}
+              className="p-3 border rounded-md text-left w-64"
+            />
+            {/* Category Dropdown */}
+            <Select
+              options={categoryOptions}
+              onChange={handleCategoryChange}
+              value={categoryOptions.find((option) => option.value === selectedCategory) || null}
+              placeholder="Select a category..."
+              className="w-64" // Adjust the width as needed
+              isClearable
+            />
+          </div>
           {/* Blog Cards Section */}
           <div className="mt-8 flex justify-center">
             <div className="w-[80vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

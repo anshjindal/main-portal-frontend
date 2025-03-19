@@ -112,15 +112,11 @@ export const useBlogController = () => {
     }
   };
 
-  useEffect(() => {
-    console.log('getBlogs');
-    
+  useEffect(() => {    
     getBlogs();
   }, [page, debouncedSearch, selectedCategory]);
 
   useEffect(() => {
-    console.log('getCategoy');
-
     getCategory();
   }, []);
 
