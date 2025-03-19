@@ -11,6 +11,7 @@ import { useBlogController } from '../controllers/blogController';
 function Blogs() {
   const { lang, slug } = useParams();
   const [isOpen, setIsOpen] = useState(false);
+  const [totalPages, setTotalPages] = useState(1);
 
   const {
     blogData,
@@ -19,11 +20,15 @@ function Blogs() {
     perPage,
     setPerPage,
     updatePage,
-    totalPages,
+    totalBlogs,
     search,
     updateSearch,
     categoryData,
   } = useBlogController();
+
+  useEffect(() => {
+    setTotalPages(Math.ceil(totalBlogs/perPage));
+  }, [totalBlogs, perPage]);
 
   const handlePageClick = (event) => {
     updatePage(event.selected + 1);

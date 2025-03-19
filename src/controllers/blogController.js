@@ -10,7 +10,7 @@ export const useBlogController = () => {
   const [loading, setLoading] = useState(true);
   const [categoryData, setCategoryData] = useState([]);
   const [loadingCategory, setLoadingCategory] = useState(true);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalBlogs, setTotalBlogs] = useState(1);
   const [perPage, setPerPage] = useState(12); // Default 12 blogs per page
 
   const { lang = "en" } = useParams();
@@ -60,7 +60,7 @@ export const useBlogController = () => {
       }
 
       setBlogData(data?.blogs || []);
-      setTotalPages(data?.pagination?.totalBlogs || 1);
+      setTotalBlogs(data?.pagination?.totalBlogs || 1);
 
     } catch (err) {
       return toast.error(err, { duration: 5000 });
@@ -112,7 +112,7 @@ export const useBlogController = () => {
     setPerPage,
     search,
     updateSearch,
-    totalPages: totalPages || 1,
+    totalBlogs,
     categoryData: categoryData || [],
   };
 };
