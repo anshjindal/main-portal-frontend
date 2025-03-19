@@ -51,7 +51,6 @@ export const useBlogController = () => {
     updatedParams.set('page', '1'); // Reset to first page when category changes
     setSearchParams(updatedParams);
   };
-  
 
   const getBlogs = async () => {
     try {
@@ -87,7 +86,6 @@ export const useBlogController = () => {
     const categoryFromParams = searchParams.get('category') || '';
     setSelectedCategory(categoryFromParams);
   }, [searchParams]);
-  
 
   const getCategory = async () => {
     try {
@@ -122,6 +120,15 @@ export const useBlogController = () => {
     getCategory();
   }, []);
 
+  const categoryOptions = categoryData.map((item) => ({
+    value: item.slug,
+    label: item.translations[0]?.name,
+  }));
+
+  const handleCategoryChange = (selectedOption) => {
+    updateCategory(selectedOption?.value || '');
+  };
+
   return {
     blogData: blogData || [],
     loading,
@@ -135,6 +142,8 @@ export const useBlogController = () => {
     updateCategory,
     totalPages: totalPages || 1,
     categoryData: categoryData || [],
+    categoryOptions,
+    handleCategoryChange,
   };
 };
 

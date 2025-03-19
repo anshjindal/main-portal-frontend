@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import BlogMetaDataRender from '../components/Blog/BlogMetaDataRender';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import HeaderSection from '../components/Reusable/HeaderSection';
 import BlogCard from '../components/Blog/BlogCard';
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 import Select from 'react-select';
 
@@ -20,20 +20,10 @@ function Blogs() {
     totalPages,
     search,
     updateSearch,
-    categoryData,
+    categoryOptions,
     selectedCategory,
-    updateCategory,
+    handleCategoryChange,
   } = useBlogController();
-  console.log(page, totalPages);
-  
-  const categoryOptions = categoryData.map((item) => ({
-    value: item.slug,
-    label: item.translations[0]?.name,
-  }));
-
-  const handleCategoryChange = (selectedOption) => {
-    updateCategory(selectedOption?.value || '');
-  };
 
   return (
     <>
