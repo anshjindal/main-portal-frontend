@@ -35,6 +35,15 @@ function Blogs() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
+  const handleBlogsPerPageChange = (event) => {
+    const selectedValue = parseInt(event.target.value);
+
+    if (selectedValue){
+      setPerPage(selectedValue);
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }
+
   return (
     <>
       <div className="!z-50">
@@ -109,34 +118,13 @@ function Blogs() {
               previousLabel="Previous"
               renderOnZeroPageCount={null}
             />
-            {/* Dropdown */}
-            <div className="relative ml-4 flex justify-center">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
-              >
-                {perPage} ▼
-              </button>
-
-              {isOpen && (
-                <div className="absolute bg-gray-100 text-[#2B00AC] border border-gray-300 mt-10 rounded-lg shadow-lg transition">
-                <ul className="py-2">
-                  {[12, 15, 18, 21].map((num) => (
-                    <li
-                      key={num}
-                      className="px-4 py-2 hover:bg-gray-200 cursor-pointer transition"
-                      onClick={() => {
-                        setPerPage(num);
-                        setIsOpen(false);
-                      }}
-                    >
-                      {num}
-                    </li>
-                  ))}
-                </ul>
-                </div>
-              )}
-            </div>
+            {/* select number of blogs per page */}
+            <select name="pets" id="pet-select" className="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md ml-4 text-white transition" value={perPage} onChange={handleBlogsPerPageChange} >
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="18">18</option>
+                <option value="21">21</option>
+            </select>
         </div>
           
           {/* Call-To-Action */}
