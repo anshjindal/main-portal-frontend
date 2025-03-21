@@ -12,6 +12,7 @@ function Navbar() {
   const { language, switchLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
   const { lang } = useParams();
+  
   const Content = content[lang];
   const { isSignedIn, user, isLoaded } = useUser();
 
