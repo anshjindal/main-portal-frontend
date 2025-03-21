@@ -6,9 +6,12 @@ import HeaderSection from '../components/Reusable/HeaderSection';
 import BlogList from '../components/Blog/BlogList';
 import { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
+
 import SearchBar from '../components/Reusable/SearchBar';
 import CategoryFilter from '../components/Reusable/CategoryFilter';
 import Pagination from '../components/Reusable/Pagination';
+
+
 
 function Blogs() {
   const { lang } = useParams();
@@ -25,6 +28,8 @@ function Blogs() {
     categoryOptions,
     selectedCategory,
     handleCategoryChange,
+    perPage,
+    setPerPage,
   } = useBlogController();
 
   return (
@@ -50,11 +55,13 @@ function Blogs() {
             />
           </div>
 
+
           {/* Blog List */}
           <BlogList loading={loading} blogData={blogData} lang={lang} />
 
           {/* Pagination */}
           <Pagination page={page} totalPages={totalPages} updatePage={updatePage} />
+
 
           {/* Call-To-Action */}
           <CallToActionSection CallToAction="workwithus" lang={lang} />

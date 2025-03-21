@@ -20,7 +20,7 @@ export const useBlogController = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = parseInt(searchParams.get('page') || '1', 10);
   const search = searchParams.get('search') || '';
-  const perPage = 12; // Default 12 blogs per page
+  const [perPage, setPerPage] = useState(12);
 
   const debouncedSearch = useDebounce(search, 700);
 
@@ -53,6 +53,8 @@ export const useBlogController = () => {
   };
 
   const getBlogs = async () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
     try {
       const currentCategory = searchParams.get('category') || '';
   
@@ -73,7 +75,7 @@ export const useBlogController = () => {
       }
   
       setBlogData(data?.blogs || []);
-      setTotalPages(data?.pagination?.totalBlogs || 1);
+      setTotalPages(data?.pagination?.lastPage || 1);
   
     } catch (err) {
       return toast.error(err, { duration: 5000 });
@@ -114,7 +116,7 @@ export const useBlogController = () => {
 
   useEffect(() => {    
     getBlogs();
-  }, [page, debouncedSearch, selectedCategory]);
+  }, [page, debouncedSearch, selectedCategory, perPage]);
 
   useEffect(() => {
     getCategory();
@@ -136,6 +138,7 @@ export const useBlogController = () => {
     page,
     updatePage,
     perPage,
+    setPerPage,
     search,
     updateSearch,
     selectedCategory,
