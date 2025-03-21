@@ -27,7 +27,11 @@ import SignUp from './components/SignUp/SignUp';
 import Register from './components/SignUp/SignUp';
 import AIChatbot from './components/Reusable/AIChatbot';
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={`text-center bg-[#F4F4F4]`}>
       <Navbar />

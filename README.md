@@ -18,7 +18,7 @@ Contains all the main pages of the website:
 - **`CookiePolicy.js`**: Cookie usage policy.
 - **`CopyrightPolicy.js`**: Copyright policy.
 - **`Error.js`**: Error page for handling 404 or other errors.
-- **`Home.js`**: Homepage of the website.
+- **`Home.tsx`**: Homepage of the website.
 - **`Portfolio.js`**: Showcase of our work.
 - **`PrivacyPolicy.js`**: Privacy policy details.
 - **`Products.js`**: Information about our products.
