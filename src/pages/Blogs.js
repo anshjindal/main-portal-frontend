@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast';
 import { useBlogController } from '../controllers/blogController';
 import Select from 'react-select';
 import { colourStyles } from '../utils/select';
+import ReactPaginate from 'react-paginate';
 
 function Blogs() {
   const { lang } = useParams();
@@ -24,6 +25,8 @@ function Blogs() {
     categoryOptions,
     selectedCategory,
     handleCategoryChange,
+    perPage,
+    setPerPage,
   } = useBlogController();
 
   return (
@@ -75,22 +78,39 @@ function Blogs() {
           </div>
 
           {/* Pagination Controls */}
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => updatePage(Math.max(page - 1, 1))}
-              disabled={page === 1}
-              className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-            >
-              Previous
-            </button>
-            <span className="px-4 py-2">{`Page ${page} of ${totalPages}`}</span>
-            <button
-              onClick={() => updatePage(page < totalPages ? page + 1 : page)}
-              disabled={page >= totalPages}
-              className="mx-2 px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-            >
-              Next
-            </button>
+          <div className="flex justify-center mt-6">
+            <ReactPaginate
+              className="flex space-x-2 text-sm"
+              pageClassName="border border-gray-300 px-4 py-1.5 rounded-md text-[#2B00AC] hover:bg-gray-200 transition"
+              activeClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              previousClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              nextClassName="bg-[#2B00AC] bg-opacity-70 hover:bg-opacity-100 px-4 py-1.5 rounded-md text-white transition"
+              breakClassName="px-4 py-1.5 rounded-md text-[#2B00AC]"
+              disabledClassName="border border-gray-300 opacity-50 cursor-not-allowed transition"
+              breakLabel="..."
+              nextLabel="Next"
+              onPageChange={(event)=>updatePage(event.selected + 1)}
+              pageRangeDisplayed={1}
+              pageCount={totalPages}
+              previousLabel="Previous"
+              renderOnZeroPageCount={null}
+            />
+            {/* select number of blogs per page */}
+            <select
+              name="pets" id="pet-select" className="bg-white px-4 py-1.5 rounded-md ml-4 text-black transition hover:outline-none focus:outline-none"
+              value={perPage}
+              onChange={(event)=>{
+                const selectedValue = parseInt(event.target.value);
+
+                if (selectedValue){
+                  setPerPage(selectedValue);
+                }
+              }} >
+
+              {[12, 15, 18, 21].map((item, index) => (
+                <option className="hover:bg-[#2B00AC]" key={index} value={item}>{item}</option>
+              ))}
+            </select>
           </div>
 
           {/* Call-To-Action */}
