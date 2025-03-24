@@ -1,14 +1,14 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import ProductsData from '../content/Products/Products';
 import { CgArrowLongUp } from 'react-icons/cg';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import ProductsMetaDataRender from '../components/Products/ProductsMetaDataRender';
+import { useDataLang } from '../hooks/useDataLang';
+import { useGetLang } from '../hooks/useGetLang';
 
 function Products() {
-  const { lang } = useParams();
-  const data = ProductsData[lang]; // Default to English if lang is not found
-
+  const { data } =  useDataLang(ProductsData)
+  const lang = useGetLang()
   return (
     <>
       <ProductsMetaDataRender />
@@ -29,14 +29,14 @@ function Products() {
           </div>
 
           {/* Product Sections */}
-          {data.products.map((product, index) => (
+          {data.products.map((product:any, index:number) => (
             <div
               key={index}
               className={`flex justify-between text-left items-center border-t-[0.01vw] border-[#9C9C9C] pt-[2vw] mt-[5vw] mb-[2vw] max-[450px]:items-start max-[450px]:pt-[5vw] ${index % 2 === 0 ? 'border-[#9C9C9C]' : ''}`}
             >
               <div
-                className={`w-[30vw] h-[35vw] bg-cover bg-[center_right_-2vw] max-[450px]:w-[33vw] max-[450px]:h-[55vw] max-[450px]:bg-center`}
-                style={{ backgroundImage: `url(${product.image})` }}
+                className='w-[30vw] h-[35vw] bg-cover bg-[center_right_-2vw] max-[450px]:w-[33vw] max-[450px]:h-[55vw] max-[450px]:bg-center'
+                style={{ backgroundImage: `url(${product.image})`, height:'35vw', backgroundPosition:'center right -2vw' }}
               ></div>
               <div className="flex flex-col gap-y-[2vw]">
                 <h1 className="text-[3.5vw] text-[#2E2E2E] font-extrabold max-[450px]:text-[6vw] max-[450px]:font-bold max-[450px]:mb-[4vw]">

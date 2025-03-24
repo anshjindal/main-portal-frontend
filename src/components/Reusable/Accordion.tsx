@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import { IoMdArrowDropright } from 'react-icons/io';
 
-function Accordion({ title, InnerTextData = [] }) {
+interface AccordionProps {
+  key: number | string
+  title: string,
+  children?: React.ReactNode,
+  InnerTextData?: {
+    innerTitle:string,
+    innerText: string
+  }[]
+  
+}
+function Accordion({ key, title, InnerTextData = [] }:AccordionProps) {
   const [accordionOpen, setAccordionOpen] = useState(true);
 
   const accordionToggle = () => {

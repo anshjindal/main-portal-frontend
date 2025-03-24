@@ -4,12 +4,12 @@ import CallToActionSection from '../components/Reusable/CallToActionSection';
 import HeaderSection from '../components/Reusable/HeaderSection';
 import Accordion from '../components/Reusable/Accordion';
 import content from '../content/Services/ServicesData.json';
-import { useParams } from 'react-router-dom';
 import ServicesMetaRender from '../components/Home/ServicesMetaRender';
+import { useDataLang } from '../hooks/useDataLang';
 
 function Services() {
-  const { lang } = useParams();
-  const Content = content[lang];
+  const {data, lang} = useDataLang(content);
+  const Content = data;
 
   return (
     <>
@@ -28,7 +28,7 @@ function Services() {
               if (sectionKey === 'Logo') {
                 return (
                   <Accordion key={index} title={section.heading}>
-                    {section.content.map((item, innerIndex) => (
+                    {section.content.map((item:any, innerIndex:any) => (
                       <div key={innerIndex}>
                         <h3>{item.innerTitle}</h3>
                         <p>{item.innerText}</p>

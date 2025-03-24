@@ -4,12 +4,12 @@ import PrivacyIcon from '../assets/SVG/PrivacyPolicyIcon.svg';
 import Accordion from '../components/Reusable/Accordion';
 import PrivacyData from '../content/PolicyPages/PrivacyPolicyText.json';
 import ContactUsSection from '../components/Reusable/ContactUsSection';
-import { useParams } from 'react-router-dom';
 import PolicyMetaRender from '../components/PolicyPgesMetaRender/PolicyMetaRender';
+import { useDataLang } from '../hooks/useDataLang';
 
 function PrivacyPolicy() {
-  const { lang } = useParams();
-  const Content = PrivacyData[lang];
+  const {data} = useDataLang(PrivacyData);
+  const Content = data
 
   // Define section titles and corresponding data keys
   const sections = [
@@ -30,7 +30,7 @@ function PrivacyPolicy() {
 
   return (
     <>
-      <PolicyMetaRender lang={lang} />
+      <PolicyMetaRender/>
       <div className="flex justify-center mt-[5vw] page-background">
         <div className="w-[80%]">
           <div className="items-center justify-between max-[450px]:flex-col max-[450px]:gap-y-[6vw] relative">
