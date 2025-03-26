@@ -1,35 +1,47 @@
 import React, { useState } from 'react';
 import { CgArrowLongDown, CgArrowLongUp } from 'react-icons/cg';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
-import PortfolioData from '../content/Portfolio/PortfolioData'; // Import static data
+import PortfolioData from '../content/Portfolio/PortfolioData';
 import { useParams } from 'react-router-dom';
 import content from '../content/Portfolio/Portfolio.json';
 import PortifolioMetaDataRender from '../components/Portifolio/PortifolioMetaDataRender';
 import HeaderSection from '../components/Reusable/HeaderSection';
 
-function Portfolio() {
-  const [visible, setVisible] = useState(4); // Show 4 cards initially
-  const { lang } = useParams();
-  const Content = content[lang];
+// Define the shape of each portfolio item
+interface PortfolioItem {
+  title: string;
+  image: string;
+  link: string;
+  alt?: string;
+}
 
-  // Remove states and useEffect related to data fetching
-  // const [portfolioItems, setPortfolioItems] = useState([]); // State to store portfolio data
-  // const [loading, setLoading] = useState(true); // Loading state
-  // const [error, setError] = useState(null); // Error state
+// Define structure of the content JSON
+interface PortfolioPageContent {
+  title: string;
+  description: string;
+  buttonSeeMore: string;
+  buttonSeeLess: string;
+  Content?: string;
+  CallToAction?: string;
+  Title?: string;
+}
 
-  // Use the static PortfolioData
-  const portfolioItems = PortfolioData;
 
-  // Remove loading and error handling
-  // const fetchPortfolioData = async () => { ... };
-  // useEffect(() => { fetchPortfolioData(); }, []);
 
-  // const showMorePortfolioData = () => { ... }; // Keep this function for showing more/less functionality
+const Portfolio: React.FC = () => {
+  const [visible, setVisible] = useState<number>(4);
+  const { lang } = useParams<{ lang?: string }>();
+  const Content: PortfolioPageContent | undefined = lang ? content[lang] : undefined;
+
+  const portfolioItems: PortfolioItem[] = PortfolioData;
+
   const showMorePortfolioData = () => {
-    setVisible((prevValue) =>
-      prevValue === 10 ? (prevValue = 2) : prevValue + 2
-    );
+    setVisible((prev) => (prev === 10 ? 2 : prev + 2));
   };
+
+  if (!Content) {
+    return <div className="text-center mt-10 text-lg">Content not available</div>;
+  }
 
   return (
     <>
@@ -50,7 +62,7 @@ function Portfolio() {
                 <div className="relative w-full h-[29vw] max-[450px]:h-[65vw] overflow-hidden">
                   <img
                     src={item.image}
-                    alt={item.alt ? item.alt : item.title}
+                    alt={item.alt ?? item.title}
                     className="w-full h-full object-cover rounded-t-2xl transition-transform transform hover:scale-105 transition-all duration-500 ease-in-out"
                   />
                 </div>
@@ -65,6 +77,7 @@ function Portfolio() {
                 </div>
               </a>
             ))}
+
             <div className="flex justify-center w-full max-[450px]:mt-[4vw] max-[450px]:mb-[8vw]">
               <div
                 className="border-black border-[0.1vw] rounded-[3vw] hover:bg-[#2703A5] hover:text-white transition ease-in-out flex justify-center mt-[3vw] w-[8.5vw] h-[2.5vw] text-[1.1vw] cursor-pointer max-[450px]:w-[19vw] max-[450px]:h-[6vw] max-[450px]:text-[2.5vw]"
@@ -84,11 +97,12 @@ function Portfolio() {
               </div>
             </div>
           </div>
+
           <CallToActionSection CallToAction="workwithus" lang={lang} />
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Portfolio;

@@ -6,12 +6,29 @@ import CopyrightData from '../content/PolicyPages/CopyrightPolicyText.json';
 import ContactUsSection from '../components/Reusable/ContactUsSection';
 import { useParams } from 'react-router-dom';
 
-function CopyrightPolicy() {
-  const { lang } = useParams();
-  const Content = CopyrightData[lang];
+// Define the type for each section in the content
+interface SectionContent {
+  Heading?: string;
+  Content?: string[];
+}
 
-  // Define section titles and data keys
-  const sections = [
+// Define the overall content type for each language
+interface PolicyContent {
+  Title: string;
+  Description: string;
+  [key: string]: string | string[] | SectionContent | undefined;
+}
+
+// Define route params
+interface RouteParams {
+  lang?: keyof typeof CopyrightData;
+}
+
+const CopyrightPolicy: React.FC = () => {
+  const { lang } = useParams<{ lang?: string }>();
+  const Content: PolicyContent = CopyrightData[lang as keyof typeof CopyrightData];
+
+  const sections: string[] = [
     'OwnershipofContent',
     'LimitedLicense',
     'ProhibitedUses',
@@ -52,8 +69,8 @@ function CopyrightPolicy() {
           {sections.map((section) => (
             <Accordion
               key={section}
-              title={Content[section]?.Heading || section} // Default to section name if Heading is missing
-              InnerTextData={Content[section]?.Content || []} // Ensure it's an array
+              title={(Content[section] as SectionContent)?.Heading || section}
+              InnerTextData={(Content[section] as SectionContent)?.Content || []}
             />
           ))}
         </div>
@@ -62,6 +79,6 @@ function CopyrightPolicy() {
       </div>
     </div>
   );
-}
+};
 
 export default CopyrightPolicy;
