@@ -1,39 +1,28 @@
 import React, { useState } from 'react';
-import content from '../../content/AboutUs/OurApproach';
+import { PiArrowCircleLeftLight, PiArrowCircleRightLight } from 'react-icons/pi';
+import { ApproachCard } from '../../content/AboutUs/OurApproach';
 import contenttitle from '../../content/AboutUs/OurApproachTitle.json';
+import content from '../../content/AboutUs/OurApproach';
 
-import {
-  PiArrowCircleLeftLight,
-  PiArrowCircleRightLight,
-} from 'react-icons/pi';
+type OurApproachCarouselProps = {
+  lang: 'en' | 'fr';
+};
 
-function OurApproachCarousel({ lang }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+function OurApproachCarousel({ lang }: OurApproachCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const ContentTitle = contenttitle[lang];
-  const Content = content[lang];
+  const Content: ApproachCard[] = content[lang];
 
   const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide
-      ? Math.ceil(Content.length / 3) - 1
-      : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? Math.ceil(Content.length / 3) - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === Math.ceil(Content.length / 3) - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === Math.ceil(Content.length / 3) - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  };
-
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
   };
 
   return (
@@ -53,24 +42,18 @@ function OurApproachCarousel({ lang }) {
                 className="w-[full] h-[30vw] bg-cover bg-center"
               >
                 <div
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                   className={`${
-                    hoveredIndex === index &&
-                    card.hoverTitle &&
-                    card.hoverContent
+                    hoveredIndex === index && card.hoverTitle && card.hoverContent
                       ? 'w-full h-full bg-[#2B00AC] p-[2vw] text-white text-left'
                       : 'flex items-end text-left pl-[0.4vw] text-white bg-gray-500/35 w-full h-full font-bold text-[2vw]'
                   } transition duration-300 ease-out`}
                 >
                   {hoveredIndex === index ? (
                     <div>
-                      <h1 className="text-[1.5vw] font-bold">
-                        {card.hoverTitle}
-                      </h1>
-                      <p className="text-[1.1vw] mt-[1vw]">
-                        {card.hoverContent}
-                      </p>
+                      <h1 className="text-[1.5vw] font-bold">{card.hoverTitle}</h1>
+                      <p className="text-[1.1vw] mt-[1vw]">{card.hoverContent}</p>
                     </div>
                   ) : (
                     <h2 className="font-bold text-white text-[2vw] text-left pl-[0.4vw]">
@@ -79,9 +62,7 @@ function OurApproachCarousel({ lang }) {
                   )}
                 </div>
               </div>
-              <h2 className="font-bold text-[2vw] text-left pl-[0.4vw]">
-                {card.subtitle}
-              </h2>
+              <h2 className="font-bold text-[2vw] text-left pl-[0.4vw]">{card.subtitle}</h2>
             </div>
           </div>
         ))}
@@ -91,7 +72,6 @@ function OurApproachCarousel({ lang }) {
           onClick={goToPrevious}
           className="flex justify-center items-center text-[2vw] text-[#C8CFD5] w-[4.5vw] h-[4.5vw] ml-[1vw] cursor-pointer z-10 hover:text-[#FF9900]"
         />
-
         <PiArrowCircleRightLight
           onClick={goToNext}
           className="flex justify-center items-center text-[2vw] text-[#C8CFD5] w-[4.5vw] h-[4.5vw] cursor-pointer z-10 hover:text-[#FF9900]"

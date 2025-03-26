@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Pagination = ({ page, totalPages, updatePage }) => (
+type PaginationProps = {
+  page: number;
+  totalPages: number;
+  updatePage: (page: number) => void;
+};
+
+const Pagination: React.FC<PaginationProps> = ({ page, totalPages, updatePage }) => (
   <div className="flex justify-center mt-4">
     <button
       onClick={() => updatePage(Math.max(page - 1, 1))}

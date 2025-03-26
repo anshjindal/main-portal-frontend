@@ -1,7 +1,8 @@
+
 import React from 'react';
 import '../styles/AboutUs.css';
 
-import NewsletterRegister from '../components/Reusable/NewsletterRegister.js';
+import NewsletterRegister from '../components/Reusable/NewsletterRegisters';
 import ClientTestimonySlider from '../components/Home/ClientTestimonySlider';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import OurTeamCarousel from '../components/AboutUs/OurTeamCarousel';
@@ -9,56 +10,56 @@ import OurPartners from '../components/AboutUs/OurPartners';
 import OurApproachCarousel from '../components/AboutUs/OurApproachCarousel';
 import TechStack from '../components/AboutUs/TechStack';
 import WorkerTestimonial from '../components/AboutUs/WorkerTestimonial';
-import HeroAboutUs from '../components/AboutUs/HeroAbousUs.js';
+import HeroAboutUs from '../components/AboutUs/HeroAbousUs';
 import { useParams } from 'react-router-dom';
-import AboutMetaRender from '../components/AboutUs/AboutMetaRender.js';
+import AboutMetaRender from '../components/AboutUs/AboutMetaRender';
 
-function AboutUs() {
-  const { lang } = useParams();
+type RouteParams = {
+  lang: string;
+};
+
+const AboutUs: React.FC = () => {
+  const { lang } = useParams<RouteParams>() || {};
+  const validLang = lang === 'en' || lang === 'fr' ? lang : 'en';
 
   return (
     <>
-      <AboutMetaRender lang={lang} />
+      <AboutMetaRender lang={validLang} />
       <div className="page-background">
+        <HeroAboutUs lang={validLang} />
+
         <section>
-          <HeroAboutUs lang={lang} />
+          <OurTeamCarousel lang={validLang} />
         </section>
 
         <section>
-          <OurTeamCarousel lang={lang} />
+          <OurPartners lang={validLang} />
         </section>
-
 
         <section>
-          <OurPartners lang={lang} />
+          <ClientTestimonySlider lang={validLang} isHomepage={false} />
         </section>
 
-
-        <section>
-          <ClientTestimonySlider lang={lang} isHomepage={false} />
-        </section>
-
-
-       {/* 
-
+        {/* 
         <section id="OurApproach">
           <OurApproachCarousel lang={lang} />
         </section>
-       
-       <section>
+
+        <section>
           <WorkerTestimonial lang={lang} />
         </section>
-       
-       <section>
+
+        <section>
           <TechStack lang={lang} />
         </section>
-        */} 
+        */}
+
         <section>
-          <CallToActionSection CallToAction="workwithus" lang={lang} />
+          <CallToActionSection CallToAction="workwithus" lang={validLang} />
         </section>
       </div>
     </>
   );
-}
+};
 
 export default AboutUs;

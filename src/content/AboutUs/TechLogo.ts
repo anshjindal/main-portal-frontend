@@ -24,7 +24,7 @@ import Azure from '../../assets/SVG/TechLogo/Azure.svg';
 import Kubemetes from '../../assets/SVG/TechLogo/Kubemetes.svg';
 import NextJS from '../../assets/SVG/TechLogo/NextJS.svg';
 
-const TeckLogos = [
+const TeckLogos: string []= [
   ExpressJS,
   ReactJS,
   Vue,

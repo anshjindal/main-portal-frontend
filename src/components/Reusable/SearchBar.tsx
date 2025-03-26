@@ -1,6 +1,11 @@
 import React from 'react';
 
-const SearchBar = ({ search, updateSearch }) => (
+type SearchBarProps = {
+  search: string;
+  updateSearch: (value: string) => void;
+};
+
+const SearchBar: React.FC<SearchBarProps> = ({ search, updateSearch }) => (
   <input
     type="text"
     placeholder="Search for a blog..."

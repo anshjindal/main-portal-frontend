@@ -1,17 +1,35 @@
-import React from 'react';
+import {JSX } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const BlogCard = ({ blog, lang }) => {
+type BlogCardProps = {
+  blog: {
+    slug: string;
+    imageUrl: string;
+    tags: string[];
+    timeToRead: number;
+    title: {
+      en: string;
+      fr: string;
+    };
+    shortDesc: {
+      en: string;
+      fr: string;
+    };
+  };
+  lang: 'en' | 'fr';
+};
+
+const BlogCard = ({ blog, lang }: BlogCardProps): JSX.Element => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/${lang}/${blog.slug}`); // Navigate to the blog's detailed page
+    navigate(`/${lang}/${blog.slug}`);
   };
 
   return (
     <div
       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-      onClick={handleCardClick} // Make the entire card clickable
+      onClick={handleCardClick}
     >
       <div
         className="w-full h-48 bg-cover bg-center"
@@ -23,7 +41,7 @@ const BlogCard = ({ blog, lang }) => {
         <div className="flex items-center mb-4">
           <div className="flex gap-4 justify-start items-center w-full">
             <p className="flex-1 text-sm line-clamp-1 text-start text-[#666666]">
-              {blog.tags}
+              {blog.tags.join(', ')}
             </p>
             <p className="flex-none text-sm text-[#666666]">
               {blog.timeToRead} Mins

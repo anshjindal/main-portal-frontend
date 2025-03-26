@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import NewsletterBanner from '../../assets/Images/NewsletterBanner.webp';
 import { FaArrowRight } from 'react-icons/fa6';
 import content from '../../content/Reusable/NewsletterRegister.json';
 
-function NewsletterRegister({ lang }) {
-  const [email, setEmail] = useState(''); // State to manage the email input
-  const [message, setMessage] = useState(''); // State to manage success/error messages
-  const [isSubmitting, setIsSubmitting] = useState(false); // State to trigger useEffect on form submission
-  const Content = content[lang]; // Default to English if lang is not found
+type Props = {
+  lang: string;
+};
 
-  // UseEffect for handling side effects, like API calls
+function NewsletterRegister({ lang }: Props) {
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const Content = content[lang as keyof typeof content];
+
   useEffect(() => {
     const subscribeToNewsletter = async () => {
       if (isSubmitting) {
@@ -28,27 +31,26 @@ function NewsletterRegister({ lang }) {
           const result = await response.json();
 
           if (response.ok) {
-            setMessage(result.message); // Display success message
-            setEmail(''); // Clear the input field
+            setMessage(result.message);
+            setEmail('');
           } else {
-            setMessage(result.message); // Display error message
+            setMessage(result.message);
           }
         } catch (error) {
-          setMessage('An error occurred. Please try again.'); // Handle fetch errors
+          setMessage('An error occurred. Please try again.');
         } finally {
-          setIsSubmitting(false); // Reset the submission state
+          setIsSubmitting(false);
         }
       }
     };
 
-    subscribeToNewsletter(); // Call the async function when isSubmitting changes
-  }, [isSubmitting, email]); // Dependency array includes isSubmitting and email
+    subscribeToNewsletter();
+  }, [isSubmitting, email]);
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (email) {
-      setIsSubmitting(true); // Trigger the API call via useEffect
+      setIsSubmitting(true);
     }
   };
 
@@ -77,7 +79,7 @@ function NewsletterRegister({ lang }) {
                   placeholder={Content.emailPlaceholder}
                   required
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} // Update email state on input change
+                  onChange={(e) => setEmail(e.target.value)}
                   className="bg-[#2B00AC] px-[6px] h-[3.5vw] w-full text-[1.2vw] focus-visible:outline-none placeholder:font-normal placeholder:text-white max-[450px]:text-[2.5vw] max-[450px]:h-[5vw]"
                 />
                 <button

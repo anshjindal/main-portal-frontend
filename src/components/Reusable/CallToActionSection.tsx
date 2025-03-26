@@ -2,8 +2,15 @@ import React from 'react';
 import { CgArrowLongUp } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import content from '../../content/Reusable/CallToActionSection.json';
+type Lang = 'en' | 'fr';
 
-function CallToActionSection({ CallToAction, lang, RedirectTo = 'ContactUs' }) {
+type Props = {
+  CallToAction: keyof typeof content;
+  lang: Lang;
+  RedirectTo?: string;
+};
+
+const CallToActionSection: React.FC<Props> = ({ CallToAction, lang, RedirectTo = 'ContactUs' }) => {
   const Content = content[CallToAction][lang];
 
   return (
@@ -24,6 +31,6 @@ function CallToActionSection({ CallToAction, lang, RedirectTo = 'ContactUs' }) {
       </Link>
     </div>
   );
-}
+};
 
 export default CallToActionSection;

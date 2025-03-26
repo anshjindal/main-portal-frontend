@@ -18,16 +18,25 @@ import StartupYMMLogo from '../../assets/SVG/PartnersLogo/StartupYMMLogo.svg';
 import VelocityLogo from '../../assets/SVG/PartnersLogo/VelocityLogo.svg';
 import YoshiLogo from '../../assets/SVG/PartnersLogo/YoshiLogo.svg';
 
-const partnersLogos = [
+// 🔹 Type pour chaque logo
+export interface PartnerLogo {
+  src: string;
+  alt: string;
+}
+
+const partnersLogos: PartnerLogo[] = [
   { src: ATRCyberLogo, alt: 'ATRCyber Logo' },
   { src: AyaLogo, alt: 'Aya Logo' },
   { src: BantuLogo, alt: 'Bantu Logo' },
   { src: BipocLogo, alt: 'Bipoc Logo' },
+  { src: BogolLogo, alt: 'Bogol Logo' },
   { src: DigitalMainStLogo, alt: 'Digital Main St Logo' },
+  { src: EgoluLogo, alt: 'Egolu Logo' },
+  { src: EPlogo, alt: 'EP Logo' },
   { src: EuclidesLogo, alt: 'Euclides Logo' },
   { src: ISMLogo, alt: 'ISM Logo' },
   { src: JKMediDesignLogo, alt: 'JK Medi Design Logo' },
-  { src: KPDILogo, alt: 'KPDILogo Logo' },
+  { src: KPDILogo, alt: 'KPDI Logo' },
   { src: NeuralAILogo, alt: 'Neural AI Logo' },
   { src: RiipenLogo, alt: 'Riipen Logo' },
   { src: RockPowerLogo, alt: 'Rock Power Logo' },
