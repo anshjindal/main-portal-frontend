@@ -4,6 +4,20 @@ import OurApproachInnovativeExecution from '../../assets/Images/OurApproach/OurA
 import OurApproachCollaborativePartnership from '../../assets/Images/OurApproach/OurApproachCollaborativePartnership.webp';
 import OurApproachContinuousImprovement from '../../assets/Images/OurApproach/OurApproachContinuousImprovement.webp';
 
+export type ApproachCard = {
+  image: string;
+  title: string;
+  subtitle: string;
+  hoverTitle?: string;
+  hoverContent?: string;
+};
+
+type OurApproachDataType = {
+  en: ApproachCard[];
+  fr: ApproachCard[];
+};
+
+
 const OurApproachData = {
   en: [
     {

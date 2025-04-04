@@ -9,14 +9,33 @@ import QuoteIcon from '../../assets/SVG/QuoteIcon.svg';
 import { useParams } from 'react-router-dom';
 import content from '../../content/Home/ClientTestimony.json';
 
-function ClientTestimonySlider({ isHomepage = true }) {
-  const [testimonySlider, updateTestimonySlider] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const { lang } = useParams();
+type Testimony = {
+  comment: string;
+  name: string;
+  role: string;
+  location: string;
+};
 
-  const testimonyData = isHomepage
+type Params = {
+  lang?: keyof typeof HomepageTestimonyData;
+};
+
+type Props = {
+  
+
+  lang: string;
+  isHomepage?: boolean;
+};
+
+function ClientTestimonySlider({ isHomepage = true }: Props) {
+  const [testimonySlider, updateTestimonySlider] = useState<number>(0);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const { lang = 'en' } = useParams<Params>(); // fallback to 'en' if undefined
+
+  const testimonyData: Testimony[] = isHomepage
     ? HomepageTestimonyData[lang]
     : AboutUsPageTestimonyData[lang];
+
   const testimonyCount = testimonyData.length;
   const backgroundColor = isHomepage ? 'bg-white' : 'bg-[#F4F4F4]';
   const cardColor = isHomepage ? 'bg-[#F4F4F4]' : 'bg-white';
@@ -29,11 +48,10 @@ function ClientTestimonySlider({ isHomepage = true }) {
     }, 500);
   }, [testimonySlider, testimonyCount]);
 
-  // Autoplay functionality with useEffect
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 8000); // Change slide every 8 seconds
+    }, 8000);
     return () => clearInterval(interval);
   }, [handleNext]);
 
@@ -62,7 +80,6 @@ function ClientTestimonySlider({ isHomepage = true }) {
           <div
             className={`flex justify-center items-center text-left w-[50vw] max-[450px]:w-[72vw] h-fit mt-[4vw] ${cardColor} overflow-hidden relative`}
           >
-            {/* Sliding Testimonial Content */}
             <div
               className={`w-fit h-fit transform transition-transform duration-500 ${
                 isAnimating ? 'translate-x-[-100%]' : 'translate-x-0'
@@ -77,16 +94,13 @@ function ClientTestimonySlider({ isHomepage = true }) {
                 </h2>
                 <div className="flex flex-wrap space-x-[0.5vw] justify-center text-[1.5vw] text-[#666666] max-[450px]:text-[3vw]">
                   <p>{testimonyData[testimonySlider].role}</p>
-                  <p className="w-fit">
-                    {testimonyData[testimonySlider].location}
-                  </p>
+                  <p className="w-fit">{testimonyData[testimonySlider].location}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Fixed Slider Buttons */}
         <div className="flex justify-center gap-x-[0.5vw] w-full p-[2vw]">
           <PiArrowCircleLeftLight
             onClick={handlePrev}

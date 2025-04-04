@@ -26,7 +26,7 @@ const AdminData = {
   fr: {
     title: 'Admin - Créer un Blog',
     InputTitle: 'Titre du Blog:',
-    InputSlug: 'Lien simplifié:', // Translated slug
+    InputSlug: 'Lien simplifié:',
     InputAuthor: 'Auteur:',
     InputTimeToRead: 'Il est temps de lire:',
     Image: 'Image de couverture:',
@@ -40,15 +40,13 @@ const AdminData = {
       author: "L'auteur est requis",
       description: 'La description est requise',
       timeToRead: 'Le champ Temps de lecture est obligatoire',
-      validateTimeToRead:
-        'Le temps de lecture du champ doit être compris entre 0 et 60 minutes',
+      validateTimeToRead: 'Le temps de lecture du champ doit être compris entre 0 et 60 minutes',
       image: "Veuillez télécharger l'image",
       minTags: 'Au moins 1 balise doit être ajoutée',
       maxTags: 'Un maximum de 10 balises est autorisé',
-      shortDesc:
-        'La brève description doit comporter entre 20 et 500 caractères',
+      shortDesc: 'La brève description doit comporter entre 20 et 500 caractères',
     },
   },
-};
+} as const;
 
 export default AdminData;

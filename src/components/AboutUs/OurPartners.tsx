@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Slider from 'react-infinite-logo-slider';
 import partnersLogos from '../../content/AboutUs/PartnersLogoData';
 import content from '../../content/AboutUs/OurPartners.json';
 
-function OurClients({ lang }) {
+interface Props {
+  lang: 'en' | 'fr';
+}
+
+function OurClients({ lang }: Props): JSX.Element {
   const Content = content[lang];
 
   return (
@@ -15,24 +19,30 @@ function OurClients({ lang }) {
           </h1>
         </div>
       </div>
+
       <Slider
         width="250px"
         duration={60}
         pauseOnHover={true}
         blurBorders={false}
-        blurBoderColor={'#fff'}
+        blurBorderColor="#fff"
       >
         {partnersLogos.map((logo, index) => (
-          <Slider.Slide
-            key={index}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              margin: '0 10px', // Add horizontal margin to create space
-            }}
-          >
-            <img src={logo.src} alt={logo.alt} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+          <Slider.Slide key={index}>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 10px',
+              }}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
+              />
+            </div>
           </Slider.Slide>
         ))}
       </Slider>
