@@ -1,18 +1,16 @@
 import Achievements from '../components/Home/Achievements';
-import NewsletterRegister from '../components/Reusable/NewsletterRegister.js';
 import OurClients from '../components/Home/OurClients';
 import ClientTestimonySlider from '../components/Home/ClientTestimonySlider';
 import RecentProjects from '../components/Home/RecentProjects';
-import RecentBlogs from '../components/Home/RecentBlogs';
 import CallToActionSection from '../components/Reusable/CallToActionSection';
 import WhyChooseUS from '../components/Home/WhyChooseUs';
 import ServiceSpotlight from '../components/Home/ServiceSpotlight';
 import OurServices from '../components/Home/OurServices';
 import OurVision from '../components/Home/OurVision';
 import Hero from '../components/Home/Hero';
-// import PronunciationButton from "../components/Home/PronunciationButton";
 import { useParams } from 'react-router-dom';
 import HomeMetaRender from '../components/Home/HomeMetaDataRender.js';
+import React from 'react';
 
 function Home() {
   const { lang } = useParams();
@@ -39,7 +37,7 @@ function Home() {
 
       <RecentProjects lang={lang} />
 
-      <ClientTestimonySlider lang={lang} />
+      <ClientTestimonySlider />
 
       {/*<NewsletterRegister lang={lang}/> */}
 
